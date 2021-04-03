@@ -5,14 +5,18 @@ year: 28 May 2019
 id: kolo-zycia
 date: 2021-03-05T19:49:47.171Z
 description: >
-  Jest to narzędzie, od którego zaczynamy, ponieważ zrewolucjonizowało ono całe moje myślenie o planowaniu.
-
+  Jest to narzędzie, od którego zaczynamy, ponieważ zrewolucjonizowało ono całe
+  moje myślenie o planowaniu.
 ---
 ## DLACZEGO KOŁO ŻYCIA
 
+
+
+![Hello](/images/blog/parallax.jpg "it-is-me")
+
 Jest to narzędzie, od którego zaczynamy, ponieważ zrewolucjonizowało ono całe moje myślenie o planowaniu. Mam nadzieję, że pomoże również Tobie.
 
-Wiele osób myśli, że planowanie tygodnia, miesiąca czy roku rozpoczynamy od pytania: _“Jakie cele chciałbym w tym roku zrealizować?”_. Rezultatem jest wybór kilku postanowień, które przyszły nam do głowy w ciągu kilku ostatnich chwil bez większego ładu i składu. Taki sposób wyznaczania celów często sprawia, że skupiamy się tylko na jednym z obszarów naszego życia. 
+Wiele osób myśli, że planowanie tygodnia, miesiąca czy roku rozpoczynamy od pytania: *“Jakie cele chciałbym w tym roku zrealizować?”*. Rezultatem jest wybór kilku postanowień, które przyszły nam do głowy w ciągu kilku ostatnich chwil bez większego ładu i składu. Taki sposób wyznaczania celów często sprawia, że skupiamy się tylko na jednym z obszarów naszego życia. 
 
 W konsekwencji, planując swój rok, zapominamy, że nasze życie, zupełnie jak nasz organizm, to sieć naczyń połączonych. Każdy z jego obszarów funkcjonuje najlepiej, kiedy jest w harmonii z innymi. 
 
@@ -30,10 +34,10 @@ oraz zrozumieć o wiele więcej.
 Koniec gadania, przejdźmy do działania!
 Łap za kartkę i długopis (najlepiej w towarzystwie dobrej herbaty) i zaczynamy!
 
-
 ## INSTRUKCJA OBSŁUGI
 
-### Krok 1. 
+### Krok 1.
+
 Narysuj koło i podziel je na 8 części. Będą one reprezentowały kluczowe sfery Twojego życia. Każdą z części opisz jedną z poniższych kategorii:
 Relacje
 Finanse
@@ -45,8 +49,8 @@ Zdrowie i kondycja
 Duchowość
 Pamiętaj, że są to jedynie sugerowane propozycje. Jeśli chciałbyś uwzględnić nieco inne kategorie (lub też nazwać je tak, aby lepiej oddawały Twoją sytuację), stwórz własną listę najważniejszych obszarów swojego życia. Na każdym etapie tego ćwiczenia, pamiętaj że ma ono służyć Tobie, a więc wprowadzanie poprawek jest nie tylko możliwe, a wręcz pożądane! Zapisz zatem tylko te, które możesz nazwać kluczowymi obszarami Twojego życia.
 
+### Krok 2.
 
-### Krok 2.  
 Wyobraź sobie, że każdy obszar to skala od 1 do 10. Oceń swój poziom zadowolenia z każdej ze sfer życia i wpisz do koła. 
 Pamiętaj! Oceniając swoje sfery życia nie myśl o tym jak otoczenie je ocenia. Zastanów się jak TY się z nimi czujesz. Czy jesteś usatysfakcjonowany czy może można by było co nieco poprawić? A może są kategorie, o których całkowicie zapomniałeś w natłoku codziennych zadań? 
 Postaraj się spojrzeć na każdą z kategorii holistycznie, zauważyć ją jako ważną część większej całości. 
@@ -54,19 +58,22 @@ Postaraj się spojrzeć na każdą z kategorii holistycznie, zauważyć ją jako
 Zadaj sobie pytania dodatkowe, poniżej znajdziesz kilka przykładów. Zapisz odpowiedzi, skojarzenia, cokolwiek co przychodzi ci do głowy w czasie pracy z kołem. Jeśli chcesz, możesz nawet stworzyć mapę myśli z kołem w centrum. Pamiętaj, że w tym ćwiczeniu najważniejsze są Twoje uczucia, nie fakty. Postaraj się myśleć o tym zarówno oceniając poszczególne obszary, jak i tworząc dodatkowe notatki.
 
 Pytania dodatkowe:
+
 * Co jest dla Ciebie ważne w tej sferze?
 * Jak chcesz, aby ona wyglądała? Czego Ci w niej brakuje?
 * Jak będzie wyglądać Twoje życie, gdy zwiększy się poziom zadowolenia w danym obszarze?
 * Co możesz zrobić aby podnieść poziom satysfakcji w tej dziedzinie?
 
-### Krok 3.  
+### Krok 3.
+
 Po przeanalizowaniu każdej z części osobno czas na spojrzenie z lotu ptaka i zadanie sobie szeregu pytań. 
 Co widzisz kiedy patrzysz na swoje koło? Jakie uczucia Ci towarzyszą gdy na nie patrzysz? 
 Widzisz organizm, który jest zbilansowany czy może są obszary, które mocno wybijają się na tle pozostałych (zarówno pozytywnie, jak i negatywnie)? Jak oceniłbyś stan zdrowia pacjenta gdyby poszczególne części Twojego koła były częściami ciała? Które obszary nadają się do operacji w pierwszej kolejności? Jak to wpływa na inne sfery Twojego życia? 
 Jak myślisz, które z części mają na siebie największy wpływ? Poprawa której części spowoduje najbardziej pozytywną zmianę w Twoim życiu? Która z części jest kluczem do poprawy całości koła?
 Które ze sposobów działania w obszarach o wysokiej samoocenie możesz przenieść do tych, gdzie jest Twoim zdaniem gorzej?
 
-### Krok 4.  
+### Krok 4.
+
 Po takiej analizie możesz przystąpić do wyznaczania swoich celów. Wybierz 3 obszary, których poprawa wniesie do Twojego życia największą pozytywną zmianę. Do każdego z obszarów wyznacz kroki, które chcesz podjąć aby poprawić swój poziom satysfakcji w wybranym obszarze. Pamiętaj też aby wyznaczyć rezultat, który mają Ci przynieść podjęte działania. Będzie to Twój drogowskaz, który regularnie będzie Ci przypominał o powodach dla których postanowiłeś podjąć wspomniane kroki.
 
 Pamiętaj! Nie próbuj naprawiać całego swojego świata jednocześnie. Jeśli okazało się, że poprawy wymagają więcej niż 3 obszary, poczekaj. Daj sobie czas i przestrzeń na skupienie się na najważniejszej trójce. Kiedy te projekty zostaną zakończone, zabierz się za kolejne. 
@@ -94,11 +101,3 @@ Jak widzisz, kiedy zrozumiesz jak działa koło, okazuje się, że obszarów jeg
 
 Teraz już piłeczka po Twojej stronie - próbuj, nie czekaj! ;)
 Powodzenia!
-
-
-
-
-
-
-
-
