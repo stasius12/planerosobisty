@@ -15,16 +15,20 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'http://fonts.cdnfonts.com/css/libra-serif-modern' },
-      { rel: "preconnect", href: "https://fonts.gstatic.com" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600;700&family=Work+Sans:wght@400;700&display=swap"}
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600;700&family=Work+Sans:wght@400;700&display=swap',
+      },
+    ],
+    script: [
+      { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
     ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '~/assets/css/main.scss',
-  ],
+  css: ['~/assets/css/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -44,7 +48,7 @@ export default {
     scss: [
       '~/assets/css/utilities/_variables.scss',
       '~/assets/css/base/_grid.scss',
-    ]
+    ],
   },
 
   moment: {
