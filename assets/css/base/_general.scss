@@ -5,9 +5,10 @@ html{
 }
 
 body {
-  background-color: $background-primary;
+  background-color: $background;
 	min-width: 320px;
 	height: 100%;
+  margin: 0;
   overflow-x: hidden;
   transition: transform .5s ease-out;
 
@@ -43,43 +44,15 @@ body {
   to   { opacity: 1; }
 }
 
-.text-negative {
-  color: $text-negative;
-}
-
-.wrapper{
-  position: relative;
-  padding-left: 0;
-  top: $header-height-breakpoint;
-  height: calc(100% - #{$header-height-breakpoint});
-  -webkit-overflow-scrolling: touch;
-  overflow-y: auto;
-
-  @media (min-width: $grid-breakpoint){
-    height: auto;
-    top: initial;
-  }
-}
-
-::selection { 
+::selection {
   background: $primary;
-  color: white;
-}
-
-.fa{
-  text-decoration: none;
-  display: inline-block;
-  &:hover,
-  &.active,
-  &:focus{
-    outline: 0;
-    text-decoration: none;
-  }
+  color: #000000;
 }
 
 img{
   max-width: 100%;
   height: auto;
+  user-select: none;
 }
 
 .shape{
@@ -90,17 +63,17 @@ img{
   cursor: not-allowed;
 }
 
-li, ul {
+.list-none {
   list-style-type: none;
 }
 
 section {
   margin-bottom: 2.4rem;
 
-  ul {
-    padding: 0;
-  }
-  
+  //ul {
+  //  padding: 0;
+  //}
+
   @media (min-width: $screen-sm){
     margin-bottom: 7.2rem;
   }
@@ -117,7 +90,7 @@ button {
   cursor: pointer;
   border: 0;
   text-align: center;
-  transition: background 250ms ease-in-out, 
+  transition: background 250ms ease-in-out,
               transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;

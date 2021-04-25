@@ -1,30 +1,23 @@
 <template>
-  <div class="blog-container">
-    <div class="blog-header">
-      <div class="blog-header__left">
-        <div class="blog-header__left-item">
-          <nuxt-link :to="{ name: 'index' }">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 4" aria-hidden="true" style="width: 16px; transform: rotate(180deg);">
-              <polygon fill="currentColor" points="0 2.33 4.72 2.33 3.53 3.53 4 4 6 2 4 0 3.53 0.47 4.72 1.67 0 1.67 0 2.33"/>
-            </svg>
-            Wróć
-          </nuxt-link>
-        </div>
-        <div class="blog-header__left-item">
+  <main class="blog-container">
+    <section class="blog-header">
+      <div class="blog-header__text">
+        <time :datetime="$moment(blog.date).format('YYYY-MM-DD')">
           {{ $moment(blog.date).format('LL') }}
-          <h1>{{ blog.title }}</h1>
-          {{ blog.description }}
-        </div>
+        </time>
+        <h1>{{ blog.title }}</h1>
       </div>
-      <div class="blog-header__right">
-        <img src="~/assets/images/blog/kolo-zycia/_main.jpg" />
+      <div class="blog-header__img">
+        <img :src="blog.thumbnail" />
       </div>
-    </div>
-    <nuxt-content
-      :document="blog"
-      class="container small blog-content"
-    />
-  </div>
+    </section>
+    <section class="container blog-content">
+      <nuxt-content
+        :document="blog"
+        class="blog-content__inner"
+      />
+    </section>
+  </main>
 </template>
 
 <script>
@@ -41,29 +34,35 @@ export default {
 <style lang="scss">
 .blog-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  min-height: 500px;
+  margin-top: 5rem;
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+  }
 
   h1 {
     color: $secondary;
   }
 
-  &__left {
+  &__text {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    min-height: 500px;
     padding: 2.4rem 4rem 2.4rem 2.4rem;
+
+    > * {
+      max-width: 500px;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
-  &__left-item {
-    max-width: 500px;
-    width: 100%;
-    margin-left: auto;
-    margin-bottom: auto;
-  }
-  &__right {
+
+  &__img {
     width: 100%;
     img {
       max-width: 100%;
@@ -71,10 +70,47 @@ export default {
   }
 }
 .blog-content {
-  max-width: 700px;
-  p {
-    font-size: 1.7rem;
-    color: $grey-1;
+  padding-bottom: 7.2rem;
+
+  &__inner {
+    > * {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 800px;
+      display: block;
+    }
+  }
+
+  p + ul {
+    margin-top: -1.7rem;
+  }
+
+  ul, ol {
+    padding-left: 4rem;
+  }
+
+  li {
+    list-style: none;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      left: -4rem;
+      top: 0;
+      width: 2.7rem;
+      height: 2.7rem;
+      //padding-top: 0.2rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+
+      font-family: "icomoon";
+      font-size: 1.5rem;
+      content: "\e900";
+      background-color: $primary;
+    }
   }
 }
 </style>

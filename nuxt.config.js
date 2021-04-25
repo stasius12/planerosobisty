@@ -2,6 +2,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  server: {
+    host: '0'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'planerosobisty',
@@ -19,7 +23,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600;700&family=Work+Sans:wght@400;700&display=swap',
+          'https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&family=Lato:wght@100;300;400&family=Montserrat:wght@300;400&family=Nunito+Sans:wght@200;300;400&display=swap',
       },
     ],
     script: [

@@ -1,9 +1,23 @@
+local_backend: true
+
 backend:
   name: git-gateway
   branch: master
 
 media_folder: static/images/blog
 public_folder: /images/blog
+
+media_library:
+  name: cloudinary
+  output_filename_only: false
+  config:
+    cloud_name: planer-osobisty
+    api_key: 458159627694677
+    default_transformations:
+      - - fetch_format: auto
+          width: 1400
+          quality: auto
+          crop: scale
 
 publish_mode: editorial_workflow
 
@@ -17,7 +31,23 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Thumbnail'
+        name: 'thumbnail'
+        widget: 'image'
+        default: 'thumbnail'
+        media_library:
+          config:
+            multiple: false
+      - label: 'Publish Date'
+        name: 'date'
+        widget: 'datetime'
+      - label: 'Description'
+        name: 'description'
+        widget: 'string'
+        hint: 'For optimized SEO it should be between 50-160 characters'
+      - label: 'Body'
+        name: 'body'
+        widget: 'markdown'
