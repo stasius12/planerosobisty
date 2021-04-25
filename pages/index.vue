@@ -1,6 +1,6 @@
 <template>
   <main class="home_page">
-    <img class="home_page__img" src="~assets/images/main.png" />
+    <img class="home_page__img" src="~assets/images/main_small.png" />
 <!--    <div class="home_page__circle">-->
 <!--      <img class="home_page__circle__img" src="~assets/images/beauty-script/home-page-quote.png" />-->
 <!--      <div class="home_page__circle__text">-->
