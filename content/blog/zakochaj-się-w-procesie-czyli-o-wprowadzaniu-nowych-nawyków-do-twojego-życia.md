@@ -84,7 +84,7 @@ Jeżeli kiedykolwiek zastanawiałeś się nad tym dlaczego masz problem z realiz
 
 Postaw sobie następujące pytania:
 
-#### **Jak mogę sprawić, aby było to oczywiste?** 
+**1. Jak mogę sprawić, aby było to oczywiste?** 
 
 Dostosuj otoczenie. Eksponuj rzeczy i sygnały, które wyzwolą dobre nawyki.
 
@@ -92,7 +92,8 @@ Dostosuj otoczenie. Eksponuj rzeczy i sygnały, które wyzwolą dobre nawyki.
 * jeżeli chcesz czytać wieczorem, połóż książkę na poduszce
 * jeżeli chcesz jeść owoce zamiast słodyczy, postaw miskę z owocami w widocznym miejscu, a słodycze zanieś do pracy
 
-Jak mogę to uatrakcyjnić w moich oczach? 
+**2. Jak mogę to uatrakcyjnić w moich oczach?** 
+
 Sposobów może być wiele, oto kilka propozycji, które można stosować zarówno osobno, jak i łączyć ze sobą. Im więcej, tym skuteczniej ;)
 
 wykorzystanie działania, które chcesz wykonać i które sprawi Ci przyjemność:
