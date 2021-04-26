@@ -1,6 +1,6 @@
 ---
 title: Jak wyznaczać cele? Spróbuj MAPY MARZEŃ
-thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1618291304/173385061_4029753000465776_4048269226179889383_n_yq6c2k.png
+thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619418475/Grafika_do_tekst%C3%B3w_na_bloga_1_xfmtsg.png
 date: 2021-04-05T12:22:22.658Z
 description: >
   Jest to narzędzie, od którego zaczynamy, ponieważ zrewolucjonizowało ono całe
