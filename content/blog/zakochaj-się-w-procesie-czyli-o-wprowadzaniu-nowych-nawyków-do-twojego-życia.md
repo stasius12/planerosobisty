@@ -86,7 +86,11 @@ Postaw sobie następujące pytania:
 
 **1. Jak mogę sprawić, aby było to oczywiste?** 
 
+<div style="background: yellow">
+
 Dostosuj otoczenie. Eksponuj rzeczy i sygnały, które wyzwolą dobre nawyki.
+
+</div>
 
 * jeżeli chcesz codziennie rano jeść witaminę B12, ustaw ją przy szczoteczce do zębów
 * jeżeli chcesz czytać wieczorem, połóż książkę na poduszce
