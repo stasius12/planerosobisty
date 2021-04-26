@@ -2,7 +2,8 @@
 title: Jak wyznaczać cele? Spróbuj MAPY MARZEŃ!
 thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619424487/Grafika_do_tekst%C3%B3w_na_bloga_7_ctkzer.png
 date: 2021-04-05T12:22:22.658Z
-description: Mapa marzeń to narzędzie do planowania krótko- i długoterminowych celów.
+description: Mapa marzeń to proste narzędzie do skutecznego i holistycznego
+  planowania swoich projektów, marzeń i celów.
 ---
 Nieco na ten temat powiedziałam już w poście Nie próbuj wynaleźć koła na nowo! Zacznij planowanie od KOŁA ŻYCIA. Dzięki przygotowaniu takiego koła będziesz w stanie spojrzeć na swoje życie z lotu ptaka i zidentyfikować główne potrzeby i kierunki rozwoju we wszystkich głównych obszarach swojego życia, może nawet określisz już pierwsze cele. 
 
