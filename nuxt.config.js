@@ -19,12 +19,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&family=Lato:wght@100;300;400&family=Montserrat:wght@300;400&family=Nunito+Sans:wght@200;300;400&display=swap',
-      },
+      { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' },
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon.svg' },
+      { rel: 'manifest', href: '/manifest.webmanifest' },
     ],
     script: [
       { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
