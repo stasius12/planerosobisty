@@ -59,11 +59,11 @@ Możesz myśleć sobie teraz “Okej, okej, wszystko jest łatwe i jasne w teori
 
 ## PRAKTYCZNE WSKAZÓWKI
 
-### Określ jakim typem człowieka chciałbyś się stać
+### 1. Określ jakim typem człowieka chciałbyś się stać
 
 Najlepiej zapisz to sobie w miejscu, na które często spoglądasz (np. w kalendarzu czy aplikacji, w której regularnie robisz notatki). Przemyśl to dobrze, zastanów się dlaczego tego chcesz. Pomocne może być narzędzie, o którym wspominałam w tym poście. Jest bardzo ważne, abyś naprawdę dobrze to przemyślał, ponieważ motywacja do zmian musi płynąć z Twoich wartości życiowych. Tylko w ten sposób zostaną z Tobą na zawsze.
 
-### **Formułuj swoje nowe nawyki w formie pozytywnej**
+### **2. Formułuj swoje nowe nawyki w formie pozytywnej**
 
 Nie próbuj pozbywać się obecnych szkodliwych nawyków poprzez negatywne stwierdzenie typu:
 
@@ -78,7 +78,7 @@ Zamiast tego zapisz je w formie pozytywnej, a najlepiej od razu wymyśl jakieś 
 * “Codziennie przed rozpoczęciem pracy będę pił świeży sok warzywny” (zamiast “nie będę pił kawy”)
 * “Codziennie o 7 rano wyjdę na 15 minutową przebieżkę po okolicy z moim psem” (zamiast “nie będę wstawał późno”)
 
-### **Spraw aby nowe zachowania były oczywiste, atrakcyjne, łatwe i satysfakcjonujące**
+### **3. Spraw aby nowe zachowania były oczywiste, atrakcyjne, łatwe i satysfakcjonujące**
 
 Jeżeli kiedykolwiek zastanawiałeś się nad tym dlaczego masz problem z realizowaniem postanowień, o których twierdzisz, że są NAPRAWDĘ ważne i potrzebne albo zaczynałeś 1 stycznia, a 14 już miałeś dość i rezygnowałeś? Mam dobrą wiadomość :) To niekoniecznie oznacza, że jesteś leniem, brak Ci motywacji czy wytrwałości. To po prostu znak, że nie przygotowałeś się dobrze do startu. Tym razem zrób to dobrze, a będą gwarantowane.
 
