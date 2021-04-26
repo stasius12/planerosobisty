@@ -2,9 +2,7 @@
 title: Jak wyznaczać cele? Spróbuj MAPY MARZEŃ
 thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619418475/Grafika_do_tekst%C3%B3w_na_bloga_1_xfmtsg.png
 date: 2021-04-05T12:22:22.658Z
-description: >
-  Jest to narzędzie, od którego zaczynamy, ponieważ zrewolucjonizowało ono całe
-  moje myślenie o planowaniu.
+description: Mapa marzeń to narzędzie do planowania krótko- i długoterminowych celów.
 ---
 Nieco na ten temat powiedziałam już w poście Nie próbuj wynaleźć koła na nowo! Zacznij planowanie od KOŁA ŻYCIA. Dzięki przygotowaniu takiego koła będziesz w stanie spojrzeć na swoje życie z lotu ptaka i zidentyfikować główne potrzeby i kierunki rozwoju we wszystkich głównych obszarach swojego życia, może nawet określisz już pierwsze cele. 
 
@@ -38,7 +36,9 @@ Jeśli w Twoim Planie Działania znalazły się nowe nawyki, które chciałbyś 
 Krok 4. Miej nadzieję na najlepsze, ale przygotuj się na najgorsze
 Bądźmy realistami. Podczas planowania zmian często zakładamy różowe okulary co do naszych działań i okoliczności, które będą nam towarzyszyły w przyszłości. Choć spora dawka pozytywnego myślenia jest zawsze w cenie, warto już teraz pomyśleć jakie problemy możesz napotkać na drodze do swojego celu. 
 
-„Człowiek bez strategii, który lekceważy przeciwnika, nieuchronnie skończy jako jeniec” –  to myśl Sun Tzu - chińskiego myśliciela i autora najstarszego na świecie podręcznika sztuki wojennej. Choć została zapisana w starożytności, nie straciła ani trochę na aktualności. Kiedy planujesz kolejne kroki prowadzące do osiągnięcia swoich celów, zawsze pamiętaj aby przygotować się również na trudności, które Z PEWNOŚCIĄ nadejdą. Zastanów się co zrobisz jeśli plan A nie wypali? Jakie masz opcje awaryjne? Do kogo możesz zwrócić się po pomoc? W jaki sposób inni realnie mogą Cię wesprzeć w osiągnięciu Twojego celu? 
+> „Człowiek bez strategii, który lekceważy przeciwnika, nieuchronnie skończy jako jeniec” 
+
+To myśl Sun Tzu - chińskiego myśliciela i autora najstarszego na świecie podręcznika sztuki wojennej. Choć została zapisana w starożytności, nie straciła ani trochę na aktualności. Kiedy planujesz kolejne kroki prowadzące do osiągnięcia swoich celów, zawsze pamiętaj aby przygotować się również na trudności, które Z PEWNOŚCIĄ nadejdą. Zastanów się co zrobisz jeśli plan A nie wypali? Jakie masz opcje awaryjne? Do kogo możesz zwrócić się po pomoc? W jaki sposób inni realnie mogą Cię wesprzeć w osiągnięciu Twojego celu? 
 
 Zaplanowanie rozwiązań i kół ratunkowych zanim natrafisz na przeszkody doda Ci pewności siebie i zbliży do celu bardziej niż cokolwiek innego. Łatwiej spać spokojnie (i realizować swoje najśmielsze plany), kiedy wiesz, że szalupy ratunkowe czekają w pogotowiu :) 
 
