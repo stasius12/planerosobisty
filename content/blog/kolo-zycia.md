@@ -34,14 +34,14 @@ Koniec gadania, przejdźmy do działania!
 
 Narysuj koło i podziel je na 8 części. Będą one reprezentowały kluczowe sfery Twojego życia. Każdą z części opisz jedną z poniższych kategorii:
 
-* Otoczenie
-* Finanse
-* Duchowość
-* Kariera
-* Zdrowie
-* Rozwój osobisty
-* Odpoczynek
-* Relacje
+1. Otoczenie
+2. Finanse
+3. Duchowość
+4. Kariera
+5. Zdrowie
+6. Rozwój osobisty
+7. Odpoczynek
+8. Relacje
 
 Pamiętaj, że są to jedynie propozycje. Jeśli chciałbyś uwzględnić nieco inne kategorie (lub też nazwać je tak, aby lepiej oddawały Twoją sytuację), stwórz własną listę najważniejszych obszarów swojego życia. Na każdym etapie tego ćwiczenia, pamiętaj że ma ono służyć Tobie, a więc wprowadzanie poprawek jest nie tylko możliwe, a wręcz pożądane! Zapisz zatem tylko te, które możesz nazwać kluczowymi obszarami Twojego życia.
 
