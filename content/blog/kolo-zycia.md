@@ -3,7 +3,7 @@ name: kolo-zycia
 title: Nie próbuj wynaleźć koła na nowo! Zacznij planowanie od KOŁA ŻYCIA
 year: 28 May 2019
 id: kolo-zycia
-thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619419678/Grafika_do_tekst%C3%B3w_na_bloga_2_ggcrr8.png
+thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619420003/Grafika_do_tekst%C3%B3w_na_bloga_3_f3lhy1.png
 date: 2021-03-05T19:49:47.171Z
 description: >
   Jest to narzędzie, od którego zaczynamy, ponieważ zrewolucjonizowało ono całe
