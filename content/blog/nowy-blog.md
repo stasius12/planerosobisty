@@ -1,6 +1,6 @@
 ---
 title: Jak wyznaczać cele? Spróbuj MAPY MARZEŃ!
-thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619424487/Grafika_do_tekst%C3%B3w_na_bloga_7_ctkzer.png
+thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619426662/Grafika_do_tekst%C3%B3w_na_bloga_12_lsoxsu.png
 date: 2021-04-05T12:22:22.658Z
 description: Mapa marzeń to proste narzędzie do skutecznego i holistycznego
   planowania swoich projektów, marzeń i celów.
