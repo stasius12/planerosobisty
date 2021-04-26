@@ -52,9 +52,7 @@ Narysuj koło i podziel je na 8 części. Będą one reprezentowały kluczowe sf
 
 Pamiętaj, że są to jedynie propozycje. Jeśli chciałbyś uwzględnić nieco inne kategorie (lub też nazwać je tak, aby lepiej oddawały Twoją sytuację), stwórz własną listę najważniejszych obszarów swojego życia. Na każdym etapie tego ćwiczenia, pamiętaj że ma ono służyć Tobie, a więc wprowadzanie poprawek jest nie tylko możliwe, a wręcz pożądane! Zapisz zatem tylko te, które możesz nazwać kluczowymi obszarami Twojego życia.
 
-![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619428070/Grafika_do_tekst%C3%B3w_na_bloga_13_ttmswf.png)
-
-
+![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619428375/Grafika_do_tekst%C3%B3w_na_bloga_14_z49ga8.png)
 
 ### Krok 2.
 
