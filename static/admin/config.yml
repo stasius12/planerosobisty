@@ -21,18 +21,27 @@ media_library:
 
 publish_mode: editorial_workflow
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 collections:
   - name: 'blog'
     label: 'Blog'
     folder: 'content/blog'
     format: 'frontmatter'
     create: true
-    slug: '{{slug}}'
+    slug: '{{short_name}}'
+    preview_path: 'blog/{{short_name}}'
     editor:
       preview: true
     fields:
       - label: 'Title'
         name: 'title'
+        widget: 'string'
+      - label: 'Short name'
+        name: 'short_name'
         widget: 'string'
       - label: 'Thumbnail'
         name: 'thumbnail'
@@ -47,7 +56,8 @@ collections:
       - label: 'Description'
         name: 'description'
         widget: 'string'
-        hint: 'For optimized SEO it should be between 50-160 characters'
+        hint: 'Between 50-160 characters (https://www.charactercountonline.com/)'
+        pattern: ['.{50,160}', "Must have between 50 and 160 characters"]
       - label: 'Body'
         name: 'body'
         widget: 'markdown'

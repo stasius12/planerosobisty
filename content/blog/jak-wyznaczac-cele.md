@@ -1,11 +1,12 @@
 ---
 title: Jak wyznaczać cele? Spróbuj MAPY MARZEŃ!
+short_name: jak-wyznaczac-cele
 thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619426662/Grafika_do_tekst%C3%B3w_na_bloga_12_lsoxsu.png
 date: 2021-04-05T12:22:22.658Z
 description: Mapa marzeń to proste narzędzie do skutecznego i holistycznego
   planowania swoich projektów, marzeń i celów.
 ---
-Nieco na ten temat powiedziałam już w poście Nie próbuj wynaleźć koła na nowo! Zacznij planowanie od KOŁA ŻYCIA. Dzięki przygotowaniu takiego koła będziesz w stanie spojrzeć na swoje życie z lotu ptaka i zidentyfikować główne potrzeby i kierunki rozwoju we wszystkich głównych obszarach swojego życia, może nawet określisz już pierwsze cele. 
+Nieco na ten temat powiedziałam już w poście [Nie próbuj wynaleźć koła na nowo! Zacznij planowanie od KOŁA ŻYCIA](/blog/kolo-zycia). Dzięki przygotowaniu takiego koła będziesz w stanie spojrzeć na swoje życie z lotu ptaka i zidentyfikować główne potrzeby i kierunki rozwoju we wszystkich głównych obszarach swojego życia, może nawet określisz już pierwsze cele. 
 
 Czasami wyznaczymy swoje cele na podstawie tego co akurat wpadło nam do głowy czy zobaczyliśmy na Instagramie. Kiedy cele krótkoterminowe nie są spójne z naszymi wartościami i celami życiowymi, bardzo szybko zaczyna nam brakować motywacji do ich realizacji. Jeśli nie są spójne z naszą tożsamością, nie pozostaną na długo w naszym życiu. Dlatego tak ciężko jest nam wyjść pobiegać, kiedy naszym celem jest osiągnięcie figury modeli z Instagrama. Dużo chętniej ruszymy się z kanapy, jeśli takie wyjście będzie związane z pragnieniem życia w zdrowiu do późnej starości. 
 

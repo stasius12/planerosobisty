@@ -28,6 +28,9 @@ export default {
       blog,
     }
   },
+  transition: {
+    name: 'slide-fade'
+  },
 }
 </script>
 
@@ -78,6 +81,18 @@ export default {
       margin-right: auto;
       max-width: 800px;
       display: block;
+    }
+  }
+  a {
+    text-decoration: underline;
+    color: $blog-link-color;
+
+    &:hover,
+    &.active,
+    &:focus,
+    .nuxt-link-active {
+      outline: 0;
+      color: darken($blog-link-color, 20%);
     }
   }
 

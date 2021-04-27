@@ -1,9 +1,9 @@
 ---
 title: ZAKOCHAJ SIĘ W PROCESIE, czyli o wprowadzaniu nowych nawyków do Twojego życia
+short_name: wprowadzanie-nowych-nawykow
 thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619455439/Grafika_do_tekst%C3%B3w_na_bloga_18_uufxmy.png
 date: 2021-04-26T16:42:57.954Z
-description: "O potędze nawyków napisano tysiące książek. Problem jest tylko
-  jeden - jak wdrożyć je w życie NAPRAWDĘ skutecznie? "
+description: O potędze nawyków napisano tysiące książek. Problem jest tylko jeden - jak wdrożyć je w życie NAPRAWDĘ skutecznie?
 ---
 O potędze nawyków napisano tysiące książek. Problem jest tylko jeden - praktycznie każdy ma problem z wprowadzaniem ich w życie. Jak wdrożyć je w życie NAPRAWDĘ skutecznie? 
 
@@ -156,7 +156,7 @@ Jednym z najbardziej naturalnych i efektywnych sposobów na opanowanie nowego na
   “Po wyjściu z łazienki robię herbatę”<br>
   “Po zrobieniu herbaty rozpoczynam pracę nad kolejną stroną książki” (jeżeli codzienne pisanie książki jest Twoim celem)
 
-Zastanów się kiedy najłatwiej możesz wpleść swój nowy nawyk w życie i powiąż go z już istniejącymi przyzwyczajeniami. Ustal co się wydarzy dokładnie między istniejącym nawykiem A, a istniejącym nawykiem B. Im dokładniej tym lepiej. Myślenie w czasie tworzenia nowych nawyków powinno być wyeliminowane.
+Zastanów się, kiedy najłatwiej możesz wpleść swój nowy nawyk w życie i powiąż go z już istniejącymi przyzwyczajeniami. Ustal co się wydarzy dokładnie między istniejącym nawykiem A, a istniejącym nawykiem B. Im dokładniej tym lepiej. Myślenie w czasie tworzenia nowych nawyków powinno być wyeliminowane.
 
 Mam nadzieję, że ta spora porcja narzędzi i wskazówek będzie dla Ciebie pomocna. 
 
