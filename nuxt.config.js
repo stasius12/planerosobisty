@@ -68,4 +68,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  hooks: {
+    'content:file:beforeParse': (file) => {
+      if (file.extension !== '.md') return
+      file.data = file.data.replace(
+        /!!(.*?)!!/g,
+        (match, p1) => `<span class="bg-primary">${p1}</span>`
+      )
+    }
+  },
 }

@@ -147,18 +147,13 @@ Nagradzaj się! Zarówno z badań, jak i codziennego życia wiemy, że z chęci�
 
 Jednym z najbardziej naturalnych i efektywnych sposobów na opanowanie nowego nawyku jest powiązanie go z już istniejącym planem dnia i sposobem zachowania. Taki sposób eliminuje zbyt dużą ilość myślenia i pozwala wykorzystać naturalną siłę pędu, która towarzyszy nam przy wykonywaniu codziennych rutynowych czynności. Przykłady:
 
-* “Po powrocie z pracy od razu przebieram się w strój sportowy” 
-
-  “Po przebraniu się w strój sportowy rozwijam matę w salonie i zaczynam ćwiczyć”
-
+* “Po powrocie z pracy od razu przebieram się w strój sportowy”<br>
+  “Po przebraniu się w strój sportowy rozwijam matę w salonie i zaczynam ćwiczyć”<br>
   “Po ćwiczeniach biorę relaksujący prysznic” (jeśli Twoim celem są regularne ćwiczenia)
-* “Po zaparkowaniu samochodu przed firmą idę kupić sok warzywny w kawiarni na parterze”
-
-  “Po wypiciu soku zaczynam pracę” (jeśli chcesz spożywać więcej warzyw w ciągu dnia) 
-* “Po pobudce o 5tej zaczynam poranną toaletę” 
-
-  “Po wyjściu z łazienki robię herbatę” 
-
+* “Po zaparkowaniu samochodu przed firmą idę kupić sok warzywny w kawiarni na parterze”<br>
+  “Po wypiciu soku zaczynam pracę” (jeśli chcesz spożywać więcej warzyw w ciągu dnia)<br>
+* “Po pobudce o 5tej zaczynam poranną toaletę”<br>
+  “Po wyjściu z łazienki robię herbatę”<br>
   “Po zrobieniu herbaty rozpoczynam pracę nad kolejną stroną książki” (jeżeli codzienne pisanie książki jest Twoim celem)
 
 Zastanów się kiedy najłatwiej możesz wpleść swój nowy nawyk w życie i powiąż go z już istniejącymi przyzwyczajeniami. Ustal co się wydarzy dokładnie między istniejącym nawykiem A, a istniejącym nawykiem B. Im dokładniej tym lepiej. Myślenie w czasie tworzenia nowych nawyków powinno być wyeliminowane.
