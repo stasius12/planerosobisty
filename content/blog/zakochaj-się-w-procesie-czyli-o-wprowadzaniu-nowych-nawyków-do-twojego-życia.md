@@ -7,7 +7,7 @@ description: "O potędze nawyków napisano tysiące książek. Problem jest tylk
 ---
 O potędze nawyków napisano tysiące książek. Problem jest tylko jeden - praktycznie każdy ma problem z wprowadzaniem ich w życie. Jak wdrożyć je w życie NAPRAWDĘ skutecznie? 
 
-## POTĘGA MIKRO KROKÓW
+## !!POTĘGA MIKRO KROKÓW!!
 
 Jak może wiesz, jedną z moich pasji, której oddaję się po godzinach jest inwestowanie na giełdzie. Jeśli miałeś z nią cokolwiek wspólnego, wiesz, że światem inwestycji rządzi magia procentu składanego. 
 
