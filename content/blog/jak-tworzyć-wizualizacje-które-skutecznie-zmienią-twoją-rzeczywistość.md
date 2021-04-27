@@ -99,7 +99,7 @@ Zobacz kilka przykładów:
 
 ![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619511577/Grafika_do_tekst%C3%B3w_na_bloga_28_fjt1x1.png)
 
-![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619511574/Grafika_do_tekst%C3%B3w_na_bloga_30_mgjwzi.png)
+![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619512215/Grafika_do_tekst%C3%B3w_na_bloga_31_ogmklu.png)
 
 ![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619511575/Grafika_do_tekst%C3%B3w_na_bloga_29_twdl5v.png)
 
@@ -125,7 +125,7 @@ Natomiast jest w Twojej głowie pojawiły się cele przekraczające Twoje aktual
 
 Jak stworzyć taką strategię? O tym już w innym poście, ale krótko - niech będzie maksymalnie precyzyjnie i zgodnie z zasadą od ogółu do szczegółu. I pamiętaj - im mniejsze będą kroczki, tym łatwiej je zrealizujesz. A teraz do dzieła! :)
 
-## PODSUMOWANIE
+## PODSUMOWANIE 
 
 Mam nadzieję, że stworzona tablica pomoże Ci lepiej zaplanować Twoją przyszłość, osiągać jeszcze więcej i da Ci dodatkową dawkę motywacji, aby zmieniać świat wokół Ciebie na lepsze.
 
