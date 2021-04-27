@@ -47,7 +47,7 @@ Zamiast myśleć o efektach, skup się na poprawie o 1% i czerpaniu przyjemnośc
 
 James powiedział coś, co przypominam sobie codziennie, gdy staram się wdrożyć nowy nawyk do swojego życia: “Każde Twoje działanie jest oddaniem głosu na osobę, którą chcesz się stać w przyszłości”. 
 
-![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619499334/Grafika_do_tekst%C3%B3w_na_bloga_19_r9qq1q.png)
+![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619501995/Grafika_do_tekst%C3%B3w_na_bloga_21_dz9jep.png)
 
 Zamiast skupiać się na konkretnym celu, pomyśl “chcę być typem człowieka, który…”. A potem zrób to, co zbliży Cię do bycia takim właśnie człowiekiem. Jesteśmy sumą naszych nawyków, przyzwyczajeń, myśli. Jeśli zrobisz choć drobną pozytywną zmianę w swojej rzeczywistości, możesz być pewny, że przyniesie ona korzyści również w innych obszarach. Na początku może jej nawet nie zauważysz. Przypominam Ci jednak o prawie procentu składanego. Takie zmiany są jak tocząca się kula śniegowa - początkowo wydaje się, że nic się nie zmienia, że każdy wystający spod śniegu listek jest znaczącą przeszkodą, wszystko idzie jakoś wolno i mozolnie, ale jak wiesz, z czasem kula się rozpędza, a wtedy staje się większa z każdą sekundą i ciężko ją zatrzymać, nawet człowiekowi.
 
@@ -162,8 +162,6 @@ Jednym z najbardziej naturalnych i efektywnych sposobów na opanowanie nowego na
   “Po zrobieniu herbaty rozpoczynam pracę nad kolejną stroną książki” (jeżeli codzienne pisanie książki jest Twoim celem)
 
 Zastanów się kiedy najłatwiej możesz wpleść swój nowy nawyk w życie i powiąż go z już istniejącymi przyzwyczajeniami. Ustal co się wydarzy dokładnie między istniejącym nawykiem A, a istniejącym nawykiem B. Im dokładniej tym lepiej. Myślenie w czasie tworzenia nowych nawyków powinno być wyeliminowane.
-
-
 
 Mam nadzieję, że ta spora porcja narzędzi i wskazówek będzie dla Ciebie pomocna. 
 
