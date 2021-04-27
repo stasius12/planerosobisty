@@ -99,7 +99,7 @@ Zobacz kilka przykładów:
 
 ![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619511577/Grafika_do_tekst%C3%B3w_na_bloga_28_fjt1x1.png)
 
-![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619511574/Grafika_do_tekst%C3%B3w_na_bloga_30_mgjwzi.png)
+![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619512215/Grafika_do_tekst%C3%B3w_na_bloga_31_ogmklu.png)
 
 ![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619511575/Grafika_do_tekst%C3%B3w_na_bloga_29_twdl5v.png)
 
