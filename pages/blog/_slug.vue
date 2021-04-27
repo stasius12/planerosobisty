@@ -81,7 +81,9 @@ export default {
     }
   }
 
-  p + ul {
+  p + ul,
+  p + ol,
+  p + .list-style-arrow + ul {
     margin-top: -1.7rem;
   }
 
@@ -89,7 +91,12 @@ export default {
     padding-left: 4rem;
   }
 
-  li {
+  ul ul,
+  ol ul {
+    list-style-type: disc;
+  }
+
+  .list-style-arrow + ul > li {
     list-style: none;
     position: relative;
 

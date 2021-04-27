@@ -76,6 +76,9 @@ export default {
         /!!(.*?)!!/g,
         (match, p1) => `<span class="bg-primary">${p1}</span>`
       )
+      file.data = file.data.replace(
+        /\[list-style: arrow\]/g, '<div class="list-style-arrow"></div>'
+      )
     }
   },
 }
