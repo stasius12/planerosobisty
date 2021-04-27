@@ -41,6 +41,7 @@ Fundament trwałej zmiany.
 Czas, aby się rozmarzyć. Zanim jednak to zrobisz, wyciągnij kartkę i długopis. Zapisuj wszystko co przyjdzie Ci do głowy. Wizja może być rozbudowana i bardzo opisowa. Im bardziej szczegółowo i konkretnie ją opiszesz, tym większą wzbudzi w Tobie motywację, a także ułatwi wyznaczanie celów.
 
 Na początek pozwól swojemu umysłowi nieco pobłądzić. Wyobraź sobie swój idealny świat, docelową rzeczywistość, w której każdego dnia wstajesz zadowolony. Jak ona wygląda? Zastanów się nad tym w kontekście każdego z następujących obszarów życia: 
+
 * Relacje (przyjaciele, rodzina, partner, reszta świata)
 * Finanse 
 * Kariera / rozwój zawodowy
@@ -51,6 +52,7 @@ Na początek pozwól swojemu umysłowi nieco pobłądzić. Wyobraź sobie swój 
 * Duchowość / religia
 
 Pomocne będą następujące pytania:
+
 * Dokąd zmierzam? 
 * Jak wygląda moja rzeczywistość?
 * Jakie wartości kierują moimi decyzjami?
@@ -69,8 +71,8 @@ Jakim muszę stać się człowiekiem, aby zrealizować swoją misję?
 Jakie kroki trzeba podjąć, aby zrealizować moją wizję?
 Jakich uczuć chciałbym doświadczać realizując swoje cele?
 
-## WIZUALIZACJA 
-	
+## WIZUALIZACJA
+
 Czas na wizualizację. 
 
 Jest to słowo używane w dwóch kontekstach. Może być definiowane jako:
@@ -95,7 +97,11 @@ Oba sposoby mogą być skuteczną pomocą w realizacji naszych ambicji. Najistot
 
 Zobacz kilka przykładów:
 
+![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619511577/Grafika_do_tekst%C3%B3w_na_bloga_28_fjt1x1.png)
 
+![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619511574/Grafika_do_tekst%C3%B3w_na_bloga_30_mgjwzi.png)
+
+![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619511575/Grafika_do_tekst%C3%B3w_na_bloga_29_twdl5v.png)
 
 Taką tablicę możesz wykonać w programie graficznym, używając wycinków z gazet, wydrukowanych zdjęć, rysunków własnego autorstwa… możliwości jest wiele. Wybierz tę, której przygotowanie sprawi Ci najwięcej radości, ponieważ celem jest stworzenie pozytywnych skojarzeń z celami, które na niej umiejscowisz.
 
