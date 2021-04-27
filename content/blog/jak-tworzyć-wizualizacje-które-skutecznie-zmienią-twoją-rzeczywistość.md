@@ -125,7 +125,7 @@ Natomiast jest w Twojej głowie pojawiły się cele przekraczające Twoje aktual
 
 Jak stworzyć taką strategię? O tym już w innym poście, ale krótko - niech będzie maksymalnie precyzyjnie i zgodnie z zasadą od ogółu do szczegółu. I pamiętaj - im mniejsze będą kroczki, tym łatwiej je zrealizujesz. A teraz do dzieła! :)
 
-## PODSUMOWANIE
+## PODSUMOWANIE 
 
 Mam nadzieję, że stworzona tablica pomoże Ci lepiej zaplanować Twoją przyszłość, osiągać jeszcze więcej i da Ci dodatkową dawkę motywacji, aby zmieniać świat wokół Ciebie na lepsze.
 
