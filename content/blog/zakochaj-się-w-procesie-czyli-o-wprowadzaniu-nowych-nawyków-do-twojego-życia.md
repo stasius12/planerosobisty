@@ -47,6 +47,8 @@ Zamiast myśleć o efektach, skup się na poprawie o 1% i czerpaniu przyjemnośc
 
 James powiedział coś, co przypominam sobie codziennie, gdy staram się wdrożyć nowy nawyk do swojego życia: “Każde Twoje działanie jest oddaniem głosu na osobę, którą chcesz się stać w przyszłości”. 
 
+![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619499334/Grafika_do_tekst%C3%B3w_na_bloga_19_r9qq1q.png)
+
 Zamiast skupiać się na konkretnym celu, pomyśl “chcę być typem człowieka, który…”. A potem zrób to, co zbliży Cię do bycia takim właśnie człowiekiem. Jesteśmy sumą naszych nawyków, przyzwyczajeń, myśli. Jeśli zrobisz choć drobną pozytywną zmianę w swojej rzeczywistości, możesz być pewny, że przyniesie ona korzyści również w innych obszarach. Na początku może jej nawet nie zauważysz. Przypominam Ci jednak o prawie procentu składanego. Takie zmiany są jak tocząca się kula śniegowa - początkowo wydaje się, że nic się nie zmienia, że każdy wystający spod śniegu listek jest znaczącą przeszkodą, wszystko idzie jakoś wolno i mozolnie, ale jak wiesz, z czasem kula się rozpędza, a wtedy staje się większa z każdą sekundą i ciężko ją zatrzymać, nawet człowiekowi.
 
 Zatem jeśli chcesz być typem człowieka, który codziennie rano z uśmiechem na twarzy przebiega 5, 10 czy 15 kilometrów, oddaj na niego głos już dzisiaj. Wyjdź na poranny 15 min spacer i doceń się za to. Wykonałeś w końcu krok w stronę osoby, którą chcesz się stać :) 
@@ -86,11 +88,7 @@ Postaw sobie następujące pytania:
 
 **1. Jak mogę sprawić, aby było to oczywiste?** 
 
-<div style="background: yellow">
-
 Dostosuj otoczenie. Eksponuj rzeczy i sygnały, które wyzwolą dobre nawyki.
-
-</div>
 
 * jeżeli chcesz codziennie rano jeść witaminę B12, ustaw ją przy szczoteczce do zębów
 * jeżeli chcesz czytać wieczorem, połóż książkę na poduszce
@@ -100,61 +98,72 @@ Dostosuj otoczenie. Eksponuj rzeczy i sygnały, które wyzwolą dobre nawyki.
 
 Sposobów może być wiele, oto kilka propozycji, które można stosować zarówno osobno, jak i łączyć ze sobą. Im więcej, tym skuteczniej ;)
 
-wykorzystanie działania, które chcesz wykonać i które sprawi Ci przyjemność:
+**Wykorzystaj działania, które chcesz wykonać i które sprawi Ci przyjemność**
 
-po napisaniu 1 strony artykułu zrobię sobie przerwę na przekąskę
-po odpisaniu na maile z wczoraj, wezmę gorącą kąpiel
+* po napisaniu 1 strony artykułu zrób sobie przerwę na przekąskę
+* po odpisaniu na maile z wczoraj, zaplanuj gorącą kąpiel
 
-zrobienie czegoś miłego przed przystąpieniem do działania
+**Zrób coś miłego przed przystąpieniem do działania**
 
-> > kupię kwiaty na biurko, aby rozpoczęcie pracy rano było przyjemnością
-> > porozmawiam ze współpracownikami zanim zabierzemy się do obowiązków
+* kup kwiaty na biurko, aby rozpoczęcie pracy rano było przyjemnością
+* idź na kawę ze współpracownikami zanim zabierzesz się do obowiązków
 
-dołączenie do grupy, w której Twój nowy nawyk będzie postrzegany jako normalny lub wręcz pożądany
+**Dołącz do grupy, w której Twój nowy nawyk będzie postrzegany jako normalny lub wręcz pożądany**
 
-> > to może być grupa tematyczna ludzi, którzy regularnie się spotykają: biegaczy, przedsiębiorców, aktorów amatorów, taneczna 
-> > czy też grupa internetowa
-> > możesz się także zacząć otaczać książkami, filmami, blogami itd. ludzi, którzy robią to co Ty
+* to może być grupa tematyczna ludzi, którzy regularnie spotykają się na żywo: biegaczy, przedsiębiorców, aktorów amatorów, tancerzy
+* czy też grupa internetowa
+* możesz się także zacząć otaczać książkami, filmami, blogami itd. ludzi, którzy robią to co Ty
 
-3. Jak mogę ułatwić sobie zadanie?
-   Przede wszystkim przygotuj się wcześniej. Im łatwiej będzie rozpocząć i mniej trzeba myśleć, tym większe prawdopodobieństwo, że to zrobisz.
+**3. Jak mogę ułatwić sobie zadanie?**
 
-> > stwórz sobie playlistę z ćwiczeniami
-> > przygotuj dzień wcześniej zdrowy lunch do pracy
-> > ustaw stałe zlecenie przelewu w banku na konto oszczędnościowe
+Przede wszystkim przygotuj się wcześniej. Im łatwiej będzie rozpocząć i mniej trzeba myśleć, tym większe prawdopodobieństwo, że to zrobisz.
 
-4. Jak mogę uczynić to satysfakcjonującym?
-   Nagradzaj się! Zarówno z badań, jak i codziennego życia wiemy, że z chęcią powtarzamy zachowania, które są nagradzane (nawet jeśli nie są łatwe, atrakcyjne ani oczywiste). Zatem zadbaj o to, żeby do nowego nawyku zawsze był dodany jakiś bonus, a Twój mózg po kilku powtórzeniach sam zachęci Cię do działania.
+* stwórz sobie playlistę z ćwiczeniami
+* przygotuj dzień wcześniej zdrowy lunch do pracy
+* ustaw stałe zlecenie przelewu w banku na konto oszczędnościowe
 
-śledź swoje nawyki! świadomość robienia postępów jest bardzo satysfakcjonująca (najlepiej od razu, wtedy Twój mózg od razu skojarzy nowy nawyk z satysfakcją odznaczenia go w kalendarzu)
+**4. Jak mogę uczynić to satysfakcjonującym?**
 
-> > stwórz harmonogram ćwiczeń i po każdym treningu zaznaczaj swój sukces 
-> > będą tu pomocne wszelkiego rodzaju trackery na papierze, w excelu czy aplikacje podsumowujące Twoje postępy
+Nagradzaj się! Zarówno z badań, jak i codziennego życia wiemy, że z chęcią powtarzamy zachowania, które są nagradzane (nawet jeśli nie są łatwe, atrakcyjne ani oczywiste). Zatem zadbaj o to, żeby do nowego nawyku zawsze był dodany jakiś bonus, a Twój mózg po kilku powtórzeniach sam zachęci Cię do działania.
 
-wzmacniaj swój poziom satysfakcji 
+ **Śledź swoje nawyki!** 
 
-> > powiedz o tym swojemu partnerowi, znajomym, rodzinie 
+Świadomość robienia postępów jest bardzo satysfakcjonująca (zaznaczaj postępy najlepiej od razu po wykonaniu danej czynności, wtedy Twój mózg od razu skojarzy nowy nawyk z satysfakcją odznaczenia go w kalendarzu).
 
-przyznawaj sobie nagrody
+* stwórz harmonogram ćwiczeń i po każdym treningu zaznaczaj swój sukces 
+* będą tu pomocne wszelkiego rodzaju trackery na papierze, w excelu czy aplikacje podsumowujące Twoje postępy
 
-> > daj sobie bonus za każde powtórzenie nowego nawyku (niech to będzie jakaś drobna przyjemność, z którą będziesz kojarzył nowy nawyk)
-> > wyznacz sobie kamienie milowe swojego projektu i świętuj je (mogą być wyrażone w formie konkretnych wyników (“napisałem 100 stron książki”), miesięcznic/rocznic (“od 10 miesięcy gotuję sobie zdrowe lunche do pracy”) czy zdarzeń (“założyłem firmę”))
+**Wzmacniaj swój poziom satysfakcji**
 
-Spiętrzaj swoje nawyki (i ustalaj ich wykonywanie w czasie)
+* powiedz o tym swojemu partnerowi, znajomym, rodzinie 
+
+**Przyznawaj sobie nagrody**
+
+* daj sobie bonus za każde powtórzenie nowego nawyku (niech to będzie jakaś drobna przyjemność, z którą będziesz kojarzył nowy nawyk)
+* wyznacz sobie kamienie milowe swojego projektu i świętuj je
+* mogą być wyrażone w formie konkretnych wyników (“napisałem 100 stron książki”), miesięcznic/rocznic (“od 10 miesięcy gotuję sobie zdrowe lunche do pracy”) czy zdarzeń (“założyłem firmę”)
+
+### Spiętrzaj swoje nawyki (i ustalaj ich wykonywanie w czasie)
+
 Jednym z najbardziej naturalnych i efektywnych sposobów na opanowanie nowego nawyku jest powiązanie go z już istniejącym planem dnia i sposobem zachowania. Taki sposób eliminuje zbyt dużą ilość myślenia i pozwala wykorzystać naturalną siłę pędu, która towarzyszy nam przy wykonywaniu codziennych rutynowych czynności. Przykłady:
 
-> > “Po powrocie z pracy od razu przebieram się w strój sportowy” 
-> > “Po przebraniu się w strój sportowy rozwijam matę w salonie i zaczynam ćwiczyć”
-> > “Po ćwiczeniach biorę relaksujący prysznic” (jeśli Twoim celem są regularne ćwiczenia)
-> >
-> > “Po zaparkowaniu samochodu przed firmą idę kupić sok warzywny w kawiarni na parterze”
-> > “Po wypiciu soku zaczynam pracę” (jeśli chcesz spożywać więcej warzyw w ciągu dnia) 
-> >
-> > “Po pobudce o 5tej zaczynam poranną toaletę” 
-> > “Po wyjściu z łazienki robię herbatę” 
-> > “Po zrobieniu herbaty rozpoczynam pracę nad kolejną stroną książki” (jeżeli codzienne pisanie książki jest Twoim celem)
+* “Po powrocie z pracy od razu przebieram się w strój sportowy” 
+
+  “Po przebraniu się w strój sportowy rozwijam matę w salonie i zaczynam ćwiczyć”
+
+  “Po ćwiczeniach biorę relaksujący prysznic” (jeśli Twoim celem są regularne ćwiczenia)
+* “Po zaparkowaniu samochodu przed firmą idę kupić sok warzywny w kawiarni na parterze”
+
+  “Po wypiciu soku zaczynam pracę” (jeśli chcesz spożywać więcej warzyw w ciągu dnia) 
+* “Po pobudce o 5tej zaczynam poranną toaletę” 
+
+  “Po wyjściu z łazienki robię herbatę” 
+
+  “Po zrobieniu herbaty rozpoczynam pracę nad kolejną stroną książki” (jeżeli codzienne pisanie książki jest Twoim celem)
 
 Zastanów się kiedy najłatwiej możesz wpleść swój nowy nawyk w życie i powiąż go z już istniejącymi przyzwyczajeniami. Ustal co się wydarzy dokładnie między istniejącym nawykiem A, a istniejącym nawykiem B. Im dokładniej tym lepiej. Myślenie w czasie tworzenia nowych nawyków powinno być wyeliminowane.
+
+
 
 Mam nadzieję, że ta spora porcja narzędzi i wskazówek będzie dla Ciebie pomocna. 
 
