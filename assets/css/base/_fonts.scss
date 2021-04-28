@@ -54,12 +54,9 @@ li{
 blockquote {
   border-left: 4px solid $primary;
   padding-left: 1em;
-  font-size: $fs-h3;
-  font-weight: bold;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  max-width: 600px
+  font-weight: 500;
+  font-style: italic;
+  color: $grey-2;
 }
 
 h1, h2, h3, h4, h5, h6 {

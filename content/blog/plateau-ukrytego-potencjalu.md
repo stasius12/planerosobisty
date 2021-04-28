@@ -56,4 +56,5 @@ Od razu ostrzegam, nie będzie to proste i jest duże prawdopodobieństwo, że z
 
 Oto prosta, choć niekoniecznie łatwa, recepta na dolinę rozczarowania :) 
 
-> “Gdy wszystko jest nieskuteczne, idę popatrzeć na pracę kamieniarza sto razy uderzającego o skałę, na której nie pojawia się nawet drobna rysa, ale za sto pierwszym uderzeniem kamień pęka na dwoje, a ja wiem, że nie ostatni cios to sprawił, lecz wszystkie, które nastąpiły przed nim.” Jacob Riis
+> “Gdy wszystko jest nieskuteczne, idę popatrzeć na pracę kamieniarza sto razy uderzającego o skałę, na której nie pojawia się nawet drobna rysa, ale za sto pierwszym uderzeniem kamień pęka na dwoje, a ja wiem, że nie ostatni cios to sprawił, lecz wszystkie, które nastąpiły przed nim.”<br>
+> ~ <cite>Jacob Riis</cite>
