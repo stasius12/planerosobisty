@@ -65,6 +65,7 @@ img{
 
 .list-none {
   list-style-type: none;
+  padding-left: unset;
 }
 
 .bg-primary {
@@ -83,33 +84,52 @@ section {
   }
 }
 
-button {
+button,
+.button {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 1.2rem 3rem 1rem 3rem;
   margin: 0;
-  height: 3.6rem;
-  background-color: $primary;
   text-decoration: none;
+  font-family: $font-family-base;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 1;
+  background-color: #525b60;
   color: #ffffff;
   cursor: pointer;
   border: 0;
   text-align: center;
-  transition: background 250ms ease-in-out,
+  transition: background-color 250ms ease-in-out,
               transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
+
+  &.button-large {
+    padding: 1.8rem 4.5rem 1.5rem 4.5rem;
+  }
+
+  &:hover {
+    background-color: lighten(#525b60, 20%);
+  }
 }
 
-button:hover {
-  background-color: #574bc1;
+.button.button-primary {
+  background-color: $primary;
+  color: #000000;
+
+  &:hover {
+    background-color: lighten($primary, 20%);
+  }
 }
 
-button:focus {
+button:focus,
+.button:focus {
   outline: none;
 }
 
-button:active {
-  transform: scale(0.99);
+button:active,
+.button:active {
+  transform: scale(0.95);
 }
 
 .text-input {

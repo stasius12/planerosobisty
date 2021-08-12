@@ -13,7 +13,7 @@ Jak ustalać je tak, aby osiągać więcej niż kiedykolwiek? 
 
 W tym poście znajdziesz 3 strategie, które pozwolą Ci osiągnąć maksymalną produktywność już dziś. Połącz je ze sobą, a zobaczysz, że realizacja Twoich celów nabierze tempa.
 
-# CZEGO NIE ROBIĆ?
+## CZEGO NIE ROBIĆ?
 
 Większość z nas planuje swój dzień wypisując niekończącą się listę rzeczy do zrobienia. W rezultacie rozpoczynamy wiele działań, ale przy podsumowaniu miesiąca czy kwartału okazuje się, że niewiele naszych celów zostało osiągniętych. 
 
@@ -23,13 +23,13 @@ Mamy tendencję do traktowania priorytetowo rzeczy najpilniejszych. Zamiast plan
 
 Co najgorsze, wydaje nam się, że jesteśmy produktywni. Przecież “załatwiamy” tyle spraw każdego dnia. Zrobiliśmy zakupy, odkurzyliśmy dom, zawieźliśmy dziecko na zajęcia, samochód do naprawy, wybraliśmy nowe zasłony… I tak mija nam dzień za dniem, wydaje się, że całkiem produktywnie. Aż nastaje koniec roku czy kwartału, a ty zastanawiasz się “jak to się stało, że nie osiągnąłem swoich celów?”. 
 
-# JAK SOBIE Z TYM PORADZIĆ?
+## JAK SOBIE Z TYM PORADZIĆ?
 
 Prawdziwa produktywność nie polega na wykreślaniu kolejnych pozycji ze swojej listy “to do” - to raczej nazwałabym “zajętością”. 
 
 **Osiąganie swoich celów WYMAGA nadania im priorytetu.** Jeśli tego nie zrobimy, nasz czas zawsze wypełnią rzeczy pilne, przysłaniając nam te, które są naprawdę ważne. Niestety bardzo często mylimy te dwa pojęcia, nadając etykietę “ważne” wszystkiemu co pilne. 
 
-# STRATEGIA #1 SIATKA PRIORYTETÓW
+## STRATEGIA #1 SIATKA PRIORYTETÓW
 
 Z pomocą przychodzi nam Dwight Eisenhower.
 
@@ -52,7 +52,7 @@ Podziel swoją listę zadań przyporządkowując każde zadanie do odpowiedniej 
 
 Jeśli zrobisz ją w formie takiej siatki priorytetów, łatwiej będzie Ci efektywnie planować swój czas. Możesz jej używać organizując zarówno swój dzień, jak i tydzień czy miesiąc.
 
-## 1.WAŻNE i PILNE
+### 1.WAŻNE i PILNE
 
 Pierwsza ćwiartka to priorytety - do wykonania od razu. Trafiają do niej zazwyczaj **kryzysy, problemy i terminy**. 
 
@@ -60,7 +60,7 @@ Jeśli zadania na twojej liście regularnie znajdują się w tej ćwiartce, to p
 
 Odrobina planowania z wyprzedzeniem często wystarczy, aby wprowadzić do naszego życia spokój, harmonię i działania, które realnie poprawią jakość naszego życia.
 
-## 2.WAŻNE, ale NIEPILNE
+### 2.WAŻNE, ale NIEPILNE
 
 Druga ćwiartka to miejsce, w którym docelowo powinno znajdować się większość Twoich zadań. 
 
@@ -68,7 +68,7 @@ Tutaj znajdują się sprawy ważne, ale nieposiadające naglącego terminu. Doty
 
 !!Samoświadomość, planowanie i skuteczne zarządzanie sobą w czasie są kluczowe, aby tego dokonać. Jeśli wykażesz się proaktywnym podejściem, dzięki nim będziesz w stanie zaprojektować swoją rzeczywistość tak jak zechcesz.!!
 
-## 3. i 4. czyli NIEWAŻNE
+### 3. i 4. czyli NIEWAŻNE
 
 Teraz weź pod lupę zadania z kwadrantów 3 i 4. Przyporządkuj im jedno z następujących rozwiązań:
 
@@ -86,7 +86,7 @@ Zadania z 3 i 4 ćwiartki odciągają Cię od rzeczy naprawdę ważnych, zbliża
 
 Regularne przyporządkowanie zadań do odpowiedniej ćwiartki sprawi, że zdasz sobie sprawę jakie czynności są dla Ciebie najbardziej wartościowe i nauczysz się budować swój plan dnia tak, aby poświęcać najwięcej czasu i energii zadaniom decydującym o Twoim sukcesie.
 
-# STRATEGIA #2 ESENCJALIZM
+## STRATEGIA #2 ESENCJALIZM
 
 Czy zdarza Ci się mieć wrażenie, że choć bardzo dużo pracujesz, czujesz się nieefektywny lub mało użyteczny?
 
@@ -100,7 +100,7 @@ Dzięki skupieniu się na esencji, będziesz bardziej kreatywny, a jakość dzia
 
 Zrealizowanie 3 zadań x 365 dni w roku to zrobienie 1095 kroków do Twojego celu. Nie rozmieniaj się na drobne! Każdego dnia wykonaj 3 konkretne kroki w stronę swojej wizji i gwarantuję Ci, że efekty przyjdą szybciej niż myślisz.
 
-# STRATEGIA #3 NAJPIERW DUŻE KAMYKI
+## STRATEGIA #3 NAJPIERW DUŻE KAMYKI
 
 Na początek historyjka. Może już ją znasz, ale jeśli nie to...
 
@@ -127,7 +127,7 @@ Ale gdy zaczniemy od mniejszych kamieni czy piasku, na duże kamienie zabraknie 
 
 Nie zaczynaj swojego dnia od tego co pilne, bo na ważne nie wystarczy Ci czasu i energii. Zacznij swój dzień od skupienia się na tym co dla Ciebie najważniejsze, na całą resztę też z pewnością znajdziesz czas.
 
-# 1+2+3 = maksymalna produktywność
+## 1+2+3 = maksymalna produktywność
 
 Połącz te trzy strategie i wprowadź je w życie, a gwarantuję, że zaczniesz osiągać swoje cele szybciej niż ci się wydaje.
 
