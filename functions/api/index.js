@@ -27,7 +27,5 @@ app.post('/subscribe', async(req, res) => {
   }
 })
 
-export default {
-  path: '/api',
-  handler: serverless(app)
-}
+module.exports.path = '/api';
+module.exports.handler = serverless(app);
