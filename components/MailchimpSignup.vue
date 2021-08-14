@@ -59,11 +59,29 @@ export default {
   },
   methods: {
     async subscribe(event) {
-      this.response.errorMessage = '';
+      this.response.errorMessage = ''
+
+      // try {
+      //   const response = await axios.post(
+      //     'https://us1.api.mailchimp.com/3.0/lists/01d3f8d745/members/',
+      //     {
+      //       email_address: this.form.email.toLowerCase(),
+      //       status: 'subscribed',
+      //     },
+      //     {
+      //       auth: {
+      //         username: 'anystring',
+
+      //       },
+      //     }
+      //   )
+      // } catch (error) {
+      //   console.log(error)
+      // }
 
       const formData = { email: this.form.email.toLowerCase() }
       try {
-        const { data, status } = await axios.post('/api/subscribe', formData)
+        const { data, status } = await axios.post('/.netlify/functions/api/subscribe', formData)
         console.log(data)
         this.response.status = status
         this.response.message = `${data.email_address} został zarejestrowany!`

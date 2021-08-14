@@ -1,5 +1,6 @@
 import express from 'express'
 import Mailchimp from 'mailchimp-api-v3'
+import serverless from 'serverless-http';
 
 const apiKey = process.env.MAILCHIMP_API_KEY;
 const audienceId = '01d3f8d745';
@@ -28,5 +29,5 @@ app.post('/subscribe', async(req, res) => {
 
 export default {
   path: '/api',
-  handler: app
+  handler: serverless(app)
 }

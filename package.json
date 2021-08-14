@@ -17,6 +17,7 @@
     "express": "^4.17.1",
     "mailchimp-api-v3": "^1.15.0",
     "nuxt": "^2.15.3",
+    "serverless-http": "^2.7.0",
     "vee-validate": "^3.4.11"
   },
   "devDependencies": {
