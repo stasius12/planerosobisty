@@ -12,8 +12,12 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
+    "axios": "^0.21.1",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3"
+    "express": "^4.17.1",
+    "mailchimp-api-v3": "^1.15.0",
+    "nuxt": "^2.15.3",
+    "vee-validate": "^3.4.11"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",

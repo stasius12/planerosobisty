@@ -1,15 +1,15 @@
 <template>
   <header class="header">
-    <nuxt-link :to="{name: 'index'}" class="header__logo-outer-link">
-      <div class="header__logo">
-          <h1 class="header__logo-text">PLANER<br>OSOBISTY</h1>
-          <span class="header__logo-bg"></span>
-      </div>
+    <nuxt-link :to="{name: 'index'}" class="header__logo">
+      <h1>PLANER<br>OSOBISTY</h1>
     </nuxt-link>
     <nav class="header__menu">
-      <nuxt-link :to="{name: 'index'}"><span>Sklep</span></nuxt-link>
-      <nuxt-link :to="{name: 'index'}"><span>O mnie</span></nuxt-link>
-      <nuxt-link :to="{name: 'index', hash: '#blogs'}"><span>Blog</span></nuxt-link>
+      <ul class="list-none">
+        <li><nuxt-link :to="{name: 'index'}">Sklep</nuxt-link></li>
+        <li><nuxt-link :to="{name: 'index', hash: '#blogs'}">Blog</nuxt-link></li>
+        <li><nuxt-link :to="{name: 'index'}">O mnie</nuxt-link></li>
+        <li><nuxt-link :to="{name: 'index'}">Kontakt</nuxt-link></li>
+      </ul>
     </nav>
   </header>
 </template>
@@ -21,75 +21,52 @@ name: "HeaderSection"
 </script>
 
 <style lang="scss">
+$font-size-header-base: 2.5rem;
 .header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: $header-height;
-  padding: 1.5rem 1.5rem 1rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin: 4rem 0;
+  background: $primary;
+  font: 400 $font-size-header-base 'Bebas Neue', serif;
   color: black;
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
-  font: 400 2rem 'Bebas Neue', serif;
 
-  &__logo-outer-link {
-    color: inherit;
+  > * {
+    position: relative;
+    top: 0.2rem;
   }
 
   &__logo {
     display: flex;
-    margin-right: auto;
     width: 15rem;
-    position: relative;
+    margin-right: auto;
     user-select: none;
-  }
-  &__logo-text {
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 3rem;
-    text-align: center;
-    z-index: 1;
-    width: 100%;
-    margin-bottom: 0;
-  }
-  &__logo-bg {
-    background: yellow;
-    width: 100%;
-    height: 3.3rem;
-    position: absolute;
-    top: 1rem;
-    z-index: 0;
-  }
 
-  &__menu {
+    > * {
+      width: 100%;
+      margin-bottom: 0;
+      font-size: $font-size-header-base * 1.5;
+      font-weight: 500;
+      line-height: $font-size-header-base * 1.5 - 0.2rem;
+      text-align: center;
+    }
+  }
+  &__menu ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    > * {
+    margin: 0;
+
+    li {
       display: block;
-      position: relative;
+      margin: 0 3rem;
       color: inherit;
-      margin: 1rem 2rem;
-      span {
-        position: relative;
-        z-index: 1;
-      }
-      &:after {
-        position: absolute;
-        bottom: 0.75rem;
-        left: 0;
-        right: 0;
-        width: 0;
-        height: 1.6rem;
-        background-color: #fff72e;
-        content: "";
-        transition: all 0.3s linear;
-        z-index: 0;
-      }
-      &:hover {
-        &:after {
-          width: 100%;
-        }
+      line-height: $header-height;
+      a {
+        color: inherit;
       }
     }
   }
