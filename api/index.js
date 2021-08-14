@@ -1,7 +1,7 @@
 import express from 'express'
 import Mailchimp from 'mailchimp-api-v3'
 
-const apiKey = '17e83417a5bc95b80cecc48344d97362-us1';
+const apiKey = process.env.MAILCHIMP_API_KEY;
 const audienceId = '01d3f8d745';
 const mailchimp = new Mailchimp(apiKey);
 
