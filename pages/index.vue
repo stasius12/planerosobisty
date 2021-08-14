@@ -70,10 +70,9 @@
           <li>Być <span class="font-weight-bold">efektywnym</span> jak nigdy dotąd</li>
           <li><span class="font-weight-bold">Otrzymać bonusowego ebooka</span></li>
         </ol>
-        <form>
-          <input class="font-primary" type="email" placeholder="twój email" />
-          <button class="button" type="submit">Zapisz mnie</button>
-        </form>
+        <client-only>
+          <mailchimp-signup></mailchimp-signup>
+        </client-only>
       </div>
     </section>
     <section class="social">
@@ -99,7 +98,6 @@
         </nuxt-link>
       </article>
     </section>
-
     <!--    <div class="home_page__circle">-->
     <!--      <img class="home_page__circle__img" src="~assets/images/beauty-script/home-page-quote.png" />-->
     <!--    </div>-->
@@ -112,8 +110,9 @@
 import HeaderSection from '@/components/HeaderSection'
 import BlogSection from '@/components/BlogSection'
 import AboutMeSection from '@/components/AboutMeSection'
+import MailchimpSignup from '@/components/MailchimpSignup'
 export default {
-  components: { AboutMeSection, BlogSection },
+  components: { MailchimpSignup, AboutMeSection, BlogSection },
   async asyncData({ $content }) {
     const blogs = await $content('blog').fetch()
     return {
@@ -284,6 +283,7 @@ $circle-radius: 25vw;
     display: flex;
 
     input {
+      height: 100%;
       background: transparent;
       border: none;
       border-bottom: 1px solid black;
@@ -293,8 +293,13 @@ $circle-radius: 25vw;
       &:focus-visible {
         outline: none;
       }
+
       &::placeholder {
         color: black;
+      }
+
+      &.invalid {
+        border-bottom-color: $error;
       }
     }
 
@@ -305,6 +310,15 @@ $circle-radius: 25vw;
       &:hover {
         background-color: lighten($grey-3, 20%);
       }
+    }
+
+    .first-error {
+      position: absolute;
+      color: $error;
+    }
+
+    .success-message {
+      position: absolute;
     }
   }
 }
