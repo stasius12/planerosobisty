@@ -1,6 +1,6 @@
-import express from 'express'
-import Mailchimp from 'mailchimp-api-v3'
-import serverless from 'serverless-http';
+const express = require('express');
+const Mailchimp = require('mailchimp-api-v3');
+const serverless = require('serverless-http');
 
 const apiKey = process.env.MAILCHIMP_API_KEY;
 const audienceId = '01d3f8d745';
