@@ -37,7 +37,7 @@ export default {
   ],
 
   serverMiddleware: [
-    { path: "/api", handler: "~/functions/api/index.js" },
+    { path: "/api", handler: "~/functions/api.js" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
