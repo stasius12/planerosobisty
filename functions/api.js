@@ -8,8 +8,9 @@ const mailchimp = new Mailchimp(apiKey);
 
 const app = express()
 app.use(express.json())
+const router = express.Router();
 
-app.post('/subscribe', async(req, res) => {
+router.post('/subscribe', async(req, res) => {
   const { email: email_address } = req.body;
   try{
     const response = await mailchimp.request({
@@ -27,5 +28,7 @@ app.post('/subscribe', async(req, res) => {
   }
 })
 
-module.exports.path = '/api';
+app.use('/.netlify/functions/api', router);
+
+module.exports = app;
 module.exports.handler = serverless(app);
