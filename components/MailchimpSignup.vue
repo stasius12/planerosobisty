@@ -81,7 +81,7 @@ export default {
 
       const formData = { email: this.form.email.toLowerCase() }
       try {
-        const { data, status } = await axios.post('/.netlify/functions/api/subscribe', formData)
+        const { data, status } = await axios.post('/.netlify/functions/mailchimp-subscribe', formData)
         console.log(data)
         this.response.status = status
         this.response.message = `${data.email_address} został zarejestrowany!`
