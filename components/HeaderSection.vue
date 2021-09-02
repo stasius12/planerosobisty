@@ -5,7 +5,7 @@
     </nuxt-link>
     <nav class="header__menu">
       <ul class="list-none">
-        <li><nuxt-link :to="{name: 'index'}">Sklep</nuxt-link></li>
+        <li><nuxt-link :to="{name: 'sklep'}">Sklep</nuxt-link></li>
         <li><nuxt-link :to="{name: 'index', hash: '#blogs'}">Blog</nuxt-link></li>
         <li><nuxt-link :to="{name: 'index'}">O mnie</nuxt-link></li>
         <li><nuxt-link :to="{name: 'index'}">Kontakt</nuxt-link></li>
