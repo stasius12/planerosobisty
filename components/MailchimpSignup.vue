@@ -61,24 +61,6 @@ export default {
     async subscribe(event) {
       this.response.errorMessage = ''
 
-      // try {
-      //   const response = await axios.post(
-      //     'https://us1.api.mailchimp.com/3.0/lists/01d3f8d745/members/',
-      //     {
-      //       email_address: this.form.email.toLowerCase(),
-      //       status: 'subscribed',
-      //     },
-      //     {
-      //       auth: {
-      //         username: 'anystring',
-
-      //       },
-      //     }
-      //   )
-      // } catch (error) {
-      //   console.log(error)
-      // }
-
       const formData = { email: this.form.email.toLowerCase() }
       try {
         const { data, status } = await axios.post('/.netlify/functions/api/subscribe', formData)

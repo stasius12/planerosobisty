@@ -36,10 +36,6 @@ export default {
     { src: '~/plugins/vee-validate', ssr: false },
   ],
 
-  serverMiddleware: [
-    { path: "/api", handler: "~/functions/api.js" },
-  ],
-
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -67,13 +63,22 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/toast',
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
+  toast: {
+    position: 'bottom-center',
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  env: {
+    domainName: process.env.DOMAIN_NAME,
+  },
 
   hooks: {
     'content:file:beforeParse': (file) => {
