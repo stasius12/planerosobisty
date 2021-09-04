@@ -3,6 +3,7 @@ export default {
   target: 'static',
 
   generate: {
+    fallback: true,
     exclude: [
       /^\/order/
     ]
