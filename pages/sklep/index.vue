@@ -10,6 +10,8 @@
           <button type="submit">Buy now</button>
         </form>
       </li>
+
+      {{ $cookies.get("cookie-name")}}
     </ul>
   </div>
 </template>
@@ -29,13 +31,18 @@ export default {
       console.error(error)
     }
 
-    return { products }
+    return { products, cook: "" }
   },
   mounted() {
     if (this.$nuxt.context.query.error) {
       this.$toast.error('Oops...Something went wrong', { duration: 3000 });
       this.$router.replace({ name: 'sklep' })
     }
+
+    this.$cookies.set('cookie-name', { hello: 1 }, {
+      path: '/',
+      maxAge: 60 * 60 * 24 * 7
+    })
   }
 }
 </script>

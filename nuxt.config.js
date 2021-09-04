@@ -1,6 +1,7 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  ssr: false,
 
   generate: {
     fallback: true,
@@ -71,6 +72,7 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/toast',
+    'cookie-universal-nuxt',
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
