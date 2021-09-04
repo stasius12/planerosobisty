@@ -9,22 +9,22 @@
 import axios from 'axios'
 
 export default {
-  async asyncData({ query }) {
-    let customer = {};
-    const sessionID = query.session_id;
+  data() {
+    return {
+      customer: {},
+    }
+  },
+  async fetch() {
+    const sessionID = this.$nuxt.context.query.session_id;
 
     if (sessionID) {
       try {
         const rawSession = await axios.get(`${process.env.domainName}/.netlify/functions/api/checkout-sessions/${sessionID}`);
         const { retrievedCustomer } = rawSession.data
-        customer = retrievedCustomer
+        this.customer = retrievedCustomer
       } catch {
         console.log("Error")
       }
-    }
-
-    return {
-      customer
     }
   }
 }
