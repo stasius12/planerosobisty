@@ -11,7 +11,8 @@
         </form>
       </li>
 
-      {{ $cookies.get("cookie-name")}}
+      <button @click="increase">Click me</button>
+      {{ count }}
     </ul>
   </div>
 </template>
@@ -21,6 +22,11 @@ import axios from 'axios'
 
 export default {
   name: 'index',
+  data() {
+    return {
+      count: 0,
+    }
+  },
   async asyncData() {
     let products = [];
 
@@ -39,10 +45,16 @@ export default {
       this.$router.replace({ name: 'sklep' })
     }
 
-    this.$cookies.set('cookie-name', { hello: 1 }, {
-      path: '/',
-      maxAge: 60 * 60 * 24 * 7
-    })
+    this.count = this.$cookies.get('cookie-name')["count"];
+  },
+  methods: {
+    increase() {
+      this.count += 1;
+      this.$cookies.set('cookie-name', { count: this.count }, {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 7
+      })
+    }
   }
 }
 </script>
