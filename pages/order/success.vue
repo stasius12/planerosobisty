@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Your order has been accepted!</h1>
-    <p>Thank you <strong>{{ session.retrievedCustomer.name }}</strong> for placing an order.</p>
+    <p>Thank you <strong>{{ customer.name }}</strong> for placing an order.</p>
   </div>
 </template>
 
@@ -9,22 +9,22 @@
 import axios from 'axios'
 
 export default {
-  name: 'success.vue',
   async asyncData({ query }) {
-    let session = {};
+    let customer = {};
     const sessionID = query.session_id;
 
     if (sessionID) {
       try {
         const rawSession = await axios.get(`${process.env.domainName}/.netlify/functions/api/checkout-sessions/${sessionID}`);
-        session = rawSession.data
+        const { retrievedCustomer } = rawSession.data
+        customer = retrievedCustomer
       } catch {
         console.log("Error")
       }
     }
 
     return {
-      session
+      customer
     }
   }
 }

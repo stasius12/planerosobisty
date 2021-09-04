@@ -26,8 +26,8 @@ const checkoutSessionInfo = async (req, res) => {
   if (sessionID) {
     try {
       const session = await stripe.checkout.sessions.retrieve(sessionID)
-      session.retrievedCustomer = await stripe.customers.retrieve(session.customer)
-      res.status(200).json(session)
+      const retrievedCustomer = await stripe.customers.retrieve(session.customer)
+      res.status(200).json({ session, retrievedCustomer })
     } catch (error) {
       res.status(500).send(error)
     }
