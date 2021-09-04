@@ -2,6 +2,12 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  generate: {
+    exclude: [
+      /^\/order/
+    ]
+  },
+
   server: {
     host: '0'
   },
