@@ -53,6 +53,7 @@ export default {
     // '@nuxtjs/eslint-module',
     '@nuxtjs/style-resources',
     '@nuxtjs/moment',
+    '@nuxtjs/tailwindcss',
   ],
 
   styleResources: {
