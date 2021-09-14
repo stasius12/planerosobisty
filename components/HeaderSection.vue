@@ -1,16 +1,18 @@
 <template>
-  <header class="header">
-    <nuxt-link :to="{name: 'index'}" class="header__logo">
-      <h1>PLANER<br>OSOBISTY</h1>
-    </nuxt-link>
-    <nav class="header__menu">
-      <ul class="list-none">
-        <li><nuxt-link :to="{name: 'sklep'}">Sklep</nuxt-link></li>
-        <li><nuxt-link :to="{name: 'index', hash: '#blogs'}">Blog</nuxt-link></li>
-        <li><nuxt-link :to="{name: 'index'}">O mnie</nuxt-link></li>
-        <li><nuxt-link :to="{name: 'index'}">Kontakt</nuxt-link></li>
-      </ul>
-    </nav>
+  <header>
+    <div class="header">
+      <nuxt-link :to="{name: 'index'}" class="header__logo">
+        <h1>PLANER<br>OSOBISTY</h1>
+      </nuxt-link>
+      <nav class="header__menu">
+        <ul class="list-none">
+          <li><nuxt-link :to="{name: 'sklep'}">Sklep</nuxt-link></li>
+          <li><nuxt-link :to="{name: 'index', hash: '#blogs'}">Blog</nuxt-link></li>
+          <li><nuxt-link :to="{name: 'index'}">O mnie</nuxt-link></li>
+          <li><nuxt-link :to="{name: 'index'}">Kontakt</nuxt-link></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 </template>
 
@@ -22,6 +24,11 @@ name: "HeaderSection"
 
 <style lang="scss">
 $font-size-header-base: 2.5rem;
+
+header {
+  padding: 4rem 0;
+}
+
 .header {
   position: relative;
   display: flex;
@@ -29,7 +36,6 @@ $font-size-header-base: 2.5rem;
   justify-content: space-between;
   width: 100%;
   height: $header-height;
-  margin: 4rem 0;
   background: $primary;
   font: 400 $font-size-header-base 'Bebas Neue', serif;
   color: black;
