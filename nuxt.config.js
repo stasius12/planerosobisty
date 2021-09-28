@@ -30,9 +30,12 @@ export default {
       { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' },
       { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       { rel: 'manifest', href: '/manifest.webmanifest' },
+      { rel: 'stylesheet', href: 'https://geowidget.easypack24.net/css/easypack.css' },
     ],
     script: [
       { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+      { src: 'https://js.stripe.com/v3/' },
+      { src: 'https://geowidget.easypack24.net/js/sdk-for-javascript.js', async: true },
     ],
   },
 
@@ -51,9 +54,9 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     // '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
     '@nuxtjs/moment',
-    '@nuxtjs/tailwindcss',
   ],
 
   styleResources: {

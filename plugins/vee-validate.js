@@ -1,17 +1,23 @@
 import Vue from 'vue';
-import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
+import { ValidationObserver, localize, setInteractionMode, extend } from 'vee-validate'
 
-import { required, email } from 'vee-validate/dist/rules';
+import { required, email, min, digits, regex } from 'vee-validate/dist/rules';
+import pl from 'vee-validate/dist/locale/pl.json';
 
-// Add the required rule
+localize('pl', pl);
+
 extend('required', {
   ...required,
-  message: (field) => `Pole ${field} jest wymagane.`
-})
-// Add the email rule
-extend('email', {
-  ...email,
-  message: (field) => `Pole ${field} nie jest poprawne.`
-})
+  message: 'To pole jest wymagane',
+});
+extend('email', email);
+extend('min', min);
+extend('digits', digits);
+extend('postcode', {
+  validate: (value) => /[0-9]{2}-[0-9]{3}/.test(value),
+  message: `To nie jest poprawny kod pocztowy`
+});
 
 Vue.component('ValidationObserver', ValidationObserver)
+
+setInteractionMode('eager');

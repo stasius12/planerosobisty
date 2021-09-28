@@ -20,13 +20,31 @@ const listAllProducts = async (req, res) => {
   }
 }
 
+const retrieveProduct = async (req, res) => {
+  const { productID } = req.params
+
+  try {
+    const product = await stripe.products.retrieve(productID)
+    const prices = await stripe.prices.list({
+      product: productID,
+      active: true,
+    })
+
+    res.status(200).json({ product, price: prices.data[0] })
+  } catch (error) {
+    res.status(500).send(error)
+  }
+}
+
 const checkoutSessionInfo = async (req, res) => {
   const { sessionID } = req.params
 
   if (sessionID) {
     try {
       const session = await stripe.checkout.sessions.retrieve(sessionID)
-      const retrievedCustomer = await stripe.customers.retrieve(session.customer)
+      const retrievedCustomer = await stripe.customers.retrieve(
+        session.customer
+      )
       res.status(200).json({ session, retrievedCustomer })
     } catch (error) {
       res.status(500).send(error)
@@ -42,7 +60,8 @@ const createCheckoutSession = async (req, res) => {
   if (!productID) return res.redirect(303, `/sklep/?error=true`)
 
   const rawPrices = await stripe.prices.list({
-    product: productID, active: true
+    product: productID,
+    active: true,
   })
 
   if (!rawPrices) return res.redirect(303, `/sklep/?error=true`)
@@ -54,6 +73,7 @@ const createCheckoutSession = async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: prices,
     mode: 'payment',
+    customer: 'cus_KALI7bRYUSeiLJ',
     success_url: `${process.env.DOMAIN_NAME}/order/success/?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${process.env.DOMAIN_NAME}?canceled=true`,
     payment_method_types: ['card', 'p24'],
@@ -62,10 +82,23 @@ const createCheckoutSession = async (req, res) => {
     shipping_address_collection: {
       allowed_countries: ['PL'],
     },
+    billing_address_collection: 'required',
   })
   res.redirect(303, session.url)
 }
 
+const createPaymentIntent = async (req, res) => {
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: 1099,
+    currency: 'pln',
+    payment_method_types: ['p24'],
+  })
+
+  res.status(200).json(paymentIntent.client_secret)
+}
+
+module.exports.retrieveProduct = retrieveProduct
 module.exports.listAllProducts = listAllProducts
 module.exports.createCheckoutSession = createCheckoutSession
 module.exports.checkoutSessionInfo = checkoutSessionInfo
+module.exports.createPaymentIntent = createPaymentIntent

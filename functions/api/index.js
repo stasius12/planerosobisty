@@ -17,10 +17,12 @@ router.post('/subscribe', mailchimp.subscribe);
 
 // Stripe products
 router.get('/products', stripe.listAllProducts);
+router.get('/products/:productID', stripe.retrieveProduct);
 
 // Stripe checkout
 router.post('/create-checkout-session', stripe.createCheckoutSession);
 router.get('/checkout-sessions/:sessionID', stripe.checkoutSessionInfo);
+router.post('/create-payment-intent', stripe.createPaymentIntent);
 
 
 module.exports = app;

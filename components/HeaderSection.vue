@@ -1,15 +1,72 @@
 <template>
   <header>
-    <div class="header">
-      <nuxt-link :to="{name: 'index'}" class="header__logo">
-        <h1>PLANER<br>OSOBISTY</h1>
+    <div
+      class="header relative w-full flex items-center justify-between text-black"
+    >
+      <nuxt-link :to="{ name: 'index' }">
+        <img src="@/assets/images/logo.svg" width="200" class="" />
       </nuxt-link>
-      <nav class="header__menu">
-        <ul class="list-none">
-          <li><nuxt-link :to="{name: 'sklep'}">Sklep</nuxt-link></li>
-          <li><nuxt-link :to="{name: 'index', hash: '#blogs'}">Blog</nuxt-link></li>
-          <li><nuxt-link :to="{name: 'index'}">O mnie</nuxt-link></li>
-          <li><nuxt-link :to="{name: 'index'}">Kontakt</nuxt-link></li>
+      <nav class="header__menu hidden md:block">
+        <ul class="list-none flex justify-between m-0">
+          <li><nuxt-link :to="{ name: 'sklep' }">Sklep</nuxt-link></li>
+          <li>
+            <nuxt-link :to="{ name: 'index', hash: '#blogs' }">Blog</nuxt-link>
+          </li>
+          <li><nuxt-link :to="{ name: 'index' }">O mnie</nuxt-link></li>
+          <li><nuxt-link :to="{ name: 'index' }">Kontakt</nuxt-link></li>
+        </ul>
+      </nav>
+      <div class="md:hidden flex items-center mr-10 z-20">
+        <button
+          class="outline-none mobile-menu-button flex"
+          @click="$emit('toggleMobileMenu')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-20 transition-all"
+            :class="{'w-20': !showMobileMenu, 'w-0': showMobileMenu}"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-20 transition-all"
+            :class="{'w-20': showMobileMenu, 'w-0': !showMobileMenu}"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav
+        id="mobile-menu"
+        class="header__mobile absolute right-0 top-0 h-screen pt-48 flex items-center justify-center text-black z-10 overflow-hidden"
+        :class="{ 'w-0': !showMobileMenu, 'w-full': showMobileMenu }"
+      >
+        <ul class="list-none flex flex-col items-center mb-72">
+          <li>
+            <nuxt-link :to="{ name: 'sklep' }">Sklep</nuxt-link>
+          </li>
+          <li>
+            <nuxt-link :to="{ name: 'index', hash: '#blogs' }">Blog</nuxt-link>
+          </li>
+          <li>
+            <nuxt-link :to="{ name: 'index' }">O mnie</nuxt-link>
+          </li>
+          <li>
+            <nuxt-link :to="{ name: 'index' }">Kontakt</nuxt-link>
+          </li>
         </ul>
       </nav>
     </div>
@@ -18,54 +75,25 @@
 
 <script>
 export default {
-name: "HeaderSection"
+  name: 'HeaderSection',
+  props: {
+    showMobileMenu: Boolean,
+  }
 }
 </script>
 
 <style lang="scss">
 $font-size-header-base: 2.5rem;
 
-header {
-  padding: 4rem 0;
-}
-
 .header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: $header-height;
-  background: $primary;
   font: 400 $font-size-header-base 'Bebas Neue', serif;
-  color: black;
 
-  > * {
+  > .header__menu {
     position: relative;
     top: 0.2rem;
   }
 
-  &__logo {
-    display: flex;
-    width: 15rem;
-    margin-right: auto;
-    user-select: none;
-
-    > * {
-      width: 100%;
-      margin-bottom: 0;
-      font-size: $font-size-header-base * 1.5;
-      font-weight: 500;
-      line-height: $font-size-header-base * 1.5 - 0.2rem;
-      text-align: center;
-    }
-  }
   &__menu ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0;
-
     li {
       display: block;
       margin: 0 3rem;
@@ -73,6 +101,24 @@ header {
       line-height: $header-height;
       a {
         color: inherit;
+      }
+    }
+  }
+
+  &__mobile {
+    background-color: #fff72e;
+    transition: width 500ms ease;
+    li {
+      padding: 2rem;
+      a {
+        display: block;
+        color: black;
+        text-align: center;
+        transition: background-color 200ms ease-in-out;
+
+        &.nuxt-link-exact-active {
+          text-decoration: underline;
+        }
       }
     }
   }

@@ -1,5 +1,7 @@
 * { box-sizing: border-box; }
 
+div#__nuxt, #__layout, #__layout>div, #app { min-height: 100vh; }
+
 html{
   height: 100%;
 }
@@ -84,11 +86,9 @@ section {
   }
 }
 
-button,
 .button {
   display: inline-block;
   padding: 1.2rem 3rem 1rem 3rem;
-  margin: 0;
   text-decoration: none;
   font-family: $font-family-base;
   font-weight: 400;
@@ -113,6 +113,34 @@ button,
   }
 }
 
+.button.button-outline {
+  background-color: #ffffff;
+  color: #525b60;
+  border: 1px solid #525b60;
+
+  &:hover {
+    background-color: #525b60;
+    color: #ffffff;
+  }
+}
+
+.button.button-icon {
+  background-color: transparent;
+  color: unset;
+  padding: 0;
+
+  &:hover {
+    background-color: unset;
+    svg {
+      fill: lighten(black, 20%);
+    }
+  }
+
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
 .button.button-primary {
   background-color: $primary;
   color: #000000;
@@ -122,46 +150,76 @@ button,
   }
 }
 
-button:focus,
 .button:focus {
   outline: none;
 }
 
-button:active,
 .button:active {
   transform: scale(0.95);
 }
 
-.text-input {
-  display: flex;
-  flex-direction: column;
+//.text-input {
+//  display: flex;
+//  flex-direction: column;
+//
+//  &__label {
+//    margin-bottom: 4px;
+//  }
+//
+//  &__field {
+//    transition: border .1s ease;
+//    border: 1px solid $grey-3;
+//    background-color: white;
+//    padding: 0 8px;
+//    height: 36px;
+//    font-size: 16px;
+//
+//    &:active,
+//    &:hover {
+//      outline: none;
+//      border: 1px solid $primary;
+//    }
+//
+//    &:focus {
+//      outline-offset: 0;
+//      border: 1px solid $primary;
+//    }
+//
+//    &:disabled {
+//      background-color: grey;
+//      pointer-events: none;
+//    }
+//  }
+//}
 
-  &__label {
-    margin-bottom: 4px;
+.text-input {
+  height: 100%;
+  background: transparent;
+  border-bottom: 1px solid black;
+
+  &:focus-visible {
+    outline: none;
   }
 
-  &__field {
-    transition: border .1s ease;
-    border: 1px solid $grey-3;
-    background-color: white;
-    padding: 0 8px;
-    height: 36px;
-    font-size: 16px;
+  &::placeholder {
+    color: black;
+  }
+}
 
-    &:active,
-    &:hover {
-      outline: none;
-      border: 1px solid $primary;
-    }
+.easypack-widget {
+  .search-widget {
+    background-color: #f3f4f6 !important;
+  }
+  .map-list-row .map-list-flex .list-widget {
+    background-color: #f3f4f6 !important;
 
-    &:focus {
-      outline-offset: 0;
-      border: 1px solid $primary;
-    }
-
-    &:disabled {
-      background-color: grey;
-      pointer-events: none;
+    .list-wrapper ul li a {
+      &:hover {
+        background-color: #f9fafb !important;
+      }
+      .title {
+        margin: 0;
+      }
     }
   }
 }

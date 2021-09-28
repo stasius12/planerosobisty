@@ -1,7 +1,11 @@
 <template>
   <div>
-    <header-section />
-    <Nuxt />
+    <header-section
+      :show-mobile-menu="showMobileMenu"
+      @toggleMobileMenu="toggleMobileMenu"
+    />
+    <Nuxt v-if="!$slots.default" />
+    <slot />
   </div>
 </template>
 
@@ -9,6 +13,24 @@
 <script>
 import HeaderSection from '@/components/HeaderSection'
 export default {
-  components: { HeaderSection }
+  components: { HeaderSection },
+  data() {
+    return {
+      showMobileMenu: false,
+    }
+  },
+  methods: {
+    toggleMobileMenu() {
+      this.showMobileMenu = !this.showMobileMenu
+      if (this.showMobileMenu) document.body.classList.add('overflow-hidden')
+      else document.body.classList.remove('overflow-hidden')
+    },
+  },
+  watch: {
+    $route() {
+      this.showMobileMenu = false
+      document.body.classList.remove('overflow-hidden')
+    },
+  },
 }
 </script>
