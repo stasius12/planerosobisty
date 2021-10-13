@@ -1,6 +1,7 @@
 <template>
   <label>
     <input type="radio" :checked="shouldBeChecked" :value="value" @change="$emit('change', value)">
+    <slot />
   </label>
 </template>
 

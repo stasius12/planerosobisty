@@ -61,3 +61,9 @@ collections:
       - label: 'Body'
         name: 'body'
         widget: 'markdown'
+      - label: 'List'
+        name: 'list'
+        widget: 'list'
+        fields:
+          - {label: Thumbnail, name: 'ttt', widget: 'image'}
+

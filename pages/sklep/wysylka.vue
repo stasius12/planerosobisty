@@ -1,36 +1,22 @@
 <template>
   <div>
-    <div class="lg:w-2/3 lg:mx-auto">
+    <div class=" lg:mx-auto">
       <h1 class="text-center mt-10">Paczkomat czy kurier?</h1>
-      <div class="shipment-select w-full self-center grid lg:flex">
-        <label class="m-4 lg:w-1/2">
+      <div class="shipment-select w-full self-center grid md:flex">
+        <label class="m-4 md:w-1/2" v-for="method in shippingMethods" :key="method.id">
           <input
             type="radio"
-            name="inpost_locker_standard"
+            :id="method.id"
+            :name="method.metadata.type"
             v-model="shipmentDetails.method"
-            value="inpost_locker_standard"
+            :value="method.metadata.type"
             class="absolute hidden"
-            @change="showLockerMap"
+            @change="shippingMethodChanged"
           >
           <div class="p-4 border-2 border-gray-100 bg-gray-100 flex flex-col items-center cursor-pointer">
             <img src="~/assets/images/inpost/logo_dark.png" alt="InPost logo" width="100" />
-            <span class="text-3xl">InPost Paczkomaty 24/7</span>
-            <span class="font-2xl">13,99 zł</span>
-          </div>
-        </label>
-        <label class="m-4 lg:w-1/2">
-          <input
-            type="radio"
-            name="inpost_locker_standard"
-            v-model="shipmentDetails.method"
-            value="inpost_courier"
-            class="absolute hidden"
-            @change="hideLockerMap"
-          >
-          <div class="p-4 border-2 border-gray-100 bg-gray-100 flex flex-col items-center cursor-pointer">
-            <img src="~/assets/images/inpost/logo_dark.png" alt="InPost logo" width="100" />
-            <span class="text-3xl">InPost Kurier</span>
-            <span class="font-2xl">14,99 zł</span>
+            <span class="text-3xl">{{ method.metadata.name }}</span>
+            <span class="font-2xl">{{ method.price.unit_amount / 100 }} zł</span>
           </div>
         </label>
       </div>
@@ -68,6 +54,7 @@
 
 <script>
 import BaseRadio from '../../components/BaseRadio'
+import axios from 'axios'
 
 export default {
   name: 'wysylka',
@@ -100,12 +87,24 @@ export default {
       map: null,
     }
   },
+  async asyncData() {
+    let shippingMethods = [];
+
+    try {
+      const response = await axios.get(`${process.env.domainName}/.netlify/functions/api/shipping`);
+      shippingMethods = response.data;
+    } catch (error) {
+      console.error(error)
+    }
+
+    return { shippingMethods }
+  },
   computed: {
     isLockerMethodChosen() {
-      return this.shipmentDetails.method === 'inpost_locker_standard';
+      return this.shipmentDetails.method === 'locker';
     },
     isCourierMethodChosen() {
-      return this.shipmentDetails.method === 'inpost_courier';
+      return this.shipmentDetails.method === 'courier';
     },
     locker: {
       get() {
@@ -119,7 +118,8 @@ export default {
   watch: {
     shipmentDetails: {
       deep: true,
-      handler() {
+      handler(event) {
+        console.log(event)
         if (this.areShipmentDetailsValid()) {
           if (this.isCourierMethodChosen) this.locker = null;
           this.$store.dispatch('checkout/updateShipmentDetails', {
@@ -142,6 +142,11 @@ export default {
     hideLockerMap() {
       this.map.hidden = true;
     },
+    shippingMethodChanged(event) {
+      this.shipmentDetails.priceID = event.target.id
+      if (this.isCourierMethodChosen) this.hideLockerMap()
+      else this.showLockerMap()
+    },
     areShipmentDetailsValid() {
       if (this.isLockerMethodChosen) return !!this.locker;
       return this.isCourierMethodChosen;
@@ -152,7 +157,7 @@ export default {
 
 <style lang="scss" scoped>
 .shipment-select {
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   label {
     input:checked + div {
       border-color: #6B7280;

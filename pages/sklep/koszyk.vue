@@ -53,20 +53,26 @@
           </tr>
           <tr class="border-t-2">
             <td colspan="3" class="pt-14">Kod promocyjny</td>
-            <td colspan="2" class="pt-14">- 13.45 zł</td>
+            <td colspan="2" class="pt-14">{{ couponAmountOff / 100 }} zł</td>
           </tr>
           <tr class="font-weight-bold">
             <td colspan="3" class="">Wartość zamówienia</td>
-            <td colspan="2" class="">{{ total }} zł</td>
+            <td colspan="2" class="">{{ total / 100 }} zł</td>
           </tr>
         </tbody>
       </table>
       <div class="sm:hidden mt-10">
-        <div v-for="item in cartItems" :key="item.id" class="flex items-center py-5">
+        <div
+          v-for="item in cartItems"
+          :key="item.id"
+          class="flex items-center py-5"
+        >
           <img width="60" :src="item.image" :alt="item.name" />
           <div class="flex flex-col ml-6">
             <span class="text-3xl mb-2">{{ item.name }}</span>
-            <span class="text-2xl font-weight-bold">{{ item.price / 100 }} zł</span>
+            <span class="text-2xl font-weight-bold"
+              >{{ item.price / 100 }} zł</span
+            >
           </div>
           <div class="select-none ml-auto">
             <input
@@ -99,20 +105,23 @@
         </div>
         <div class="border-t-2 mt-5 py-3 flex justify-between">
           <div>Kod promocyjny</div>
-          <div>- 13.45 zł</div>
+          <div>{{ couponAmountOff / 100 }} zł</div>
         </div>
         <div class="py-3 flex justify-between font-weight-bold">
           <div class="">Wartość zamówienia</div>
-          <div class="">{{ total }} zł</div>
+          <div class="">{{ total / 100 }} zł</div>
         </div>
       </div>
       <div class="mt-20 sm:p-4 relative">
-        <form class="flex flex-col sm:flex-row">
+        <form class="flex flex-col sm:flex-row" @submit.prevent="redeemCode">
           <div class="sm:w-1/2 m-4">
-            <input
+            <base-input
+              name="kod-promocyjny"
               type="text"
-              class="uppercase w-full h-full"
-              placeholder="Wpisz kod promocyjny"
+              outerClass="uppercase"
+              label="Wpisz kod promocyjny"
+              labelTop="5"
+              v-model="promoCode"
             />
           </div>
           <button class="button button-outline sm:w-1/2 m-4">Aplikuj</button>
@@ -132,31 +141,91 @@ import { mapActions, mapGetters } from 'vuex'
 
 export default {
   layout: 'checkout',
+  data() {
+    return {
+      promoCode: '',
+    }
+  },
   computed: {
-    ...mapGetters('checkout', ['cartItems']),
-    total() {
-      return (
-        Math.round(
-          this.cartItems.reduce(
-            (sum, { price, quantity }) => sum + quantity * price,
-            0
-          )
-        ) / 100
+    ...mapGetters('checkout', ['cartItems', 'cartItem', 'coupon']),
+    couponApplied() {
+      return this.coupon && this.coupon.id && this.coupon.percent_off
+    },
+    rawTotal() {
+      return this.cartItems.reduce(
+        (sum, { price, quantity }) => sum + quantity * price,
+        0
       )
     },
+    total() {
+      return Math.round(this.rawTotal * ((100 - this.coupon.percent_off) / 100))
+    },
+    couponAmountOff() {
+      if (this.couponApplied) {
+        return -Math.round(this.rawTotal - this.total)
+      }
+      return 0
+    },
+  },
+  mounted() {
+    if (this.couponApplied) this.promoCode = this.coupon.code
   },
   async beforeRouteLeave(to, from, next) {
-    if (to.name !== 'sklep-dane-zamowienia' || this.cartItems.length) {
+    if (
+      to.name !== 'sklep-dane-zamowienia' ||
+      (this.cartItems.length && this.total)
+    ) {
+      this.$toasted.clear()
       next()
     }
   },
   methods: {
     ...mapActions('checkout', ['removeCartItem', 'changeQuantity']),
-    changeQuantityForProduct(event) {
-      this.changeQuantity({
-        productID: event.target.id,
-        newQuantity: event.target.value,
-      })
+    async changeQuantityForProduct(event) {
+      const productID = event.target.id
+      const newQuantity = event.target.value
+
+      this.$toasted.clear()
+
+      if (!newQuantity || parseInt(newQuantity) === 0) {
+        await this.$toasted.show('Chcesz usunąć ten produkt z koszyka?', {
+          theme: 'toasted-primary',
+          position: 'top-center',
+          duration: 10000,
+          keepOnHover: true,
+          action: [
+            {
+              text: 'Tak',
+              onClick: (e, toastObject) => {
+                this.removeCartItem(event.target.id)
+                toastObject.goAway(0)
+              },
+            },
+            {
+              text: 'Nie',
+              onClick: (e, toastObject) => {
+                toastObject.goAway(0)
+              },
+            },
+          ],
+        })
+        if (newQuantity) {
+          const product = this.cartItem(productID);
+          this.changeQuantity({ productID, newQuantity: product ? product.quantity : 1 })
+        }
+      } else {
+        this.changeQuantity({
+          productID,
+          newQuantity,
+        })
+      }
+    },
+    async redeemCode() {
+      try {
+        await this.$store.dispatch('checkout/addCoupon', this.promoCode)
+      } catch (error) {
+        console.log(error)
+      }
     },
   },
 }
