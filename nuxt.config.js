@@ -1,5 +1,4 @@
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   ssr: false,
 
@@ -76,6 +75,7 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/toast',
+    '@nuxtjs/axios',
     'cookie-universal-nuxt',
   ],
 
@@ -86,11 +86,18 @@ export default {
     position: 'bottom-center',
   },
 
+  publicRuntimeConfig: {
+    axios: {
+      baseURL: `${process.env.DOMAIN_NAME}/.netlify/functions/api/`
+    }
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
   env: {
     domainName: process.env.DOMAIN_NAME,
+    stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
   },
 
   hooks: {

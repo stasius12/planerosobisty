@@ -18,12 +18,14 @@ router.post('/subscribe', mailchimp.subscribe);
 // Stripe products
 router.get('/products', stripe.listAllProducts);
 router.get('/products/:productID', stripe.retrieveProduct);
+router.post('/products/promo-codes/:code', stripe.retrieveAndValidatePromotionCode);
+
+// Shipping methods
+router.get('/shipping', stripe.listAllShippingMethods);
 
 // Stripe checkout
-router.post('/create-checkout-session', stripe.createCheckoutSession);
-router.get('/checkout-sessions/:sessionID', stripe.checkoutSessionInfo);
-router.post('/create-payment-intent', stripe.createPaymentIntent);
-
+router.post('/payment-intent', stripe.createPaymentIntent);
+router.post('/customer', stripe.createCustomer);
 
 module.exports = app;
 module.exports.handler = serverless(app);

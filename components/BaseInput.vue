@@ -1,18 +1,19 @@
 <template>
   <validation-provider
+    :vid="name"
     :name="verboseName"
     :rules="rules"
     :bails="false"
     tag="div"
-    class="floating relative"
+    class="floating relative h-full"
     :class="outerClass"
     v-slot="{ errors, validated, invalid, touched }"
   >
-    <div>
+    <div class="h-full">
       <input
         v-bind="$attrs"
         :id="name"
-        :class="{ 'border-red-600': (touched || validated) && invalid }"
+        :class="[{ 'border-red-600': (touched || validated) && invalid }, innerClass.split(' ')]"
         :name="name"
         :autocomplete="name"
         :value="value"
@@ -20,14 +21,14 @@
         :placeholder="label"
         :required="required"
         @input="$emit('input', $event.target.value)"
-        class="floating__input relative w-full outline-none bg-transparent py-2 z-10 border-gray-200"
+        class="floating__input relative w-full outline-none bg-transparent py-2 z-10 border-gray-200 h-full"
       />
-      <label :for="name" class="floating__label absolute left-0 top-3 z-0">
+      <label :for="name" class="floating__label absolute left-0 z-0" :class="'top-' + labelTop">
         {{ label }}
         <span v-if="required">*</span>
       </label>
     </div>
-    <div class="h-6 text-xl mt-1 text-red-600">{{ errors[0] }}</div>
+    <div class="h-6 text-xl mt-1 text-red-600 absolute">{{ errors[0] }}</div>
   </validation-provider>
 </template>
 
@@ -52,7 +53,14 @@ export default {
     verbose: String,
     type: String,
     rules: String || Object,
+    innerClass: {
+      type: String,
+      default: "",
+    },
     outerClass: String,
+    labelTop: {
+      default: 0,
+    }
   },
   computed: {
     required() {

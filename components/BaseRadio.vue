@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     shouldBeChecked() {
-      return this.modelValue == this.value;
+      return this.modelValue === this.value;
     }
   }
 }

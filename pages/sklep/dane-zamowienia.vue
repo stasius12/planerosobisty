@@ -1,12 +1,8 @@
 <template>
   <div>
     <h1 class="text-center mt-10">Dane zamówienia</h1>
-    <validation-observer
-      ref="personalForm"
-      tag="form"
-      class="px-4 pt-12 pb-6"
-    >
-      <div class="grid sm:grid-cols-2 gap-12 mb-12">
+    <validation-observer ref="personalForm" tag="form" class="px-4 pt-12 pb-6">
+      <div class="grid sm:grid-cols-2 gap-12 mb-20">
         <base-input
           name="given-name"
           type="text"
@@ -22,7 +18,7 @@
           v-model="personalForm.surname"
         />
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-6 gap-12 mb-12">
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-12 mb-20">
         <base-input
           name="street-address"
           type="text"
@@ -45,7 +41,7 @@
           v-model="personalForm.street_house_apartment"
         />
       </div>
-      <div class="grid sm:grid-cols-2 gap-12 mb-12">
+      <div class="grid sm:grid-cols-2 gap-12 mb-20">
         <base-input
           name="postal-code"
           type="text"
@@ -62,7 +58,7 @@
           v-model="personalForm.city"
         />
       </div>
-      <div class="grid sm:grid-cols-2 gap-12 mb-12">
+      <div class="grid sm:grid-cols-2 gap-12 mb-20">
         <base-input
           name="tel"
           type="text"
@@ -94,16 +90,16 @@
       </div>
     </validation-observer>
     <label class="cursor-pointer">
-      <input type="checkbox" v-model="differentShipmentAddress" :value="true" />
+      <input type="checkbox" v-model="shipmentInfoDiffers" :value="true" />
       <span class="ml-2">Wysłać na inny adres?</span>
     </label>
     <validation-observer
-      v-if="differentShipmentAddress"
+      v-if="shipmentInfoDiffers"
       ref="shipmentForm"
       tag="form"
       class="px-4 pt-12 pb-4 mt-4 bg-gray-50"
     >
-      <div class="grid sm:grid-cols-2 gap-12 mb-12">
+      <div class="grid sm:grid-cols-2 gap-12 mb-20">
         <base-input
           name="given-name"
           type="text"
@@ -119,7 +115,7 @@
           v-model="shipmentForm.surname"
         />
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-6 gap-12 mb-12">
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-12 mb-20">
         <base-input
           name="street-address"
           type="text"
@@ -142,7 +138,7 @@
           v-model="shipmentForm.street_house_apartment"
         />
       </div>
-      <div class="grid sm:grid-cols-2 gap-12 mb-12">
+      <div class="grid sm:grid-cols-2 gap-12 mb-20">
         <base-input
           name="postal-code"
           type="text"
@@ -159,7 +155,7 @@
           v-model="shipmentForm.city"
         />
       </div>
-      <div class="grid sm:grid-cols-2 gap-12 mb-12">
+      <div class="grid sm:grid-cols-2 gap-12 mb-20">
         <base-input
           name="tel"
           type="text"
@@ -198,22 +194,11 @@ export default {
   name: 'dane-zamowienia',
   layout: 'checkout',
   components: { BaseInput },
-  created() {
-    this.verifyShipmentInfo()
-  },
-  async beforeRouteLeave(to, from, next) {
-    let isValid = await this.$refs.personalForm.validate();
-    if (this.$refs.shipmentForm) {
-      isValid = isValid && await this.$refs.shipmentForm.validate();
-    }
-
-    if (to.name !== 'sklep-wysylka' || isValid) next();
-  },
   data() {
     return {
       personalForm: { ...this.$store.getters['checkout/personalInfo'] },
       shipmentForm: { ...this.$store.getters['checkout/shipmentInfo'] },
-      differentShipmentAddress: false,
+      shipmentInfoDiffers: this.$store.getters['checkout/shipmentInfoDiffers'],
     }
   },
   watch: {
@@ -223,7 +208,7 @@ export default {
         this.$store.dispatch('checkout/updatePersonalInfo', {
           ...this.personalForm,
         })
-        this.verifyShipmentInfo()
+        this.validateAndUpdateShipmentInfo()
       },
     },
     shipmentForm: {
@@ -234,13 +219,22 @@ export default {
         })
       },
     },
-    differentShipmentAddress(value) {
-      this.verifyShipmentInfo()
+    shipmentInfoDiffers(value) {
+      this.validateAndUpdateShipmentInfo()
+      this.$store.dispatch('checkout/updateShipmentInfoDiffers', value)
     },
   },
+  async beforeRouteLeave(to, from, next) {
+    let isValid = await this.$refs.personalForm.validate()
+    if (this.$refs.shipmentForm) {
+      isValid = isValid && (await this.$refs.shipmentForm.validate())
+    }
+
+    if (to.name !== 'sklep-wysylka' || isValid) next()
+  },
   methods: {
-    verifyShipmentInfo() {
-      if (this.differentShipmentAddress) {
+    validateAndUpdateShipmentInfo() {
+      if (this.shipmentInfoDiffers) {
         this.shipmentForm = { ...EMPTY_PERSONAL }
       } else {
         this.shipmentForm = _.pickBy(this.personalForm, (value, key) => {

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col p-5 xl:w-1/2 mx-auto select-none">
+  <div class="flex flex-col p-5 xl:w-2/3 2xl:w-1/2 mx-auto select-none">
     <div class="p-4">
       <div class="flex items-center">
         <div
@@ -182,7 +182,7 @@
         <slot></slot>
       </div>
       <div class="p-4">
-        <div v-if="previous || next" class="flex p-2 mt-4">
+        <div v-if="previous || next" class="flex p-4 mt-4">
           <nuxt-link
             v-if="previous"
             :to="previous.link"

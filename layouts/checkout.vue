@@ -1,7 +1,7 @@
 <template>
   <default-layout>
     <stepper>
-      <Nuxt x="2" />
+      <Nuxt />
     </stepper>
   </default-layout>
 </template>
