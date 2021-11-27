@@ -1,6 +1,11 @@
 <template>
   <label>
-    <input type="radio" :checked="shouldBeChecked" :value="value" @change="$emit('change', value)">
+    <input
+      type="radio"
+      :checked="shouldBeChecked"
+      :value="value"
+      @change="$emit('change', value)"
+    />
   </label>
 </template>
 
@@ -27,17 +32,15 @@ export default {
     verbose: String,
     rules: String || Object,
     modelValue: {
-      default: ""
+      default: '',
     },
   },
   computed: {
     shouldBeChecked() {
-      return this.modelValue === this.value;
-    }
-  }
+      return this.modelValue === this.value
+    },
+  },
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

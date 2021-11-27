@@ -1,7 +1,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET
 
-exports.handler = async function(event, context) {
+exports.handler = function (event) {
   const payload = event.body
   const sig = event.headers['stripe-signature']
 
@@ -11,10 +11,10 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 400,
       body: `Webhook Error: ${err.message}`,
-    };
+    }
   }
 
   return {
-    statusCode: 200
+    statusCode: 200,
   }
 }

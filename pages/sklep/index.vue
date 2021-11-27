@@ -4,16 +4,16 @@
       <div class="p-2">
         <img
           :src="frontProductImage.src"
-          @click="index = frontProductImage.id"
           class="cursor-pointer"
+          @click="index = frontProductImage.id"
         />
         <div class="grid grid-cols-4 gap-x-4 mt-4">
           <img
             v-for="image in productImages"
             :key="image.id"
             :src="image.src"
-            @click="frontProductImage = { src: image.src, id: image.id }"
             class="cursor-pointer"
+            @click="frontProductImage = { src: image.src, id: image.id }"
           />
         </div>
       </div>
@@ -165,15 +165,11 @@ const WHAT_IS_INSIDE_SECTIONS = [
 ]
 
 export default {
-  name: 'index',
+  name: 'Index',
   async asyncData({ $axios }) {
     let products = []
 
-    try {
-      products = await $axios.$get('products')
-    } catch (error) {
-      console.error(error)
-    }
+    products = await $axios.$get('products')
 
     return { products }
   },
@@ -193,8 +189,8 @@ export default {
       return this.productImages.map(({ src }) => src)
     },
     swiperSections() {
-      return WHAT_IS_INSIDE_SECTIONS;
-    }
+      return WHAT_IS_INSIDE_SECTIONS
+    },
   },
   mounted() {
     if (this.$nuxt.context.query.error) {

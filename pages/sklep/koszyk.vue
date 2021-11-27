@@ -21,20 +21,20 @@
             <td>{{ item.priceAmount / 100 }} zł</td>
             <td class="select-none">
               <input
+                :id="item.id"
                 type="number"
                 class="border-1 border-gray-200 p-2"
-                :id="item.id"
                 :value="item.quantity"
-                @input="changeQuantityForProduct"
                 min="1"
                 max="10"
+                @input="changeQuantityForProduct"
               />
             </td>
             <td>{{ Math.round(item.priceAmount * item.quantity) / 100 }} zł</td>
             <td>
               <button
-                @click="removeItemFromCart(item.id)"
                 class="button button-icon mt-2"
+                @click="removeItemFromCart(item.id)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -54,14 +54,34 @@
           <tr v-if="coupon.code && couponAmountOff" class="border-t-2">
             <td colspan="3" class="pt-14">Kod promocyjny</td>
             <td colspan="2" class="pt-14">
-              <svg v-if="promoLoading" class="animate-spin h-8 w-8 ml-10 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="black" stroke-width="4"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              <svg
+                v-if="promoLoading"
+                class="animate-spin h-8 w-8 ml-10 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="black"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
               </svg>
               <div v-else>{{ couponAmountOff / 100 }} zł</div>
             </td>
           </tr>
-          <tr class="font-weight-bold" :class="{'border-t-2': !coupon.code || !couponAmountOff}">
+          <tr
+            class="font-weight-bold"
+            :class="{ 'border-t-2': !coupon.code || !couponAmountOff }"
+          >
             <td colspan="3" class="">Wartość zamówienia</td>
             <td colspan="2" class="">{{ total / 100 }} zł</td>
           </tr>
@@ -82,18 +102,18 @@
           </div>
           <div class="select-none ml-auto">
             <input
+              :id="item.id"
               type="number"
               class="border-1 border-gray-200 p-2"
-              :id="item.id"
               :value="item.quantity"
-              @input="changeQuantityForProduct"
               min="1"
               max="10"
+              @input="changeQuantityForProduct"
             />
           </div>
           <button
-            @click="removeItemFromCart(item.id)"
             class="button button-icon ml-6"
+            @click="removeItemFromCart(item.id)"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -109,34 +129,57 @@
             </svg>
           </button>
         </div>
-        <div v-if="coupon.code && couponAmountOff" class="border-t-2 mt-5 pt-5 pb-3 flex justify-between">
+        <div
+          v-if="coupon.code && couponAmountOff"
+          class="border-t-2 mt-5 pt-5 pb-3 flex justify-between"
+        >
           <div>Kod promocyjny</div>
-          <svg v-if="promoLoading" class="animate-spin h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="black" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          <svg
+            v-if="promoLoading"
+            class="animate-spin h-8 w-8 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="black"
+              stroke-width="4"
+            ></circle>
+            <path
+              class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            ></path>
           </svg>
           <div v-else>{{ couponAmountOff / 100 }} zł</div>
         </div>
-        <div class="py-5 flex justify-between font-weight-bold" :class="{'border-t-2 mt-5': !coupon.code || !couponAmountOff}">
+        <div
+          class="py-5 flex justify-between font-weight-bold"
+          :class="{ 'border-t-2 mt-5': !coupon.code || !couponAmountOff }"
+        >
           <div class="">Wartość zamówienia</div>
           <div class="">{{ total / 100 }} zł</div>
         </div>
       </div>
       <div class="mt-10 relative">
         <validation-observer
-          tag="form"
           ref="form"
+          tag="form"
           class="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2"
           @submit.prevent="redeemCode"
         >
           <div class="mt-3 m-2">
             <base-input
+              v-model="promoCode"
               name="kod-promocyjny"
               type="text"
-              outerClass="uppercase"
+              outer-class="uppercase"
               label="Wpisz kod promocyjny"
-              labelTop="5"
-              v-model="promoCode"
+              label-top="5"
             />
           </div>
           <button class="button button-outline mt-3 m-2">Aplikuj</button>
@@ -162,9 +205,9 @@ import {
 import BaseInput from '@/components/BaseInput'
 
 export default {
-  name: 'koszyk',
-  layout: 'checkout',
+  name: 'Koszyk',
   components: { BaseInput, ValidationObserver },
+  layout: 'checkout',
   data() {
     return {
       promoCode: '',
@@ -201,7 +244,7 @@ export default {
       (this.cartItems.length && this.total)
     ) {
       this.$toasted.clear()
-      next()
+      await next()
     }
   },
   methods: {
@@ -254,7 +297,7 @@ export default {
       }
     },
     async redeemCode() {
-      this.$refs.form.reset();
+      this.$refs.form.reset()
 
       if (!this.promoCode)
         return this.$refs.form.setErrors({
@@ -269,7 +312,11 @@ export default {
         )
         await this.$store.dispatch('checkout/addCoupon', promoCode)
       } catch (error) {
-        const msg = _.get(error, 'response.data.validationMessage', 'Niepoprawny kod promocyjny')
+        const msg = _.get(
+          error,
+          'response.data.validationMessage',
+          'Niepoprawny kod promocyjny'
+        )
         this.$refs.form.setErrors({ 'kod-promocyjny': [msg] })
       } finally {
         this.promoLoading = false
@@ -282,7 +329,7 @@ export default {
       } finally {
         this.promoLoading = false
       }
-    }
+    },
   },
 }
 </script>

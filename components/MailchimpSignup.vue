@@ -1,16 +1,16 @@
 <template>
   <validation-observer
-    v-slot="{ invalid, valid }"
+    v-slot="{ invalid }"
     ref="subscribe"
     tag="form"
     @submit.prevent="subscribe()"
   >
     <validation-provider
+      v-slot="{ errors }"
       rules="required|email"
       :bails="false"
       tag="div"
       name="Email"
-      v-slot="{ errors }"
     >
       <input
         v-model="form.email"
@@ -57,14 +57,19 @@ export default {
       cachedForm: {},
     }
   },
+  mounted() {
+    this.cachedForm = { ...this.form }
+  },
   methods: {
-    async subscribe(event) {
+    async subscribe() {
       this.response.errorMessage = ''
 
       const formData = { email: this.form.email.toLowerCase() }
       try {
-        const { data, status } = await axios.post('/.netlify/functions/api/subscribe', formData)
-        console.log(data)
+        const { data, status } = await axios.post(
+          '/.netlify/functions/api/subscribe',
+          formData
+        )
         this.response.status = status
         this.response.message = `${data.email_address} został zarejestrowany!`
         this.form = { ...this.cachedForm }
@@ -78,9 +83,6 @@ export default {
           errorMapping[e.response.data.title] || e.response.data.detail
       }
     },
-  },
-  mounted() {
-    this.cachedForm = { ...this.form }
   },
 }
 </script>

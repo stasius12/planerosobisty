@@ -1,63 +1,108 @@
 <template>
   <div>
-    <div class=" lg:mx-auto">
+    <div class="lg:mx-auto">
       <h1 class="text-center mt-5">Paczkomat czy kurier?</h1>
       <div class="shipment-select w-full self-center grid md:flex">
-        <label class="m-2 md:w-1/2" v-for="method in shippingMethods" :key="method.id">
+        <label
+          v-for="method in shippingMethods"
+          :key="method.id"
+          class="m-2 md:w-1/2"
+        >
           <input
-            type="radio"
             :id="method.price.id"
-            :name="method.metadata.type"
             v-model="shipmentDetails.method"
+            type="radio"
+            :name="method.metadata.type"
             :value="method.metadata.type"
             class="absolute hidden"
             @change="shippingMethodChanged"
+          />
+          <div
+            class="p-4 border-2 border-gray-100 bg-gray-100 flex flex-col items-center cursor-pointer"
           >
-          <div class="p-4 border-2 border-gray-100 bg-gray-100 flex flex-col items-center cursor-pointer">
-            <img src="~/assets/images/inpost/logo_dark.png" alt="InPost logo" width="100" />
+            <img
+              src="~/assets/images/inpost/logo_dark.png"
+              alt="InPost logo"
+              width="100"
+            />
             <span class="text-lg">{{ method.metadata.name }}</span>
             <span class="font-sm">{{ method.price.unit_amount / 100 }} zł</span>
           </div>
         </label>
       </div>
-      <div v-if="isCourierMethodChosen" class="grid grid-cols-2 gap-y-2 m-2 p-2 border-gray-100 border-2">
+      <div
+        v-if="isCourierMethodChosen"
+        class="grid grid-cols-2 gap-y-2 m-2 p-2 border-gray-100 border-2"
+      >
         <div class="font-weight-bold">Dane do wysyłki</div>
         <div class="pl-2">
-          <div v-if="shipmentInfo.company_name">{{ shipmentInfo.company_name }}</div>
+          <div v-if="shipmentInfo.company_name">
+            {{ shipmentInfo.company_name }}
+          </div>
           <div>{{ shipmentInfo.first_name }} {{ shipmentInfo.surname }}</div>
           <div>
-            ul. {{ shipmentInfo.street }}
-            {{ shipmentInfo.street_house_number }}{{ shipmentInfo.street_house_apartment ? `/${shipmentInfo.street_house_apartment}` : '' }}
+            ul. {{ shipmentInfo.street }} {{ shipmentInfo.street_house_number
+            }}{{
+              shipmentInfo.street_house_apartment
+                ? `/${shipmentInfo.street_house_apartment}`
+                : ''
+            }}
           </div>
           <div>{{ shipmentInfo.postal_code }} {{ shipmentInfo.city }}</div>
         </div>
         <div class="font-weight-bold border-t-1 pt-2">Czas dostawy</div>
         <div class="border-t-1 pt-2 pl-2">1-3 dni robocze</div>
       </div>
-      <div v-else-if="isLockerMethodChosen && locker" class="grid grid-cols-2 gap-y-4 m-2 p-2 border-gray-100 border-2">
+      <div
+        v-else-if="isLockerMethodChosen && locker"
+        class="grid grid-cols-2 gap-y-4 m-2 p-2 border-gray-100 border-2"
+      >
         <div class="font-weight-bold">Wybrany paczkomat</div>
         <div class="pl-2">
           <div>{{ locker.name }}</div>
-          <div v-if="locker.address && locker.address.line1">ul. {{ locker.address.line1 }}</div>
-          <div v-if="locker.address && locker.address.line2">{{ locker.address.line2 }}</div>
+          <div v-if="locker.address && locker.address.line1">
+            ul. {{ locker.address.line1 }}
+          </div>
+          <div v-if="locker.address && locker.address.line2">
+            {{ locker.address.line2 }}
+          </div>
         </div>
         <div class="font-weight-bold border-t-1 pt-2">Czas dostawy</div>
         <div class="border-t-1 pt-2 pl-2">1-3 dni robocze</div>
       </div>
     </div>
-    <button v-if="isLockerMethodChosen && locker" class="button button-outline m-2" @click="showLockerMap">Zmień paczkomat</button>
+    <button
+      v-if="isLockerMethodChosen && locker"
+      class="button button-outline m-2"
+      @click="showLockerMap"
+    >
+      Zmień paczkomat
+    </button>
     <div class="p-2">
-      <div class="p-2" id="easypack-map"></div>
+      <div id="easypack-map" class="p-2"></div>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
-  name: 'wysylka',
+  name: 'Wysylka',
+  async beforeRouteLeave(to, from, next) {
+    if (to.name !== 'sklep-platnosc' || this.areShipmentDetailsValid())
+      await next()
+  },
   layout: 'checkout',
+  async asyncData({ $axios }) {
+    let shippingMethods = []
+
+    try {
+      shippingMethods = await $axios.$get(`shipping`)
+    } catch (error) {
+      console.error(error)
+    }
+
+    return { shippingMethods }
+  },
   data() {
     return {
       shipmentInfo: { ...this.$store.getters['checkout/shipmentInfo'] },
@@ -65,45 +110,34 @@ export default {
       map: null,
     }
   },
-  async asyncData({ $axios }) {
-    let shippingMethods = [];
-
-    try {
-      shippingMethods = await $axios.$get(`shipping`);
-    } catch (error) {
-      console.error(error)
-    }
-
-    return { shippingMethods }
-  },
   computed: {
     isLockerMethodChosen() {
-      return this.shipmentDetails.method === 'locker';
+      return this.shipmentDetails.method === 'locker'
     },
     isCourierMethodChosen() {
-      return this.shipmentDetails.method === 'courier';
+      return this.shipmentDetails.method === 'courier'
     },
     locker: {
       get() {
-        return this.shipmentDetails.locker;
+        return this.shipmentDetails.locker
       },
       set(value) {
-        this.shipmentDetails.locker = value;
-      }
-    }
+        this.shipmentDetails.locker = value
+      },
+    },
   },
   watch: {
     shipmentDetails: {
       deep: true,
       handler(event) {
         if (this.areShipmentDetailsValid()) {
-          if (this.isCourierMethodChosen) this.locker = null;
+          if (this.isCourierMethodChosen) this.locker = null
           this.$store.dispatch('checkout/updateShipmentDetails', {
             ...this.shipmentDetails,
-          });
+          })
         }
-      }
-    }
+      },
+    },
   },
   mounted() {
     window.easyPackAsyncInit = function () {
@@ -114,32 +148,31 @@ export default {
         },
         mapType: 'osm',
         searchType: 'osm',
-      });
-    };
-    window.setPoint = (point) => {
-      this.locker = point;
-      this.hideLockerMap();
+      })
     }
-    this.map = document.getElementById('easypack-map');
-  },
-  async beforeRouteLeave(to, from, next) {
-    if (to.name !== 'sklep-platnosc' || this.areShipmentDetailsValid()) next();
+    window.setPoint = (point) => {
+      this.locker = point
+      this.hideLockerMap()
+    }
+    this.map = document.getElementById('easypack-map')
   },
   methods: {
     showLockerMap() {
-      this.map.hidden = false;
+      this.map.hidden = false
 
       if (!this.map.hasChildNodes()) {
         easyPack.mapWidget('easypack-map', function (point) {
-          window.setPoint(point);
-        });
+          window.setPoint(point)
+        })
       }
     },
     hideLockerMap() {
-      this.map.hidden = true;
+      this.map.hidden = true
     },
     shippingMethodChanged(event) {
-      const method = this.shippingMethods.find((method) => method.price.id === event.target.id);
+      const method = this.shippingMethods.find(
+        (method) => method.price.id === event.target.id
+      )
       if (method) {
         this.shipmentDetails.priceID = method.price.id
         this.shipmentDetails.priceAmount = method.price.unit_amount
@@ -149,9 +182,9 @@ export default {
       else this.showLockerMap()
     },
     areShipmentDetailsValid() {
-      if (this.isLockerMethodChosen) return !!this.locker;
-      return this.isCourierMethodChosen;
-    }
+      if (this.isLockerMethodChosen) return !!this.locker
+      return this.isCourierMethodChosen
+    },
   },
 }
 </script>
@@ -161,10 +194,10 @@ export default {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   label {
     input:checked + div {
-      border-color: #6B7280;
+      border-color: #6b7280;
     }
     input:hover:not(:checked) + div {
-      background-color: #F9FAFB;
+      background-color: #f9fafb;
     }
   }
 }

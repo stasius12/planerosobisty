@@ -21,7 +21,9 @@
       </div>
     </section>
     <section class="container intro">
-      <h2 class="font-handwrite font-weight-normal">Cześć! Jestem Natalia :)</h2>
+      <h2 class="font-handwrite font-weight-normal">
+        Cześć! Jestem Natalia :)
+      </h2>
       <p>
         Wierzę, że
         <span class="font-weight-bold">mając odpowiednie narzędzia</span>, każdy
@@ -50,7 +52,7 @@
         <h2 class="text-center">Najnowsze artykuły</h2>
       </header>
       <div class="newest-blogs__list">
-        <article v-for="blog in blogs.slice(0,3)" :key="blog.slug">
+        <article v-for="blog in blogs.slice(0, 3)" :key="blog.slug">
           <nuxt-link :to="{ name: 'blog-slug', params: { slug: blog.slug } }">
             <img :src="blog.thumbnail" :alt="blog.title" />
             <h3 class="text-center">{{ blog.title }}</h3>
@@ -58,17 +60,31 @@
         </article>
       </div>
       <footer>
-        <nuxt-link class="font-primary button button-large" to="/">Zobacz więcej postów</nuxt-link>
+        <nuxt-link class="font-primary button button-large" to="/"
+          >Zobacz więcej postów</nuxt-link
+        >
       </footer>
     </section>
     <section class="newsletter">
       <div class="container-lg">
         <h2>ZAPISZ SIĘ DO DARMOWEGO NEWSLETTERA JEŚLI CHCESZ:</h2>
         <ol>
-          <li><span class="font-weight-bold">Świadomie tworzyć własną rzeczywistość</span></li>
-          <li>Nauczyć się <span class="font-weight-bold">skutecznie planować</span> swoje działania</li>
-          <li>Być <span class="font-weight-bold">efektywnym</span> jak nigdy dotąd</li>
-          <li><span class="font-weight-bold">Otrzymać bonusowego ebooka</span></li>
+          <li>
+            <span class="font-weight-bold"
+              >Świadomie tworzyć własną rzeczywistość</span
+            >
+          </li>
+          <li>
+            Nauczyć się
+            <span class="font-weight-bold">skutecznie planować</span> swoje
+            działania
+          </li>
+          <li>
+            Być <span class="font-weight-bold">efektywnym</span> jak nigdy dotąd
+          </li>
+          <li>
+            <span class="font-weight-bold">Otrzymać bonusowego ebooka</span>
+          </li>
         </ol>
         <client-only>
           <mailchimp-signup></mailchimp-signup>
@@ -78,19 +94,22 @@
     <section class="social">
       <div class="social__container container-lg">
         <h2 class="social__title">Po więcej materiałów wpadaj na mojego:</h2>
-        <a href="https://www.facebook.com/Planer-Osobisty-102458435311991" class="social__element">
-          <img src="~assets/images/facebook.svg" alt="Facebook icon">
+        <a
+          href="https://www.facebook.com/Planer-Osobisty-102458435311991"
+          class="social__element"
+        >
+          <img src="~assets/images/facebook.svg" alt="Facebook icon" />
           <span class="font-primary">Facebooka</span>
         </a>
         <a href="https://instagram.com/planerosobisty" class="social__element">
-          <img src="~assets/images/instagram.svg" alt="Instagram icon">
+          <img src="~assets/images/instagram.svg" alt="Instagram icon" />
           <span class="font-primary">Instagrama</span>
         </a>
-        <img src="~assets/images/book.png" class="ebook" alt="Ebook">
+        <img src="~assets/images/book.png" class="ebook" alt="Ebook" />
       </div>
     </section>
     <section class="more-blogs container-lg">
-      <article v-for="blog in blogs.slice(0,5)" :key="blog.slug">
+      <article v-for="blog in blogs.slice(0, 5)" :key="blog.slug">
         <nuxt-link :to="{ name: 'blog-slug', params: { slug: blog.slug } }">
           <img :src="blog.thumbnail" :alt="blog.title" />
           <h3 class="text-center">{{ blog.title }}</h3>
@@ -107,21 +126,18 @@
 </template>
 
 <script>
-import HeaderSection from '@/components/HeaderSection'
-import BlogSection from '@/components/BlogSection'
-import AboutMeSection from '@/components/AboutMeSection'
 import MailchimpSignup from '@/components/MailchimpSignup'
 export default {
-  components: { MailchimpSignup, AboutMeSection, BlogSection },
+  components: { MailchimpSignup },
+
+  transition: {
+    name: 'slide-fade',
+  },
   async asyncData({ $content }) {
     const blogs = await $content('blog').fetch()
     return {
       blogs,
     }
-  },
-
-  transition: {
-    name: 'slide-fade',
   },
 }
 </script>
@@ -134,7 +150,8 @@ $circle-radius: 25vw;
   padding-bottom: 5rem;
   margin-bottom: 0;
 
-  h2, h3 {
+  h2,
+  h3 {
     font-weight: 400;
   }
 }
@@ -193,7 +210,7 @@ $circle-radius: 25vw;
     top: 50%;
     width: 15vw;
     height: 15vw * 1.79;
-    background: url("~/assets/images/half-circle.png") no-repeat 50% 50%;
+    background: url('~/assets/images/half-circle.png') no-repeat 50% 50%;
     background-size: cover;
   }
 }

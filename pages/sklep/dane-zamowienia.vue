@@ -4,93 +4,93 @@
     <validation-observer ref="personalForm" tag="form" class="px-2 pt-6 pb-3">
       <div class="grid sm:grid-cols-2 gap-10 mb-10">
         <base-input
+          v-model="personalForm.first_name"
           name="given-name"
           type="text"
           label="Imię"
           rules="required|min:2"
-          v-model="personalForm.first_name"
         />
         <base-input
+          v-model="personalForm.surname"
           name="family-name"
           type="text"
           label="Nazwisko"
           rules="required|min:2"
-          v-model="personalForm.surname"
         />
       </div>
       <div class="grid grid-cols-2 md:grid-cols-6 gap-10 mb-10">
         <base-input
+          v-model="personalForm.street"
           name="street-address"
           type="text"
           label="Ulica"
-          outerClass="col-span-2 md:col-span-4"
+          outer-class="col-span-2 md:col-span-4"
           rules="required|min:2"
-          v-model="personalForm.street"
         />
         <base-input
+          v-model="personalForm.street_house_number"
           name="#TODO:"
           type="text"
           label="Nr domu"
           rules="required"
-          v-model="personalForm.street_house_number"
         />
         <base-input
+          v-model="personalForm.street_house_apartment"
           name="#TODO:2"
           type="text"
           label="Nr lokalu"
-          v-model="personalForm.street_house_apartment"
         />
       </div>
       <div class="grid sm:grid-cols-2 gap-10 mb-10">
         <base-input
+          v-model="personalForm.postal_code"
           name="postal-code"
           type="text"
           label="Kod pocztowy"
           aria-autocomplete="postal-code"
           rules="required|postcode"
-          v-model="personalForm.postal_code"
         />
         <base-input
+          v-model="personalForm.city"
           name="#TODO:3"
           type="text"
           label="Miasto"
           rules="required"
-          v-model="personalForm.city"
         />
       </div>
       <div class="grid sm:grid-cols-2 gap-10 mb-10">
         <base-input
+          v-model="personalForm.phone"
           name="tel"
           type="text"
           label="Telefon"
           rules="required|digits:9"
-          v-model="personalForm.phone"
         />
         <base-input
+          v-model="personalForm.email"
           name="email"
           type="email"
           label="Email"
           rules="required|email"
-          v-model="personalForm.email"
         />
       </div>
       <div class="grid sm:grid-cols-2 gap-10">
         <base-input
+          v-model="personalForm.company_name"
           name="organization"
           type="text"
           label="Nazwa firmy"
-          v-model="personalForm.company_name"
         />
         <base-input
+          v-model="personalForm.company_id"
           name="nip"
           type="text"
           label="NIP"
-          v-model="personalForm.company_id"
         />
       </div>
     </validation-observer>
     <label class="cursor-pointer">
-      <input type="checkbox" v-model="shipmentInfoDiffers" :value="true" />
+      <input v-model="shipmentInfoDiffers" type="checkbox" :value="true" />
       <span class="ml-2">Wysłać na inny adres?</span>
     </label>
     <validation-observer
@@ -101,82 +101,82 @@
     >
       <div class="grid sm:grid-cols-2 gap-10 mb-10">
         <base-input
+          v-model="shipmentForm.first_name"
           name="given-name"
           type="text"
           label="Imię"
           rules="required|min:2"
-          v-model="shipmentForm.first_name"
         />
         <base-input
+          v-model="shipmentForm.surname"
           name="family-name"
           type="text"
           label="Nazwisko"
           rules="required|min:2"
-          v-model="shipmentForm.surname"
         />
       </div>
       <div class="grid grid-cols-2 md:grid-cols-6 gap-10 mb-10">
         <base-input
+          v-model="shipmentForm.street"
           name="street-address"
           type="text"
           label="Ulica"
-          outerClass="col-span-2 md:col-span-4"
+          outer-class="col-span-2 md:col-span-4"
           rules="required|min:2"
-          v-model="shipmentForm.street"
         />
         <base-input
+          v-model="shipmentForm.street_house_number"
           name="#TODO:"
           type="text"
           label="Nr domu"
           rules="required"
-          v-model="shipmentForm.street_house_number"
         />
         <base-input
+          v-model="shipmentForm.street_house_apartment"
           name="#TODO:2"
           type="text"
           label="Nr lokalu"
-          v-model="shipmentForm.street_house_apartment"
         />
       </div>
       <div class="grid sm:grid-cols-2 gap-10 mb-10">
         <base-input
+          v-model="shipmentForm.postal_code"
           name="postal-code"
           type="text"
           label="Kod pocztowy"
           aria-autocomplete="postal-code"
           rules="required|postcode"
-          v-model="shipmentForm.postal_code"
         />
         <base-input
+          v-model="shipmentForm.city"
           name="#TODO:3"
           type="text"
           label="Miasto"
           rules="required"
-          v-model="shipmentForm.city"
         />
       </div>
       <div class="grid sm:grid-cols-2 gap-10 mb-10">
         <base-input
+          v-model="shipmentForm.phone"
           name="tel"
           type="text"
           label="Telefon"
           rules="required|digits:9"
-          v-model="shipmentForm.phone"
         />
         <base-input
+          v-model="shipmentForm.email"
           name="email"
           type="email"
           label="Email"
           rules="required|email"
-          v-model="shipmentForm.email"
         />
       </div>
       <div class="grid sm:grid-cols-2 gap-10">
         <base-input
+          v-model="shipmentForm.company_name"
           name="organization"
           type="text"
           label="Nazwa firmy"
-          v-model="shipmentForm.company_name"
         />
       </div>
     </validation-observer>
@@ -191,9 +191,17 @@ import BaseInput from '@/components/BaseInput'
 import { EMPTY_PERSONAL } from '@/store/checkout'
 //
 export default {
-  name: 'dane-zamowienia',
-  layout: 'checkout',
+  name: 'DaneZamowienia',
   components: { BaseInput },
+  async beforeRouteLeave(to, from, next) {
+    let isValid = await this.$refs.personalForm.validate()
+    if (this.$refs.shipmentForm) {
+      isValid = isValid && (await this.$refs.shipmentForm.validate())
+    }
+
+    if (to.name !== 'sklep-wysylka' || isValid) next()
+  },
+  layout: 'checkout',
   data() {
     return {
       personalForm: { ...this.$store.getters['checkout/personalInfo'] },
@@ -223,14 +231,6 @@ export default {
       this.validateAndUpdateShipmentInfo()
       this.$store.dispatch('checkout/updateShipmentInfoDiffers', value)
     },
-  },
-  async beforeRouteLeave(to, from, next) {
-    let isValid = await this.$refs.personalForm.validate()
-    if (this.$refs.shipmentForm) {
-      isValid = isValid && (await this.$refs.shipmentForm.validate())
-    }
-
-    if (to.name !== 'sklep-wysylka' || isValid) next()
   },
   methods: {
     validateAndUpdateShipmentInfo() {

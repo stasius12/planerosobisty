@@ -112,7 +112,7 @@ export const actions = {
   },
 
   // COUPON
-  async addCoupon({ commit, dispatch }, data) {
+  addCoupon({ commit, dispatch }, data) {
     commit('UPDATE_COUPON', data)
     dispatch('saveStateInCookies')
   },
@@ -120,10 +120,9 @@ export const actions = {
     if (!state._coupon.code) return
 
     try {
-      await this.$axios.$post(
-        `products/promo-codes/${state._coupon.code}`,
-        { cartAmount: calculateCartAmount([...state._cartItems]) }
-      )
+      await this.$axios.$post(`products/promo-codes/${state._coupon.code}`, {
+        cartAmount: calculateCartAmount([...state._cartItems]),
+      })
     } catch {
       dispatch('addCoupon', EMPTY_COUPON)
     }

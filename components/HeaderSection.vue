@@ -24,7 +24,7 @@
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-10 transition-all"
-            :class="{'w-10': !showMobileMenu, 'w-0': showMobileMenu}"
+            :class="{ 'w-10': !showMobileMenu, 'w-0': showMobileMenu }"
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -37,7 +37,7 @@
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-10 transition-all"
-            :class="{'w-10': showMobileMenu, 'w-0': !showMobileMenu}"
+            :class="{ 'w-10': showMobileMenu, 'w-0': !showMobileMenu }"
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -78,7 +78,7 @@ export default {
   name: 'HeaderSection',
   props: {
     showMobileMenu: Boolean,
-  }
+  },
 }
 </script>
 

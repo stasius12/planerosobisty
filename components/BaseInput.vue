@@ -1,5 +1,6 @@
 <template>
   <validation-provider
+    v-slot="{ errors, validated, invalid, touched }"
     :vid="name"
     :name="verboseName"
     :rules="rules"
@@ -7,23 +8,29 @@
     tag="div"
     class="floating relative h-full"
     :class="outerClass"
-    v-slot="{ errors, validated, invalid, touched }"
   >
     <div class="h-full">
       <input
         v-bind="$attrs"
         :id="name"
-        :class="[{ 'border-red-600': (touched || validated) && invalid }, innerClass.split(' ')]"
+        :class="[
+          { 'border-red-600': (touched || validated) && invalid },
+          innerClass.split(' '),
+        ]"
         :name="name"
         :autocomplete="name"
         :value="value"
         :type="type"
         :placeholder="label"
         :required="required"
-        @input="$emit('input', $event.target.value)"
         class="floating__input relative w-full outline-none bg-transparent py-1 z-10 border-gray-200 h-full"
+        @input="$emit('input', $event.target.value)"
       />
-      <label :for="name" class="floating__label absolute left-0 z-0" :class="'top-' + labelTop">
+      <label
+        :for="name"
+        class="floating__label absolute left-0 z-0"
+        :class="'top-' + labelTop"
+      >
         {{ label }}
         <span v-if="required">*</span>
       </label>
@@ -55,21 +62,21 @@ export default {
     rules: String || Object,
     innerClass: {
       type: String,
-      default: "",
+      default: '',
     },
     outerClass: String,
     labelTop: {
       default: 0,
-    }
+    },
   },
   computed: {
     required() {
-      return typeof this.rules === "string" && this.rules.includes("required");
+      return typeof this.rules === 'string' && this.rules.includes('required')
     },
     verboseName() {
-      return this.verbose || this.label;
-    }
-  }
+      return this.verbose || this.label
+    },
+  },
 }
 </script>
 
@@ -97,5 +104,4 @@ input::-webkit-input-placeholder {
   transition: inherit;
   opacity: 0;
 }
-
 </style>

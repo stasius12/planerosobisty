@@ -4,13 +4,11 @@ export default {
 
   generate: {
     fallback: true,
-    exclude: [
-      /^\/order/
-    ]
+    exclude: [/^\/order/],
   },
 
   server: {
-    host: '0'
+    host: '0',
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -29,12 +27,18 @@ export default {
       { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' },
       { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       { rel: 'manifest', href: '/manifest.webmanifest' },
-      { rel: 'stylesheet', href: 'https://geowidget.easypack24.net/css/easypack.css' },
+      {
+        rel: 'stylesheet',
+        href: 'https://geowidget.easypack24.net/css/easypack.css',
+      },
     ],
     script: [
       { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
       { src: 'https://js.stripe.com/v3/' },
-      { src: 'https://geowidget.easypack24.net/js/sdk-for-javascript.js', async: true },
+      {
+        src: 'https://geowidget.easypack24.net/js/sdk-for-javascript.js',
+        async: true,
+      },
     ],
   },
 
@@ -44,7 +48,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/vee-validate', ssr: false },
-    '~/plugins/vue-gallery.js'
+    '~/plugins/vue-gallery.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -82,7 +86,7 @@ export default {
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
-    fullTextSearchFields: ['title', 'description']
+    fullTextSearchFields: ['title', 'description'],
   },
 
   toast: {
@@ -91,8 +95,8 @@ export default {
 
   publicRuntimeConfig: {
     axios: {
-      baseURL: `${process.env.DOMAIN_NAME}/.netlify/functions/api/`
-    }
+      baseURL: `${process.env.DOMAIN_NAME}/.netlify/functions/api/`,
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -111,8 +115,9 @@ export default {
         (match, p1) => `<span class="bg-primary">${p1}</span>`
       )
       file.data = file.data.replace(
-        /\[list-style: arrow\]/g, '<div class="list-style-arrow"></div>'
+        /\[list-style: arrow\]/g,
+        '<div class="list-style-arrow"></div>'
       )
-    }
+    },
   },
 }

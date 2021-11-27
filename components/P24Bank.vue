@@ -7,7 +7,9 @@
       :value="value"
       @change="$emit('change', value)"
     />
-    <div class="items-center cursor-pointer h-full w-full flex items-center justify-center border border-gray-200">
+    <div
+      class="items-center cursor-pointer h-full w-full flex items-center justify-center border border-gray-200"
+    >
       <img :src="imgSrc" :alt="imgAlt" :width="imgWidth" />
     </div>
   </label>
@@ -39,7 +41,7 @@ export default {
     imgWidth: {
       type: Number || String,
       default: 80,
-    }
+    },
   },
   computed: {
     shouldBeChecked() {
@@ -54,6 +56,6 @@ input:checked + div {
   border: 1px solid #dddddd;
 }
 input:hover:not(:checked) + div {
-  background-color: #F9FAFB;
+  background-color: #f9fafb;
 }
 </style>

@@ -11,11 +11,11 @@
         @submit.prevent="performSearch"
       >
         <input
+          v-model="search"
           name="search"
           type="text"
           placeholder="Czego szukasz?"
           class="border-1 border-gray-300 text-gray-300 mr-4 p-2 outline-none w-full md:w-auto h-full"
-          v-model="search"
         />
         <button class="button search-button h-full">Szukaj</button>
       </validation-observer>
@@ -45,12 +45,10 @@
 
 <script>
 import { ValidationObserver } from 'vee-validate'
-//
-import BaseInput from '@/components/BaseInput'
 
 export default {
-  name: 'blog',
-  components: { BaseInput, ValidationObserver },
+  name: 'Blog',
+  components: { ValidationObserver },
   async asyncData({ $content, query }) {
     const search = query.search || ''
     const blogs = await $content('blog').search(search).fetch()

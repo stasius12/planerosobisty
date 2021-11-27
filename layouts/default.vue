@@ -19,17 +19,17 @@ export default {
       showMobileMenu: false,
     }
   },
+  watch: {
+    $route() {
+      this.showMobileMenu = false
+      document.body.classList.remove('overflow-hidden')
+    },
+  },
   methods: {
     toggleMobileMenu() {
       this.showMobileMenu = !this.showMobileMenu
       if (this.showMobileMenu) document.body.classList.add('overflow-hidden')
       else document.body.classList.remove('overflow-hidden')
-    },
-  },
-  watch: {
-    $route() {
-      this.showMobileMenu = false
-      document.body.classList.remove('overflow-hidden')
     },
   },
 }

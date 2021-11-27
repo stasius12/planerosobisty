@@ -12,24 +12,21 @@
       </div>
     </section>
     <section class="container blog-content">
-      <nuxt-content
-        :document="blog"
-        class="blog-content__inner"
-      />
+      <nuxt-content :document="blog" class="blog-content__inner" />
     </section>
   </main>
 </template>
 
 <script>
 export default {
+  transition: {
+    name: 'slide-fade',
+  },
   async asyncData({ $content, params }) {
     const blog = await $content('blog', params.slug).fetch()
     return {
       blog,
     }
-  },
-  transition: {
-    name: 'slide-fade'
   },
 }
 </script>
@@ -102,7 +99,8 @@ export default {
     margin-top: -1.7rem;
   }
 
-  ul, ol {
+  ul,
+  ol {
     padding-left: 4rem;
   }
 
@@ -128,9 +126,9 @@ export default {
       align-items: center;
       border-radius: 50%;
 
-      font-family: "icomoon";
+      font-family: 'icomoon';
       font-size: 0.8rem;
-      content: "\e900";
+      content: '\e900';
       background-color: $primary;
     }
   }

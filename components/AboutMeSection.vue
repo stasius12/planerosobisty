@@ -1,7 +1,10 @@
 <template>
   <div class="container-lg">
     <div class="about_me">
-      <img class="about_me__headline" src="~assets/images/beauty-script/I-am-Natalia.png" />
+      <img
+        class="about_me__headline"
+        src="~assets/images/beauty-script/I-am-Natalia.png"
+      />
       <div class="about_me__text">
         <p>
           Wierzę, że mając odpowiednie narzędzia, każdy z nas może zaprojektować

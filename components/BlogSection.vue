@@ -13,13 +13,14 @@
 </template>
 
 <script>
-import HeaderSection from '@/components/HeaderSection'
 export default {
   name: 'BlogSection',
-  components: { HeaderSection },
   props: {
-    blogs: Array,
-  }
+    blogs: {
+      type: Array,
+      default: () => [],
+    },
+  },
 }
 </script>
 
