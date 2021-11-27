@@ -21,14 +21,14 @@
         :placeholder="label"
         :required="required"
         @input="$emit('input', $event.target.value)"
-        class="floating__input relative w-full outline-none bg-transparent py-2 z-10 border-gray-200 h-full"
+        class="floating__input relative w-full outline-none bg-transparent py-1 z-10 border-gray-200 h-full"
       />
       <label :for="name" class="floating__label absolute left-0 z-0" :class="'top-' + labelTop">
         {{ label }}
         <span v-if="required">*</span>
       </label>
     </div>
-    <div class="h-6 text-xl mt-1 text-red-600 absolute">{{ errors[0] }}</div>
+    <div class="h-6 text-xs mt-0.5 text-red-600 absolute">{{ errors[0] }}</div>
   </validation-provider>
 </template>
 
@@ -78,12 +78,12 @@ export default {
   &__input {
     border-bottom-width: 1px;
     &__label {
-      font-size: 1.8rem;
+      font-size: 1rem;
     }
     &:not(:placeholder-shown) + label,
     &:focus + label {
-      font-size: 1.2rem;
-      transform: translate3d(0, -2.5rem, 0) scale3d(1, 1, 1);
+      font-size: 0.7rem;
+      transform: translate3d(0, -1.2rem, 0) scale3d(1, 1, 1);
       transition: transform 0.2s ease;
     }
   }

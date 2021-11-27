@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1 class="text-center mt-10">Koszyk</h1>
+    <h1 class="text-center mt-5">Koszyk</h1>
     <div v-if="cartItems.length">
       <table class="hidden sm:table mt-10">
-        <thead class="text-2xl">
+        <thead class="text-sm">
           <tr>
             <th class="w-2/5">Produkt</th>
             <th class="w-1/6">Cena</th>
@@ -12,7 +12,7 @@
             <th></th>
           </tr>
         </thead>
-        <tbody class="text-3xl">
+        <tbody class="text-md">
           <tr v-for="item in cartItems" :key="item.id">
             <td class="flex items-center">
               <img width="40" :src="item.image" :alt="item.name" />
@@ -34,11 +34,11 @@
             <td>
               <button
                 @click="removeItemFromCart(item.id)"
-                class="button button-icon"
+                class="button button-icon mt-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-8 w-8"
+                  class="h-6 w-6"
                   viewBox="0 0 20 20"
                   fill="black"
                 >
@@ -75,8 +75,8 @@
         >
           <img width="60" :src="item.image" :alt="item.name" />
           <div class="flex flex-col ml-6">
-            <span class="text-3xl mb-2">{{ item.name }}</span>
-            <span class="text-2xl font-weight-bold"
+            <span class="text-md mb-2">{{ item.name }}</span>
+            <span class="text-sm font-weight-bold"
               >{{ item.priceAmount / 100 }} zł</span
             >
           </div>
@@ -97,7 +97,7 @@
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-8 w-8"
+              class="h-6 w-6"
               viewBox="0 0 20 20"
               fill="black"
             >
@@ -122,14 +122,14 @@
           <div class="">{{ total / 100 }} zł</div>
         </div>
       </div>
-      <div class="mt-20 relative">
+      <div class="mt-10 relative">
         <validation-observer
           tag="form"
           ref="form"
           class="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2"
           @submit.prevent="redeemCode"
         >
-          <div class="mt-8 m-4">
+          <div class="mt-3 m-2">
             <base-input
               name="kod-promocyjny"
               type="text"
@@ -139,7 +139,7 @@
               v-model="promoCode"
             />
           </div>
-          <button class="button button-outline mt-8 m-4">Aplikuj</button>
+          <button class="button button-outline mt-3 m-2">Aplikuj</button>
         </validation-observer>
       </div>
     </div>

@@ -66,7 +66,7 @@ export default {
   }
 
   &__headline {
-    height: 2.5rem;
+    height: 1.4rem;
   }
 
   &__text {

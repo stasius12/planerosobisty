@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class=" lg:mx-auto">
-      <h1 class="text-center mt-10">Paczkomat czy kurier?</h1>
+      <h1 class="text-center mt-5">Paczkomat czy kurier?</h1>
       <div class="shipment-select w-full self-center grid md:flex">
-        <label class="m-4 md:w-1/2" v-for="method in shippingMethods" :key="method.id">
+        <label class="m-2 md:w-1/2" v-for="method in shippingMethods" :key="method.id">
           <input
             type="radio"
             :id="method.price.id"
@@ -15,14 +15,14 @@
           >
           <div class="p-4 border-2 border-gray-100 bg-gray-100 flex flex-col items-center cursor-pointer">
             <img src="~/assets/images/inpost/logo_dark.png" alt="InPost logo" width="100" />
-            <span class="text-3xl">{{ method.metadata.name }}</span>
-            <span class="font-2xl">{{ method.price.unit_amount / 100 }} zł</span>
+            <span class="text-lg">{{ method.metadata.name }}</span>
+            <span class="font-sm">{{ method.price.unit_amount / 100 }} zł</span>
           </div>
         </label>
       </div>
-      <div v-if="isCourierMethodChosen" class="grid grid-cols-2 gap-y-4 m-4 p-4 border-gray-100 border-2">
+      <div v-if="isCourierMethodChosen" class="grid grid-cols-2 gap-y-2 m-2 p-2 border-gray-100 border-2">
         <div class="font-weight-bold">Dane do wysyłki</div>
-        <div class="pl-4">
+        <div class="pl-2">
           <div v-if="shipmentInfo.company_name">{{ shipmentInfo.company_name }}</div>
           <div>{{ shipmentInfo.first_name }} {{ shipmentInfo.surname }}</div>
           <div>
@@ -31,23 +31,23 @@
           </div>
           <div>{{ shipmentInfo.postal_code }} {{ shipmentInfo.city }}</div>
         </div>
-        <div class="font-weight-bold border-t-1 pt-4">Czas dostawy</div>
-        <div class="border-t-1 pt-4 pl-4">1-3 dni robocze</div>
+        <div class="font-weight-bold border-t-1 pt-2">Czas dostawy</div>
+        <div class="border-t-1 pt-2 pl-2">1-3 dni robocze</div>
       </div>
-      <div v-else-if="isLockerMethodChosen && locker" class="grid grid-cols-2 gap-y-4 m-4 p-4 border-gray-100 border-2">
+      <div v-else-if="isLockerMethodChosen && locker" class="grid grid-cols-2 gap-y-4 m-2 p-2 border-gray-100 border-2">
         <div class="font-weight-bold">Wybrany paczkomat</div>
-        <div class="pl-4">
+        <div class="pl-2">
           <div>{{ locker.name }}</div>
           <div v-if="locker.address && locker.address.line1">ul. {{ locker.address.line1 }}</div>
           <div v-if="locker.address && locker.address.line2">{{ locker.address.line2 }}</div>
         </div>
-        <div class="font-weight-bold border-t-1 pt-4">Czas dostawy</div>
-        <div class="border-t-1 pt-4 pl-4">1-3 dni robocze</div>
+        <div class="font-weight-bold border-t-1 pt-2">Czas dostawy</div>
+        <div class="border-t-1 pt-2 pl-2">1-3 dni robocze</div>
       </div>
     </div>
-    <button v-if="isLockerMethodChosen && locker" class="button button-outline m-4" @click="showLockerMap">Zmień paczkomat</button>
-    <div class="px-4 py-4">
-      <div class="p-4" id="easypack-map"></div>
+    <button v-if="isLockerMethodChosen && locker" class="button button-outline m-2" @click="showLockerMap">Zmień paczkomat</button>
+    <div class="p-2">
+      <div class="p-2" id="easypack-map"></div>
     </div>
   </div>
 </template>

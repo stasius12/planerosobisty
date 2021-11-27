@@ -1,14 +1,14 @@
 <template>
   <div>
-    <h1 class="text-center mt-10">Podsumowanie</h1>
-    <div class="summary__general grid grid-cols-2 m-4 p-4">
+    <h1 class="text-center mt-5">Podsumowanie</h1>
+    <div class="summary__general grid grid-cols-2 m-2 p-2">
       <div class="border-b-1">
         <div class="font-weight-bold">Wartość zamówienia</div>
-        <div class="text-2xl mt-1">w tym koszty dostawy</div>
+        <div class="text-sm mt-1">w tym koszty dostawy</div>
       </div>
       <div class="border-b-1 text-right">
-        <div class="font-weight-bold text-4xl">{{ total / 100 }} zł</div>
-        <div class="text-2xl mt-1">{{ shipmentDetails.priceAmount / 100 }} zł</div>
+        <div class="font-weight-bold text-xl">{{ total / 100 }} zł</div>
+        <div class="text-sm mt-1">{{ shipmentDetails.priceAmount / 100 }} zł</div>
       </div>
       <div class="border-b-1 font-weight-bold">Dane zamówienia</div>
       <div class="border-b-1 text-right">
@@ -30,9 +30,9 @@
         <div>{{ shipmentInfo.postal_code }} {{ shipmentInfo.city }}</div>
       </div>
     </div>
-    <div class="border-1 border-gray-300 m-8 p-4">
-      <h3 class="text-center mb-8">Wybierz metodę płatności</h3>
-      <div class="summary__payments grid gap-4 items-center">
+    <div class="border-1 border-gray-300 m-2 p-2">
+      <h3 class="text-center mb-4">Wybierz metodę płatności</h3>
+      <div class="summary__payments grid gap-2 items-center">
       <p24-bank img-src="/p24/Blik.svg" img-alt="Blik" v-model="p24Bank" value="blik"></p24-bank>
       <p24-bank img-src="/p24/Alior.svg" img-alt="Alior" v-model="p24Bank" value="alior_bank"></p24-bank>
       <p24-bank img-src="/p24/Millenium.svg" img-alt="Bank Millenium" v-model="p24Bank" value="bank_millennium"></p24-bank>
@@ -60,7 +60,7 @@
 <!--      <p24-bank img-src="/p24/Bos Bank.svg" img-alt="Bos Bank" v-model="p24Bank" value="volkswagen_bank"></p24-bank>-->
     </div>
     </div>
-    <div class="summary__pay-button text-center mt-10">
+    <div class="summary__pay-button text-center mt-5">
       <button class="button button-outline" @click="createPaymentIntent">Przejdź do płatności</button>
     </div>
   </div>
@@ -169,7 +169,7 @@ export default {
 <style lang="scss" scoped>
 .summary__general {
   & > div {
-    padding: 2rem 0;
+    padding: 1rem 0;
     //&:not(:first-of-type) {
     //  border-top: 1px solid;
     //}

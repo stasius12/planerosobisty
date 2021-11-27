@@ -129,7 +129,7 @@ export default {
       border-radius: 50%;
 
       font-family: "icomoon";
-      font-size: 1.5rem;
+      font-size: 0.8rem;
       content: "\e900";
       background-color: $primary;
     }

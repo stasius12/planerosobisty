@@ -18,12 +18,6 @@ body {
     padding-left: 0;
     padding-right: 0;
   }
-
-  &.open-menu{
-    @media (max-width: $grid-breakpoint - 1){
-      transform: translateX($nav-responsive-width);
-    }
-  }
 }
 
 .slide-fade-enter-active,
@@ -88,14 +82,12 @@ section {
 
 .button {
   display: inline-block;
-  padding: 1.2rem 3rem 1rem 3rem;
+  padding: 0.7rem 1.7rem 0.6rem 1.7rem;
   text-decoration: none;
   font-family: $font-family-base;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 1.4rem;
   line-height: 1;
-  background-color: #525b60;
-  color: #ffffff;
   cursor: pointer;
   border: 0;
   text-align: center;
@@ -103,24 +95,28 @@ section {
               transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
+  @apply bg-gray-600;
+  @apply text-white;
 
   &.button-large {
-    padding: 1.8rem 4.5rem 1.5rem 4.5rem;
+    padding: 1rem 2.5rem 0.8rem 2.5rem;
   }
 
   &:hover {
-    background-color: lighten(#525b60, 20%);
+    @apply bg-gray-500;
   }
 }
 
 .button.button-outline {
-  background-color: #ffffff;
-  color: #525b60;
-  border: 1px solid #525b60;
+  @apply bg-white;
+  @apply text-gray-600;
+  @apply border-gray-600;
+  @apply border-1;
+  @apply border-solid;
 
   &:hover {
-    background-color: #525b60;
-    color: #ffffff;
+    @apply bg-gray-600;
+    @apply text-white;
   }
 }
 
@@ -132,21 +128,12 @@ section {
   &:hover {
     background-color: unset;
     svg {
-      fill: lighten(black, 20%);
+      fill: rgb(75, 85, 99);
     }
   }
 
   &:active {
     transform: scale(0.8);
-  }
-}
-
-.button.button-primary {
-  background-color: $primary;
-  color: #000000;
-
-  &:hover {
-    background-color: lighten($primary, 20%);
   }
 }
 
@@ -203,23 +190,5 @@ section {
 
   &::placeholder {
     color: black;
-  }
-}
-
-.easypack-widget {
-  .search-widget {
-    background-color: #f3f4f6 !important;
-  }
-  .map-list-row .map-list-flex .list-widget {
-    background-color: #f3f4f6 !important;
-
-    .list-wrapper ul li a {
-      &:hover {
-        background-color: #f9fafb !important;
-      }
-      .title {
-        margin: 0;
-      }
-    }
   }
 }

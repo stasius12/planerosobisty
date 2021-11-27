@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1 class="text-center mt-10">Dane zamówienia</h1>
-    <validation-observer ref="personalForm" tag="form" class="px-4 pt-12 pb-6">
-      <div class="grid sm:grid-cols-2 gap-12 mb-20">
+    <h1 class="text-center mt-5">Dane zamówienia</h1>
+    <validation-observer ref="personalForm" tag="form" class="px-2 pt-6 pb-3">
+      <div class="grid sm:grid-cols-2 gap-10 mb-10">
         <base-input
           name="given-name"
           type="text"
@@ -18,7 +18,7 @@
           v-model="personalForm.surname"
         />
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-6 gap-12 mb-20">
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-10 mb-10">
         <base-input
           name="street-address"
           type="text"
@@ -41,7 +41,7 @@
           v-model="personalForm.street_house_apartment"
         />
       </div>
-      <div class="grid sm:grid-cols-2 gap-12 mb-20">
+      <div class="grid sm:grid-cols-2 gap-10 mb-10">
         <base-input
           name="postal-code"
           type="text"
@@ -58,7 +58,7 @@
           v-model="personalForm.city"
         />
       </div>
-      <div class="grid sm:grid-cols-2 gap-12 mb-20">
+      <div class="grid sm:grid-cols-2 gap-10 mb-10">
         <base-input
           name="tel"
           type="text"
@@ -74,7 +74,7 @@
           v-model="personalForm.email"
         />
       </div>
-      <div class="grid sm:grid-cols-2 gap-12">
+      <div class="grid sm:grid-cols-2 gap-10">
         <base-input
           name="organization"
           type="text"
@@ -97,9 +97,9 @@
       v-if="shipmentInfoDiffers"
       ref="shipmentForm"
       tag="form"
-      class="px-4 pt-12 pb-4 mt-4 bg-gray-50"
+      class="px-2 pt-6 pb-4 mt-4 bg-gray-50"
     >
-      <div class="grid sm:grid-cols-2 gap-12 mb-20">
+      <div class="grid sm:grid-cols-2 gap-10 mb-10">
         <base-input
           name="given-name"
           type="text"
@@ -115,7 +115,7 @@
           v-model="shipmentForm.surname"
         />
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-6 gap-12 mb-20">
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-10 mb-10">
         <base-input
           name="street-address"
           type="text"
@@ -138,7 +138,7 @@
           v-model="shipmentForm.street_house_apartment"
         />
       </div>
-      <div class="grid sm:grid-cols-2 gap-12 mb-20">
+      <div class="grid sm:grid-cols-2 gap-10 mb-10">
         <base-input
           name="postal-code"
           type="text"
@@ -155,7 +155,7 @@
           v-model="shipmentForm.city"
         />
       </div>
-      <div class="grid sm:grid-cols-2 gap-12 mb-20">
+      <div class="grid sm:grid-cols-2 gap-10 mb-10">
         <base-input
           name="tel"
           type="text"
@@ -171,7 +171,7 @@
           v-model="shipmentForm.email"
         />
       </div>
-      <div class="grid sm:grid-cols-2 gap-12">
+      <div class="grid sm:grid-cols-2 gap-10">
         <base-input
           name="organization"
           type="text"

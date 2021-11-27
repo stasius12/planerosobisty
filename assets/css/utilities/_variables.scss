@@ -10,10 +10,8 @@ $grey-4:                          #f6f6f6;
 
 $error:                           #b70d0d;
 
-$gutter: 				  				        2.4rem;
-$header-height:      			        3.3rem;
-$header-height-breakpoint: 			  5rem;
-$nav-responsive-width:       			26rem;
+$gutter: 				  				        1.4rem;
+$header-height:      			        1.8rem;
 
 $border-radius: 					   			3px;
 $shadow:								 				  0 2px 4px rgba(black, .08);
@@ -29,13 +27,11 @@ $font-weight-base:            300;
 $line-height-base:            1.6;
 $line-height-header:          1;
 
-$fs-base:                     1.8rem;
-$fs-large:                    3rem;
-$fs-small:                    1rem;
+$fs-base:                     18px;
 
-$fs-h1:                       5rem;
-$fs-h2:                       3.5rem;
-$fs-h3:                       2.5rem;
+$fs-h1:                       2.8rem;
+$fs-h2:                       2rem;
+$fs-h3:                       1.4rem;
 $fs-h4:                       $fs-base;
 $fs-h5:                       $fs-base;
-$fs-h6:                       $fs-small;
+$fs-h6:                       0.8rem;

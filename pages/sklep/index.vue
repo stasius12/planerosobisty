@@ -1,7 +1,7 @@
 <template>
   <div class="xl:w-2/3 mt-10 mx-auto">
     <div class="grid md:grid-cols-2 gap-x-20">
-      <div class="p-4">
+      <div class="p-2">
         <img
           :src="frontProductImage.src"
           @click="index = frontProductImage.id"
@@ -17,7 +17,7 @@
           />
         </div>
       </div>
-      <div class="p-4">
+      <div class="p-2">
         <h1>Planer Osobisty</h1>
         <h2 class="text-gray-600">123,99 zł</h2>
         <p class="text-justify">
@@ -29,12 +29,12 @@
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum
         </p>
-        <button class="button w-full" @click="addProductToCart(product.id)">
+        <button class="button w-full" @click="addProductToCart()">
           Kup teraz
         </button>
-        <div class="grid sm:grid-cols-2 gap-x-4 font-primary text-3xl mt-4">
+        <div class="grid sm:grid-cols-2 gap-x-2 font-primary text-md mt-2">
           <div
-            class="flex items-center justify-center border-1 border-gray-300 my-4 px-5 py-3"
+            class="flex items-center justify-center border-1 border-gray-300 my-2 px-3 py-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -50,10 +50,10 @@
                 d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
               />
             </svg>
-            <span class="pl-4 mt-2">14 dni na zwrot</span>
+            <span class="pl-2 mt-1 leading-4">14 dni na zwrot</span>
           </div>
           <div
-            class="flex items-center justify-center border-1 border-gray-300 my-4 px-5 py-3"
+            class="flex items-center justify-center border-1 border-gray-300 my-2 px-3 py-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@
                 d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
               />
             </svg>
-            <span class="pl-4 mt-2">Darmowa wysyłka od 200zł</span>
+            <span class="pl-4 mt-2 leading-4">Darmowa wysyłka od 200zł</span>
           </div>
         </div>
       </div>
@@ -208,7 +208,7 @@ export default {
   methods: {
     ...mapActions('checkout', ['addCartItem']),
     async addProductToCart(productID) {
-      await this.addCartItem(productID)
+      await this.addCartItem('prod_K3sGdqwOzlBcyW')
       await this.$router.push({ name: 'sklep-koszyk' })
     },
   },

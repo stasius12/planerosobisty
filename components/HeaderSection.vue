@@ -10,21 +10,21 @@
         <ul class="list-none flex justify-between m-0">
           <li><nuxt-link :to="{ name: 'sklep' }">Sklep</nuxt-link></li>
           <li>
-            <nuxt-link :to="{ name: 'index', hash: '#blogs' }">Blog</nuxt-link>
+            <nuxt-link :to="{ name: 'blog' }">Blog</nuxt-link>
           </li>
           <li><nuxt-link :to="{ name: 'index' }">O mnie</nuxt-link></li>
           <li><nuxt-link :to="{ name: 'index' }">Kontakt</nuxt-link></li>
         </ul>
       </nav>
-      <div class="md:hidden flex items-center mr-10 z-20">
+      <div class="md:hidden flex items-center mr-5 z-20">
         <button
           class="outline-none mobile-menu-button flex"
           @click="$emit('toggleMobileMenu')"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-20 transition-all"
-            :class="{'w-20': !showMobileMenu, 'w-0': showMobileMenu}"
+            class="h-10 transition-all"
+            :class="{'w-10': !showMobileMenu, 'w-0': showMobileMenu}"
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -36,8 +36,8 @@
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-20 transition-all"
-            :class="{'w-20': showMobileMenu, 'w-0': !showMobileMenu}"
+            class="h-10 transition-all"
+            :class="{'w-10': showMobileMenu, 'w-0': !showMobileMenu}"
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -54,12 +54,12 @@
         class="header__mobile absolute right-0 top-0 h-screen pt-48 flex items-center justify-center text-black z-10 overflow-hidden"
         :class="{ 'w-0': !showMobileMenu, 'w-full': showMobileMenu }"
       >
-        <ul class="list-none flex flex-col items-center mb-72">
+        <ul class="list-none flex flex-col items-center mb-52">
           <li>
             <nuxt-link :to="{ name: 'sklep' }">Sklep</nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="{ name: 'index', hash: '#blogs' }">Blog</nuxt-link>
+            <nuxt-link :to="{ name: 'blog' }">Blog</nuxt-link>
           </li>
           <li>
             <nuxt-link :to="{ name: 'index' }">O mnie</nuxt-link>
@@ -83,10 +83,8 @@ export default {
 </script>
 
 <style lang="scss">
-$font-size-header-base: 2.5rem;
-
 .header {
-  font: 400 $font-size-header-base 'Bebas Neue', serif;
+  font: 400 1.4rem 'Bebas Neue', serif;
 
   > .header__menu {
     position: relative;
@@ -96,7 +94,7 @@ $font-size-header-base: 2.5rem;
   &__menu ul {
     li {
       display: block;
-      margin: 0 3rem;
+      margin: 0 1.7rem;
       color: inherit;
       line-height: $header-height;
       a {

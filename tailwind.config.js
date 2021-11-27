@@ -2,7 +2,11 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#fff72e"
+      }
+    },
     borderWidth: {
       0: '0',
       1: '1px',

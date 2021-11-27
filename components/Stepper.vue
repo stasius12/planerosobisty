@@ -1,19 +1,19 @@
 <template>
   <div class="flex flex-col p-5 xl:w-2/3 2xl:w-1/2 mx-auto select-none">
-    <div class="p-4">
+    <div class="p-2">
       <div class="flex items-center">
         <div
           class="flex items-center relative"
           :class="{
             'text-white': currentStepNumber === 0,
-            'text-gray-500': currentStepNumber !== 0,
+            'text-gray-600': currentStepNumber !== 0,
           }"
         >
           <div
-            class="rounded-full transition duration-500 ease-in-out h-20 w-20 py-3 border-2"
+            class="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2"
             :class="{
-              'bg-gray-500': currentStepNumber === 0,
-              'border-gray-500': currentStepNumber >= 0,
+              'bg-gray-600': currentStepNumber === 0,
+              'border-gray-600': currentStepNumber >= 0,
               'border-gray-300': currentStepNumber < 0,
             }"
           >
@@ -35,7 +35,7 @@
             </svg>
           </div>
           <div
-            class="absolute top-0 -ml-10 text-center mt-24 w-40 text-xl font-medium uppercase text-gray-500"
+            class="absolute top-0 -ml-4 text-center mt-14 w-20 text-xs font-medium uppercase text-gray-600"
           >
             Koszyk
           </div>
@@ -43,7 +43,7 @@
         <div
           class="flex-auto border-t-2 transition duration-500 ease-in-out"
           :class="{
-            'border-gray-500': currentStepNumber > 0,
+            'border-gray-600': currentStepNumber > 0,
             'border-gray-300': currentStepNumber <= 0,
           }"
         ></div>
@@ -51,14 +51,14 @@
           class="flex items-center relative"
           :class="{
             'text-white': currentStepNumber === 1,
-            'text-gray-500': currentStepNumber !== 1,
+            'text-gray-600': currentStepNumber !== 1,
           }"
         >
           <div
-            class="rounded-full transition duration-500 ease-in-out h-20 w-20 py-3 border-2"
+            class="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2"
             :class="{
-              'bg-gray-500': currentStepNumber === 1,
-              'border-gray-500': currentStepNumber >= 1,
+              'bg-gray-600': currentStepNumber === 1,
+              'border-gray-600': currentStepNumber >= 1,
               'border-gray-300': currentStepNumber < 1,
             }"
           >
@@ -80,7 +80,7 @@
             </svg>
           </div>
           <div
-            class="absolute top-0 -ml-10 text-center mt-24 w-40 text-xl font-medium uppercase text-gray-500"
+            class="absolute top-0 -ml-4 text-center mt-14 w-20 text-xs font-medium uppercase text-gray-600"
           >
             Dane
           </div>
@@ -88,7 +88,7 @@
         <div
           class="flex-auto border-t-2 transition duration-500 ease-in-out"
           :class="{
-            'border-gray-500': currentStepNumber > 1,
+            'border-gray-600': currentStepNumber > 1,
             'border-gray-300': currentStepNumber <= 1,
           }"
         ></div>
@@ -96,14 +96,14 @@
           class="flex items-center relative"
           :class="{
             'text-white': currentStepNumber === 2,
-            'text-gray-500': currentStepNumber !== 2,
+            'text-gray-600': currentStepNumber !== 2,
           }"
         >
           <div
-            class="rounded-full transition duration-500 ease-in-out h-20 w-20 py-3 border-2"
+            class="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2"
             :class="{
-              'bg-gray-500': currentStepNumber === 2,
-              'border-gray-500': currentStepNumber >= 2,
+              'bg-gray-600': currentStepNumber === 2,
+              'border-gray-600': currentStepNumber >= 2,
               'border-gray-300': currentStepNumber < 2,
             }"
           >
@@ -125,7 +125,7 @@
             </svg>
           </div>
           <div
-            class="absolute top-0 -ml-10 text-center mt-24 w-40 text-xl font-medium uppercase text-gray-500"
+            class="absolute top-0 -ml-4 text-center mt-14 w-20 text-xs font-medium uppercase text-gray-600"
           >
             Wysyłka
           </div>
@@ -133,7 +133,7 @@
         <div
           class="flex-auto border-t-2 transition duration-500 ease-in-out"
           :class="{
-            'border-gray-500': currentStepNumber > 2,
+            'border-gray-600': currentStepNumber > 2,
             'border-gray-300': currentStepNumber <= 2,
           }"
         ></div>
@@ -141,14 +141,14 @@
           class="flex items-center relative"
           :class="{
             'text-white': currentStepNumber === 3,
-            'text-gray-500': currentStepNumber !== 3,
+            'text-gray-600': currentStepNumber !== 3,
           }"
         >
           <div
-            class="rounded-full transition duration-500 ease-in-out h-20 w-20 py-3 border-2"
+            class="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2"
             :class="{
-              'bg-gray-500': currentStepNumber === 3,
-              'border-gray-500': currentStepNumber >= 3,
+              'bg-gray-600': currentStepNumber === 3,
+              'border-gray-600': currentStepNumber >= 3,
               'border-gray-300': currentStepNumber < 3,
             }"
           >
@@ -170,7 +170,7 @@
             </svg>
           </div>
           <div
-            class="absolute top-0 -ml-10 text-center mt-24 w-40 text-xl font-medium uppercase text-gray-500"
+            class="absolute top-0 -ml-4 text-center mt-14 w-20 text-xs font-medium uppercase text-gray-600"
           >
             Płatność
           </div>
@@ -182,7 +182,7 @@
         <slot></slot>
       </div>
       <div class="p-4">
-        <div v-if="previous || next" class="flex p-4 mt-4">
+        <div v-if="previous || next" class="flex p-2 mt-2">
           <nuxt-link
             v-if="previous"
             :to="previous.link"

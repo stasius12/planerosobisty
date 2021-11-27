@@ -94,7 +94,7 @@
         <nuxt-link :to="{ name: 'blog-slug', params: { slug: blog.slug } }">
           <img :src="blog.thumbnail" :alt="blog.title" />
           <h3 class="text-center">{{ blog.title }}</h3>
-          <summary class="text-center">{{ blog.description }}</summary>
+          <summary class="text-center block">{{ blog.description }}</summary>
         </nuxt-link>
       </article>
     </section>
@@ -206,7 +206,7 @@ $circle-radius: 25vw;
 
   > * {
     max-width: 1300px;
-    margin-bottom: 3rem;
+    margin-bottom: 1.7rem;
     margin-top: 0;
     &:last-child {
       margin-bottom: 0;
@@ -228,7 +228,7 @@ $circle-radius: 25vw;
     padding-right: 5rem;
     background: $primary;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 1.7rem;
     line-height: 4rem;
 
     li {
@@ -241,7 +241,7 @@ $circle-radius: 25vw;
 .home-page .newest-blogs {
   header {
     background: #cbcbcb;
-    margin-bottom: 3rem;
+    margin-bottom: 1.7rem;
 
     > * {
       position: relative;
@@ -255,11 +255,11 @@ $circle-radius: 25vw;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 40px;
     margin-bottom: 4rem;
-    padding: 3rem 0;
+    padding: 1.7rem 0;
     background: #cbcbcb30;
 
     article h3 {
-      font-size: 3rem;
+      font-size: 1.7rem;
       margin: 2rem 0 0 0;
     }
   }
@@ -276,8 +276,8 @@ $circle-radius: 25vw;
     font-size: 4rem;
   }
   ol {
-    font-size: 2.5rem;
-    margin: 3rem 0;
+    font-size: 1.4rem;
+    margin: 1.7rem 0;
   }
   form {
     display: flex;
@@ -287,7 +287,7 @@ $circle-radius: 25vw;
       background: transparent;
       border: none;
       border-bottom: 1px solid black;
-      font-size: 3rem;
+      font-size: 1.7rem;
       text-transform: uppercase;
 
       &:focus-visible {
@@ -353,7 +353,7 @@ $circle-radius: 25vw;
 
 .home-page .more-blogs {
   article {
-    margin-bottom: 3rem;
+    margin-bottom: 1.7rem;
   }
   article a {
     display: grid;
@@ -370,7 +370,7 @@ $circle-radius: 25vw;
       align-self: end;
       color: inherit;
       font-weight: 700;
-      font-size: 3rem;
+      font-size: 1.7rem;
     }
     summary {
       align-self: start;
