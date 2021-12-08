@@ -1,21 +1,23 @@
 <template>
   <main class="home-page select-none">
     <section class="intro"></section>
-    <section class="cite my-10">
+    <section class="cite container my-10">
       <blockquote class="font-handwrite text-3xl">
         "Ludzie, którzy mają cele, odnoszą sukcesy, ponieważ wiedzą, dokąd
         zmierzają."
       </blockquote>
       <cite class="font-primary font-style-normal">EARL NIGHTINGALE</cite>
     </section>
-    <section class="hero mt-10 py-14 container items-center px-10 flex flex-col lg:grid">
+    <section
+      class="hero mt-10 py-14 container items-center flex flex-col lg:grid"
+    >
       <!--flex flex-wrap     2xl:ml-auto xl:ml-20 -->
       <img
-        class="hero__img col-span-2 lg:pr-5 lg:pl-0 md:px-20 px-10"
+        class="hero__img col-span-2 lg:pr-5 lg:pl-0 md:px-32 sm:px-16 px-10"
         src="~assets/images/Natalka_rounded.png"
         alt="Natalia Włodarska"
       />
-      <div class="text-center col-span-3 pl-5 mt-10 lg:mt-0">
+      <div class="text-center col-span-3 lg:pl-5 mt-10 lg:mt-0">
         <h2 class="font-handwrite font-weight-normal mb-8">
           Cześć! Jestem Natalia :)
         </h2>
@@ -82,7 +84,7 @@
         </nuxt-link>
       </footer>
     </section>
-    <section class="newsletter bg-primary p-14">
+    <section class="newsletter bg-primary py-14">
       <div class="container">
         <h2>ZAPISZ SIĘ DO DARMOWEGO NEWSLETTERA JEŚLI CHCESZ:</h2>
         <ol class="pt-5 pl-10 text-lg list-decimal">
@@ -107,7 +109,7 @@
         </client-only>
       </div>
     </section>
-    <section class="social p-14">
+    <section class="social py-14">
       <div class="social__container container relative">
         <h2 class="mb-2">Po więcej materiałów wpadaj na mojego:</h2>
         <div class="flex flex-wrap gap-x-5">
