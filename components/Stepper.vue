@@ -2,7 +2,8 @@
   <div class="flex flex-col p-5 xl:w-2/3 2xl:w-1/2 mx-auto select-none">
     <div class="p-2">
       <div class="flex items-center">
-        <div
+        <nuxt-link
+          :to="currentStepNumber > 0 ? { name: 'sklep-koszyk' } : ''"
           class="flex items-center relative"
           :class="{
             'text-white': currentStepNumber === 0,
@@ -39,7 +40,7 @@
           >
             Koszyk
           </div>
-        </div>
+        </nuxt-link>
         <div
           class="flex-auto border-t-2 transition duration-500 ease-in-out"
           :class="{
@@ -47,7 +48,8 @@
             'border-gray-300': currentStepNumber <= 0,
           }"
         ></div>
-        <div
+        <nuxt-link
+          :to="currentStepNumber > 1 ? { name: 'sklep-dane-zamowienia' } : ''"
           class="flex items-center relative"
           :class="{
             'text-white': currentStepNumber === 1,
@@ -84,7 +86,7 @@
           >
             Dane
           </div>
-        </div>
+        </nuxt-link>
         <div
           class="flex-auto border-t-2 transition duration-500 ease-in-out"
           :class="{
@@ -92,7 +94,8 @@
             'border-gray-300': currentStepNumber <= 1,
           }"
         ></div>
-        <div
+        <nuxt-link
+          :to="currentStepNumber > 2 ? { name: 'sklep-wysylka' } : ''"
           class="flex items-center relative"
           :class="{
             'text-white': currentStepNumber === 2,
@@ -129,7 +132,7 @@
           >
             Wysyłka
           </div>
-        </div>
+        </nuxt-link>
         <div
           class="flex-auto border-t-2 transition duration-500 ease-in-out"
           :class="{
@@ -137,7 +140,8 @@
             'border-gray-300': currentStepNumber <= 2,
           }"
         ></div>
-        <div
+        <nuxt-link
+          :to="currentStepNumber > 3 ? { name: 'sklep-platnosc' } : ''"
           class="flex items-center relative"
           :class="{
             'text-white': currentStepNumber === 3,
@@ -174,7 +178,7 @@
           >
             Płatność
           </div>
-        </div>
+        </nuxt-link>
       </div>
     </div>
     <div class="flex flex-col border-2 border-gray-300 my-20">
