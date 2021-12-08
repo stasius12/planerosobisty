@@ -189,8 +189,9 @@
     <div v-else class="text-center mt-10">
       <div>Twój koszyk jest pusty 🙈</div>
       <nuxt-link :to="{ name: 'sklep' }" class="button button-outline mt-10"
-        >Kliknij aby wrócić do sklepu</nuxt-link
-      >
+>
+        Kliknij aby wrócić do sklepu
+      </nuxt-link>
     </div>
   </div>
 </template>

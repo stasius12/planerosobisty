@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="lala bg-center bg-cover w-screen h-screen">
     <header-section
       :show-mobile-menu="showMobileMenu"
       @toggleMobileMenu="toggleMobileMenu"
@@ -36,3 +36,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.lala {
+  background-image: url('~assets/images/home_page_intro.png');
+}
+</style>

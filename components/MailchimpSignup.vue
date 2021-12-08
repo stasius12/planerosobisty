@@ -2,6 +2,7 @@
   <validation-observer
     v-slot="{ invalid }"
     ref="subscribe"
+    class="flex flex-wrap sm:flex-nowrap gap-x-10 gap-y-8"
     tag="form"
     @submit.prevent="subscribe()"
   >
@@ -11,25 +12,29 @@
       :bails="false"
       tag="div"
       name="Email"
+      class="h-11 w-full"
     >
       <input
         v-model="form.email"
-        class="font-primary"
-        :class="{ invalid: errors.length || response.errorMessage }"
+        class="w-full h-full bg-transparent border-b-1 border-black font-primary outline-none placeholder-black uppercase"
+        :class="{
+          'border-red-700': errors.length || response.errorMessage,
+          ...inputClass,
+        }"
         type="email"
         placeholder="twój email"
       />
-      <div class="first-error font-weight-bold">
+      <div class="first-error font-weight-bold absolute text-red-700">
         <small>{{ errors[0] || response.errorMessage }}</small>
       </div>
       <div
         v-if="response.message && !errors.length && !response.errorMessage"
-        class="success-message font-weight-bold"
+        class="absolute success-message font-weight-bold"
       >
         <small>{{ response.message }}</small>
       </div>
     </validation-provider>
-    <button class="button" type="submit" :disabled="invalid">
+    <button class="button w-full bg-gray-600" type="submit" :disabled="invalid">
       Zapisz mnie
     </button>
   </validation-observer>
@@ -43,6 +48,12 @@ export default {
   name: 'MailchimpSignup',
   components: {
     ValidationProvider,
+  },
+  props: {
+    inputClass: {
+      type: Object,
+      default: () => {},
+    },
   },
   data() {
     return {
@@ -86,5 +97,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss"></style>

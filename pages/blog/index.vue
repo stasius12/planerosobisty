@@ -1,9 +1,9 @@
 <template>
   <main>
-    <div class="container-lg flex flex-col md:flex-row mt-8 mb-3">
+    <div class="container flex flex-col md:flex-row mt-8 mb-3">
       <div class="flex items-center w-full mt-2 md:mr-4">
         <h1 class="mb-0 top-1 relative text-gray-300">Blog</h1>
-        <div class="border-b-1 border-gray-300 w-full ml-4"></div>
+        <div class="border-b-1 border-gray-300 w-full ml-4" />
       </div>
       <validation-observer
         class="flex items-center mt-2 h-11 md:h-auto"
@@ -20,7 +20,7 @@
         <button class="button search-button h-full">Szukaj</button>
       </validation-observer>
     </div>
-    <section class="container-lg">
+    <section class="container">
       <article v-for="blog in blogs" :key="blog.slug" class="py-4">
         <nuxt-link
           :to="{ name: 'blog-slug', params: { slug: blog.slug } }"

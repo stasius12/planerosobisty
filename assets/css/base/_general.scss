@@ -68,17 +68,6 @@ img{
   background-color: $primary;
 }
 
-section {
-  margin-bottom: 2.4rem;
-
-  //ul {
-  //  padding: 0;
-  //}
-
-  @media (min-width: $screen-sm){
-    margin-bottom: 7.2rem;
-  }
-}
 
 .button {
   display: inline-block;
