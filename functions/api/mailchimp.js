@@ -5,13 +5,13 @@ const audienceId = '01d3f8d745'
 const mailchimp = new Mailchimp(apiKey)
 
 const subscribe = async (req, res) => {
-  const { email: emailAddress } = req.body
+  const { email } = req.body
   try {
     const response = await mailchimp.request({
       method: 'post',
       path: `/lists/${audienceId}/members`,
       body: {
-        emailAddress,
+        email_address: email,
         status: 'subscribed',
       },
     })

@@ -105,7 +105,7 @@
           </li>
         </ol>
         <client-only>
-          <mailchimp-signup class="lg:w-1/2"></mailchimp-signup>
+          <mailchimp-signup form-class="lg:w-1/2"></mailchimp-signup>
         </client-only>
       </div>
     </section>
