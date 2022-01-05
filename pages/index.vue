@@ -50,15 +50,19 @@
         </p>
       </div>
     </section>
-    <section class="newest-blogs bg-gray-100 pb-14">
-      <header class="bg-gray-300">
-        <h2
-          class="relative top-1 text-center text-white text-4xl leading-normal"
-        >
-          Najnowsze artykuły
-        </h2>
+    <section class="newest-blogs bg-gray-100 py-14">
+      <header>
+        <div class="container">
+          <div class="flex items-center w-full">
+            <div class="border-b-1 border-gray-600 w-full mr-4" />
+            <h2 class="min-w-max mb-0 top-1 relative text-gray-600 text-center">
+              Najnowsze artykuły
+            </h2>
+            <div class="border-b-1 border-gray-600 w-full ml-4" />
+          </div>
+        </div>
       </header>
-      <div class="container flex flex-wrap gap-x-6 py-6">
+      <div class="container flex flex-wrap gap-x-6">
         <article
           v-for="blog in blogs.slice(0, 3)"
           :key="blog.slug"
@@ -68,7 +72,7 @@
           <nuxt-link :to="{ name: 'blog-slug', params: { slug: blog.slug } }">
             <img :src="blog.thumbnail" :alt="blog.title" />
             <h3
-              class="mt-4 px-2 text-center text-gray-600 text-lg uppercase font-body font-medium"
+              class="mt-4 px-2 text-center text-black text-lg font-body font-medium"
             >
               {{ blog.title }}
             </h3>
@@ -227,6 +231,9 @@ $circle-radius: 25vw;
 }
 
 .home-page .newest-blogs {
+  h2 {
+    font-weight: 600;
+  }
   &__article:last-child {
     @screen sm {
       display: none;
