@@ -51,15 +51,13 @@
       </div>
     </section>
     <section class="newest-blogs bg-gray-100 py-14">
-      <header>
-        <div class="container">
-          <div class="flex items-center w-full">
-            <div class="border-b-1 border-gray-600 w-full mr-4" />
-            <h2 class="min-w-max mb-0 top-1 relative text-gray-600 text-center">
-              Najnowsze artykuły
-            </h2>
-            <div class="border-b-1 border-gray-600 w-full ml-4" />
-          </div>
+      <header class="container mb-2">
+        <div class="flex items-center w-full">
+          <div class="border-b-1 border-gray-600 w-full mr-4" />
+          <h2 class="min-w-max mb-0 top-1 relative text-gray-600 text-center">
+            Najnowsze artykuły
+          </h2>
+          <div class="border-b-1 border-gray-600 w-full ml-4" />
         </div>
       </header>
       <div class="container flex flex-wrap gap-x-6">
