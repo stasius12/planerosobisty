@@ -8,53 +8,55 @@
       </blockquote>
       <cite class="font-primary font-style-normal">EARL NIGHTINGALE</cite>
     </section>
-    <section
-      class="hero mt-10 py-14 container items-center flex flex-col lg:grid"
-    >
-      <!--flex flex-wrap     2xl:ml-auto xl:ml-20 -->
-      <img
-        class="hero__img col-span-2 lg:pr-5 lg:pl-0 md:px-32 sm:px-16 px-10"
-        src="~assets/images/Natalka_rounded.png"
-        alt="Natalia Włodarska"
-      />
-      <div class="text-center col-span-3 lg:pl-5 mt-10 lg:mt-0">
-        <h2 class="font-handwrite font-weight-normal mb-8">
-          Cześć! Jestem Natalia :)
+    <section class="hero py-4 container">
+      <header class="flex items-center w-full">
+        <div class="border-b-1 border-gray-600 w-full mr-4" />
+        <h2
+          class="min-w-max mb-0 top-1 relative text-gray-600 text-center font-normal"
+        >
+          Poznajmy się
         </h2>
-        <p class="mt-0 mb-4">
-          Wierzę, że
-          <span class="font-bold">mając odpowiednie narzędzia</span>, każdy z
-          nas może zaprojektować życie swoich marzeń.
-        </p>
-        <p class="mt-0 mb-4">
-          Istnieją 3 filary, które determinują nasz sukces w tym zakresie.
-        </p>
-        <p class="mt-0 mb-4">
-          1. Samoświadomość 2. Planowanie 3. Produktywność
-        </p>
-        <p class="mt-0 mb-4">
-          Każdy z nich jest
-          <span class="font-bold">nieodzownym</span> elementem projektowania
-          własnej rzeczywistości.
-        </p>
-        <p class="mt-0 mb-4">
-          Moją misją jest wspierać Cię w tworzeniu życia, o którym marzysz.
-          Stworzyłam to miejsce, aby podzielić się z tobą swoją wiedzą i
-          doświadczeniem. Treści i narzędzia, które tu znajdziesz, pomogą Ci
-          <span class="font-bold">świadomie i skutecznie</span> tworzyć własną
-          mapę do celu i w konsekwencji, spełniać swoje marzenia.
-        </p>
-        <p class="font-primary text-3xl">
-          Moją misją jest pomóc Ci stworzyć mapę do celu. <br />
-          <span class="font-bold">Ścieżkę wybierasz sam.</span>
-        </p>
+        <div class="border-b-1 border-gray-600 w-full ml-4" />
+      </header>
+      <div class="hero__content items-center flex flex-col lg:grid py-6">
+        <img
+          class="hero__img col-span-2 lg:pr-5 lg:pl-0 md:px-32 sm:px-16 px-10"
+          src="~assets/images/Natalka_rounded.png"
+          alt="Natalia Włodarska"
+        />
+        <div class="text-center col-span-3 lg:pl-5 mt-10 lg:mt-0">
+          <p class="my-3">
+            Cześć! Jestem Natalia :) Wierzę, że
+            <span class="font-bold">mając odpowiednie narzędzia</span>, każdy z
+            nas może zaprojektować życie swoich marzeń.
+          </p>
+          <p class="my-3">
+            Trzy filary, które determinują nasz sukces w tym zakresie to:
+            samoświadomość, planowanie i produktywność. Każdy z nich jest
+            <span class="font-bold">
+              nieodzownym elementem projektowania własnej rzeczywistości </span>.
+          </p>
+          <p class="my-3">
+            Moją misją jest wspierać Cię w tworzeniu życia, o którym marzysz.
+            Stworzyłam to miejsce, aby podzielić się z Tobą swoją wiedzą i
+            doświadczeniem. Treści i narzędzia, które tu znajdziesz, pomogą Ci
+            <span class="font-bold">świadomie i skutecznie</span> tworzyć własną
+            mapę do celu i w konsekwencji, spełniać swoje marzenia.
+          </p>
+          <p class="font-primary text-3xl mb-2">
+            Moją misją jest pomóc Ci stworzyć mapę do celu. <br />
+            <span class="font-bold">Ścieżkę wybierasz sam.</span>
+          </p>
+        </div>
       </div>
     </section>
     <section class="newest-blogs bg-gray-100 py-14">
       <header class="container mb-2">
         <div class="flex items-center w-full">
           <div class="border-b-1 border-gray-600 w-full mr-4" />
-          <h2 class="min-w-max mb-0 top-1 relative text-gray-600 text-center">
+          <h2
+            class="min-w-max mb-0 top-1 relative text-gray-600 text-center font-normal"
+          >
             Najnowsze artykuły
           </h2>
           <div class="border-b-1 border-gray-600 w-full ml-4" />
@@ -146,6 +148,15 @@
       </div>
     </section>
     <section class="container pt-14">
+      <header class="mb-5">
+        <div class="flex items-center w-full">
+          <div class="border-b-1 border-gray-600 w-full mr-4" />
+          <h2 class="min-w-max mb-0 top-1 relative text-gray-600 text-center">
+            Zobacz więcej
+          </h2>
+          <div class="border-b-1 border-gray-600 w-full ml-4" />
+        </div>
+      </header>
       <article v-for="blog in blogs.slice(0, 5)" :key="blog.slug" class="py-4">
         <nuxt-link
           :to="{ name: 'blog-slug', params: { slug: blog.slug } }"
@@ -220,7 +231,9 @@ $circle-radius: 25vw;
 }
 
 .home-page .hero {
-  grid-template-columns: repeat(5, 1fr);
+  &__content {
+    grid-template-columns: repeat(5, 1fr);
+  }
 
   &__img {
     //max-width: 35rem;
@@ -229,9 +242,6 @@ $circle-radius: 25vw;
 }
 
 .home-page .newest-blogs {
-  h2 {
-    font-weight: 600;
-  }
   &__article:last-child {
     @screen sm {
       display: none;
