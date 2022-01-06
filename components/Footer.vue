@@ -62,7 +62,4 @@ export default {
 section {
   flex: 1 1 200px;
 }
-.signup input {
-  font-size: 1.5rem;
-}
 </style>

@@ -1,15 +1,10 @@
 <template>
   <main class="home-page select-none">
-    <section class="intro"></section>
-    <section class="cite container my-10">
-      <blockquote class="font-handwrite text-3xl">
-        "Ludzie, którzy mają cele, odnoszą sukcesy, ponieważ wiedzą, dokąd
-        zmierzają."
-      </blockquote>
-      <cite class="font-primary font-style-normal">EARL NIGHTINGALE</cite>
+    <section class="intro bg-center bg-cover w-screen h-screen my-12 pt-2 hidden lg:flex items-center justify-center">
+      <img src="~assets/images/home_page_tekst.png">
     </section>
-    <section class="hero py-4 container">
-      <header class="flex items-center w-full">
+    <section class="hero container">
+      <header class="hidden lg:flex items-center w-full pt-4">
         <div class="border-b-1 border-gray-600 w-full mr-4" />
         <h2
           class="min-w-max mb-0 top-1 relative text-gray-600 text-center font-normal"
@@ -18,7 +13,7 @@
         </h2>
         <div class="border-b-1 border-gray-600 w-full ml-4" />
       </header>
-      <div class="hero__content items-center flex flex-col lg:grid py-6">
+      <div class="hero__content items-center flex flex-col lg:grid py-12">
         <img
           class="hero__img col-span-2 lg:pr-5 lg:pl-0 md:px-32 sm:px-16 px-10"
           src="~assets/images/Natalka_rounded.png"
@@ -34,10 +29,11 @@
             Trzy filary, które determinują nasz sukces w tym zakresie to:
             samoświadomość, planowanie i produktywność. Każdy z nich jest
             <span class="font-bold">
-              nieodzownym elementem projektowania własnej rzeczywistości </span>.
+              nieodzownym elementem projektowania własnej rzeczywistości </span
+            >.
           </p>
           <p class="my-3">
-            Moją misją jest wspierać Cię w tworzeniu życia, o którym marzysz.<br>
+            Moją misją jest wspierać Cię w tworzeniu życia, o którym marzysz.<br />
             Treści i narzędzia, które tu znajdziesz, pomogą Ci
             <span class="font-bold">świadomie i skutecznie</span> tworzyć własną
             mapę do celu i w konsekwencji, spełniać swoje marzenia.
@@ -49,7 +45,7 @@
         </div>
       </div>
     </section>
-    <section class="newest-blogs bg-gray-100 py-14">
+    <section class="newest-blogs py-12 bg-gray-100">
       <header class="container mb-2">
         <div class="flex items-center w-full">
           <div class="border-b-1 border-gray-600 w-full mr-4" />
@@ -61,7 +57,7 @@
           <div class="border-b-1 border-gray-600 w-full ml-4" />
         </div>
       </header>
-      <div class="container flex flex-wrap gap-x-6">
+      <div class="container flex flex-wrap gap-x-6 py-4">
         <article
           v-for="blog in blogs.slice(0, 3)"
           :key="blog.slug"
@@ -80,41 +76,32 @@
       </div>
       <footer class="flex justify-center">
         <nuxt-link
-          class="font-primary button h-11 w-96 bg-gray-300 hover:bg-gray-400"
+          class="font-primary button h-11 w-64 bg-gray-300 hover:bg-gray-400"
           :to="{ name: 'blog' }"
         >
           Zobacz więcej postów
         </nuxt-link>
       </footer>
     </section>
-    <section class="newsletter bg-primary py-14">
+    <section class="newsletter bg-primary py-12">
       <div class="container">
-        <h2>ZAPISZ SIĘ DO DARMOWEGO NEWSLETTERA JEŚLI CHCESZ:</h2>
-        <ol class="pt-5 pl-10 text-lg list-decimal">
-          <li class="py-1">
-            <span class="font-bold">
-              Świadomie tworzyć własną rzeczywistość
-            </span>
-          </li>
-          <li class="py-1">
-            Nauczyć się
-            <span class="font-bold">skutecznie planować</span> swoje działania
-          </li>
-          <li class="py-1">
-            Być <span class="font-bold">efektywnym</span> jak nigdy dotąd
-          </li>
-          <li class="py-1">
-            <span class="font-bold">Otrzymać bonusowego ebooka</span>
-          </li>
+        <h2 class="font-normal">ZAPISZ SIĘ DO DARMOWEGO NEWSLETTERA JEŚLI CHCESZ:</h2>
+        <ol class="pt-5 pl-10 text-lg list-decimal font-normal">
+          <li>Świadomie tworzyć własną rzeczywistość</li>
+          <li>Nauczyć się skutecznie planować swoje działania</li>
+          <li>Być efektywnym jak nigdy dotąd</li>
+          <li>Otrzymać bonusowego ebooka</li>
         </ol>
         <client-only>
           <mailchimp-signup form-class="lg:w-1/2"></mailchimp-signup>
         </client-only>
       </div>
     </section>
-    <section class="social py-14">
+    <section class="social py-12">
       <div class="container relative">
-        <h2 class="mb-2 font-secondary text-2xl">Po więcej materiałów wpadaj na mojego:</h2>
+        <h2 class="mb-2 font-secondary text-2xl font-normal">
+          Po więcej materiałów wpadaj na mojego:
+        </h2>
         <div class="flex flex-wrap gap-x-5">
           <a
             href="https://www.facebook.com/Planer-Osobisty-102458435311991"
@@ -146,11 +133,11 @@
         />
       </div>
     </section>
-    <section class="container pt-14">
-      <header class="mb-5">
+    <section class="container pt-12">
+      <header class="mb-8">
         <div class="flex items-center w-full">
           <div class="border-b-1 border-gray-600 w-full mr-4" />
-          <h2 class="min-w-max mb-0 top-1 relative text-gray-600 text-center">
+          <h2 class="min-w-max mb-0 top-1 relative text-gray-600 text-center font-normal">
             Zobacz więcej
           </h2>
           <div class="border-b-1 border-gray-600 w-full ml-4" />
@@ -183,7 +170,7 @@ import MailchimpSignup from '@/components/MailchimpSignup'
 export default {
   components: { MailchimpSignup },
 
-  layout: 'homePage',
+  // layout: 'homePage',
 
   transition: {
     name: 'slide-fade',
@@ -201,14 +188,15 @@ export default {
 <style lang="scss">
 $circle-radius: 25vw;
 
-.home-page section {
-  h2 {
-    font-weight: 400;
-  }
-}
-
 .home-page .intro {
-  height: calc(100vh - 114px);
+  background-image: url('~assets/images/home_page_intro.png');
+  @screen lg {
+    height: calc(100vh - 300px);
+
+    @media (min-aspect-ratio: 2 / 1) {
+      height: calc(100vh - 200px);
+    }
+  }
 }
 
 .home-page .cite {
@@ -254,14 +242,14 @@ $circle-radius: 25vw;
 .home-page .newsletter {
   form {
     input {
-      font-size: 1.7rem;
+      //font-size: 1.7rem;
     }
   }
 }
 
 .home-page .social {
   &__ebook {
-    right: 1rem;
+    right: 2rem;
 
     @screen 2xl {
       right: 10rem;

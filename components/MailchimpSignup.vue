@@ -16,13 +16,13 @@
       >
         <input
           v-model="form.email"
-          class="w-full h-full bg-transparent border-b-1 border-black font-primary outline-none placeholder-black uppercase"
+          class="w-full h-full bg-transparent border-b-1 border-black outline-none placeholder-black text-xl"
           :class="{
             'border-red-700': errors.length || response.errorMessage,
             ...inputClass,
           }"
           type="email"
-          placeholder="twój email"
+          placeholder="Twój email"
           @keyup.enter.prevent="handleSubmit(subscribe)"
         />
         <div class="first-error font-weight-bold absolute text-red-700">
