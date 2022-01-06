@@ -18,12 +18,3 @@ $grid-breakpoint:     $screen-md;
   padding-left:  $gutter;
   padding-right: $gutter;
 }
-
-.container {
-  @include container-fixed;
-}
-
-.container-lg {
-  @include container-fixed;
-  max-width: $container-lg;
-}

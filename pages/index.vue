@@ -70,7 +70,7 @@
           <nuxt-link :to="{ name: 'blog-slug', params: { slug: blog.slug } }">
             <img :src="blog.thumbnail" :alt="blog.title" />
             <h3
-              class="mt-4 px-2 text-center text-black text-lg font-body font-medium"
+              class="mt-4 px-2 text-center text-black text-lg font-body font-normal"
             >
               {{ blog.title }}
             </h3>
@@ -145,7 +145,7 @@
         />
       </div>
     </section>
-    <section class="container py-14">
+    <section class="container pt-14">
       <article v-for="blog in blogs.slice(0, 5)" :key="blog.slug" class="py-4">
         <nuxt-link
           :to="{ name: 'blog-slug', params: { slug: blog.slug } }"

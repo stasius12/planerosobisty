@@ -6,7 +6,7 @@
     />
     <Nuxt v-if="!$slots.default" />
     <slot />
-    <footer-section />
+    <footer-section class="mt-10" />
   </div>
 </template>
 

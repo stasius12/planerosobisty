@@ -11,7 +11,7 @@
         <img :src="blog.thumbnail" />
       </div>
     </section>
-    <section class="container blog-content">
+    <section class="container blog-content py-12">
       <nuxt-content :document="blog" class="blog-content__inner" />
     </section>
   </main>
@@ -70,8 +70,6 @@ export default {
   }
 }
 .blog-content {
-  padding-bottom: 7.2rem;
-
   &__inner {
     > * {
       margin-left: auto;
@@ -119,7 +117,6 @@ export default {
       top: 0;
       width: 2.7rem;
       height: 2.7rem;
-      //padding-top: 0.2rem;
 
       display: flex;
       justify-content: center;
