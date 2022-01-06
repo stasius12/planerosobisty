@@ -37,9 +37,8 @@
               nieodzownym elementem projektowania własnej rzeczywistości </span>.
           </p>
           <p class="my-3">
-            Moją misją jest wspierać Cię w tworzeniu życia, o którym marzysz.
-            Stworzyłam to miejsce, aby podzielić się z Tobą swoją wiedzą i
-            doświadczeniem. Treści i narzędzia, które tu znajdziesz, pomogą Ci
+            Moją misją jest wspierać Cię w tworzeniu życia, o którym marzysz.<br>
+            Treści i narzędzia, które tu znajdziesz, pomogą Ci
             <span class="font-bold">świadomie i skutecznie</span> tworzyć własną
             mapę do celu i w konsekwencji, spełniać swoje marzenia.
           </p>
@@ -81,7 +80,7 @@
       </div>
       <footer class="flex justify-center">
         <nuxt-link
-          class="font-primary button button-large"
+          class="font-primary button h-11 w-96 bg-gray-300 hover:bg-gray-400"
           :to="{ name: 'blog' }"
         >
           Zobacz więcej postów
@@ -114,35 +113,35 @@
       </div>
     </section>
     <section class="social py-14">
-      <div class="social__container container relative">
-        <h2 class="mb-2">Po więcej materiałów wpadaj na mojego:</h2>
+      <div class="container relative">
+        <h2 class="mb-2 font-secondary text-2xl">Po więcej materiałów wpadaj na mojego:</h2>
         <div class="flex flex-wrap gap-x-5">
           <a
             href="https://www.facebook.com/Planer-Osobisty-102458435311991"
-            class="flex items-center text-gray-500 font-medium text-3xl"
+            class="flex items-center text-gray-500 font-medium text-xl"
           >
             <img
               src="~assets/images/facebook.svg"
               alt="Facebook icon"
-              class="w-16"
+              class="w-10"
             />
-            <span class="relative top-0.5 font-header">Facebooka</span>
+            <span class="relative top-0.5">Facebooka</span>
           </a>
           <a
             href="https://instagram.com/planerosobisty"
-            class="flex items-center text-gray-500 font-medium text-3xl"
+            class="flex items-center text-gray-500 font-medium text-xl"
           >
             <img
               src="~assets/images/instagram.svg"
               alt="Instagram icon"
-              class="w-16"
+              class="w-10"
             />
-            <span class="relative top-0.5 font-header">Instagrama</span>
+            <span class="relative top-0.5">Instagrama</span>
           </a>
         </div>
         <img
           src="~assets/images/book.png"
-          class="absolute right-8 bottom-0 w-0 lg:w-80"
+          class="social__ebook absolute right-0 bottom-0 w-0 lg:w-80"
           alt="Ebook"
         />
       </div>
@@ -256,6 +255,16 @@ $circle-radius: 25vw;
   form {
     input {
       font-size: 1.7rem;
+    }
+  }
+}
+
+.home-page .social {
+  &__ebook {
+    right: 1rem;
+
+    @screen 2xl {
+      right: 10rem;
     }
   }
 }

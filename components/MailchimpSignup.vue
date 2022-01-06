@@ -36,7 +36,7 @@
         </div>
       </validation-provider>
       <button
-        class="button w-full bg-gray-600"
+        class="button w-full bg-gray-600 hover:bg-gray-500"
         :class="{ 'button-icon-mailchimp': loading }"
         type="submit"
       >

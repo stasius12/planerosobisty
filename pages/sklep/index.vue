@@ -34,11 +34,11 @@
         </button>
         <div class="grid sm:grid-cols-2 gap-x-2 font-primary text-md mt-2">
           <div
-            class="flex items-center justify-center border-1 border-gray-300 my-2 px-3 py-2"
+            class="flex items-center justify-center border-1 border-gray-300 my-2 px-3 py-1"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10"
+              class="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="gray"
@@ -50,14 +50,14 @@
                 d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
               />
             </svg>
-            <span class="pl-2 mt-1 leading-4">14 dni na zwrot</span>
+            <span class="pl-2 mt-1">14 dni na zwrot</span>
           </div>
           <div
-            class="flex items-center justify-center border-1 border-gray-300 my-2 px-3 py-2"
+            class="flex items-center justify-center border-1 border-gray-300 my-2 px-3 py-1"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10"
+              class="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="gray"
@@ -72,7 +72,7 @@
                 d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
               />
             </svg>
-            <span class="pl-4 mt-2 leading-4">Darmowa wysyłka od 200zł</span>
+            <span class="pl-4 mt-1">Darmowa wysyłka od 200zł</span>
           </div>
         </div>
       </div>

@@ -84,15 +84,10 @@ img{
               transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
-  @apply bg-gray-600;
   @apply text-white;
 
   &.button-large {
     padding: 1rem 2.5rem 0.8rem 2.5rem;
-  }
-
-  &:hover {
-    @apply bg-gray-500;
   }
 }
 
