@@ -128,7 +128,7 @@
         </div>
         <img
           src="~assets/images/book.png"
-          class="social__ebook absolute right-0 bottom-0 w-0 lg:w-80"
+          class="social__ebook absolute right-0 bottom-0 w-0 lg:w-64 xl:w-80"
           alt="Ebook"
         />
       </div>
@@ -230,10 +230,10 @@ $circle-radius: 25vw;
 
 .home-page .newest-blogs {
   &__article:last-child {
-    @screen sm {
+    @screen md {
       display: none;
     }
-    @screen lg {
+    @screen xl {
       display: block;
     }
   }

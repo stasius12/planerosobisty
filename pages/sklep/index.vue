@@ -29,7 +29,7 @@
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum
         </p>
-        <button class="button w-full" @click="addProductToCart()">
+        <button class="button w-full bg-gray-600" @click="addProductToCart()">
           Kup teraz
         </button>
         <div class="grid sm:grid-cols-2 gap-x-2 font-primary text-md mt-2">
@@ -88,9 +88,9 @@
         <button
           v-for="section in swiperSections"
           :key="section.id"
-          class="text-gray-600 py-4 px-6 block hover:text-purple-500 focus:outline-none"
+          class="text-gray-600 py-4 px-6 block hover:text-gray-600 focus:outline-none"
           :class="{
-            'text-purple-500 border-b-2 font-medium border-purple-500':
+            'text-gray-600 border-b-2 font-medium border-gray-600':
               swiperPage === section.id,
           }"
           @click="swiperInstance.slide(section.id)"

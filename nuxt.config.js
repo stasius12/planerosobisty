@@ -82,6 +82,7 @@ export default {
     '@nuxtjs/toast',
     '@nuxtjs/axios',
     'cookie-universal-nuxt',
+    'portal-vue/nuxt',
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content

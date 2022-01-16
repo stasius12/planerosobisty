@@ -52,7 +52,7 @@
             </td>
           </tr>
           <tr v-if="coupon.code && couponAmountOff" class="border-t-2">
-            <td colspan="3" class="pt-14">Kod promocyjny</td>
+            <td colspan="3" class="pt-14">Kod promocyjny (-{{ coupon.percent_off }}%)</td>
             <td colspan="2" class="pt-14">
               <svg
                 v-if="promoLoading"
@@ -133,7 +133,7 @@
           v-if="coupon.code && couponAmountOff"
           class="border-t-2 mt-5 pt-5 pb-3 flex justify-between"
         >
-          <div>Kod promocyjny</div>
+          <div>Kod promocyjny (-{{ coupon.percent_off }}%)</div>
           <svg
             v-if="promoLoading"
             class="animate-spin h-8 w-8 text-white"
@@ -177,9 +177,8 @@
               v-model="promoCode"
               name="kod-promocyjny"
               type="text"
-              outer-class="uppercase"
               label="Wpisz kod promocyjny"
-              label-top="5"
+              label-top="3"
             />
           </div>
           <button class="button button-outline mt-3 m-2">Aplikuj</button>
@@ -351,22 +350,6 @@ table {
 
     &:first-of-type {
       padding-left: 40px;
-    }
-  }
-}
-
-form {
-  input[type='text'] {
-    height: 100%;
-    background: transparent;
-    border-bottom: 1px solid black;
-
-    &:focus-visible {
-      outline: none;
-    }
-
-    &::placeholder {
-      color: black;
     }
   }
 }

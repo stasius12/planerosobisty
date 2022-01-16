@@ -81,6 +81,7 @@ img{
   border: 0;
   text-align: center;
   transition: background-color 250ms ease-in-out,
+              border 250ms ease-in-out,
               transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -119,6 +120,11 @@ img{
   &:active {
     transform: scale(0.8);
   }
+}
+
+.button.button-spinner {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .button:focus {

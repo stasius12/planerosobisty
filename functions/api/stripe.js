@@ -97,50 +97,61 @@ const retrieveProduct = async (req, res) => {
 }
 
 const createPaymentIntent = async (req, res) => {
-  const { customerID, cartItemsPrices, shippingPrice, promoCode } = req.body
-
-  const cartItemsWithAmounts = await Promise.all(
-    cartItemsPrices.map(async ({ priceID, quantity }) => {
-      const price = await stripe.prices.retrieve(priceID)
-      return { priceAmount: price.unit_amount, quantity }
-    })
-  )
-
-  let amountCartItems = calculateCartAmount(cartItemsWithAmounts)
-
-  if (promoCode) {
-    const promotionCodeResponse = await stripe.promotionCodes.list({
-      active: true,
-      code: promoCode,
-    })
-
-    const promotionCode = validatePromoCodeResponse(promotionCodeResponse)
-    if (!promotionCode) res.status(400).json('Invalid promotion code')
-
-    if (!validatePromoCodeRestrictions(promotionCode, amountCartItems))
-      res.status(400).json('Promotion code not applicable')
-
-    amountCartItems = calculateCartAmountWithDiscount(
-      amountCartItems,
-      promotionCode.coupon.percent_off
-    )
-  }
-
-  const shipping = await stripe.prices.retrieve(shippingPrice)
-  const amountShipping = shipping.unit_amount
-
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: calculateCartAmountWithShipping(amountCartItems, amountShipping),
-    currency: 'pln',
-    payment_method_types: ['p24'],
-    customer: customerID,
-    metadata: {
-      cart: JSON.stringify(cartItemsPrices),
+  try {
+    const {
+      customerID,
+      cartItemsPrices,
+      metadata,
+      shippingPrice,
       promoCode,
-    },
-  })
+    } = req.body
 
-  res.status(200).json(paymentIntent.client_secret)
+    const cartItemsWithAmounts = await Promise.all(
+      cartItemsPrices.map(async ({ priceID, quantity }) => {
+        const price = await stripe.prices.retrieve(priceID)
+        return { priceAmount: price.unit_amount, quantity }
+      })
+    )
+
+    let amountCartItems = calculateCartAmount(cartItemsWithAmounts)
+
+    if (promoCode) {
+      const promotionCodeResponse = await stripe.promotionCodes.list({
+        active: true,
+        code: promoCode,
+      })
+
+      const promotionCode = validatePromoCodeResponse(promotionCodeResponse)
+      if (!promotionCode) res.status(400).json('Invalid promotion code')
+
+      if (!validatePromoCodeRestrictions(promotionCode, amountCartItems))
+        res.status(400).json('Promotion code not applicable')
+
+      amountCartItems = calculateCartAmountWithDiscount(
+        amountCartItems,
+        promotionCode.coupon.percent_off
+      )
+    }
+
+    const shipping = await stripe.prices.retrieve(shippingPrice)
+    const amountShipping = shipping.unit_amount
+
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: calculateCartAmountWithShipping(amountCartItems, amountShipping),
+      currency: 'pln',
+      payment_method_types: ['p24'],
+      customer: customerID,
+      metadata: {
+        ...metadata,
+        promoCode,
+      },
+    })
+
+    res.status(200).json(paymentIntent.client_secret)
+
+  } catch {
+    res.status(500)
+  }
 }
 
 const retrieveAndValidatePromotionCode = async (req, res) => {

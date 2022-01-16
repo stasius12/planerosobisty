@@ -92,6 +92,16 @@ export default {
       font-size: 0.7rem;
       transform: translate3d(0, -1.2rem, 0) scale3d(1, 1, 1);
       transition: transform 0.2s ease;
+
+      &.top-2 {
+        transform: translate3d(0, -1.4rem, 0) scale3d(1, 1, 1);
+      }
+      &.top-3 {
+        transform: translate3d(0, -1.5rem, 0) scale3d(1, 1, 1);
+      }
+      &.top-4 {
+        transform: translate3d(0, -1.6rem, 0) scale3d(1, 1, 1);
+      }
     }
   }
 }

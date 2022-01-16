@@ -1,5 +1,6 @@
 <template>
   <div>
+    <portal-target name="spinner-screen"></portal-target>
     <header-section
       :show-mobile-menu="showMobileMenu"
       @toggleMobileMenu="toggleMobileMenu"

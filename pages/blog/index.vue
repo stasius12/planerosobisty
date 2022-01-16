@@ -17,7 +17,7 @@
           placeholder="Czego szukasz?"
           class="border-1 border-gray-300 text-gray-300 mr-4 p-2 outline-none w-full md:w-auto h-full"
         />
-        <button class="button search-button h-full">Szukaj</button>
+        <button class="button bg-gray-300 h-full">Szukaj</button>
       </validation-observer>
     </div>
     <section class="container">
@@ -69,9 +69,3 @@ export default {
   },
 }
 </script>
-
-<style scoped lang="scss">
-.search-button {
-  @apply bg-gray-300;
-}
-</style>

@@ -37,7 +37,7 @@
       </validation-provider>
       <button
         class="button w-full bg-gray-600 hover:bg-gray-500"
-        :class="{ 'button-icon-mailchimp': loading }"
+        :class="{ 'button-spinner': loading }"
         type="submit"
       >
         <img
@@ -124,10 +124,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.button-icon-mailchimp {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-</style>

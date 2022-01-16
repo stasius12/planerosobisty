@@ -190,13 +190,13 @@
           <nuxt-link
             v-if="previous"
             :to="previous.link"
-            class="button"
+            class="button bg-gray-600"
             type="button"
           >
             Wróć
           </nuxt-link>
           <div class="flex-auto flex flex-row-reverse">
-            <nuxt-link v-if="next" :to="next.link" class="button" type="button">
+            <nuxt-link v-if="next" :to="next.link" class="button bg-gray-600" type="button">
               Dalej
             </nuxt-link>
           </div>

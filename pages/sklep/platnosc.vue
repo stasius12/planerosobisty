@@ -23,22 +23,21 @@
       </div>
       <div class="border-b-s font-weight-bold">Dostawa</div>
       <div class="border-b-s text-right">
-        <div v-if="shipmentInfo.company_name">
-          {{ shipmentInfo.company_name }}
+        <div v-if="shipment.company_name">
+          {{ shipment.company_name }}
         </div>
-        <div>{{ shipmentInfo.first_name }} {{ shipmentInfo.surname }}</div>
-        <div>
-          ul. {{ shipmentInfo.street }} {{ shipmentInfo.street_house_number
-          }}{{
-            shipmentInfo.street_house_apartment
-              ? `/${shipmentInfo.street_house_apartment}`
-              : ''
-          }}
+        <div>{{ shipment.name }}</div>
+        <div v-if="shipment.locker_name">
+          Paczkomat - {{ shipment.locker_name }}
         </div>
-        <div>{{ shipmentInfo.postal_code }} {{ shipmentInfo.city }}</div>
+        <div>ul. {{ shipment.address_line_1 }}</div>
+        <div>{{ shipment.address_line_2 }}</div>
       </div>
     </div>
-    <div class="border-1 border-gray-300 m-2 p-2">
+    <div
+      class="border-1 border-gray-300 m-2 p-2"
+      :class="{ 'border-2 border-red-300': formInValid }"
+    >
       <h3 class="text-center mb-4">Wybierz metodę płatności</h3>
       <div class="summary__payments grid gap-2 items-center">
         <p24-bank
@@ -186,11 +185,18 @@
         <!--      <p24-bank img-src="/p24/Bos Bank.svg" img-alt="Bos Bank" v-model="p24Bank" value="volkswagen_bank"></p24-bank>-->
       </div>
     </div>
-    <div class="summary__pay-button text-center mt-5">
-      <button class="button button-outline" @click="createPaymentIntent">
+    <div class="summary__pay-button text-center mt-5 mx-2 md:w-1/2 md:mx-auto">
+      <button class="button button-outline w-full" @click="createPaymentIntent">
         Przejdź do płatności
       </button>
     </div>
+    <portal v-if="loading" to="spinner-screen">
+      <div
+        class="fixed top-0 bottom-0 flex w-screen h-full bg-gray-600 opacity-20 z-10 overflow-y-hidden"
+      >
+        <img src="~assets/images/spinner.svg" class="mx-auto" width="200" />
+      </div>
+    </portal>
   </div>
 </template>
 
@@ -206,6 +212,8 @@ export default {
   data() {
     return {
       p24Bank: null,
+      piTriggered: false,
+      loading: false,
       stripeInstance: Stripe(process.env.stripePublishableKey),
     }
   },
@@ -240,9 +248,44 @@ export default {
         address += `/${this.shipmentInfo.street_house_apartment}`
       return address
     },
+    shipment() {
+      const base = {
+        company_name: this.shipmentInfo.company_name,
+        name: `${this.shipmentInfo.first_name} ${this.shipmentInfo.surname}`,
+        method: this.shipmentDetails.method,
+      }
+
+      if (this.shipmentDetails.method === 'locker') {
+        return {
+          ...base,
+          locker_name: this.shipmentDetails.locker.name,
+          address_line_1: this.shipmentDetails.locker.address.line1,
+          address_line_2: this.shipmentDetails.locker.address.line2,
+        }
+      } else {
+        return {
+          ...base,
+          address_line_1: this.shipmentAddressLine,
+          address_line_2: `${this.shipmentInfo.postal_code} ${this.shipmentInfo.city}`,
+        }
+      }
+    },
+    formInValid() {
+      return this.piTriggered && !this.p24Bank
+    },
   },
   methods: {
+    showErrorMessage() {
+      this.$toasted.show('Wygląda na to, że wystąpił błąd. Spróbuj ponownie.', {
+        position: 'top-center',
+        duration: 4000,
+      })
+    },
     async createPaymentIntent() {
+      this.piTriggered = true
+      if (!this.p24Bank || this.loading) return
+      this.loading = true
+
       try {
         const customer = await this.$axios.$post('customer', {
           personal: {
@@ -268,13 +311,28 @@ export default {
           cartItemsPrices: this.cartItems.map(({ priceID, quantity }) => {
             return { priceID, quantity }
           }),
+          metadata: {
+            ...this.cartItems.reduce(
+              (obj, { id, name, priceID, priceAmount, quantity }, index) => ({
+                ...obj,
+                [`cart-${index + 1}`]: `${name} (${id}): ${
+                  priceAmount / 100
+                } zł (${priceID}): QNT ${quantity}`,
+              }),
+              {}
+            ),
+            ...this.shipment,
+          },
           shippingPrice: this.shipmentDetails.priceID,
           promoCode: this.coupon.code ? this.coupon.code : null,
         })
 
         await this.finalizePaymentIntent(piSecret)
+
       } catch (error) {
-        console.error(error)
+        this.showErrorMessage()
+      } finally {
+        this.loading = false
       }
     },
     async finalizePaymentIntent(piSecret) {
