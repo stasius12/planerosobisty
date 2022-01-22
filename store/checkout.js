@@ -100,6 +100,24 @@ export const actions = {
       await dispatch('validateCoupon')
     }
   },
+  async addCartItem2({ commit, getters, dispatch }, productID) {
+    if (!getters.cartItems.filter(({ id }) => id === productID).length) {
+      const response = await axios.get(
+        `${process.env.domainName}/.netlify/functions/api/products/2/${productID}`
+      )
+      const data = response.data
+      commit('ADD_CART_ITEM', {
+        id: productID,
+        name: data.product.name,
+        priceAmount: data.price.unit_amount_decimal,
+        priceID: data.price.id,
+        quantity: 1,
+        image: data.product.images[0],
+      })
+      dispatch('saveStateInCookies')
+      await dispatch('validateCoupon')
+    }
+  },
   async removeCartItem({ commit, getters, dispatch }, productID) {
     commit('REMOVE_CART_ITEM', { productID })
     dispatch('saveStateInCookies')

@@ -32,6 +32,9 @@
         <button class="button w-full bg-gray-600" @click="addProductToCart()">
           Kup teraz
         </button>
+        <button class="button w-full bg-gray-600" @click="addProductToCart2()">
+          Kup teraz
+        </button>
         <div class="grid sm:grid-cols-2 gap-x-2 font-primary text-md mt-2">
           <div
             class="flex items-center justify-center border-1 border-gray-300 my-2 px-3 py-1"
@@ -202,9 +205,13 @@ export default {
     })
   },
   methods: {
-    ...mapActions('checkout', ['addCartItem']),
+    ...mapActions('checkout', ['addCartItem', 'addCartItem2']),
     async addProductToCart(productID) {
-      await this.addCartItem('prod_K3sGdqwOzlBcyW')
+      await this.addCartItem('prod_K3sGdqwOzlBcy')
+      await this.$router.push({ name: 'sklep-koszyk' })
+    },
+    async addProductToCart2(productID) {
+      await this.addCartItem2('prod_K3sGdqwOzlBcy')
       await this.$router.push({ name: 'sklep-koszyk' })
     },
   },

@@ -96,6 +96,18 @@ const retrieveProduct = async (req, res) => {
   }
 }
 
+const retrieveProduct2 = async (req, res) => {
+  const { productID } = req.params
+
+  const product = await stripe.products.retrieve(productID)
+  const prices = await stripe.prices.list({
+    product: productID,
+    active: true,
+  })
+
+  res.status(200).json({ product, price: prices.data[0] })
+}
+
 const createPaymentIntent = async (req, res) => {
   try {
     const {
@@ -189,6 +201,7 @@ const retrieveAndValidatePromotionCode = async (req, res) => {
 // PRODUCTS
 module.exports.listAllProducts = listAllProducts
 module.exports.retrieveProduct = retrieveProduct
+module.exports.retrieveProduct2 = retrieveProduct2
 
 // SHIPPING
 module.exports.listAllShippingMethods = listAllShippingMethods
