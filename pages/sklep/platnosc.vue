@@ -35,7 +35,7 @@
       </div>
     </div>
     <div
-      class="border-1 border-gray-300 m-2 p-2"
+      class="border-1 border-gray-300 m-2 py-6 px-4"
       :class="{ 'border-2 border-red-300': formInValid }"
     >
       <h3 class="text-center mb-4">Wybierz metodę płatności</h3>
