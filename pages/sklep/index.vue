@@ -21,9 +21,13 @@
         <h1>Planer Osobisty</h1>
         <h2 class="text-gray-600">123,99 zł</h2>
         <p class="text-justify">
-          Planer Osobisty to nie tylko przestrzeń do planowania swoich zadań. To
-          również przewodnik w drodze do poznania siebie i świadomego rozwoju
-          własnego potencjału.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum
         </p>
         <button class="button w-full bg-gray-600" @click="addProductToCart()">
           Kup teraz
@@ -78,49 +82,7 @@
         @close="index = null"
       ></v-gallery>
     </div>
-    <section class="mt-8 m-4 p-4 border-2">
-      <header class="text-center">
-        <h2>Co wyróżnia Planer Osobisty?</h2>
-      </header>
-      <ul class="list-disc mb-0">
-        <li>
-          Bazuje na autorefleksji, wspierając świadome ustalanie celów i
-          priorytetów
-        </li>
-        <li>
-          Posiada gotowe szablony do rozpisywania celów, planów, marzeń itd.
-          wspierając ich skuteczną realizację
-        </li>
-        <li>
-          Jest wielofunkcyjny - poza niedatowanym kalendarzem znajdziesz w nim
-          przestrzeń na autorefleksję, ćwiczenia rozwojowe, listy zadań i
-          mnóstwo miejsca na swobodne notatki
-        </li>
-        <li>
-          Dzięki braku konkretnych dat możesz dostosować go do własnych potrzeb
-          - rozpocząć jego prowadzenie lub przerwać w dowolnym momencie
-        </li>
-        <li>
-          Każdy tydzień obejmuje dwa widoki - jeden ustrukturyzowany, drugi
-          całkowicie
-        </li>
-        <li>
-          Stworzony z myślą o możliwości planowania celów zarówno w formacie
-          rocznym, jak i kwartalnym
-        </li>
-        <li>
-          Wysoka jakość - papier 90g/m i twarda okładka z praktycznego
-          skóropodobnego materiału
-        </li>
-        <li>Minimalistyczna stylistyka</li>
-        <li>
-          Dzięki wielkości B5 zmieścisz w nim dużo więcej niż w tradycyjnym
-          kalendarzu
-        </li>
-        <li>Wyprodukowany w Polsce</li>
-      </ul>
-    </section>
-    <div class="bg-gray-100 m-4 mt-10">
+    <div class="bg-gray-100 m-4 mt-20">
       <h2 class="text-center px-4 pt-8">Co znajdziesz w środku?</h2>
       <nav class="flex flex-col sm:flex-row justify-center p-4">
         <button
@@ -149,8 +111,6 @@
 
 <script>
 import Swipe from 'swipejs'
-import * as Sentry from '@sentry/browser'
-import * as Integrations from '@sentry/integrations'
 //
 import { mapActions } from 'vuex'
 
@@ -244,21 +204,7 @@ export default {
   methods: {
     ...mapActions('checkout', ['addCartItem']),
     async addProductToCart(productID) {
-      try {
-        await this.addCartItem('prod_K3sGdqwOzlBcy')
-      } catch (error) {
-        this.$sentry.captureException(new Error('Adding product failed'), {
-          extra: {
-            details: {
-              hello: {
-                yes: {
-                  maybe: error.response.data,
-                },
-              },
-            },
-          },
-        })
-      }
+      await this.addCartItem('prod_K3sGdqwOzlBcyW')
       await this.$router.push({ name: 'sklep-koszyk' })
     },
   },

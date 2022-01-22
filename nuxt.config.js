@@ -83,21 +83,7 @@ export default {
     '@nuxtjs/axios',
     'cookie-universal-nuxt',
     'portal-vue/nuxt',
-    [
-      '@nuxtjs/sentry',
-      {
-        normalizeDepth: 11,
-        clientIntegrations: {
-          Dedupe: {},
-          ExtraErrorData: {
-            depth: 10,
-          },
-          ReportingObserver: {},
-          RewriteFrames: {},
-          Vue: { attachProps: true, logErrors: true },
-        },
-      },
-    ],
+    '@nuxtjs/sentry',
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -108,8 +94,6 @@ export default {
   toast: {
     position: 'bottom-center',
   },
-
-  // sentry: {},
 
   publicRuntimeConfig: {
     axios: {
