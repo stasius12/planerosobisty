@@ -83,6 +83,7 @@ export default {
     '@nuxtjs/axios',
     'cookie-universal-nuxt',
     'portal-vue/nuxt',
+    '@nuxtjs/sentry',
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
