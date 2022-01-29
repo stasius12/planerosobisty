@@ -49,6 +49,7 @@ export default {
   plugins: [
     { src: '~/plugins/vee-validate', ssr: false },
     '~/plugins/vue-gallery.js',
+    '~/plugins/sentry.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
