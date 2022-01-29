@@ -4,7 +4,7 @@
       <section class="flex flex-col text-white">
         <h3 class="text-white">Sklep</h3>
         <ul class="list-none">
-          <footer-link name="reklamacje">reklamacje</footer-link>
+          <li>reklamacje</li>
           <li>dostawa</li>
           <li>zwroty</li>
           <li>FAQ</li>
@@ -17,7 +17,7 @@
           <footer-link name="blog">blog</footer-link>
           <footer-link name="sklep">sklep</footer-link>
           <li>kontakt</li>
-          <li>o mnie</li>
+          <footer-link name="o-mnie">o mnie</footer-link>
         </ul>
       </section>
       <section class="flex flex-col text-white">

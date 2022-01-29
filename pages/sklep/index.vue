@@ -1,6 +1,6 @@
 <template>
-  <div class="xl:w-2/3 mt-10 mx-auto">
-    <div class="grid md:grid-cols-2 gap-x-20">
+  <article class="xl:w-2/3 mt-10 mx-auto">
+    <section class="grid md:grid-cols-2 gap-x-20">
       <div class="p-2">
         <img
           :src="frontProductImage.src"
@@ -19,16 +19,25 @@
       </div>
       <div class="p-2">
         <h1>Planer Osobisty</h1>
-        <h2 class="text-gray-600">123,99 zł</h2>
-        <p class="text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum
+        <h2 class="text-gray-600 text-3xl -ml-0.5">123,99 zł</h2>
+        <p class="text-justify mb-4" style="font-size: 0.95rem">
+          Planer Osobisty to nie tylko przestrzeń do planowania swoich zadań,
+          ale również przewodnik w drodze do poznania siebie i świadomego
+          rozwoju własnego potencjału. Planer Osobisty zapewni Ci elastyczność
+          bullet journala, a jednocześnie strukturę klasycznego kalendarza.
+          Jeśli kiedykolwiek czułeś się winny z powodu pustych stron w swoim
+          planerze niedatowany planer jest dla Ciebie idealny.
         </p>
+        <span style="font-size: 0.95rem">Znajdziesz w nim miejsce na:</span>
+        <ul class="list-disc" style="font-size: 0.95rem">
+          <li>plan roku</li>
+          <li>mapy marzeń</li>
+          <li>koło życia</li>
+          <li>rozpisanie celów (kwartalnych/rocznych)</li>
+          <li>śledzenie nawyków</li>
+          <li>zaplanowanie miesiąca</li>
+          <li>tygodniowy widok na Twoje zadania</li>
+        </ul>
         <button class="button w-full bg-gray-600" @click="addProductToCart()">
           Kup teraz
         </button>
@@ -81,8 +90,8 @@
         :index="index"
         @close="index = null"
       ></v-gallery>
-    </div>
-    <div class="bg-gray-100 m-4 mt-20">
+    </section>
+    <section class="bg-gray-100 m-2 mt-20">
       <h2 class="text-center px-4 pt-8">Co znajdziesz w środku?</h2>
       <nav class="flex flex-col sm:flex-row justify-center p-4">
         <button
@@ -105,8 +114,54 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+    <section class="sklep__faq m-2 mt-10">
+      <h2 class="text-center">FAQ</h2>
+      <ul class="p-0">
+        <li>
+          <details>
+            <summary>Jakie są dokładne wymiary planera?</summary>
+            30x20x40
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Z jakiego materiału jest okładka?</summary>
+            Jest to skóropodobny materiał Foresta, czyli elegancka, delikatnie
+            połyskująca okleina introligatorska z połamianiami/rysami które
+            nadają jej skórzany charakter.
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Gdzie produkowane są planery?</summary>
+            Planery są projektowane i produkowane w Polsce.
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Jakie są możliwości dostawy?</summary>
+            Dostarczamy zamówienia za pośrednictwem kuriera lub paczkomatów
+            InPost.
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Jak szybko moje zamówienie zostanie zrealizowane?</summary>
+            Staramy się, aby były realizowane w ciągu 24h od złożenia
+            zamówienia. Dostawa przesyłki zajmuje od 1 do 3 dni roboczych.
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Czy mogę zwrócić planer?</summary>
+            Tak, możesz zwrócić w ciągu 14 dni bez podawania przyczyny. Więcej
+            szczegółów na temat zwrotów znajdziesz tutaj (klik!).
+          </details>
+        </li>
+      </ul>
+    </section>
+  </article>
 </template>
 
 <script>
@@ -229,5 +284,23 @@ export default {
   width: 100%;
   position: relative;
   overflow: hidden;
+}
+.sklep__faq {
+  li {
+    margin-bottom: 1rem;
+    details {
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+        list-style-image: url(assets/images/right-arrow.svg);
+        &::marker {
+          font-size: 25px;
+        }
+      }
+      &[open] summary {
+        list-style-image: url(assets/images/down-arrow.svg);
+      }
+    }
+  }
 }
 </style>

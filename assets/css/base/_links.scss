@@ -1,6 +1,5 @@
 a {
   text-decoration: none;
-  color: $primary;
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
@@ -9,6 +8,8 @@ a {
   -o-transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
+
+  @apply text-gray-500;
 
   &:hover,
   &.active,
