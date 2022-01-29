@@ -105,6 +105,7 @@ export default {
   build: {},
 
   env: {
+    sentryDsn: process.env.SENTRY_DSN,
     domainName: process.env.DOMAIN_NAME,
     stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
   },

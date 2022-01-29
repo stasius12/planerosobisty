@@ -4,17 +4,16 @@ import * as Sentry from '@sentry/vue'
 import { BrowserTracing } from '@sentry/tracing'
 import { ExtraErrorData } from '@sentry/integrations'
 
-export default ({ app }, inject) => {
+export default ({ app: { router, context } }, inject) => {
   Sentry.init({
     Vue,
     normalizeDepth: 11,
-    environment: 'development',
+    environment: context.isDev ? 'development' : 'production',
     tracesSampleRate: 1.0,
-    dsn:
-      'https://77d64bf85f644caeb936808349280e1a@o1123840.ingest.sentry.io/6162034',
+    dsn: context.env.sentryDsn,
     integrations: [
       new BrowserTracing({
-        routingInstrumentation: Sentry.vueRouterInstrumentation(app.router),
+        routingInstrumentation: Sentry.vueRouterInstrumentation(router),
         tracingOrigins: ['localhost', /^\//],
       }),
       new ExtraErrorData({ depth: 10 }),
