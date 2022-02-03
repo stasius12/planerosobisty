@@ -1,5 +1,5 @@
 <template>
-  <header class="mb-10">
+  <header :class="marginBottomClass">
     <div class="flex items-center w-full">
       <h1 class="min-w-max mb-0 top-1 relative text-gray-300 text-center">
         <slot></slot>
@@ -12,5 +12,11 @@
 <script>
 export default {
   name: 'SectionTitle',
+  props: {
+    marginBottomClass: {
+      type: String,
+      default: 'mb-10',
+    },
+  },
 }
 </script>

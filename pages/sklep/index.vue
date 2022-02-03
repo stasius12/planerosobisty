@@ -92,7 +92,9 @@
       ></v-gallery>
     </section>
     <section class="bg-gray-100 m-2 mt-20">
-      <h2 class="text-center px-4 pt-8">Co znajdziesz w środku?</h2>
+      <section-title class="bg-white pb-10" margin-bottom-class="mb-0"
+        >Co znajdziesz w środku?</section-title
+      >
       <nav class="flex flex-col sm:flex-row justify-center p-4">
         <button
           v-for="section in swiperSections"
@@ -116,47 +118,57 @@
       </div>
     </section>
     <section class="sklep__faq m-2 mt-10">
-      <h2 class="text-center">FAQ</h2>
+      <section-title>FAQ</section-title>
       <ul class="p-0">
         <li>
           <details>
-            <summary>Jakie są dokładne wymiary planera?</summary>
-            30x20x40
+            <summary><span>Jakie są dokładne wymiary planera?</span></summary>
+            <div>24.5 x 17.5 x 2.5 cm</div>
           </details>
         </li>
         <li>
           <details>
-            <summary>Z jakiego materiału jest okładka?</summary>
-            Jest to skóropodobny materiał Foresta, czyli elegancka, delikatnie
-            połyskująca okleina introligatorska z połamianiami/rysami które
-            nadają jej skórzany charakter.
+            <summary><span>Z jakiego materiału jest okładka?</span></summary>
+            <div>
+              Jest to skóropodobny materiał Foresta, czyli elegancka, delikatnie
+              połyskująca okleina introligatorska z połamianiami/rysami które
+              nadają jej skórzany charakter.
+            </div>
           </details>
         </li>
         <li>
           <details>
-            <summary>Gdzie produkowane są planery?</summary>
-            Planery są projektowane i produkowane w Polsce.
+            <summary><span>Gdzie produkowane są planery?</span></summary>
+            <div>Planery są projektowane i produkowane w Polsce.</div>
           </details>
         </li>
         <li>
           <details>
-            <summary>Jakie są możliwości dostawy?</summary>
-            Dostarczamy zamówienia za pośrednictwem kuriera lub paczkomatów
-            InPost.
+            <summary><span>Jakie są możliwości dostawy?</span></summary>
+            <div>
+              Dostarczamy zamówienia za pośrednictwem kuriera lub paczkomatów
+              InPost.
+            </div>
           </details>
         </li>
         <li>
           <details>
-            <summary>Jak szybko moje zamówienie zostanie zrealizowane?</summary>
-            Staramy się, aby były realizowane w ciągu 24h od złożenia
-            zamówienia. Dostawa przesyłki zajmuje od 1 do 3 dni roboczych.
+            <summary>
+              <span>Jak szybko moje zamówienie zostanie zrealizowane?</span>
+            </summary>
+            <div>
+              Staramy się, aby były realizowane w ciągu 24h od złożenia
+              zamówienia. Dostawa przesyłki zajmuje od 1 do 3 dni roboczych.
+            </div>
           </details>
         </li>
         <li>
           <details>
-            <summary>Czy mogę zwrócić planer?</summary>
-            Tak, możesz zwrócić w ciągu 14 dni bez podawania przyczyny. Więcej
-            szczegółów na temat zwrotów znajdziesz tutaj (klik!).
+            <summary><span>Czy mogę zwrócić planer?</span></summary>
+            <div>
+              Tak, możesz zwrócić w ciągu 14 dni bez podawania przyczyny. Więcej
+              szczegółów na temat zwrotów znajdziesz tutaj (klik!)#TODO.
+            </div>
           </details>
         </li>
       </ul>
@@ -168,6 +180,7 @@
 import Swipe from 'swipejs'
 //
 import { mapActions } from 'vuex'
+import SectionTitle from '../../components/SectionTitle'
 
 const PRODUCT_IMAGES = [
   {
@@ -221,6 +234,7 @@ const WHAT_IS_INSIDE_SECTIONS = [
 
 export default {
   name: 'Index',
+  components: { SectionTitle },
   async asyncData({ $axios }) {
     let products = []
 
@@ -289,16 +303,29 @@ export default {
   li {
     margin-bottom: 1rem;
     details {
+      @apply border-1 border-gray-700;
       summary {
         font-weight: bold;
         cursor: pointer;
-        list-style-image: url(assets/images/right-arrow.svg);
+        list-style-image: none;
+        @apply relative border-1 border-gray-700 bg-gray-600 pb-1 pl-4 text-white;
+
+        span {
+          @apply absolute;
+          bottom: 15px;
+        }
+
         &::marker {
-          font-size: 25px;
+          font-size: 35px;
         }
       }
+
       &[open] summary {
-        list-style-image: url(assets/images/down-arrow.svg);
+        list-style-image: none;
+      }
+
+      div {
+        @apply p-2;
       }
     }
   }
