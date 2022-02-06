@@ -92,9 +92,13 @@
       ></v-gallery>
     </section>
     <section class="bg-gray-100 m-2 mt-20">
-      <section-title class="bg-white pb-10" margin-bottom-class="mb-0"
-        >Co znajdziesz w środku?</section-title
+      <section-title
+        header="2"
+        class="bg-white pb-10"
+        margin-bottom-class="mb-0"
       >
+        Co znajdziesz w środku?
+      </section-title>
       <nav class="flex flex-col sm:flex-row justify-center p-4">
         <button
           v-for="section in swiperSections"
@@ -118,7 +122,7 @@
       </div>
     </section>
     <section class="sklep__faq m-2 mt-10">
-      <section-title>FAQ</section-title>
+      <section-title id="faq" header="2">FAQ</section-title>
       <ul class="p-0">
         <li>
           <details>
@@ -303,12 +307,11 @@ export default {
   li {
     margin-bottom: 1rem;
     details {
-      @apply border-1 border-gray-700;
       summary {
         font-weight: bold;
         cursor: pointer;
         list-style-image: none;
-        @apply relative border-1 border-gray-700 bg-gray-600 pb-1 pl-4 text-white;
+        @apply relative bg-gray-600 pb-1 pl-4 text-white;
 
         span {
           @apply absolute;
@@ -325,7 +328,7 @@ export default {
       }
 
       div {
-        @apply p-2;
+        @apply p-2 border-b-1 border-l-1 border-r-1 border-gray-600;
       }
     }
   }

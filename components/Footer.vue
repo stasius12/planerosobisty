@@ -6,8 +6,10 @@
         <ul class="list-none">
           <li>reklamacje</li>
           <li>dostawa</li>
-          <li>zwroty</li>
-          <li>FAQ</li>
+          <footer-link name="zwroty">zwroty</footer-link>
+          <li>
+            <nuxt-link to="/sklep#faq" class="text-white">FAQ</nuxt-link>
+          </li>
           <li>czas i koszty dostawy</li>
         </ul>
       </section>
@@ -24,7 +26,7 @@
         <h3 class="text-white">Informacje</h3>
         <ul class="list-none">
           <li>polityka prywatności</li>
-          <li>regulamin strony</li>
+          <footer-link name="regulamin">regulamin strony</footer-link>
           <li>kontakt</li>
           <li>mapa witryny</li>
           <li>pliki cookies</li>

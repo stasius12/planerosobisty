@@ -3,7 +3,7 @@
     <section-title class="mt-10">O mnie</section-title>
     <div class="hero_content flex flex-col-reverse lg:grid gap-x-12">
       <div class="col-span-7 mt-10 lg:mt-0">
-        <p>Cześć, jestem Natalia! :)</p>
+        <p class="text-xl font-bold">Cześć, jestem Natalia! :)</p>
         <p>
           Marzę o świecie, w którym każdy ma wiedzę, narzędzia i wiarę w siebie,
           pozwalające osiągnąć mu sukces, według własnej, świadomie wybranej
@@ -53,9 +53,9 @@
 </template>
 
 <script>
-import SectionTitle from '../../components/SectionTitle'
+import SectionTitle from '@/components/SectionTitle'
 export default {
-  name: 'index',
+  name: 'OMnie',
   components: { SectionTitle },
 }
 </script>
