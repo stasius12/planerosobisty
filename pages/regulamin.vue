@@ -1,10 +1,9 @@
 <template>
-  <article class="xl:w-2/3 mt-10 mx-auto">
+  <main class="container mt-10">
     <section-title>Regulamin</section-title>
-
-    <ol>
+    <ol class="nested-decimal-list remove-space-left pl-3.5">
       <li>
-        POSTANOWIENIA OGÓLNE
+        <span class="font-bold">POSTANOWIENIA OGÓLNE</span>
         <ol>
           <li>
             Sklep Internetowy dostępny pod adresem internetowym
@@ -34,7 +33,7 @@
       </li>
 
       <li>
-        DEFINICJE
+        <span class="font-bold">DEFINICJE</span>
         <ol>
           <li>
             DZIEŃ ROBOCZY Jeden dzień od poniedziałku do piątku z wyłączeniem
@@ -119,7 +118,9 @@
       </li>
 
       <li>
-        USŁUGI ELEKTRONICZNE W SKLEPIE INTERNETOWYM
+        <span class="font-bold">
+          USŁUGI ELEKTRONICZNE W SKLEPIE INTERNETOWYM
+        </span>
 
         <ol>
           <li>
@@ -235,7 +236,7 @@
         </ol>
       </li>
       <li>
-        WARUNKI ZAWIERANIA UMOWY SPRZEDAŻY
+        <span class="font-bold">WARUNKI ZAWIERANIA UMOWY SPRZEDAŻY</span>
 
         <ol>
           <li>
@@ -288,7 +289,7 @@
         </ol>
       </li>
       <li>
-        SPOSOBY I TERMINY PŁATNOŚCI ZA PRODUKT
+        <span class="font-bold">SPOSOBY I TERMINY PŁATNOŚCI ZA PRODUKT</span>
 
         <ol>
           <li>
@@ -321,7 +322,7 @@
         </ol>
       </li>
       <li>
-        KOSZT, SPOSOBY I TERMIN DOSTAWY PRODUKTU
+        <span class="font-bold">KOSZT, SPOSOBY I TERMIN DOSTAWY PRODUKTU</span>
 
         <ol>
           <li>
@@ -359,7 +360,7 @@
         </ol>
       </li>
       <li>
-        REKLAMACJA PRODUKTU
+        <span class="font-bold">REKLAMACJA PRODUKTU</span>
 
         <ol>
           <li>
@@ -421,7 +422,7 @@
         </ol>
       </li>
       <li>
-        PRAWO ODSTĄPIENIA OD UMOWY
+        <span class="font-bold">PRAWO ODSTĄPIENIA OD UMOWY</span>
 
         <ol>
           <li>
@@ -513,7 +514,7 @@
         </ol>
       </li>
       <li>
-        POSTANOWIENIA DOTYCZĄCE PRZEDSIĘBIORCÓW
+        <span class="font-bold">POSTANOWIENIA DOTYCZĄCE PRZEDSIĘBIORCÓW</span>
 
         <ol>
           <li>
@@ -589,7 +590,7 @@
         </ol>
       </li>
       <li>
-        WŁASNOŚĆ INTELEKTUALNA
+        <span class="font-bold">WŁASNOŚĆ INTELEKTUALNA</span>
 
         <ol>
           <li>
@@ -616,7 +617,7 @@
         </ol>
       </li>
       <li>
-        POSTANOWIENIA KOŃCOWE
+        <span class="font-bold">POSTANOWIENIA KOŃCOWE</span>
 
         <ol>
           <li>
@@ -666,7 +667,7 @@
         </ol>
       </li>
     </ol>
-  </article>
+  </main>
 </template>
 
 <script>
@@ -676,21 +677,3 @@ export default {
   components: { SectionTitle },
 }
 </script>
-
-<style lang="scss" scoped>
-ul,
-ol {
-  padding-inline-start: 40px;
-}
-ol:not(.reset) > li {
-  &::marker {
-    content: counters(list-item, '.') '. ';
-  }
-}
-ol li {
-  @apply mb-3;
-}
-ul {
-  list-style: disc;
-}
-</style>

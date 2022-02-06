@@ -1,7 +1,9 @@
 <template>
-  <main class="home-page select-none">
-    <section class="intro bg-center bg-cover w-screen h-screen my-12 pt-2 hidden lg:flex items-center justify-center">
-      <img src="~assets/images/home_page_tekst.png">
+  <main class="home-page select-none mt-10">
+    <section
+      class="intro bg-center bg-cover w-screen h-screen mb-12 pt-2 hidden lg:flex items-center justify-center"
+    >
+      <img src="~assets/images/home_page_tekst.png" />
     </section>
     <section class="hero container">
       <header class="hidden lg:flex items-center w-full pt-4">
@@ -85,7 +87,9 @@
     </section>
     <section class="newsletter bg-primary py-12">
       <div class="container">
-        <h2 class="font-normal">ZAPISZ SIĘ DO DARMOWEGO NEWSLETTERA JEŚLI CHCESZ:</h2>
+        <h2 class="font-normal">
+          ZAPISZ SIĘ DO DARMOWEGO NEWSLETTERA JEŚLI CHCESZ:
+        </h2>
         <ol class="pt-5 pl-10 text-lg list-decimal font-normal">
           <li>Świadomie tworzyć własną rzeczywistość</li>
           <li>Nauczyć się skutecznie planować swoje działania</li>
@@ -137,7 +141,9 @@
       <header class="mb-8">
         <div class="flex items-center w-full">
           <div class="border-b-1 border-gray-600 w-full mr-4" />
-          <h2 class="min-w-max mb-0 top-1 relative text-gray-600 text-center font-normal">
+          <h2
+            class="min-w-max mb-0 top-1 relative text-gray-600 text-center font-normal"
+          >
             Zobacz więcej
           </h2>
           <div class="border-b-1 border-gray-600 w-full ml-4" />
@@ -169,8 +175,6 @@
 import MailchimpSignup from '@/components/MailchimpSignup'
 export default {
   components: { MailchimpSignup },
-
-  // layout: 'homePage',
 
   transition: {
     name: 'slide-fade',

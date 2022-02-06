@@ -1,5 +1,5 @@
 <template>
-  <article class="xl:w-2/3 mt-10 mx-auto">
+  <main class="container mt-10">
     <section class="grid md:grid-cols-2 gap-x-20">
       <div class="p-2">
         <img
@@ -171,13 +171,14 @@
             <summary><span>Czy mogę zwrócić planer?</span></summary>
             <div>
               Tak, możesz zwrócić w ciągu 14 dni bez podawania przyczyny. Więcej
-              szczegółów na temat zwrotów znajdziesz tutaj (klik!)#TODO.
+              szczegółów na temat zwrotów znajdziesz
+              <nuxt-link :to="{ name: 'zwroty' }">tutaj</nuxt-link>.
             </div>
           </details>
         </li>
       </ul>
     </section>
-  </article>
+  </main>
 </template>
 
 <script>

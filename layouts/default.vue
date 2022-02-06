@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div class="flex flex-col">
     <portal-target name="spinner-screen"></portal-target>
     <header-section
       :show-mobile-menu="showMobileMenu"
       @toggleMobileMenu="toggleMobileMenu"
     />
-    <Nuxt v-if="!$slots.default" />
+    <Nuxt v-if="!$slots.default" class="mb-10" />
     <slot />
-    <footer-section class="mt-10" />
+    <footer-section class="mt-auto" />
   </div>
 </template>
 

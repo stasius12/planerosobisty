@@ -4,13 +4,12 @@
       <section class="flex flex-col text-white">
         <h3 class="text-white">Sklep</h3>
         <ul class="list-none">
-          <li>reklamacje</li>
-          <li>dostawa</li>
+          <footer-link name="reklamacje">reklamacje</footer-link>
+          <footer-link name="dostawa">dostawa</footer-link>
           <footer-link name="zwroty">zwroty</footer-link>
           <li>
             <nuxt-link to="/sklep#faq" class="text-white">FAQ</nuxt-link>
           </li>
-          <li>czas i koszty dostawy</li>
         </ul>
       </section>
       <section class="flex flex-col text-white">
@@ -18,16 +17,17 @@
         <ul class="list-none">
           <footer-link name="blog">blog</footer-link>
           <footer-link name="sklep">sklep</footer-link>
-          <li>kontakt</li>
+          <footer-link name="kontakt">kontakt</footer-link>
           <footer-link name="o-mnie">o mnie</footer-link>
         </ul>
       </section>
       <section class="flex flex-col text-white">
         <h3 class="text-white">Informacje</h3>
         <ul class="list-none">
-          <li>polityka prywatności</li>
+          <footer-link name="polityka-prywatnosci">
+            polityka prywatności
+          </footer-link>
           <footer-link name="regulamin">regulamin strony</footer-link>
-          <li>kontakt</li>
           <li>mapa witryny</li>
           <li>pliki cookies</li>
         </ul>

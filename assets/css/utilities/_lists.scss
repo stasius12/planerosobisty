@@ -1,0 +1,42 @@
+ol.nested-decimal-list {
+  margin: 0;
+  ol,
+  ul {
+    @apply mt-4 mb-0 mx-0;
+  }
+
+  &:not(.remove-space-left),
+  ol,
+  ul {
+    padding-inline-start: 40px;
+  }
+
+  & > li,
+  ol:not(.reset) > li {
+    &::marker {
+      content: counters(list-item, '.') '. ';
+    }
+  }
+
+  & > li {
+    @apply mb-8;
+
+    li {
+      @apply mb-4;
+    }
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  li {
+    &::marker {
+      font-weight: 600;
+    }
+  }
+
+  p {
+    @apply mb-4;
+  }
+}

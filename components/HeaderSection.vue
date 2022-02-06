@@ -13,7 +13,7 @@
             <nuxt-link :to="{ name: 'blog' }">Blog</nuxt-link>
           </li>
           <li><nuxt-link :to="{ name: 'o-mnie' }">O mnie</nuxt-link></li>
-          <li><nuxt-link :to="{ name: 'index' }">Kontakt</nuxt-link></li>
+          <li><nuxt-link :to="{ name: 'kontakt' }">Kontakt</nuxt-link></li>
         </ul>
       </nav>
       <div class="md:hidden flex items-center mr-5 z-20">
@@ -65,7 +65,7 @@
             <nuxt-link :to="{ name: 'o-mnie' }">O mnie</nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="{ name: 'index' }">Kontakt</nuxt-link>
+            <nuxt-link :to="{ name: 'kontakt' }">Kontakt</nuxt-link>
           </li>
         </ul>
       </nav>

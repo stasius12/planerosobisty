@@ -1,9 +1,9 @@
 <template>
-  <article class="xl:w-2/3 mt-10 mx-auto">
+  <main class="container mt-10">
     <section-title>Zwroty</section-title>
     <p>
-      W ciągu 14 dni od momentu otrzymania przesyłki możesz zwrócić zakupione
-      produkty bez podania przyczyny.
+      <span class="font-medium">W ciągu 14 dni</span> od momentu otrzymania
+      przesyłki możesz zwrócić zakupione produkty bez podania przyczyny.
     </p>
     <p>
       Produkty nie mogą nosić śladów użytkowania czy uszkodzeń. W przypadku
@@ -13,9 +13,11 @@
     </p>
     <p>
       Jeśli planujesz dokonać zwrotu naszych produktów prosimy o poinformowanie
-      nas o tym mailowo na adres kontakt@planerosobisty.pl. <br />
+      nas o tym mailowo na adres
+      <a href="mailto:kontakt@planerosobisty.pl">kontakt@planerosobisty.pl</a>.
+      <br />
     </p>
-    <p class="mb-0">W treści wpisz:</p>
+    <p class="mb-0 font-medium">W treści wpisz:</p>
     <ol class="list-decimal mt-2 pl-10">
       <li>Numer zamówienia</li>
       <li>Imię i nazwisko</li>
@@ -24,7 +26,7 @@
         produkty w przyszłości :)
       </li>
     </ol>
-    <p class="mb-0 underline">Dane adresowe do zwrotu:</p>
+    <p class="mb-0 font-medium">Dane adresowe do zwrotu:</p>
     <address class="mt-2 mb-10 pl-6">
       Natalia Włodarska<br />
       ul. Nyska 79/13<br />
@@ -40,7 +42,7 @@
       dokonana płatność. Może to potrwać do 14 dni od momentu otrzymania przez
       nas zwracanych produktów.
     </p>
-  </article>
+  </main>
 </template>
 
 <script>

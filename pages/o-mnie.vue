@@ -1,6 +1,6 @@
 <template>
-  <article class="container">
-    <section-title class="mt-10">O mnie</section-title>
+  <main class="container mt-10">
+    <section-title>O mnie</section-title>
     <div class="hero_content flex flex-col-reverse lg:grid gap-x-12">
       <div class="col-span-7 mt-10 lg:mt-0">
         <p class="text-xl font-bold">Cześć, jestem Natalia! :)</p>
@@ -49,7 +49,7 @@
         alt="Natalia Włodarska"
       />
     </div>
-  </article>
+  </main>
 </template>
 
 <script>
