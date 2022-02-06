@@ -16,7 +16,7 @@
       >
         <input
           v-model="form.email"
-          class="w-full h-full bg-transparent border-b-1 border-black outline-none placeholder-black text-xl"
+          class="w-full h-full bg-transparent border-b-1 border-black outline-none placeholder-black text-lg"
           :class="{
             'border-red-700': errors.length || response.errorMessage,
             ...inputClass,
