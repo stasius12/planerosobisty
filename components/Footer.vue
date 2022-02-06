@@ -24,10 +24,12 @@
       <section class="flex flex-col text-white">
         <h3 class="text-white">Informacje</h3>
         <ul class="list-none">
-          <footer-link name="polityka-prywatnosci">
+          <footer-link name="polityka-prywatnosci" rel="nofollow">
             polityka prywatności
           </footer-link>
-          <footer-link name="regulamin">regulamin strony</footer-link>
+          <footer-link name="regulamin" rel="nofollow">
+            regulamin strony
+          </footer-link>
           <li>mapa witryny</li>
           <li>pliki cookies</li>
         </ul>
