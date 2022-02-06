@@ -1,7 +1,7 @@
 <template>
   <main class="container mt-10">
     <section-title>Regulamin</section-title>
-    <ol class="nested-decimal-list remove-space-left pl-3.5">
+    <ol class="nested-decimal-list remove-space-left pl-5">
       <li>
         <span class="font-bold">POSTANOWIENIA OGÓLNE</span>
         <ol>

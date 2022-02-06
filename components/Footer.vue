@@ -30,8 +30,9 @@
           <footer-link name="regulamin" rel="nofollow">
             regulamin strony
           </footer-link>
-          <li>mapa witryny</li>
-          <li>pliki cookies</li>
+          <footer-link name="pliki-cookies" rel="nofollow">
+            pliki cookies
+          </footer-link>
         </ul>
       </section>
       <section class="flex flex-col text-white" style="flex: 1 1 400px">
