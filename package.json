@@ -23,6 +23,7 @@
     "core-js": "^3.9.1",
     "express": "^4.17.1",
     "mailchimp-api-v3": "^1.15.0",
+    "mailgun.js": "^4.2.1",
     "md5": "^2.3.0",
     "nuxt": "^2.15.3",
     "portal-vue": "^2.1.7",

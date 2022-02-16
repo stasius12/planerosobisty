@@ -147,8 +147,27 @@ const createPaymentIntent = async (req, res) => {
       },
     })
 
-    res.status(200).json(paymentIntent.client_secret)
+    // res.status(200).json(paymentIntent.client_secret)
 
+    const response = await stripe.paymentIntents.confirm(paymentIntent.id, {
+      payment_method_data: {
+        type: 'p24',
+        billing_details: {
+          email: 'stanislawstepak@outlook.com',
+        },
+      },
+      payment_method_options: {
+        p24: {
+          // In order to be able to pass the `tos_shown_and_accepted` parameter, you must
+          // ensure that the P24 regulations and information obligation consent
+          // text is clearly visible to the customer. See
+          // stripe.com/docs/payments/p24/accept-a-payment#requirements
+          // for directions.
+          tos_shown_and_accepted: true,
+        },
+      },
+      return_url: 'http://localhost:8888',
+    })
   } catch {
     res.status(500)
   }

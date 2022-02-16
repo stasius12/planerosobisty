@@ -328,7 +328,6 @@ export default {
         })
 
         await this.finalizePaymentIntent(piSecret)
-
       } catch (error) {
         this.showErrorMessage()
       } finally {
@@ -336,27 +335,29 @@ export default {
       }
     },
     async finalizePaymentIntent(piSecret) {
-      await this.stripeInstance.confirmP24Payment(piSecret, {
-        payment_method: {
-          p24: {
-            bank: this.p24Bank,
-          },
-          billing_details: {
-            email: this.personalInfo.email,
-          },
-        },
-        payment_method_options: {
-          p24: {
-            // In order to be able to pass the `tos_shown_and_accepted` parameter, you must
-            // ensure that the P24 regulations and information obligation consent
-            // text is clearly visible to the customer. See
-            // stripe.com/docs/payments/p24/accept-a-payment#requirements
-            // for directions.
-            tos_shown_and_accepted: true,
-          },
-        },
-        return_url: process.env.domainName,
-      })
+
+      console.log(response)
+      // await this.stripeInstance.confirmP24Payment(piSecret, {
+      //   payment_method: {
+      //     p24: {
+      //       bank: this.p24Bank,
+      //     },
+      //     billing_details: {
+      //       email: this.personalInfo.email,
+      //     },
+      //   },
+      //   payment_method_options: {
+      //     p24: {
+      //       // In order to be able to pass the `tos_shown_and_accepted` parameter, you must
+      //       // ensure that the P24 regulations and information obligation consent
+      //       // text is clearly visible to the customer. See
+      //       // stripe.com/docs/payments/p24/accept-a-payment#requirements
+      //       // for directions.
+      //       tos_shown_and_accepted: true,
+      //     },
+      //   },
+      //   return_url: process.env.domainName,
+      // })
     },
   },
 }
