@@ -1028,6 +1028,13 @@
   resolved "https://registry.yarnpkg.com/@lokidb/loki/-/loki-2.1.0.tgz#f707e184016ce57d6dd12013938c33f9c540960e"
   integrity sha512-u2VH/4h4kZww23bak5I/oRai8VqIZCSuqiLbuSHpYXHB9Na5E9KNazh59prgUyvMzfooY7XKiHejbKVxFoAEOQ==
 
+"@mailchimp/mailchimp_transactional@^1.0.47":
+  version "1.0.47"
+  resolved "https://registry.yarnpkg.com/@mailchimp/mailchimp_transactional/-/mailchimp_transactional-1.0.47.tgz#53f4b52485bcf6c3903fc1265187c6b6855af89d"
+  integrity sha512-dZ45jWALktR4+/mMnUprSodWdnVHprrXK0uxPo9mUShihBNHIOeHGYoxahsTyhqPPx6lVu7nNj96VLzomUL1YQ==
+  dependencies:
+    axios "^0.21.1"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -7086,7 +7093,7 @@ mailchimp-api-v3@^1.15.0:
     request "^2.88.0"
     tar "^4.0.2"
 
-mailgun.js@^4.2.1:
+mailgun.js@^4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/mailgun.js/-/mailgun.js-4.2.2.tgz#8fba525fdc4ba367fd30faee1d75a1423c836839"
   integrity sha512-sWX9Sgy/uHe5liegJLJkFRRuvjyFE58c8mqpyEx1QdZSn3UgLfAe5D41ncBdPy+EROnI8zrhkHYlF8trpSSqDA==

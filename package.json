@@ -12,6 +12,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@mailchimp/mailchimp_transactional": "^1.0.47",
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/toast": "^3.3.1",
@@ -23,6 +24,7 @@
     "core-js": "^3.9.1",
     "express": "^4.17.1",
     "mailchimp-api-v3": "^1.15.0",
+    "mailgun.js": "^4.2.2",
     "md5": "^2.3.0",
     "nuxt": "^2.15.3",
     "portal-vue": "^2.1.7",
