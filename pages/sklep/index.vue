@@ -309,32 +309,6 @@ export default {
 .sklep__faq {
   li {
     margin-bottom: 1rem;
-    details {
-      summary {
-        font-weight: bold;
-        cursor: pointer;
-        list-style: none;
-
-        @apply flex items-center relative bg-gray-600 pl-4 text-white;
-
-        svg {
-          fill: white;
-        }
-
-        &::marker,
-        &::-webkit-details-marker {
-          display: none;
-        }
-      }
-
-      &[open] summary {
-        list-style-image: none;
-      }
-
-      div {
-        @apply p-2 border-b-1 border-l-1 border-r-1 border-gray-600;
-      }
-    }
   }
 }
 </style>
