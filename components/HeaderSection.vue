@@ -115,7 +115,7 @@ export default {
         transition: background-color 200ms ease-in-out;
 
         &.nuxt-link-exact-active {
-          text-decoration: underline;
+          font-weight: bold;
         }
       }
     }
