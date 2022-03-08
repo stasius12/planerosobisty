@@ -24,6 +24,7 @@ export default {
 <style lang="scss" scoped>
 details {
   summary {
+    outline: none;
     font-weight: bold;
     cursor: pointer;
     list-style: none;
