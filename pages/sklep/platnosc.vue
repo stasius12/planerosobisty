@@ -15,11 +15,11 @@
       <div class="border-b-1 font-weight-bold">Dane zamówienia</div>
       <div class="border-b-1 text-right">
         <div v-if="personalInfo.company_name">
-          {{ personalInfo.company_name }}
+          {{ personalInfo.company_name }}<br />
+          NIP: {{ personalInfo.company_id }}
         </div>
-        <div>{{ personalInfo.first_name }} {{ personalInfo.surname }}</div>
-        <div>ul. {{ personalAddressLine }}</div>
-        <div>{{ personalInfo.postal_code }} {{ personalInfo.city }}</div>
+        <div>ul. {{ personalAddressLine1 }}</div>
+        <div>{{ personalAddressLine2 }}</div>
       </div>
       <div class="border-b-s font-weight-bold">Dostawa</div>
       <div class="border-b-s text-right">
@@ -30,8 +30,8 @@
         <div v-if="shipment.locker_name">
           Paczkomat - {{ shipment.locker_name }}
         </div>
-        <div>ul. {{ shipment.address_line_1 }}</div>
-        <div>{{ shipment.address_line_2 }}</div>
+        <div>ul. {{ shipmentAddressLine1 }}</div>
+        <div>{{ shipmentAddressLine2 }}</div>
       </div>
     </div>
     <div
@@ -236,17 +236,23 @@ export default {
         this.shipmentDetails.priceAmount
       )
     },
-    personalAddressLine() {
+    personalAddressLine1() {
       let address = `${this.personalInfo.street} ${this.personalInfo.street_house_number}`
       if (this.personalInfo.street_house_apartment)
         address += `/${this.personalInfo.street_house_apartment}`
       return address
     },
-    shipmentAddressLine() {
+    personalAddressLine2() {
+      return `${this.personalInfo.postal_code} ${this.personalInfo.city}`
+    },
+    shipmentAddressLine1() {
       let address = `${this.shipmentInfo.street} ${this.shipmentInfo.street_house_number}`
       if (this.shipmentInfo.street_house_apartment)
         address += `/${this.shipmentInfo.street_house_apartment}`
       return address
+    },
+    shipmentAddressLine2() {
+      return `${this.shipmentInfo.postal_code} ${this.shipmentInfo.city}`
     },
     shipment() {
       const base = {
@@ -265,8 +271,8 @@ export default {
       } else {
         return {
           ...base,
-          address_line_1: this.shipmentAddressLine,
-          address_line_2: `${this.shipmentInfo.postal_code} ${this.shipmentInfo.city}`,
+          address_line_1: this.shipmentAddressLine1,
+          address_line_2: this.shipmentAddressLine2,
         }
       }
     },
@@ -287,10 +293,10 @@ export default {
       this.loading = true
 
       try {
-        const customer = await this.$axios.$post('customer', {
+        const { customer, orderNumber } = await this.$axios.$post('customer', {
           personal: {
             city: this.personalInfo.city,
-            line1: this.personalAddressLine,
+            line1: this.personalAddressLine1,
             postal_code: this.personalInfo.postal_code,
             email: this.personalInfo.email,
             phone: this.personalInfo.phone,
@@ -298,12 +304,13 @@ export default {
           },
           shipping: {
             city: this.shipmentInfo.city,
-            line1: this.shipmentAddressLine,
+            line1: this.shipmentAddressLine1,
             postal_code: this.shipmentInfo.postal_code,
             email: this.shipmentInfo.email,
             phone: this.shipmentInfo.phone,
             name: `${this.shipmentInfo.first_name} ${this.shipmentInfo.surname}`,
           },
+          metadata: this.getCustomerMetadata(),
         })
 
         const piSecret = await this.$axios.$post('payment-intent', {
@@ -311,24 +318,13 @@ export default {
           cartItemsPrices: this.cartItems.map(({ priceID, quantity }) => {
             return { priceID, quantity }
           }),
-          metadata: {
-            ...this.cartItems.reduce(
-              (obj, { id, name, priceID, priceAmount, quantity }, index) => ({
-                ...obj,
-                [`cart-${index + 1}`]: `${name} (${id}): ${
-                  priceAmount / 100
-                } zł (${priceID}): QNT ${quantity}`,
-              }),
-              {}
-            ),
-            ...this.shipment,
-          },
+          metadata: this.getOrderMetadata(),
           shippingPrice: this.shipmentDetails.priceID,
           promoCode: this.coupon.code ? this.coupon.code : null,
+          orderNumber,
         })
 
         await this.finalizePaymentIntent(piSecret)
-
       } catch (error) {
         this.showErrorMessage()
       } finally {
@@ -357,6 +353,45 @@ export default {
         },
         return_url: process.env.domainName,
       })
+    },
+    getCustomerMetadata() {
+      return {
+        COMPANY_NAME: this.personalInfo.company_name,
+        COMPANY_ID: this.personalInfo.company_id,
+        SHIPPING_LOCKER_NAME: this.shipment.locker_name,
+        SHIPPING_METHOD: this.shipmentDetails.method,
+        SHIPPING_ADDRESS_LINE_1: this.shipment.address_line_1,
+        SHIPPING_ADDRESS_LINE_2: this.shipment.address_line_2,
+      }
+    },
+    getOrderMetadata() {
+      return {
+        CUSTOMER_COMPANY: this.personalInfo.company_name,
+        CUSTOMER_NAME: `${this.personalInfo.first_name} ${this.personalInfo.surname}`,
+        CUSTOMER_ADDRESS_LINE_1: this.personalAddressLine1,
+        CUSTOMER_ADDRESS_LINE_2: this.personalAddressLine2,
+        SHIPPING_COMPANY: this.shipment.company_name,
+        SHIPPING_NAME: this.shipment.name,
+        ...this.getCustomerMetadata(),
+        ...this.cartItems.reduce(
+          (obj, { id, name, priceID, priceAmount, quantity }, index) => ({
+            ...obj,
+            [`cart-${index + 1}`]: `${name} (${id}): ${
+              priceAmount / 100
+            } zł (${priceID}): QNT ${quantity}`,
+          }),
+          {}
+        ),
+        ...this.cartItems.reduce(
+          (obj, { name, priceAmount, quantity }, index) => ({
+            ...obj,
+            [`CART_${index + 1}_NAME`]: name,
+            [`CART_${index + 1}_PRICE`]: priceAmount / 100,
+            [`CART_${index + 1}_QUANTITY`]: quantity,
+          }),
+          {}
+        ),
+      }
     },
   },
 }

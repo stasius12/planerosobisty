@@ -8,10 +8,13 @@ const {
   calculateCartAmountWithShipping,
   calculateCartAmountWithDiscount,
 } = require('../../utils/cartCalculator')
+const generateOrderNumber = require('../../utils/orderNumberGenerator')
 
 const createCustomer = async (req, res) => {
   try {
-    const { personal, shipping } = req.body
+    const { personal, shipping, metadata } = req.body
+
+    const orderNumber = generateOrderNumber()
 
     // 1. Creating new customer
     const customer = await stripe.customers.create({
@@ -34,9 +37,10 @@ const createCustomer = async (req, res) => {
         name: shipping.name,
         phone: shipping.phone,
       },
+      metadata: { ...metadata, ORDER_NUMBER: orderNumber },
     })
 
-    res.status(200).json(customer)
+    res.status(200).json({ customer, orderNumber })
   } catch {
     res.status(500)
   }
@@ -104,6 +108,7 @@ const createPaymentIntent = async (req, res) => {
       metadata,
       shippingPrice,
       promoCode,
+      orderNumber,
     } = req.body
 
     const cartItemsWithAmounts = await Promise.all(
@@ -113,7 +118,8 @@ const createPaymentIntent = async (req, res) => {
       })
     )
 
-    let amountCartItems = calculateCartAmount(cartItemsWithAmounts)
+    const amountCartItems = calculateCartAmount(cartItemsWithAmounts)
+    let amountTotal = amountCartItems
 
     if (promoCode) {
       const promotionCodeResponse = await stripe.promotionCodes.list({
@@ -127,7 +133,7 @@ const createPaymentIntent = async (req, res) => {
       if (!validatePromoCodeRestrictions(promotionCode, amountCartItems))
         res.status(400).json('Promotion code not applicable')
 
-      amountCartItems = calculateCartAmountWithDiscount(
+      amountTotal = calculateCartAmountWithDiscount(
         amountCartItems,
         promotionCode.coupon.percent_off
       )
@@ -135,14 +141,22 @@ const createPaymentIntent = async (req, res) => {
 
     const shipping = await stripe.prices.retrieve(shippingPrice)
     const amountShipping = shipping.unit_amount
+    const amountTotalWithShipping = calculateCartAmountWithShipping(
+      amountTotal,
+      amountShipping
+    )
 
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: calculateCartAmountWithShipping(amountCartItems, amountShipping),
+      amount: amountTotalWithShipping,
       currency: 'pln',
       payment_method_types: ['p24'],
       customer: customerID,
       metadata: {
         ...metadata,
+        ORDER_NUMBER: orderNumber,
+        ORDER_TOTAL: amountTotal / 100,
+        ORDER_SHIPPING_PRICE: amountShipping / 100,
+        ORDER_TOTAL_WITH_SHIPPING: amountTotalWithShipping / 100,
         promoCode,
       },
     })
