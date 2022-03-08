@@ -125,56 +125,58 @@
       <section-title id="faq" header="2">FAQ</section-title>
       <ul class="p-0">
         <li>
-          <details>
-            <summary><span>Jakie są dokładne wymiary planera?</span></summary>
-            <div>24.5 x 17.5 x 2.5 cm</div>
-          </details>
+          <faq-element>
+            <template #summary>Jakie są dokładne wymiary planera?</template>
+            <template #details>24.5 x 17.5 x 2.5 cm</template>
+          </faq-element>
         </li>
         <li>
-          <details>
-            <summary><span>Z jakiego materiału jest okładka?</span></summary>
-            <div>
-              Jest to skóropodobny materiał Foresta, czyli elegancka, delikatnie
+          <faq-element>
+            <template #summary>Z jakiego materiału jest okładka?</template>
+            <template #details>
+              Jest to skóropodobny materiał Foresta, czyli elegancka,
               połyskująca okleina introligatorska z połamianiami/rysami które
               nadają jej skórzany charakter.
-            </div>
-          </details>
+            </template>
+          </faq-element>
         </li>
         <li>
-          <details>
-            <summary><span>Gdzie produkowane są planery?</span></summary>
-            <div>Planery są projektowane i produkowane w Polsce.</div>
-          </details>
+          <faq-element>
+            <template #summary>Gdzie produkowane są planery?</template>
+            <template #details>
+              Planery są projektowane i produkowane w Polsce.
+            </template>
+          </faq-element>
         </li>
         <li>
-          <details>
-            <summary><span>Jakie są możliwości dostawy?</span></summary>
-            <div>
+          <faq-element>
+            <template #summary>Jakie są możliwości dostawy?</template>
+            <template #details>
               Dostarczamy zamówienia za pośrednictwem kuriera lub paczkomatów
               InPost.
-            </div>
-          </details>
+            </template>
+          </faq-element>
         </li>
         <li>
-          <details>
-            <summary>
-              <span>Jak szybko moje zamówienie zostanie zrealizowane?</span>
-            </summary>
-            <div>
+          <faq-element>
+            <template #summary>
+              Jak szybko moje zamówienie zostanie zrealizowane?
+            </template>
+            <template #details>
               Staramy się, aby były realizowane w ciągu 24h od złożenia
               zamówienia. Dostawa przesyłki zajmuje od 1 do 3 dni roboczych.
-            </div>
-          </details>
+            </template>
+          </faq-element>
         </li>
         <li>
-          <details>
-            <summary><span>Czy mogę zwrócić planer?</span></summary>
-            <div>
-              Tak, możesz zwrócić w ciągu 14 dni bez podawania przyczyny. Więcej
+          <faq-element>
+            <template #summary>Czy mogę zwrócić planer?</template>
+            <template #details>
+              Tak, możesz zwrócić w ciągu 14 dni bez podawania przyczyny.
               szczegółów na temat zwrotów znajdziesz
               <nuxt-link :to="{ name: 'zwroty' }">tutaj</nuxt-link>.
-            </div>
-          </details>
+            </template>
+          </faq-element>
         </li>
       </ul>
     </section>
@@ -311,16 +313,17 @@ export default {
       summary {
         font-weight: bold;
         cursor: pointer;
-        list-style-image: none;
-        @apply relative bg-gray-600 pb-1 pl-4 text-white;
+        list-style: none;
 
-        span {
-          @apply absolute;
-          bottom: 15px;
+        @apply flex items-center relative bg-gray-600 pl-4 text-white;
+
+        svg {
+          fill: white;
         }
 
-        &::marker {
-          font-size: 35px;
+        &::marker,
+        &::-webkit-details-marker {
+          display: none;
         }
       }
 
