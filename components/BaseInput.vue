@@ -71,7 +71,7 @@ export default {
   },
   computed: {
     required() {
-      return typeof this.rules === 'string' && this.rules.includes('required')
+      return typeof this.rules === 'string' && this.rules.includes('required') && !this.rules.includes('required_if')
     },
     verboseName() {
       return this.verbose || this.label

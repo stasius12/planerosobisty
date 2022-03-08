@@ -6,7 +6,7 @@ import {
   extend,
 } from 'vee-validate'
 
-import { required, email, min, digits } from 'vee-validate/dist/rules'
+import { required, required_if, email, min, digits } from 'vee-validate/dist/rules'
 import pl from 'vee-validate/dist/locale/pl.json'
 
 localize('pl', pl)
@@ -15,6 +15,7 @@ extend('required', {
   ...required,
   message: 'To pole jest wymagane',
 })
+extend('required_if', required_if)
 extend('email', email)
 extend('min', min)
 extend('digits', digits)

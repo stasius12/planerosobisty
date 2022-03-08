@@ -86,6 +86,7 @@
           name="nip"
           type="text"
           label="NIP"
+          rules="required_if:organization|digits:10"
         />
       </div>
     </validation-observer>
