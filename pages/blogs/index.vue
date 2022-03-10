@@ -23,7 +23,7 @@
     <section class="container">
       <article v-for="blog in blogs" :key="blog.slug" class="py-4">
         <nuxt-link
-          :to="{ name: 'blog-slug', params: { slug: blog.slug } }"
+          :to="{ name: 'blogs-slug', params: { slug: blog.slug } }"
           class="flex flex-col md:flex-row items-center bg-gray-100 md:bg-transparent lg:bg-gray-100"
         >
           <img
