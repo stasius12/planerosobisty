@@ -1,11 +1,10 @@
 <template>
   <main>
-    <div class="container flex flex-col md:flex-row mt-8 mb-3">
+    <div class="container flex flex-col md:flex-row mt-8 mb-4">
       <div class="flex items-center w-full mt-2 md:mr-4">
         <h1 class="mb-0 top-1 relative text-gray-300">Blog</h1>
         <div class="border-b-1 border-gray-300 w-full ml-4" />
       </div>
-      <!-- delete -->
       <validation-observer
         class="flex items-center mt-2 h-11 md:h-auto"
         tag="form"
