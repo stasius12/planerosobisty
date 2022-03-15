@@ -5,6 +5,7 @@
         <h1 class="mb-0 top-1 relative text-gray-300">Blog</h1>
         <div class="border-b-1 border-gray-300 w-full ml-4" />
       </div>
+      <!-- delete -->
       <validation-observer
         class="flex items-center mt-2 h-11 md:h-auto"
         tag="form"
