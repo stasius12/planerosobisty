@@ -1,20 +1,102 @@
 <template>
   <main class="container mt-10">
-    <section class="grid md:grid-cols-2 gap-x-20">
-      <div class="p-2">
+    <section class="relative shop-top-section grid md:grid-cols-2 gap-x-20">
+      <div class="p-2 hidden md:block">
         <img
           :src="frontProductImage.src"
           class="cursor-pointer"
           @click="index = frontProductImage.id"
         />
-        <div class="grid grid-cols-4 gap-x-4 mt-4">
-          <img
-            v-for="image in productImages"
-            :key="image.id"
-            :src="image.src"
-            class="cursor-pointer"
-            @click="frontProductImage = { src: image.src, id: image.id }"
+        <div class="flex items-center mt-4">
+          <button
+            :disabled="previewSliderStart <= 0"
+            @click="
+              previewSliderStop -= 1
+              previewSliderStart -= 1
+            "
+          >
+            <svg
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z"
+              />
+            </svg>
+          </button>
+          <div class="grid grid-cols-4 gap-x-4">
+            <img
+              v-for="image in productImages.slice(
+                previewSliderStart,
+                previewSliderStop
+              )"
+              :key="image.id"
+              :src="image.src"
+              class="cursor-pointer"
+              @click="frontProductImage = { src: image.src, id: image.id }"
+            />
+          </div>
+          <button
+            :disabled="previewSliderStop > productImages.length - 1"
+            @click="
+              previewSliderStop += 1
+              previewSliderStart += 1
+            "
+          >
+            <svg
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <button
+        class="absolute button-left z-10 md:hidden"
+        @click="mobileSliderInstance.slide(mobileSliderPage - 1)"
+      >
+        <svg
+          width="24"
+          height="24"
+          xmlns="http://www.w3.org/2000/svg"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+        >
+          <path
+            d="M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z"
           />
+        </svg>
+      </button>
+      <button
+        class="absolute button-right z-10 md:hidden"
+        @click="mobileSliderInstance.slide(mobileSliderPage + 1)"
+      >
+        <svg
+          width="24"
+          height="24"
+          xmlns="http://www.w3.org/2000/svg"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+        >
+          <path
+            d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z"
+          />
+        </svg>
+      </button>
+      <div id="mobileSlider" class="swipe md:hidden">
+        <div class="swipe-wrap">
+          <div v-for="{ id, src, alt } in productImages" :key="id">
+            <img :src="src" :alt="alt" class="max-w-full" />
+          </div>
         </div>
       </div>
       <div class="p-2">
@@ -91,6 +173,34 @@
         @close="index = null"
       ></v-gallery>
     </section>
+    <!--    <section class="w-1/4">-->
+    <!--      <div-->
+    <!--        style="-->
+    <!--          left: 0px;-->
+    <!--          width: 100%;-->
+    <!--          height: 0px;-->
+    <!--          position: relative;-->
+    <!--          padding-bottom: 75%;-->
+    <!--        "-->
+    <!--      >-->
+    <!--        <div-->
+    <!--          data-url="https://issuu.com/planerosobisty/docs/planer_osobisty"-->
+    <!--          style="-->
+    <!--            top: 0px;-->
+    <!--            left: 0px;-->
+    <!--            width: 100%;-->
+    <!--            height: 100%;-->
+    <!--            position: absolute;-->
+    <!--          "-->
+    <!--          class="issuuembed"-->
+    <!--        ></div>-->
+    <!--        <script-->
+    <!--          type="text/javascript"-->
+    <!--          src="//e.issuu.com/embed.js"-->
+    <!--          async="true"-->
+    <!--        ></script>-->
+    <!--      </div>-->
+    <!--    </section>-->
     <section class="bg-gray-100 m-2 mt-20">
       <section-title
         header="2"
@@ -192,22 +302,57 @@ import SectionTitle from '../../components/SectionTitle'
 const PRODUCT_IMAGES = [
   {
     id: 0,
-    src: require('@/assets/images/planer/image-1.jpeg'),
+    src: require('@/assets/images/planer/1-min.jpg'),
     alt: '#TODO',
   },
-  {
-    id: 1,
-    src: require('@/assets/images/planer/image-2.jpeg'),
-    alt: '#TODO',
-  },
+  // {
+  //   id: 1,
+  //   src: require('@/assets/images/planer/2-min.jpg'),
+  //   alt: '#TODO',
+  // },
   {
     id: 2,
-    src: require('@/assets/images/planer/image-3.jpeg'),
+    src: require('@/assets/images/planer/3-min.jpg'),
     alt: '#TODO',
   },
   {
-    id: 3,
-    src: require('@/assets/images/planer/image-4.jpeg'),
+    id: 4,
+    src: require('@/assets/images/planer/4-min.jpg'),
+    alt: '#TODO',
+  },
+  {
+    id: 5,
+    src: require('@/assets/images/planer/5-min.jpg'),
+    alt: '#TODO',
+  },
+  {
+    id: 6,
+    src: require('@/assets/images/planer/6-min.jpg'),
+    alt: '#TODO',
+  },
+  {
+    id: 7,
+    src: require('@/assets/images/planer/7-min.jpg'),
+    alt: '#TODO',
+  },
+  {
+    id: 8,
+    src: require('@/assets/images/planer/8-min.jpg'),
+    alt: '#TODO',
+  },
+  {
+    id: 9,
+    src: require('@/assets/images/planer/9-min.jpg'),
+    alt: '#TODO',
+  },
+  {
+    id: 10,
+    src: require('@/assets/images/planer/10-min.jpg'),
+    alt: '#TODO',
+  },
+  {
+    id: 11,
+    src: require('@/assets/images/planer/11-min.jpg'),
     alt: '#TODO',
   },
 ]
@@ -216,25 +361,25 @@ const WHAT_IS_INSIDE_SECTIONS = [
   {
     id: 0,
     name: 'Widok tygodniowy',
-    imgSrc: require('@/assets/images/planer/image-3.jpeg'),
+    imgSrc: require('@/assets/images/planer/8-min.jpg'),
     imgAlt: 'widok tygodniowy',
   },
   {
     id: 1,
     name: 'Widok miesięczny',
-    imgSrc: require('@/assets/images/planer/image-4.jpeg'),
+    imgSrc: require('@/assets/images/planer/4-min.jpg'),
     imgAlt: 'widok tygodniowy',
   },
   {
     id: 2,
     name: 'Widok roczny',
-    imgSrc: require('@/assets/images/planer/image-3.jpeg'),
+    imgSrc: require('@/assets/images/planer/10-min.jpg'),
     imgAlt: 'widok tygodniowy',
   },
   {
     id: 3,
     name: 'Widok twojego życia',
-    imgSrc: require('@/assets/images/planer/image-4.jpeg'),
+    imgSrc: require('@/assets/images/planer/2-min.jpg'),
     imgAlt: 'widok tygodniowy',
   },
 ]
@@ -255,6 +400,12 @@ export default {
       frontProductImage: { ...PRODUCT_IMAGES[0] },
       swiperInstance: null,
       swiperPage: 0,
+
+      previewSliderStart: 0,
+      previewSliderStop: 4,
+
+      mobileSliderInstance: null,
+      mobileSliderPage: 0,
     }
   },
   computed: {
@@ -276,6 +427,13 @@ export default {
     this.swiperInstance = new Swipe(document.getElementById('slider'), {
       callback: (index) => (this.swiperPage = index),
     })
+
+    this.mobileSliderInstance = new Swipe(
+      document.getElementById('mobileSlider'),
+      {
+        callback: (index) => (this.mobileSliderPage = index),
+      }
+    )
   },
   methods: {
     ...mapActions('checkout', ['addCartItem']),
@@ -309,6 +467,21 @@ export default {
 .sklep__faq {
   li {
     margin-bottom: 1rem;
+  }
+}
+.shop-top-section {
+  .button-left {
+    left: 0;
+    margin-left: -15px;
+  }
+  .button-right {
+    right: 0;
+    margin-right: -15px;
+  }
+
+  .button-left,
+  .button-right {
+    top: calc(0.4 * 100vw);
   }
 }
 </style>
