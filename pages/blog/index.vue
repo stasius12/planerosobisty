@@ -14,7 +14,7 @@
           v-model="search"
           name="search"
           type="text"
-          placeholder="Czego szukasz tutaj?"
+          placeholder="Czego szukasz?"
           class="border-1 border-gray-300 text-gray-300 mr-4 p-2 outline-none w-full md:w-auto h-full"
         />
         <button class="button bg-gray-300 h-full">Szukaj</button>
