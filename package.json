@@ -32,7 +32,7 @@
     "stripe": "^8.169.0",
     "swipejs": "^2.3.1",
     "vee-validate": "^3.4.11",
-    "vue-gallery": "^2.0.1"
+    "vue-picture-swipe": "^2.1.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",

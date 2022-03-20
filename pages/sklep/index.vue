@@ -1,13 +1,15 @@
 <template>
   <main class="container mt-10">
-    <section class="relative shop-top-section grid md:grid-cols-2 gap-x-20">
-      <div class="p-2 hidden md:block">
-        <img
-          :src="frontProductImage.src"
-          class="cursor-pointer"
-          @click="index = frontProductImage.id"
-        />
-        <div class="flex items-center mt-4">
+    <section class="relative shop-top-section grid lg:grid-cols-2 gap-x-20">
+      <div class="p-2">
+        <vue-picture-swipe
+          ref="pictureSwipe"
+          :items="
+            productImages.slice(index).concat(productImages.slice(0, index))
+          "
+          single-thumbnail
+        ></vue-picture-swipe>
+        <div class="hidden lg:flex items-center mt-4">
           <button
             :disabled="previewSliderStart <= 0"
             @click="
@@ -36,7 +38,7 @@
               :key="image.id"
               :src="image.src"
               class="cursor-pointer"
-              @click="frontProductImage = { src: image.src, id: image.id }"
+              @click="index = image.id"
             />
           </div>
           <button
@@ -60,42 +62,56 @@
           </button>
         </div>
       </div>
-      <button
-        class="absolute button-left z-10 md:hidden"
-        @click="mobileSliderInstance.slide(mobileSliderPage - 1)"
-      >
-        <svg
-          width="24"
-          height="24"
-          xmlns="http://www.w3.org/2000/svg"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+      <div class="relative lg:hidden">
+        <button
+          class="absolute button-left z-10"
+          @click="mobileSliderInstance.slide(mobileSliderPage - 1)"
         >
-          <path
-            d="M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z"
-          />
-        </svg>
-      </button>
-      <button
-        class="absolute button-right z-10 md:hidden"
-        @click="mobileSliderInstance.slide(mobileSliderPage + 1)"
-      >
-        <svg
-          width="24"
-          height="24"
-          xmlns="http://www.w3.org/2000/svg"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          >
+            <path
+              d="M20 .755l-14.374 11.245 14.374 11.219-.619.781-15.381-12 15.391-12 .609.755z"
+            />
+          </svg>
+        </button>
+        <button
+          class="absolute button-right z-10"
+          @click="mobileSliderInstance.slide(mobileSliderPage + 1)"
         >
-          <path
-            d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z"
-          />
-        </svg>
-      </button>
-      <div id="mobileSlider" class="swipe md:hidden">
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          >
+            <path
+              d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div id="mobileSlider" class="swipe lg:hidden mb-10">
         <div class="swipe-wrap">
-          <div v-for="{ id, src, alt } in productImages" :key="id">
-            <img :src="src" :alt="alt" class="max-w-full" />
+          <div v-for="id in 6" :key="id" class="flex pl-4 pr-8 gap-x-4">
+            <img
+              :src="productImages[2 * (id - 1)].src"
+              :alt="productImages[2 * (id - 1)].alt"
+              class="w-1/2 max-w-full"
+              @click="index = 2 * (id - 1)"
+            />
+            <img
+              v-if="id < 6"
+              :src="productImages[2 * (id - 1) + 1].src"
+              :alt="productImages[2 * (id - 1) + 1].alt"
+              class="w-1/2 max-w-full"
+              @click="index = 2 * (id - 1) + 1"
+            />
           </div>
         </div>
       </div>
@@ -167,40 +183,7 @@
           </div>
         </div>
       </div>
-      <v-gallery
-        :images="galleryImages"
-        :index="index"
-        @close="index = null"
-      ></v-gallery>
     </section>
-    <!--    <section class="w-1/4">-->
-    <!--      <div-->
-    <!--        style="-->
-    <!--          left: 0px;-->
-    <!--          width: 100%;-->
-    <!--          height: 0px;-->
-    <!--          position: relative;-->
-    <!--          padding-bottom: 75%;-->
-    <!--        "-->
-    <!--      >-->
-    <!--        <div-->
-    <!--          data-url="https://issuu.com/planerosobisty/docs/planer_osobisty"-->
-    <!--          style="-->
-    <!--            top: 0px;-->
-    <!--            left: 0px;-->
-    <!--            width: 100%;-->
-    <!--            height: 100%;-->
-    <!--            position: absolute;-->
-    <!--          "-->
-    <!--          class="issuuembed"-->
-    <!--        ></div>-->
-    <!--        <script-->
-    <!--          type="text/javascript"-->
-    <!--          src="//e.issuu.com/embed.js"-->
-    <!--          async="true"-->
-    <!--        ></script>-->
-    <!--      </div>-->
-    <!--    </section>-->
     <section class="bg-gray-100 m-2 mt-20">
       <section-title
         header="2"
@@ -209,11 +192,40 @@
       >
         Co znajdziesz w środku?
       </section-title>
-      <nav class="flex flex-col sm:flex-row justify-center p-4">
+      <div
+        class="md:hidden"
+        style="
+          left: 0px;
+          width: 100%;
+          height: 0px;
+          position: relative;
+          padding-bottom: 75%;
+        "
+      >
+        <div
+          data-url="https://issuu.com/planerosobisty/docs/planer_osobisty"
+          style="
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+          "
+          class="issuuembed"
+        ></div>
+        <script
+          type="text/javascript"
+          src="//e.issuu.com/embed.js"
+          async="true"
+        ></script>
+      </div>
+      <nav
+        class="hidden md:flex flex-col flex-wrap sm:flex-row justify-center p-4"
+      >
         <button
           v-for="section in swiperSections"
           :key="section.id"
-          class="text-gray-600 py-4 px-6 block hover:text-gray-600 focus:outline-none"
+          class="text-gray-600 py-4 px-4 block hover:text-gray-600 focus:outline-none"
           :class="{
             'text-gray-600 border-b-2 font-medium border-gray-600':
               swiperPage === section.id,
@@ -223,7 +235,7 @@
           {{ section.name }}
         </button>
       </nav>
-      <div id="slider" class="swipe">
+      <div id="slider" class="swipe hidden md:block">
         <div class="swipe-wrap">
           <div v-for="{ id, imgSrc, imgAlt } in swiperSections" :key="id">
             <img :src="imgSrc" :alt="imgAlt" class="max-w-full" />
@@ -282,7 +294,7 @@
           <faq-element>
             <template #summary>Czy mogę zwrócić planer?</template>
             <template #details>
-              Tak, możesz zwrócić w ciągu 14 dni bez podawania przyczyny.
+              Tak, możesz zwrócić w ciągu 14 dni bez podawania przyczyny. Więcej
               szczegółów na temat zwrotów znajdziesz
               <nuxt-link :to="{ name: 'zwroty' }">tutaj</nuxt-link>.
             </template>
@@ -303,84 +315,135 @@ const PRODUCT_IMAGES = [
   {
     id: 0,
     src: require('@/assets/images/planer/1-min.jpg'),
-    alt: '#TODO',
+    thumbnail: require('@/assets/images/planer/1-min.jpg'),
+    w: 1000,
+    h: 1000,
+    alt: 'Planer Osobisty - okładka',
   },
-  // {
-  //   id: 1,
-  //   src: require('@/assets/images/planer/2-min.jpg'),
-  //   alt: '#TODO',
-  // },
+  {
+    id: 1,
+    src: require('@/assets/images/planer/3-min.jpg'),
+    thumbnail: require('@/assets/images/planer/3-min.jpg'),
+    w: 1000,
+    h: 1000,
+    alt: 'Mapa marzeń',
+  },
   {
     id: 2,
-    src: require('@/assets/images/planer/3-min.jpg'),
-    alt: '#TODO',
+    src: require('@/assets/images/planer/4-min.jpg'),
+    thumbnail: require('@/assets/images/planer/4-min.jpg'),
+    w: 1000,
+    h: 1000,
+    alt: 'Plan miesiąca',
+  },
+  {
+    id: 3,
+    src: require('@/assets/images/planer/5-min.jpg'),
+    thumbnail: require('@/assets/images/planer/5-min.jpg'),
+    w: 1000,
+    h: 1000,
+    alt: 'Plan miesiąca - widok z boku',
   },
   {
     id: 4,
-    src: require('@/assets/images/planer/4-min.jpg'),
-    alt: '#TODO',
+    src: require('@/assets/images/planer/6-min.jpg'),
+    thumbnail: require('@/assets/images/planer/6-min.jpg'),
+    w: 1000,
+    h: 1000,
+    alt: 'Cele kwartalne',
   },
   {
     id: 5,
-    src: require('@/assets/images/planer/5-min.jpg'),
-    alt: '#TODO',
+    src: require('@/assets/images/planer/7-min.jpg'),
+    thumbnail: require('@/assets/images/planer/7-min.jpg'),
+    w: 1000,
+    h: 1000,
+    alt: 'Rozkład tygodnia - widok z boku',
   },
   {
     id: 6,
-    src: require('@/assets/images/planer/6-min.jpg'),
-    alt: '#TODO',
+    src: require('@/assets/images/planer/8-min.jpg'),
+    thumbnail: require('@/assets/images/planer/8-min.jpg'),
+    w: 1000,
+    h: 1000,
+    alt: 'Rozkład tygodnia',
   },
   {
     id: 7,
-    src: require('@/assets/images/planer/7-min.jpg'),
-    alt: '#TODO',
+    src: require('@/assets/images/planer/9-min.jpg'),
+    thumbnail: require('@/assets/images/planer/9-min.jpg'),
+    w: 1000,
+    h: 1000,
+    alt: 'Koło życia',
   },
   {
     id: 8,
-    src: require('@/assets/images/planer/8-min.jpg'),
-    alt: '#TODO',
+    src: require('@/assets/images/planer/10-min.jpg'),
+    thumbnail: require('@/assets/images/planer/10-min.jpg'),
+    w: 1000,
+    h: 1000,
+    alt: 'Plan roku',
   },
   {
     id: 9,
-    src: require('@/assets/images/planer/9-min.jpg'),
-    alt: '#TODO',
+    src: require('@/assets/images/planer/11-min.jpg'),
+    thumbnail: require('@/assets/images/planer/11-min.jpg'),
+    w: 1000,
+    h: 1000,
+    alt: 'Strażnik nawyków',
   },
   {
     id: 10,
-    src: require('@/assets/images/planer/10-min.jpg'),
-    alt: '#TODO',
-  },
-  {
-    id: 11,
-    src: require('@/assets/images/planer/11-min.jpg'),
-    alt: '#TODO',
+    src: require('@/assets/images/planer/2-min.jpg'),
+    thumbnail: require('@/assets/images/planer/2-min.jpg'),
+    w: 1000,
+    h: 1000,
+    alt: 'Planer Osobisty - okładka przybliżona',
   },
 ]
 
 const WHAT_IS_INSIDE_SECTIONS = [
   {
     id: 0,
-    name: 'Widok tygodniowy',
-    imgSrc: require('@/assets/images/planer/8-min.jpg'),
-    imgAlt: 'widok tygodniowy',
+    name: 'Cele kwartalne',
+    imgSrc: require('@/assets/images/planer-inside/1.png'),
+    imgAlt: 'Cele kwartalne',
   },
   {
     id: 1,
-    name: 'Widok miesięczny',
-    imgSrc: require('@/assets/images/planer/4-min.jpg'),
-    imgAlt: 'widok tygodniowy',
+    name: 'Koło życia',
+    imgSrc: require('@/assets/images/planer-inside/2.png'),
+    imgAlt: 'Koło życia',
   },
   {
     id: 2,
-    name: 'Widok roczny',
-    imgSrc: require('@/assets/images/planer/10-min.jpg'),
-    imgAlt: 'widok tygodniowy',
+    name: 'Plan roku',
+    imgSrc: require('@/assets/images/planer-inside/3.png'),
+    imgAlt: 'Plan roku',
   },
   {
     id: 3,
-    name: 'Widok twojego życia',
-    imgSrc: require('@/assets/images/planer/2-min.jpg'),
-    imgAlt: 'widok tygodniowy',
+    name: 'Plan miesiąca',
+    imgSrc: require('@/assets/images/planer-inside/4.png'),
+    imgAlt: 'Plan miesiąca',
+  },
+  {
+    id: 4,
+    name: 'Mapa marzeń',
+    imgSrc: require('@/assets/images/planer-inside/5.png'),
+    imgAlt: 'Mapa marzeń',
+  },
+  {
+    id: 5,
+    name: 'Plan tygodnia',
+    imgSrc: require('@/assets/images/planer-inside/6.png'),
+    imgAlt: 'Plan tygodnia',
+  },
+  {
+    id: 6,
+    name: 'Strażnik nawyków',
+    imgSrc: require('@/assets/images/planer-inside/7.png'),
+    imgAlt: 'Strażnik nawyków',
   },
 ]
 
@@ -397,7 +460,6 @@ export default {
   data() {
     return {
       index: null,
-      frontProductImage: { ...PRODUCT_IMAGES[0] },
       swiperInstance: null,
       swiperPage: 0,
 
@@ -411,9 +473,6 @@ export default {
   computed: {
     productImages() {
       return PRODUCT_IMAGES
-    },
-    galleryImages() {
-      return this.productImages.map(({ src }) => src)
     },
     swiperSections() {
       return WHAT_IS_INSIDE_SECTIONS
@@ -481,7 +540,13 @@ export default {
 
   .button-left,
   .button-right {
-    top: calc(0.4 * 100vw);
+    top: calc(0.15 * 100vw);
+    @screen sm {
+      top: 120px;
+    }
+    @screen md {
+      top: 150px;
+    }
   }
 }
 </style>
