@@ -119,8 +119,10 @@
         </div>
       </div>
       <div class="p-2">
-        <h1>Planer Osobisty</h1>
-        <h2 class="text-gray-600 text-3xl -ml-0.5">123,99 zł</h2>
+        <h1>{{ theProduct.name }}</h1>
+        <h2 class="text-gray-600 text-3xl -ml-0.5">
+          {{ theProduct.price.unit_amount / 100 }} zł
+        </h2>
         <p class="text-justify mb-4" style="font-size: 0.95rem">
           Planer Osobisty to nie tylko przestrzeń do planowania swoich zadań,
           ale również przewodnik w drodze do poznania siebie i świadomego
@@ -139,7 +141,7 @@
           <li>zaplanowanie miesiąca</li>
           <li>tygodniowy widok na Twoje zadania</li>
         </ul>
-        <button class="button w-full bg-gray-600" @click="addProductToCart()">
+        <button class="button w-full bg-gray-600" @click="addProductToCart(theProduct.id)">
           Kup teraz
         </button>
         <div class="grid sm:grid-cols-2 gap-x-2 font-primary text-md mt-2">
@@ -477,6 +479,9 @@ export default {
     }
   },
   computed: {
+    theProduct() {
+      return this.products.filter((product) => product.metadata.visible)[0]
+    },
     productImages() {
       return PRODUCT_IMAGES
     },
@@ -503,7 +508,7 @@ export default {
   methods: {
     ...mapActions('checkout', ['addCartItem']),
     async addProductToCart(productID) {
-      await this.addCartItem('prod_K3sGdqwOzlBcyW')
+      await this.addCartItem(productID)
       await this.$router.push({ name: 'sklep-koszyk' })
     },
   },

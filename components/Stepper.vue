@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col p-5 xl:w-2/3 2xl:w-1/2 mx-auto select-none">
+  <div class="flex flex-col p-5 w-full md:w-5/6 lg:w-2/3 2xl:w-1/2 mx-auto select-none">
     <div class="p-2">
       <div class="flex items-center">
         <nuxt-link
