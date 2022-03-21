@@ -187,11 +187,14 @@
     <section class="bg-gray-100 m-2 mt-20">
       <section-title
         header="2"
-        class="bg-white pb-10"
+        class="shop-what-inside bg-white pb-10"
         margin-bottom-class="mb-0"
       >
         Co znajdziesz w środku?
       </section-title>
+      <h2 class="shop-what-inside-mobile text-gray-300 mb-0 pb-10 bg-white">
+        Co znajdziesz w środku?
+      </h2>
       <div
         class="md:hidden"
         style="
@@ -547,6 +550,17 @@ export default {
     @screen md {
       top: 150px;
     }
+  }
+}
+
+.shop-what-inside {
+  @media (max-width: 419px) {
+    display: none;
+  }
+}
+.shop-what-inside-mobile {
+  @media (min-width: 420px) {
+    display: none;
   }
 }
 </style>

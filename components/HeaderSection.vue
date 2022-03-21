@@ -56,6 +56,9 @@
       >
         <ul class="list-none flex flex-col items-center mb-52">
           <li>
+            <nuxt-link :to="{ name: 'index' }">Strona główna</nuxt-link>
+          </li>
+          <li>
             <nuxt-link :to="{ name: 'sklep' }">Sklep</nuxt-link>
           </li>
           <li>
