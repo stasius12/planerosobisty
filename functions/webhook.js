@@ -118,7 +118,7 @@ const handleCustomerUpdated = async (eventData, send = true) => {
 
 exports.handler = async function (event) {
   if (event.httpMethod === 'GET') {
-    if (!process.env.DEV) return { statusCode: 403 }
+    // if (!process.env.DEV) return { statusCode: 403 } TODO
 
     const template = await handlePaymentIntentSucceeded(
       {
@@ -178,7 +178,7 @@ exports.handler = async function (event) {
         },
         receipt_email: 'stanislawstepak@outlook.com',
       },
-      false
+      true
     )
     return {
       statusCode: 200,

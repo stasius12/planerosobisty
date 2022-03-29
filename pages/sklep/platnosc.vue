@@ -36,7 +36,7 @@
     </div>
     <div
       class="border-1 border-gray-300 m-2 p-2"
-      :class="{ 'border-2 border-red-300': formInValid }"
+      :class="{ 'border-2 border-red-300': piTriggered && !p24Bank }"
     >
       <h3 class="text-center mb-4">Wybierz metodę płatności</h3>
       <div class="summary__payments grid gap-2 items-center">
@@ -153,7 +153,7 @@
         ></p24-bank>
         <p24-bank
           v-model="p24Bank"
-          img-src="/p24/Płacę z iPko.svg"
+          img-src="/p24/Płace_z_iPko.svg"
           img-alt="Płacę z iPko"
           :img-width="70"
           value="pbac_z_ipko"
@@ -185,6 +185,16 @@
         <!--      <p24-bank img-src="/p24/Bos Bank.svg" img-alt="Bos Bank" v-model="p24Bank" value="volkswagen_bank"></p24-bank>-->
       </div>
     </div>
+    <div class="mx-2 mt-10">
+      <input v-model="termsAccepted" type="checkbox" class="text-red-500" required />
+      <span class="ml-2 text-underline">
+        Oświadczam, że zapoznałem się z regulaminem i obowiązkiem informacyjnym
+        serwisu Przelewy24, a także z regulaminem niniejszej strony.*
+      </span>
+      <div v-if="piTriggered && !termsAccepted" class="text-red-500 text-sm">
+        *Pole obowiązkowe
+      </div>
+    </div>
     <div class="summary__pay-button text-center mt-5 mx-2 md:w-1/2 md:mx-auto">
       <button class="button button-outline w-full" @click="createPaymentIntent">
         Przejdź do płatności
@@ -202,8 +212,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { calculateCartAmountTotal } from '@/utils/cartCalculator'
 import P24Bank from '../../components/P24Bank'
+import { calculateCartAmountTotal } from '@/utils/cartCalculator'
 
 export default {
   name: 'Platnosc',
@@ -212,6 +222,7 @@ export default {
   data() {
     return {
       p24Bank: null,
+      termsAccepted: false,
       piTriggered: false,
       loading: false,
       stripeInstance: Stripe(process.env.stripePublishableKey),
@@ -276,9 +287,6 @@ export default {
         }
       }
     },
-    formInValid() {
-      return this.piTriggered && !this.p24Bank
-    },
   },
   methods: {
     showErrorMessage() {
@@ -289,7 +297,7 @@ export default {
     },
     async createPaymentIntent() {
       this.piTriggered = true
-      if (!this.p24Bank || this.loading) return
+      if (!this.p24Bank || !this.termsAccepted || this.loading) return
       this.loading = true
 
       try {
