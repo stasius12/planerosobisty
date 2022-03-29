@@ -51,7 +51,10 @@ function catchErrors(handler) {
       return await handler.call(this, ...arguments)
     } catch (e) {
       await reportError(e)
-      throw e
+      return {
+        statusCode: 500,
+        body: `Error: ${e}`,
+      }
     }
   }
 }
@@ -226,23 +229,24 @@ exports.handler = catchErrors(async function (event) {
     }
   }
 
+  let stripeEvent = null
   try {
-    const stripeEvent = stripe.webhooks.constructEvent(
+    stripeEvent = stripe.webhooks.constructEvent(
       event.body,
       event.headers['stripe-signature'],
       process.env.STRIPE_WEBHOOK_SECRET
     )
-
-    if (stripeEvent.type === 'payment_intent.succeeded') {
-      await handlePaymentIntentSucceeded(stripeEvent.data.object)
-    } else if (stripeEvent.type === 'customer.updated') {
-      await handleCustomerUpdated(stripeEvent.data)
-    }
   } catch (err) {
     return {
       statusCode: 400,
       body: `Webhook Error: ${err.message}`,
     }
+  }
+
+  if (stripeEvent.type === 'payment_intent.succeeded') {
+    await handlePaymentIntentSucceeded(stripeEvent.data.object)
+  } else if (stripeEvent.type === 'customer.updated') {
+    await handleCustomerUpdated(stripeEvent.data)
   }
 
   return {
