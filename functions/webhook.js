@@ -69,13 +69,16 @@ const getEmailTemplate = async (templateName, templateContent, mergeVars) => {
 }
 
 const sendEmail = (to, subject, text, html) => {
-  mg.messages.create('mg.planerosobisty.pl', {
-    from: 'Planer Osobisty <sklep@planerosobisty.pl>',
-    to,
-    subject,
-    text,
-    html,
-  })
+  mg.messages
+    .create('mg.planerosobisty.pl', {
+      from: 'Planer Osobisty <sklep@planerosobisty.pl>',
+      to,
+      subject,
+      text,
+      html,
+    })
+    .then((msg) => Sentry.captureMessage(msg))
+    .catch((err) => Sentry.captureException(err))
 }
 
 const handlePaymentIntentSucceeded = async (eventObject, send = true) => {
