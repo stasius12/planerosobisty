@@ -13,6 +13,49 @@ const mg = mailgun.client({
   url: 'https://api.eu.mailgun.net',
 })
 
+const Sentry = require('@sentry/node')
+const { ExtraErrorData } = require('@sentry/integrations')
+
+let sentryInitialized = false
+function initSentry() {
+  if (process.env.SENTRY_DSN) {
+    Sentry.init({
+      dsn: process.env.SENTRY_DSN,
+      normalizeDepth: 11,
+      integrations: [new ExtraErrorData({ depth: 10 })],
+    })
+    sentryInitialized = true
+  }
+}
+
+initSentry()
+
+async function reportError(error) {
+  // eslint-disable-next-line no-console
+  // console.warn(error)
+  if (!sentryInitialized) return
+
+  if (typeof error === 'string') {
+    Sentry.captureMessage(error)
+  } else {
+    Sentry.captureException(error)
+  }
+
+  await Sentry.flush()
+}
+
+function catchErrors(handler) {
+  return async function (event, context) {
+    context.callbackWaitsForEmptyEventLoop = false
+    try {
+      return await handler.call(this, ...arguments)
+    } catch (e) {
+      await reportError(e)
+      throw e
+    }
+  }
+}
+
 const getEmailTemplate = async (templateName, templateContent, mergeVars) => {
   const response = await mailchimpClient.templates.render({
     template_name: templateName,
@@ -23,16 +66,13 @@ const getEmailTemplate = async (templateName, templateContent, mergeVars) => {
 }
 
 const sendEmail = (to, subject, text, html) => {
-  mg.messages
-    .create('mg.planerosobisty.pl', {
-      from: 'Planer Osobisty <sklep@planerosobisty.pl>',
-      to,
-      subject,
-      text,
-      html,
-    })
-    .then((msg) => console.log(msg)) // logs response data
-    .catch((err) => console.log(err)) // logs any error
+  mg.messages.create('mg.planerosobisty.pl', {
+    from: 'Planer Osobisty <sklep@planerosobisty.pl>',
+    to,
+    subject,
+    text,
+    html,
+  })
 }
 
 const handlePaymentIntentSucceeded = async (eventObject, send = true) => {
@@ -59,7 +99,7 @@ const handlePaymentIntentSucceeded = async (eventObject, send = true) => {
   )
 
   if (send)
-    sendEmail(
+    await sendEmail(
       [eventObject.receipt_email],
       'Potwierdzenie złożenia zamówienia',
       'Potwierdzenie złożenia zamówienia',
@@ -116,7 +156,7 @@ const handleCustomerUpdated = async (eventData, send = true) => {
   return template
 }
 
-exports.handler = async function (event) {
+exports.handler = catchErrors(async function (event) {
   if (event.httpMethod === 'GET') {
     // if (!process.env.DEV) return { statusCode: 403 } TODO
 
@@ -208,4 +248,4 @@ exports.handler = async function (event) {
   return {
     statusCode: 200,
   }
-}
+})
