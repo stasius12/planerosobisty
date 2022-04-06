@@ -11,6 +11,7 @@ const mg = mailgun.client({
   username: 'api',
   key: process.env.MAILGUN_API_KEY,
   url: 'https://api.eu.mailgun.net',
+  timeout: 10 * 1000,
 })
 
 const Sentry = require('@sentry/node')
