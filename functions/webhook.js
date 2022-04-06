@@ -65,30 +65,28 @@ const getEmailTemplate = async (templateName, templateContent, mergeVars) => {
 }
 
 const sendEmail = async (to, subject, text, html) => {
-  await new SibApiV3Sdk.TransactionalEmailsApi()
-    .sendTransacEmail({
-      subject,
-      sender: { email: 'sklep@planerosobisty.pl', name: 'Planer Osobisty' },
-      replyTo: { email: 'sklep@planerosobisty.pl', name: 'Planer Osobisty' },
-      to: [{ email: to }],
-      htmlContent: html,
-      params: { bodyMessage: text },
-    })
-    .then(
-      function (data) {
-        Sentry.captureMessage(
-          `Email has been sent to: ${to} with subject: ${subject}`,
-          { extra: data }
-        )
-      },
-      function (error) {
-        Sentry.captureException(error, {
-          extra: {
-            description: `Tried to send an email to: ${to} with subject: ${subject}`,
-          },
-        })
-      }
+  try {
+    const data =
+      await new SibApiV3Sdk.TransactionalEmailsApi().sendTransacEmail({
+        subject,
+        sender: { email: 'sklep@planerosobisty.pl', name: 'Planer Osobisty' },
+        replyTo: { email: 'sklep@planerosobisty.pl', name: 'Planer Osobisty' },
+        to: [{ email: [to] }],
+        htmlContent: html,
+        params: { bodyMessage: text },
+      })
+
+    Sentry.captureMessage(
+      `Email has been sent to: ${to} with subject: ${subject}`,
+      { extra: data }
     )
+  } catch (error) {
+    Sentry.captureException(error, {
+      extra: {
+        description: `Tried to send an email to: ${to} with subject: ${subject}`,
+      },
+    })
+  }
 }
 
 const handlePaymentIntentSucceeded = async (eventObject, send = true) => {
