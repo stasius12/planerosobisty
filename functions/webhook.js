@@ -64,8 +64,8 @@ const getEmailTemplate = async (templateName, templateContent, mergeVars) => {
   return response.html
 }
 
-const sendEmail = (to, subject, text, html) => {
-  new SibApiV3Sdk.TransactionalEmailsApi()
+const sendEmail = async (to, subject, text, html) => {
+  await new SibApiV3Sdk.TransactionalEmailsApi()
     .sendTransacEmail({
       subject,
       sender: { email: 'sklep@planerosobisty.pl', name: 'Planer Osobisty' },
@@ -162,7 +162,7 @@ const handleCustomerUpdated = async (eventData, send = true) => {
   )
 
   if (send)
-    sendEmail(
+    await sendEmail(
       eventData.object.email,
       'Zamówienie zostało wysłane',
       'Zamówienie zostało wysłane',
