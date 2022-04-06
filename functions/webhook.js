@@ -4,15 +4,9 @@ const mailchimpClient = require('@mailchimp/mailchimp_transactional')(
   process.env.MANDRILL_API_KEY
 )
 
-const formData = require('form-data')
-const Mailgun = require('mailgun.js')
-const mailgun = new Mailgun(formData)
-const mg = mailgun.client({
-  username: 'api',
-  key: process.env.MAILGUN_API_KEY,
-  url: 'https://api.eu.mailgun.net',
-  timeout: 10 * 1000,
-})
+const SibApiV3Sdk = require('sib-api-v3-sdk')
+SibApiV3Sdk.ApiClient.instance.authentications['api-key'].apiKey =
+  process.env.SENDINBLUE_API_KEY
 
 const Sentry = require('@sentry/node')
 const { ExtraErrorData } = require('@sentry/integrations')
@@ -70,16 +64,30 @@ const getEmailTemplate = async (templateName, templateContent, mergeVars) => {
 }
 
 const sendEmail = (to, subject, text, html) => {
-  mg.messages
-    .create('mg.planerosobisty.pl', {
-      from: 'Planer Osobisty <sklep@planerosobisty.pl>',
-      to,
+  new SibApiV3Sdk.TransactionalEmailsApi()
+    .sendTransacEmail({
       subject,
-      text,
-      html,
+      sender: { email: 'sklep@planerosobisty.pl', name: 'Planer Osobisty' },
+      replyTo: { email: 'sklep@planerosobisty.pl', name: 'Planer Osobisty' },
+      to: [{ email: to }],
+      htmlContent: html,
+      params: { bodyMessage: text },
     })
-    .then((msg) => Sentry.captureMessage(msg))
-    .catch((err) => Sentry.captureException(err))
+    .then(
+      function (data) {
+        Sentry.captureMessage(
+          `Email has been sent to: ${to} with subject: ${subject}`,
+          { extra: data }
+        )
+      },
+      function (error) {
+        Sentry.captureException(error, {
+          extra: {
+            description: `Tried to send an email to: ${to} with subject: ${subject}`,
+          },
+        })
+      }
+    )
 }
 
 const handlePaymentIntentSucceeded = async (eventObject, send = true) => {
@@ -107,7 +115,7 @@ const handlePaymentIntentSucceeded = async (eventObject, send = true) => {
 
   if (send)
     await sendEmail(
-      [eventObject.receipt_email],
+      eventObject.receipt_email,
       'Potwierdzenie złożenia zamówienia',
       'Potwierdzenie złożenia zamówienia',
       template
@@ -154,7 +162,7 @@ const handleCustomerUpdated = async (eventData, send = true) => {
 
   if (send)
     sendEmail(
-      [eventData.object.email],
+      eventData.object.email,
       'Zamówienie zostało wysłane',
       'Zamówienie zostało wysłane',
       template

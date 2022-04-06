@@ -30,6 +30,7 @@
     "nuxt": "^2.15.3",
     "portal-vue": "^2.1.7",
     "serverless-http": "^2.7.0",
+    "sib-api-v3-sdk": "^8.3.0",
     "stripe": "^8.169.0",
     "swipejs": "^2.3.1",
     "vee-validate": "^3.4.11",
