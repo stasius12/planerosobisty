@@ -71,7 +71,7 @@ const sendEmail = async (to, subject, text, html) => {
         subject,
         sender: { email: 'sklep@planerosobisty.pl', name: 'Planer Osobisty' },
         replyTo: { email: 'sklep@planerosobisty.pl', name: 'Planer Osobisty' },
-        to: [{ email: [to] }],
+        to: [{ email: to }],
         htmlContent: html,
         params: { bodyMessage: text },
       })
