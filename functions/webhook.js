@@ -16,6 +16,7 @@ function initSentry() {
   if (process.env.SENTRY_DSN) {
     Sentry.init({
       dsn: process.env.SENTRY_DSN,
+      environment: process.env.DEV ? 'development' : 'production',
       normalizeDepth: 11,
       integrations: [new ExtraErrorData({ depth: 10 })],
     })
