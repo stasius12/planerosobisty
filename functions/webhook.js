@@ -114,7 +114,7 @@ const handlePaymentIntentSucceeded = async (eventObject, send = true) => {
 
   if (send)
     await sendEmail(
-      eventObject.receipt_email,
+      eventObject.charges.data[0].billing_details.email,
       'Potwierdzenie złożenia zamówienia',
       'Potwierdzenie złożenia zamówienia',
       template
@@ -230,7 +230,6 @@ exports.handler = catchErrors(async function (event) {
           ORDER_TOTAL_WITH_SHIPPING: '88.47',
           promoCode: 'planerek',
         },
-        receipt_email: 'stanislawstepak@outlook.com',
       },
       true
     )

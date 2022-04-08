@@ -186,10 +186,27 @@
       </div>
     </div>
     <div class="mx-2 mt-10">
-      <input v-model="termsAccepted" type="checkbox" class="text-red-500" required />
+      <input
+        v-model="termsAccepted"
+        type="checkbox"
+        class="text-red-500"
+        required
+      />
       <span class="ml-2 text-underline">
-        Oświadczam, że zapoznałem się z regulaminem i obowiązkiem informacyjnym
-        serwisu Przelewy24, a także z regulaminem niniejszej strony.*
+        Oświadczam, że zapoznałem się z
+        <a href="https://www.przelewy24.pl/regulamin" target="_blank">
+          regulaminem
+        </a>
+        i
+        <a
+          href="https://www.przelewy24.pl/obowiazek-informacyjny-rodo-platnicy"
+          target="_blank"
+        >
+          obowiązkiem informacyjnym
+        </a>
+        serwisu Przelewy24, a także z
+        <nuxt-link :to="{ name: 'regulamin' }" target="_blank">regulaminem</nuxt-link>
+        niniejszej strony.*
       </span>
       <div v-if="piTriggered && !termsAccepted" class="text-red-500 text-sm">
         *Pole obowiązkowe

@@ -151,6 +151,9 @@ const createPaymentIntent = async (req, res) => {
       currency: 'pln',
       payment_method_types: ['p24'],
       customer: customerID,
+      receipt_email: null,
+      statement_descriptor: 'Planer Osobisty',
+      description: 'Planer Osobisty',
       metadata: {
         ...metadata,
         ORDER_NUMBER: orderNumber,
@@ -162,7 +165,6 @@ const createPaymentIntent = async (req, res) => {
     })
 
     res.status(200).json(paymentIntent.client_secret)
-
   } catch {
     res.status(500)
   }
@@ -208,7 +210,8 @@ module.exports.retrieveProduct = retrieveProduct
 module.exports.listAllShippingMethods = listAllShippingMethods
 
 // PROMO CODES
-module.exports.retrieveAndValidatePromotionCode = retrieveAndValidatePromotionCode
+module.exports.retrieveAndValidatePromotionCode =
+  retrieveAndValidatePromotionCode
 
 // CHECKOUT
 module.exports.createCustomer = createCustomer
