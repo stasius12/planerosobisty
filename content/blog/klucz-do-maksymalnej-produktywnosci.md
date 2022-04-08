@@ -66,7 +66,7 @@ Druga ćwiartka to miejsce, w którym docelowo powinno znajdować się większo�
 
 Tutaj znajdują się sprawy ważne, ale nieposiadające naglącego terminu. Dotyczą zazwyczaj **planów długoterminowych, samorozwoju, zdrowia czy relacji**. Warto poświęcać im jak najwięcej czasu, ponieważ przyniosą nam najwięcej korzyści w przyszłości (zarówno w życiu zawodowym jak i prywatnym).
 
-!!Samoświadomość, planowanie i skuteczne zarządzanie sobą w czasie są kluczowe, aby tego dokonać. Jeśli wykażesz się proaktywnym podejściem, dzięki nim będziesz w stanie zaprojektować swoją rzeczywistość tak jak zechcesz.!!
+Samoświadomość, planowanie i skuteczne zarządzanie sobą w czasie są kluczowe, aby tego dokonać. Jeśli wykażesz się proaktywnym podejściem, dzięki nim będziesz w stanie zaprojektować swoją rzeczywistość tak jak zechcesz.
 
 ### 3. i 4. czyli NIEWAŻNE
 
