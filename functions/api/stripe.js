@@ -151,7 +151,7 @@ const createPaymentIntent = async (req, res) => {
       currency: 'pln',
       payment_method_types: ['p24'],
       customer: customerID,
-      receipt_email: null,
+      receipt_email: 'receipts@planerosobisty.pl',
       statement_descriptor: 'Planer Osobisty',
       description: 'Planer Osobisty',
       metadata: {
