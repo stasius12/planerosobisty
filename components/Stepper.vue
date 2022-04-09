@@ -3,7 +3,7 @@
     <div class="p-2">
       <div class="flex items-center">
         <nuxt-link
-          :to="currentStepNumber > 0 ? { name: 'sklep-koszyk' } : ''"
+          :to="{ name: 'sklep-koszyk' }"
           class="flex items-center relative"
           :class="{
             'text-white': currentStepNumber === 0,
@@ -11,7 +11,7 @@
           }"
         >
           <div
-            class="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2"
+            class="rounded-full transition duration-100 ease-in-out h-12 w-12 py-3 border-2"
             :class="{
               'bg-gray-600': currentStepNumber === 0,
               'border-gray-600': currentStepNumber >= 0,
@@ -42,14 +42,14 @@
           </div>
         </nuxt-link>
         <div
-          class="flex-auto border-t-2 transition duration-500 ease-in-out"
+          class="flex-auto border-t-2 transition duration-100 ease-in-out"
           :class="{
             'border-gray-600': currentStepNumber > 0,
             'border-gray-300': currentStepNumber <= 0,
           }"
         ></div>
         <nuxt-link
-          :to="currentStepNumber > 1 ? { name: 'sklep-dane-zamowienia' } : ''"
+          :to="currentStepNumber === 0 || maxStepAllowed > 0 ? { name: 'sklep-dane-zamowienia' } : ''"
           class="flex items-center relative"
           :class="{
             'text-white': currentStepNumber === 1,
@@ -57,7 +57,7 @@
           }"
         >
           <div
-            class="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2"
+            class="rounded-full transition duration-100 ease-in-out h-12 w-12 py-3 border-2"
             :class="{
               'bg-gray-600': currentStepNumber === 1,
               'border-gray-600': currentStepNumber >= 1,
@@ -88,14 +88,14 @@
           </div>
         </nuxt-link>
         <div
-          class="flex-auto border-t-2 transition duration-500 ease-in-out"
+          class="flex-auto border-t-2 transition duration-100 ease-in-out"
           :class="{
             'border-gray-600': currentStepNumber > 1,
             'border-gray-300': currentStepNumber <= 1,
           }"
         ></div>
         <nuxt-link
-          :to="currentStepNumber > 2 ? { name: 'sklep-wysylka' } : ''"
+          :to="currentStepNumber === 1 || maxStepAllowed > 1 ? { name: 'sklep-wysylka' } : ''"
           class="flex items-center relative"
           :class="{
             'text-white': currentStepNumber === 2,
@@ -103,7 +103,7 @@
           }"
         >
           <div
-            class="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2"
+            class="rounded-full transition duration-100 ease-in-out h-12 w-12 py-3 border-2"
             :class="{
               'bg-gray-600': currentStepNumber === 2,
               'border-gray-600': currentStepNumber >= 2,
@@ -134,14 +134,14 @@
           </div>
         </nuxt-link>
         <div
-          class="flex-auto border-t-2 transition duration-500 ease-in-out"
+          class="flex-auto border-t-2 transition duration-100 ease-in-out"
           :class="{
             'border-gray-600': currentStepNumber > 2,
             'border-gray-300': currentStepNumber <= 2,
           }"
         ></div>
         <nuxt-link
-          :to="currentStepNumber > 3 ? { name: 'sklep-platnosc' } : ''"
+          :to="currentStepNumber === 2 || maxStepAllowed > 2 ? { name: 'sklep-platnosc' } : ''"
           class="flex items-center relative"
           :class="{
             'text-white': currentStepNumber === 3,
@@ -149,7 +149,7 @@
           }"
         >
           <div
-            class="rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2"
+            class="rounded-full transition duration-100 ease-in-out h-12 w-12 py-3 border-2"
             :class="{
               'bg-gray-600': currentStepNumber === 3,
               'border-gray-600': currentStepNumber >= 3,
@@ -212,6 +212,12 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'Stepper',
+  props: {
+    maxStepAllowed: {
+      type: Number,
+      default: 0,
+    },
+  },
   data() {
     return {
       steps: [
