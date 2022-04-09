@@ -12,15 +12,15 @@ To narzędzie, które zrewolucjonizowało moje myślenie o planowaniu. Mam nadzi
 
 Wiele osób myśli, że planowanie tygodnia, miesiąca czy roku rozpoczynamy od pytania: “Jakie cele chciałbym w tym roku zrealizować?”. Rezultatem jest wybór kilku postanowień, które przyszły nam do głowy w ciągu kilku ostatnich chwil bez większego ładu i składu. Taki sposób wyznaczania celów często sprawia, że skupiamy się tylko na jednym z obszarów naszego życia. W konsekwencji, planując swój rok, zapominamy, że nasze życie, zupełnie jak nasz organizm, to sieć naczyń połączonych. Każdy z jego obszarów funkcjonuje najlepiej, kiedy jest w harmonii z innymi. 
 
-Przykład: jeśli poprawisz swoje relacje, prawdopodobnie łatwiej będzie Ci się skupić na rozwijaniu swojej kariery, a jeśli udoskonalisz swoje otoczenie, łatwiej będzie Ci zadbać o zdrowie. 
+**Przykład:** jeśli poprawisz swoje relacje, prawdopodobnie łatwiej będzie Ci się skupić na rozwijaniu swojej kariery, a jeśli udoskonalisz swoje otoczenie, łatwiej będzie Ci zadbać o zdrowie. 
 
 Naszą główną intencją w ustalaniu celów jest poprawa jakości naszego życia możliwie szybko i sprawnie. Możemy to zrobić albo ‘siłując się’ z każdym obszarem osobno albo wybrać drogę na skróty. Jeśli odnajdziesz i zadbasz o sfery życia, które aktualnie są najbardziej zapomniane, bardzo szybko odczujesz znaczną poprawę ogólnej jakości życia. A bonusowo łatwiej będzie Ci osiągać kolejne cele w pozostałych obszarach. 
 
 Jak to zrobić? Spojrzeć na swoje życie z lotu ptaka. Właśnie w tym pomoże nam dzisiaj koło życia.
 
 Jest to moje ulubione narzędzie, od którego za każdym razem zaczynam planowanie roku. Pozwala ono odpowiedzieć sobie na dwa podstawowe pytania w kontekście planowania:
-\* Gdzie jestem dzisiaj i jak się z tym czuję?
-\* Gdzie chcę być jutro? (za miesiąc, kwartał czy 5 lat…)
+* Gdzie jestem dzisiaj i jak się z tym czuję?
+* Gdzie chcę być jutro? (za miesiąc, kwartał czy 5 lat…)
 oraz zrozumieć o wiele więcej. 
 
 Koniec gadania, przejdźmy do działania!

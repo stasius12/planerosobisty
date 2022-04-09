@@ -91,6 +91,45 @@ export default {
     }
   }
 
+  :not(h2):not(h3):not(h4) > strong {
+    font-weight: 500;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+  h4 {
+    margin-bottom: 0.4rem;
+  }
+
+  p,
+  ul,
+  ol,
+  blockquote {
+    margin-bottom: 1.8rem;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  * + h2 {
+    margin-top: 2.5rem;
+  }
+  * + h3 {
+    margin-top: 1.8rem;
+  }
+  * + h4 {
+    margin-top: 1rem;
+  }
+
   p + ul,
   p + ol,
   p + .list-style-arrow + ul {
@@ -99,7 +138,7 @@ export default {
 
   ul,
   ol {
-    padding-left: 4rem;
+    padding-left: 2rem;
   }
 
   ul ul,
