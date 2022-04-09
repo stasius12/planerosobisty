@@ -103,6 +103,9 @@ export default {
     sentryDsn: process.env.SENTRY_DSN,
     domainName: process.env.DOMAIN_NAME,
     stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+    url: process.env.URL,
+    deployUrl: process.env.DEPLOY_URL,
+    deployPrimeUrl: process.env.DEPLOY_PRIME_URL,
   },
 
   hooks: {
