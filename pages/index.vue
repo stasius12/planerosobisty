@@ -168,7 +168,6 @@
         </nuxt-link>
       </article>
     </section>
-    {{ $nuxt.context.$config.url }}
   </main>
 </template>
 
