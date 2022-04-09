@@ -168,9 +168,6 @@
         </nuxt-link>
       </article>
     </section>
-    {{ $nuxt.context.env.url }}
-    {{ $nuxt.context.env.deployUrl }}
-    {{ $nuxt.context.env.deployPrimeUrl }}
   </main>
 </template>
 

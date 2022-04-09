@@ -1,3 +1,11 @@
+const getUrl = () => {
+  return process.env.CONTEXT === 'production'
+    ? process.env.URL
+    : process.env.CONTEXT === 'dev'
+    ? process.env.LOCAL_URL || 'http://localhost:8888' // LOCAL_URL - to easily override from .env
+    : process.env.DEPLOY_PRIME_URL
+}
+
 export default {
   target: 'static',
   ssr: false,
@@ -92,21 +100,15 @@ export default {
 
   publicRuntimeConfig: {
     axios: {
-      baseURL: `${process.env.DOMAIN_NAME}/.netlify/functions/api/`,
+      baseURL: `${getUrl()}/.netlify/functions/api/`,
     },
+    sentryDsn: process.env.SENTRY_DSN,
+    stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+    url: getUrl(),
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-
-  env: {
-    sentryDsn: process.env.SENTRY_DSN,
-    domainName: process.env.DOMAIN_NAME,
-    stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
-    url: process.env.URL,
-    deployUrl: process.env.DEPLOY_URL,
-    deployPrimeUrl: process.env.DEPLOY_PRIME_URL,
-  },
 
   hooks: {
     'content:file:beforeParse': (file) => {
