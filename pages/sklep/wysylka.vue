@@ -41,7 +41,7 @@
           </div>
           <div>{{ shipmentInfo.first_name }} {{ shipmentInfo.surname }}</div>
           <div>
-            ul. {{ shipmentInfo.street }} {{ shipmentInfo.street_house_number
+            {{ shipmentInfo.street }} {{ shipmentInfo.street_house_number
             }}{{
               shipmentInfo.street_house_apartment
                 ? `/${shipmentInfo.street_house_apartment}`
@@ -61,7 +61,7 @@
         <div class="pl-2">
           <div>{{ locker.name }}</div>
           <div v-if="locker.address && locker.address.line1">
-            ul. {{ locker.address.line1 }}
+            {{ locker.address.line1 }}
           </div>
           <div v-if="locker.address && locker.address.line2">
             {{ locker.address.line2 }}

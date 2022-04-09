@@ -18,7 +18,7 @@
           {{ personalInfo.company_name }}<br />
           NIP: {{ personalInfo.company_id }}
         </div>
-        <div>ul. {{ personalAddressLine1 }}</div>
+        <div>{{ personalAddressLine1 }}</div>
         <div>{{ personalAddressLine2 }}</div>
       </div>
       <div class="border-b-s font-weight-bold">Dostawa</div>
@@ -30,7 +30,7 @@
         <div v-if="shipment.locker_name">
           Paczkomat - {{ shipment.locker_name }}
         </div>
-        <div>ul. {{ shipmentAddressLine1 }}</div>
+        <div>{{ shipmentAddressLine1 }}</div>
         <div>{{ shipmentAddressLine2 }}</div>
       </div>
     </div>
