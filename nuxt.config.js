@@ -2,11 +2,6 @@ export default {
   target: 'static',
   ssr: false,
 
-  generate: {
-    fallback: true,
-    exclude: [/^\/order/],
-  },
-
   server: {
     host: '0',
   },
