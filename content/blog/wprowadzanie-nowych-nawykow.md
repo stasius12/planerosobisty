@@ -7,7 +7,7 @@ description: O potędze nawyków napisano tysiące książek. Problem jest tylko
 ---
 O potędze nawyków napisano tysiące książek. Problem jest tylko jeden - praktycznie każdy ma problem z wprowadzaniem ich w życie. Jak wdrożyć je w życie NAPRAWDĘ skutecznie? 
 
-## !!POTĘGA MIKRO KROKÓW!!
+## POTĘGA MIKRO KROKÓW
 
 Jak może wiesz, jedną z moich pasji, której oddaję się po godzinach jest inwestowanie na giełdzie. Jeśli miałeś z nią cokolwiek wspólnego, wiesz, że światem inwestycji rządzi magia procentu składanego. 
 
@@ -86,7 +86,7 @@ Jeżeli kiedykolwiek zastanawiałeś się nad tym dlaczego masz problem z realiz
 
 Postaw sobie następujące pytania:
 
-**1. Jak mogę sprawić, aby było to oczywiste?** 
+#### 1. Jak mogę sprawić, aby było to oczywiste? 
 
 Dostosuj otoczenie. Eksponuj rzeczy i sygnały, które wyzwolą dobre nawyki.
 
@@ -94,7 +94,7 @@ Dostosuj otoczenie. Eksponuj rzeczy i sygnały, które wyzwolą dobre nawyki.
 * jeżeli chcesz czytać wieczorem, połóż książkę na poduszce
 * jeżeli chcesz jeść owoce zamiast słodyczy, postaw miskę z owocami w widocznym miejscu, a słodycze zanieś do pracy
 
-**2. Jak mogę to uatrakcyjnić w moich oczach?** 
+#### 2. Jak mogę to uatrakcyjnić w moich oczach? 
 
 Sposobów może być wiele, oto kilka propozycji, które można stosować zarówno osobno, jak i łączyć ze sobą. Im więcej, tym skuteczniej ;)
 
@@ -114,7 +114,7 @@ Sposobów może być wiele, oto kilka propozycji, które można stosować zarów
 * czy też grupa internetowa
 * możesz się także zacząć otaczać książkami, filmami, blogami itd. ludzi, którzy robią to co Ty
 
-**3. Jak mogę ułatwić sobie zadanie?**
+#### 3. Jak mogę ułatwić sobie zadanie?
 
 Przede wszystkim przygotuj się wcześniej. Im łatwiej będzie rozpocząć i mniej trzeba myśleć, tym większe prawdopodobieństwo, że to zrobisz.
 
@@ -122,7 +122,7 @@ Przede wszystkim przygotuj się wcześniej. Im łatwiej będzie rozpocząć i mn
 * przygotuj dzień wcześniej zdrowy lunch do pracy
 * ustaw stałe zlecenie przelewu w banku na konto oszczędnościowe
 
-**4. Jak mogę uczynić to satysfakcjonującym?**
+#### 4. Jak mogę uczynić to satysfakcjonującym?
 
 Nagradzaj się! Zarówno z badań, jak i codziennego życia wiemy, że z chęcią powtarzamy zachowania, które są nagradzane (nawet jeśli nie są łatwe, atrakcyjne ani oczywiste). Zatem zadbaj o to, żeby do nowego nawyku zawsze był dodany jakiś bonus, a Twój mózg po kilku powtórzeniach sam zachęci Cię do działania.
 
