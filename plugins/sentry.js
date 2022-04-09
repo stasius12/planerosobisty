@@ -10,7 +10,7 @@ export default ({ app: { router, context } }, inject) => {
     normalizeDepth: 11,
     environment: context.isDev ? 'development' : 'production',
     tracesSampleRate: 1.0,
-    dsn: context.env.sentryDsn,
+    dsn: context.$config.sentryDsn,
     integrations: [
       new BrowserTracing({
         routingInstrumentation: Sentry.vueRouterInstrumentation(router),

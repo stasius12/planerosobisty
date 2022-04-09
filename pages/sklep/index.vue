@@ -508,7 +508,7 @@ export default {
   methods: {
     ...mapActions('checkout', ['addCartItem']),
     async addProductToCart(productID) {
-      await this.addCartItem(productID)
+      await this.addCartItem({ productID, url: this.$config.url })
       await this.$router.push({ name: 'sklep-koszyk' })
     },
   },

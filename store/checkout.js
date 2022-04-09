@@ -82,14 +82,16 @@ export const mutations = {
 
 export const actions = {
   // CART ITEMS
-  async addCartItem({ commit, getters, dispatch }, productID) {
-    if (!getters.cartItems.filter(({ id }) => id === productID).length) {
+  async addCartItem({ commit, getters, dispatch }, payload) {
+    if (
+      !getters.cartItems.filter(({ id }) => id === payload.productID).length
+    ) {
       const response = await axios.get(
-        `${process.env.domainName}/.netlify/functions/api/products/${productID}`
+        `${payload.url}/.netlify/functions/api/products/${payload.productID}`
       )
       const data = response.data
       commit('ADD_CART_ITEM', {
-        id: productID,
+        id: payload.productID,
         name: data.product.name,
         priceAmount: data.price.unit_amount_decimal,
         priceID: data.price.id,

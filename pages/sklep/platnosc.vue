@@ -242,7 +242,7 @@ export default {
       termsAccepted: false,
       piTriggered: false,
       loading: false,
-      stripeInstance: Stripe(process.env.stripePublishableKey),
+      stripeInstance: Stripe(this.$config.stripePublishableKey),
     }
   },
   computed: {
@@ -376,7 +376,7 @@ export default {
             tos_shown_and_accepted: true,
           },
         },
-        return_url: process.env.domainName,
+        return_url: this.$config.url,
       })
     },
     getCustomerMetadata() {
