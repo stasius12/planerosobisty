@@ -140,6 +140,7 @@ export default {
     },
   },
   mounted() {
+    this.$store.dispatch('checkout/updateMaxStepAllowed', 2)
     window.easyPackAsyncInit = function () {
       easyPack.init({
         defaultLocale: 'pl',

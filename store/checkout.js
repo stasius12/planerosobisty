@@ -40,6 +40,7 @@ export const state = () => ({
     priceID: '',
     priceAmount: 0,
   },
+  _maxStepAllowed: 0,
 })
 
 export const mutations = {
@@ -77,6 +78,9 @@ export const mutations = {
   },
   UPDATE_SHIPMENT_DETAILS(state, payload) {
     state._shipmentDetails = payload
+  },
+  SET_MAX_STEP_ALLOWED(state, stepNumber) {
+    state._maxStepAllowed = stepNumber
   },
 }
 
@@ -149,6 +153,10 @@ export const actions = {
     commit('UPDATE_SHIPMENT_DETAILS', data)
     dispatch('saveStateInCookies')
   },
+  updateMaxStepAllowed({ commit, dispatch }, data) {
+    commit('SET_MAX_STEP_ALLOWED', data)
+    dispatch('saveStateInCookies')
+  },
 
   // GENERAL
   saveStateInCookies({ state }) {
@@ -169,6 +177,7 @@ export const actions = {
       commit('UPDATE_SHIPMENT_INFO', newState._shipmentInfo)
       commit('UPDATE_SHIPMENT_INFO_DIFFERS', newState._shipmentInfoDiffers)
       commit('UPDATE_SHIPMENT_DETAILS', newState._shipmentDetails)
+      commit('SET_MAX_STEP_ALLOWED', newState._maxStepAllowed)
     }
   },
 }
@@ -183,4 +192,5 @@ export const getters = {
   shipmentInfo: (state) => state._shipmentInfo,
   shipmentInfoDiffers: (state) => state._shipmentInfoDiffers,
   shipmentDetails: (state) => state._shipmentDetails,
+  maxStepAllowed: (state) => state._maxStepAllowed,
 }

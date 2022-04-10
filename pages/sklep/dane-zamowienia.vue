@@ -52,7 +52,7 @@
         />
         <base-input
           v-model="personalForm.city"
-          name="#TODO:3"
+          name="city"
           type="text"
           label="Miasto"
           rules="required"
@@ -150,7 +150,7 @@
         />
         <base-input
           v-model="shipmentForm.city"
-          name="#TODO:3"
+          name="city"
           type="text"
           label="Miasto"
           rules="required"
@@ -200,7 +200,11 @@ export default {
       isValid = isValid && (await this.$refs.shipmentForm.validate())
     }
 
-    if (to.name !== 'sklep-wysylka' || isValid) next()
+    if (
+      (to.name !== 'sklep-wysylka' && to.name !== 'sklep-platnosc') ||
+      isValid
+    )
+      next()
   },
   layout: 'checkout',
   data() {
@@ -232,6 +236,9 @@ export default {
       this.validateAndUpdateShipmentInfo()
       this.$store.dispatch('checkout/updateShipmentInfoDiffers', value)
     },
+  },
+  mounted() {
+    this.$store.dispatch('checkout/updateMaxStepAllowed', 1)
   },
   methods: {
     validateAndUpdateShipmentInfo() {

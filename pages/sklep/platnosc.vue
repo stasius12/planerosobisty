@@ -305,6 +305,9 @@ export default {
       }
     },
   },
+  mounted() {
+    this.$store.dispatch('checkout/updateMaxStepAllowed', 3)
+  },
   methods: {
     showErrorMessage() {
       this.$toasted.show('Wygląda na to, że wystąpił błąd. Spróbuj ponownie.', {
