@@ -160,6 +160,7 @@ const createPaymentIntent = async (req, res) => {
         ORDER_TOTAL: amountTotal / 100,
         ORDER_SHIPPING_PRICE: amountShipping / 100,
         ORDER_TOTAL_WITH_SHIPPING: amountTotalWithShipping / 100,
+        hello: process.env.STRIPE_PUBLISHABLE_KEY,
         promoCode,
       },
     })
