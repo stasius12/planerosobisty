@@ -1,2 +1,17 @@
 [functions]
   directory = "functions"
+
+[build.environment]
+  STRIPE_URL = 'https://dashboard.stripe.com'
+  SENTRY_URL = 'https://sentry.io/organizations/planer-osobisty'
+
+[context.staging.environment]
+  STRIPE_URL = 'https://dashboard.stripe.com/test'
+
+[context.dev.environment]
+  STRIPE_URL = 'https://dashboard.stripe.com/test'
+
+[[plugins]]
+package = 'netlify-plugin-contextual-env'
+  [plugins.inputs]
+  mode = 'prefix'
