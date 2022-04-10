@@ -112,6 +112,8 @@ export default {
       baseURL: `${getUrl()}/.netlify/functions/api/`,
     },
     sentryDsn: process.env.SENTRY_DSN,
+    sentryUrl: process.env.SENTRY_URL,
+    stripeUrl: process.env.STRIPE_URL,
     stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
     url: getUrl(),
   },
