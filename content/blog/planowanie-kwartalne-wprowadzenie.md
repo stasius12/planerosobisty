@@ -34,25 +34,33 @@ Nie zapominajmy również o naszych własnych sezonach energetycznych. Są one p
 
 Planowanie kwartalne dobrze wpłynie na Twoją efektywność. Dlaczego?
 
-### KRÓTKI DEADLINE DAJE KOPA DO DZIAŁANIA 
+### 1. KRÓTKI DEADLINE DAJE KOPA DO DZIAŁANIA
 
 Po pierwsze, im krótszy deadline, tym szybsza realizacja. Jeśli skupisz się na celu, który masz osiągnąć w 3 miesiące, będzie on mniejszy niż roczny, a zatem bardziej realistyczny i mniej przytłaczający. Myśl, że musisz ruszyć w jego kierunku już teraz będzie natychmiastowa. W przeciwieństwie do celów rocznych, do których często zwlekamy (“zacznę biegać jak zrobi się cieplej”, czyli kiedy?) lub poddajemy się za szybko (znowu przykład postanowień noworocznych typu “schudnę 30kg w tym roku”), ponieważ są one tak duże i odległe, że przytłaczają nas od samego początku. 
 
 Z pewnością kojarzysz prawo Parkinsona, które mówi, że praca rozszerza się tak, aby wypełnić czas dostępny na jej ukończenie. Zatem jeżeli na ukończenie projektu dasz sobie 3 miesiące, zamiast roku, jest duża szansa, że zrobisz to właśnie w tym czasie, a nawet jeśli nie, to z pewnością będziesz dużo dalej, niż gdyby okres czasu był ustalony na cały rok.
 
-### REGULARNA EWALUACJA PODSTAWĄ POPRAWY
+### 2. REGULARNA EWALUACJA JEST PODSTAWĄ POPRAWY
 
 Po drugie, regularna cokwartalna ewaluacja postępów pozwoli Ci zastanowić się nad skutecznością prowadzonych działań i zrobić ewentualne poprawki w metodach, które uznałeś za słuszne na początku roku. Jeśli wprowadzasz swój produkt na rynek dwoma kanałami sprzedaży i podczas kwartalnego podsumowania jeden z nich okazuje się być niewystarczająco skuteczny, naturalnie przyjdzie do Ciebie myśl “jak zmienić to w następnym kwartale?”. Jeśli Twoje ewaluacje są coroczne, może się okazać, że zanim się zorientujesz, że wyrzucasz swoje pieniądze w błoto, inwestując w działania nie przynoszące oczekiwanych rezultatów, może minąć większa część roku. Podobnie z odchudzaniem czy nauką hiszpańskiego. Zadawanie sobie pytań o efektywność dotychczasowych działań, zawsze przyniesie Ci dobrą zmianę. A jeśli nie zmianę, to zadowolenie z siebie i dotychczasowych działań :)
 
-### PRAWO PROCENTU SKŁADANEGO
+### 3. PRAWO PROCENTU SKŁADANEGO
 
-Po trzecie, moje ulubione prawo procentu składanego. Jak działa skuteczne wprowadzanie ulepszeń w istniejących procesach? Zgodnie z cyklem PLANOWANIE > WDRAŻANIE > EWALUACJA. Kiedy myślimy, planujemy, działamy w cyklu rocznym, mamy szansę, aby zaplanować nowe działania 1 raz, wdrożyć i sprawdzić je 1 raz, a jeśli podczas ewaluacji okaże się, że nie przyniosły spodziewanych efektów, zaczniemy planować nowy rok inaczej. Tym sposobem przez 5 lat przejdziemy przez 5 cykli poprawy naszego procesu. Tymczasem, kiedy wdrożymy planowanie kwartalne, okazuje się, że przez 5 lat przejdziemy przez 20 takich cykli poprawy. Pomyśl o ile lepszy będziesz jeśli poprawisz coś 20 razy (choćby odrobinę) zamiast 5? 
+Po trzecie, moje ulubione - prawo procentu składanego. Jak działa skuteczne wprowadzanie ulepszeń w istniejących procesach? Zgodnie z cyklem PLANOWANIE > WDRAŻANIE > EWALUACJA. Kiedy myślimy, planujemy, działamy w cyklu rocznym, mamy szansę, aby zaplanować nowe działania 1 raz, wdrożyć i sprawdzić je 1 raz, a jeśli podczas ewaluacji okaże się, że nie przyniosły spodziewanych efektów, zaczniemy planować nowy rok inaczej. Tym sposobem przez 5 lat przejdziemy przez 5 cykli poprawy naszego procesu. Tymczasem, kiedy wdrożymy planowanie kwartalne, okazuje się, że przez 5 lat przejdziemy przez 20 takich cykli poprawy. Pomyśl o ile lepszy będziesz jeśli poprawisz coś 20 razy (choćby odrobinę) zamiast 5? 
 
 Jest to modelowy przykład jak nasze działania (lub ich brak) podlegają prawu procentu składanego. Każda kolejna iteracja takiego cyklu, będzie wnosiła dodatkowe zyski (w postaci materialnej lub niematerialnej) za każdym razem kiedy przez niego przejdziemy. Sprawdziłam jak poprawa o 10% w każdym cyklu zmieni rezultat po 5 latach:
-przy rocznym planowaniu: +61% od początkowej wartości 
-przy kwartalnej iteracji: +573% od początkowej wartości 
 
-Oczywiście te liczby mają jedynie nakreślić koncepcję, wyjaśnić dlaczego uważam zastanawianie się nad naszymi planami kilkukrotnie w ciągu roku za tak istotne. Jeśli chcesz poszerzyć swoją wiedzę możesz iść na 5 letnie studia (które stopniowo, w cyklach rocznych poszerzą twoje kompetencje) albo kupić 3 miesięczny kurs podstawowy na dany temat, po kwartale zastanowić się, które obszary chciałbyś pogłębić i znaleźć odpowiednie książki czy kursy na ten temat, w kolejnym kwartale ponownie zastanowić się nad dalszym kierunkiem rozwoju, mając już odpowiednio poszerzony horyzont itd. Jak myślisz, które podejście zrobi z Ciebie lepszego specjalistę w wybranej dziedzinie? 
+* przy rocznym planowaniu: +61% od początkowej wartości wartości 
+* przy kwartalnej iteracji: +573% od początkowej 
+
+Oczywiście te liczby mają jedynie nakreślić koncepcję, wyjaśnić dlaczego uważam zastanawianie się nad naszymi planami kilkukrotnie w ciągu roku za tak istotne. 
+
+Inny przykład: chcesz poszerzyć swoją wiedzę. 
+
+* Opcja A: Możesz iść na 5 letnie studia (które stopniowo, w cyklach rocznych poszerzą twoje kompetencje) albo...
+* Opcja B: kupić 3 miesięczny kurs podstawowy na dany temat, po kwartale zastanowić się, które obszary chciałbyś pogłębić i znaleźć odpowiednie książki czy kursy na ten temat, w kolejnym kwartale ponownie zastanowić się nad dalszym kierunkiem rozwoju, mając już odpowiednio poszerzony horyzont. 
+
+Jak myślisz, które podejście zrobi z Ciebie lepszego specjalistę w wybranej dziedzinie? 
 
 Dość oczywistym wydaje się fakt, że im więcej takich cykli ulepszeń tym lepiej. Nawet niewielkie zmiany implementowane w cyklu kwartalnym mogą całkowicie zmienić naszą rzeczywistość jeśli spojrzymy na nie w kontekście kilku lat. 
 
@@ -60,9 +68,11 @@ Dość oczywistym wydaje się fakt, że im więcej takich cykli ulepszeń tym le
 
 Naprawdę warto zatrzymać się na godzinę czy dwie raz na 3 miesiące i zrobić sobie takie spotkanie samemu ze sobą dla siebie z przyszłości, aby zastanowić się nad tym co się wydarzyło/zmieniło w ostatnich miesiącach i zaplanować kolejny kwartał. 
 
-Zapraszam Cię serdecznie do wdrożenia systemu kwartalnego już dziś. Naprawdę warto :)
-Jeśli chciałbyś spróbować zrobić to razem ze mną zapraszam Cię do posta Planowanie kwartalne w praktyce.
+Naprawdę warto :)
+Jeśli chciałbyś spróbować zrobić to razem ze mną zapraszam Cię do posta [Planowanie kwartalne w praktyce](https://planerosobisty.pl/blog/planowanie-kwartalne-w-praktyce).
 
 Powodzenia!
 
 PS Chciałabym tylko doprecyzować, że nie chodzi o to, aby całkowicie wyrzucić kalendarz roczny ze swojego życia. Sęk w tym, aby nie traktować go jak podstawę Twojego działania, a raczej traktować go jako poglądowy obraz, który w ciągu roku będzie podlegał zmianom.
+
+PSS Jeśli szukasz miejsca, w którym znajdziesz miejsce na cokwartalną refleksję, polecam oczywiście fizyczny [Planer Osobisty](https://planerosobisty.pl/sklep) ;)
