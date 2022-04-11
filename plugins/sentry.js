@@ -8,7 +8,7 @@ export default ({ app: { router, context } }, inject) => {
   Sentry.init({
     Vue,
     normalizeDepth: 11,
-    environment: context.$config.ctx,
+    environment: context.$config.environment,
     tracesSampleRate: 1.0,
     dsn: context.$config.sentryDsn,
     integrations: [

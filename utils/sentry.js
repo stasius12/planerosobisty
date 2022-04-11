@@ -1,11 +1,20 @@
 const Sentry = require('@sentry/node')
 const { ExtraErrorData } = require('@sentry/integrations')
 
+const getEnvironment = () => {
+  // It can be production, deploy-preview, branch-deploy or dev
+  if (process.env.CONTEXT === 'branch-deploy') {
+    return process.env.BRANCH
+  }
+
+  return process.env.CONTEXT
+}
+
 function initSentry() {
   if (process.env.SENTRY_DSN) {
     Sentry.init({
       dsn: process.env.SENTRY_DSN,
-      environment: process.env.CONTEXT,
+      environment: getEnvironment(),
       normalizeDepth: 11,
       integrations: [new ExtraErrorData({ depth: 10 })],
     })
