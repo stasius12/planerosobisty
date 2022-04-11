@@ -245,9 +245,6 @@ export default {
       stripeInstance: Stripe(this.$config.stripePublishableKey),
     }
   },
-  mounted() {
-    console.log(this.$config.url)
-  },
   computed: {
     ...mapGetters('checkout', [
       'cartItems',
