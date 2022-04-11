@@ -132,7 +132,7 @@ const createPaymentIntent = async (req, res) => {
   const paymentIntent = await stripe.paymentIntents.create({
     amount: amountTotalWithShipping,
     currency: 'pln',
-    payment_method_types: ['p24'],
+    payment_method_types: ['p24s'],
     customer: customerID,
     receipt_email: 'receipts@planerosobisty.pl',
     statement_descriptor: 'Planer Osobisty',
