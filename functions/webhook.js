@@ -4,56 +4,8 @@ const mailchimpClient = require('@mailchimp/mailchimp_transactional')(
   process.env.MANDRILL_API_KEY
 )
 
-const SibApiV3Sdk = require('sib-api-v3-sdk')
-SibApiV3Sdk.ApiClient.instance.authentications['api-key'].apiKey =
-  process.env.SENDINBLUE_API_KEY
-
-const Sentry = require('@sentry/node')
-const { ExtraErrorData } = require('@sentry/integrations')
-
-let sentryInitialized = false
-function initSentry() {
-  if (process.env.SENTRY_DSN) {
-    Sentry.init({
-      dsn: process.env.SENTRY_DSN,
-      environment: process.env.DEV ? 'development' : 'production',
-      normalizeDepth: 11,
-      integrations: [new ExtraErrorData({ depth: 10 })],
-    })
-    sentryInitialized = true
-  }
-}
-
-initSentry()
-
-async function reportError(error) {
-  // eslint-disable-next-line no-console
-  // console.warn(error)
-  if (!sentryInitialized) return
-
-  if (typeof error === 'string') {
-    Sentry.captureMessage(error)
-  } else {
-    Sentry.captureException(error)
-  }
-
-  await Sentry.flush()
-}
-
-function catchErrors(handler) {
-  return async function (event, context) {
-    context.callbackWaitsForEmptyEventLoop = false
-    try {
-      return await handler.call(this, ...arguments)
-    } catch (e) {
-      await reportError(e)
-      return {
-        statusCode: 500,
-        body: `Error: ${e}`,
-      }
-    }
-  }
-}
+const { sendEmail } = require('../utils/emails')
+const { catchErrors } = require('../utils/sentry')
 
 const getEmailTemplate = async (templateName, templateContent, mergeVars) => {
   const response = await mailchimpClient.templates.render({
@@ -62,31 +14,6 @@ const getEmailTemplate = async (templateName, templateContent, mergeVars) => {
     merge_vars: mergeVars,
   })
   return response.html
-}
-
-const sendEmail = async (to, subject, text, html) => {
-  try {
-    const data =
-      await new SibApiV3Sdk.TransactionalEmailsApi().sendTransacEmail({
-        subject,
-        sender: { email: 'sklep@planerosobisty.pl', name: 'Planer Osobisty' },
-        replyTo: { email: 'sklep@planerosobisty.pl', name: 'Planer Osobisty' },
-        to: [{ email: to }],
-        htmlContent: html,
-        params: { bodyMessage: text },
-      })
-
-    Sentry.captureMessage(
-      `Email has been sent to: ${to} with subject: ${subject}`,
-      { extra: data }
-    )
-  } catch (error) {
-    Sentry.captureException(error, {
-      extra: {
-        description: `Tried to send an email to: ${to} with subject: ${subject}`,
-      },
-    })
-  }
 }
 
 const handlePaymentIntentSucceeded = async (eventObject, send = true) => {

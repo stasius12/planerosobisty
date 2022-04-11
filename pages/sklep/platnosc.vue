@@ -306,10 +306,29 @@ export default {
     },
   },
   methods: {
-    showErrorMessage() {
+    showAndReportErrorMessage(error) {
       this.$toasted.show('Wygląda na to, że wystąpił błąd. Spróbuj ponownie.', {
         position: 'top-center',
         duration: 4000,
+      })
+      const eventId = this.$sentry.captureException(error)
+      const evnetIdUrl = `${this.$config.sentryUrl}?query=${eventId}`
+
+      const stripeRequestId = error?.response?.data?.requestId
+      let stripeRequestIdUrl = ''
+      if (stripeRequestId)
+        stripeRequestIdUrl = `${this.$config.stripeUrl}/logs/${stripeRequestId}`
+
+      const emailMessage = `
+Podczas dokonywania płatności przez użytkownika: ${this.personalInfo.email} wystąpił błąd.
+
+Sprawdź przyczynę tutaj:
+  * Sentry: ${evnetIdUrl}
+  * Stripe: ${stripeRequestIdUrl}
+`
+      this.$axios.post('send-email-to-admins', {
+        subject: '[PlanerOsobisty] [Error] [CRITICAL] Płatności',
+        text: emailMessage,
       })
     },
     async createPaymentIntent() {
@@ -351,7 +370,7 @@ export default {
 
         await this.finalizePaymentIntent(piSecret)
       } catch (error) {
-        this.showErrorMessage()
+        this.showAndReportErrorMessage(error)
       } finally {
         this.loading = false
       }
