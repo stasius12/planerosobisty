@@ -168,7 +168,6 @@
         </nuxt-link>
       </article>
     </section>
-    {{ $config.sentryUrl }}
   </main>
 </template>
 
