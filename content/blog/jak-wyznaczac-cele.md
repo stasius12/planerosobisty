@@ -6,7 +6,9 @@ date: 2021-04-05T12:22:22.658Z
 description: Mapa marzeń to proste narzędzie do skutecznego i holistycznego
   planowania swoich projektów, marzeń i celów.
 ---
-Nieco na ten temat powiedziałam już w poście [Nie próbuj wynaleźć koła na nowo! Zacznij planowanie od KOŁA ŻYCIA](/blog/kolo-zycia). Dzięki przygotowaniu takiego koła będziesz w stanie spojrzeć na swoje życie z lotu ptaka i zidentyfikować główne potrzeby i kierunki rozwoju we wszystkich głównych obszarach swojego życia, może nawet określisz już pierwsze cele. 
+## JAK ŚWIADOMIE I SKUTECZNIE WYZNACZAĆ CELE?
+
+Nieco na ten temat powiedziałam już w poście [Nie próbuj wynaleźć koła na nowo! Zacznij planowanie od koła życia](/blog/kolo-zycia). Dzięki przygotowaniu takiego koła będziesz w stanie spojrzeć na swoje życie z lotu ptaka i zidentyfikować główne potrzeby i kierunki rozwoju we wszystkich głównych obszarach swojego życia, może nawet określisz już pierwsze cele. 
 
 Czasami wyznaczymy swoje cele na podstawie tego co akurat wpadło nam do głowy czy zobaczyliśmy na Instagramie. Kiedy cele krótkoterminowe nie są spójne z naszymi wartościami i celami życiowymi, bardzo szybko zaczyna nam brakować motywacji do ich realizacji. Jeśli nie są spójne z naszą tożsamością, nie pozostaną na długo w naszym życiu. Dlatego tak ciężko jest nam wyjść pobiegać, kiedy naszym celem jest osiągnięcie figury modeli z Instagrama. Dużo chętniej ruszymy się z kanapy, jeśli takie wyjście będzie związane z pragnieniem życia w zdrowiu do późnej starości. 
 
@@ -14,12 +16,12 @@ Dlatego dzisiaj chciałabym jednak podzielić się z Wami metodą, którą dla w
 
 Pamiętaj! Wyznaczanie celów nie musi być zadaniem realizowanym koniecznie między świętami a Nowym Rokiem. Równie dobrym czasem będzie 16 marca, 27 lipca czy… dzisiaj.
 
-**Okej, ZACZYNAMY!**
-
-## Krok 1. Stwórz swoją MAPĘ MARZEŃ
+## Krok 1. STWÓRZ SWOJĄ MAPĘ MARZEŃ
 
 Narysuj na kartce poniższy schemat i popuść wodze fantazji. Wyobraź sobie, że wszystko co napiszesz na swojej kartce stanie się rzeczywistością w wybranym okresie czasu. Zapomnij o wszystkim co cię ogranicza i przechodząc przez schemat zgodnie z ruchem zegara, zaczynając od lewego górnego rogu, zapisz jak wyglądałoby Twoje idealne życie. Postaraj się aby wszystkie marzenia były tak konkretne jak to możliwe. Możesz zadać sobie pytanie:
 “Gdybym mógł dokonać wszystkiego albo posiadać cokolwiek o czym pomyślę, co by to było?”. 
+
+![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1649701732/01_IG_1_qqmwws.png)
 
 ## Krok 2. Wyznacz priorytety
 
