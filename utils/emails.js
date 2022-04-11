@@ -8,7 +8,7 @@ const Sentry = initSentry()
 const DEFAULT_SENDER_EMAIL = 'sklep@planerosobisty.pl'
 const DEFAULT_SENDER_NAME = 'Planer Osobisty'
 
-const sendEmail = (to, subject, text, html = null, sender = null) => {
+const sendEmail = async (to, subject, text, html = null, sender = null) => {
   /*
   :param to (required) - either string with valid email address or list of email objects
     e.g. [ { email: 'email1@com.pl' }, { email: 'email2@com.pl' } ]
@@ -29,14 +29,15 @@ const sendEmail = (to, subject, text, html = null, sender = null) => {
 
     const extra = html ? { htmlContent: html } : { textContent: text }
 
-    const data = new SibApiV3Sdk.TransactionalEmailsApi().sendTransacEmail({
-      subject,
-      sender: senderParsed,
-      replyTo: senderParsed,
-      to: toParsed,
-      params: { bodyMessage: text },
-      ...extra,
-    })
+    const data =
+      await new SibApiV3Sdk.TransactionalEmailsApi().sendTransacEmail({
+        subject,
+        sender: senderParsed,
+        replyTo: senderParsed,
+        to: toParsed,
+        params: { bodyMessage: text },
+        ...extra,
+      })
 
     Sentry.captureMessage(
       `Email has been sent to: ${toAsStr} with subject: ${subject}`,
@@ -51,8 +52,8 @@ const sendEmail = (to, subject, text, html = null, sender = null) => {
   }
 }
 
-const sendEmailToAdmins = (subject, text) => {
-  return sendEmail(
+const sendEmailToAdmins = async (subject, text) => {
+  return await sendEmail(
     [
       { email: 'stanislawstepak@outlook.com' },
       { email: 'wlodarskanatalia@gmail.com' },
