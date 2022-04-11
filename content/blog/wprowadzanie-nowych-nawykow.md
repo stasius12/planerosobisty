@@ -1,18 +1,22 @@
 ---
-title: ZAKOCHAJ SIĘ W PROCESIE, czyli o wprowadzaniu nowych nawyków do Twojego życia
+title: Zakochaj się w procesie, czyli o wprowadzaniu nowych nawyków do Twojego życia
 short_name: wprowadzanie-nowych-nawykow
 thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619455439/Grafika_do_tekst%C3%B3w_na_bloga_18_uufxmy.png
 date: 2021-04-26T16:42:57.954Z
-description: O potędze nawyków napisano tysiące książek. Problem jest tylko jeden - jak wdrożyć je w życie NAPRAWDĘ skutecznie?
+description: O potędze nawyków napisano tysiące książek. Problem jest tylko
+  jeden - jak wdrożyć je w życie NAPRAWDĘ skutecznie?
 ---
-O potędze nawyków napisano tysiące książek. Problem jest tylko jeden - praktycznie każdy ma problem z wprowadzaniem ich w życie. Jak wdrożyć je w życie NAPRAWDĘ skutecznie? 
-
 ## POTĘGA MIKRO KROKÓW
 
-Jak może wiesz, jedną z moich pasji, której oddaję się po godzinach jest inwestowanie na giełdzie. Jeśli miałeś z nią cokolwiek wspólnego, wiesz, że światem inwestycji rządzi magia procentu składanego. 
+O potędze nawyków napisano tysiące książek. Problem jest tylko jeden - praktycznie każdy ma problem z wprowadzaniem ich w życie. Jak wdrożyć je w życie NAPRAWDĘ skutecznie? 
+
+Jak może wiesz, jedną z moich pasji są finanse osobiste. Podstawową zasadą, która rządzi skutecznością w tym zakresie jest magia procentu składanego. 
 
 Czym jest procent składany? To w uproszczeniu „odsetki od odsetek”. 
+
 W praktyce oznacza to, że odsetki uzyskane w jednym okresie, dopisujemy do kapitału początkowego w kolejnym okresie. A zatem teraz pracuje na nasze oszczędności nie tylko nasz kapitał, ale także odsetki z poprzednich okresów. Dzięki temu mechanizmowi suma oszczędności rośnie szybciej, niż gdy odsetki naliczane są tylko od kwoty głównej. 
+
+
 Im więcej okresów, tym więcej odsetek, które dla nas pracują, na nowe odsetki. My leżymy na kanapie, a nasze pieniądze się pomnażają, mimo że nasz początkowy wkład kapitału nie uległ zmianie. Dodatkowo, im dłużej na tej kanapie leżymy, tym efekt działania mechanizmu procentu składanego jest bardziej widoczny.
 
 Chwila, chwila...ale czy nie miałam mówić o nawykach? Jak najbardziej. Choć może nie jest to widoczne na pierwszy rzut oka, światem finansów oraz nawyków rządzi to samo prawo - PRAWO PROCENTU SKŁADANEGO.  
@@ -21,7 +25,7 @@ Zauważył to James Clear i podzielił się ze światem w swojej książce “At
 
 Zanim przejdę do głównego tematu, chciałabym tylko podzielić się z Tobą poniższym wykresem. Jeśli moje wyjaśnienia na temat magii procentu składanego nie wystarczyły, mam nadzieję, że on opowie Ci wszystko.
 
-tu wkleić wykres procentu składanego atomic hab.. s26
+![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1649704956/procent-sk%C5%82adany_tvmern.png)
 
 Co widzimy na wykresie? Rezultat poprawy o 1% dziennie przez rok. 
 
@@ -47,13 +51,15 @@ Zamiast myśleć o efektach, skup się na poprawie o 1% i czerpaniu przyjemnośc
 
 James powiedział coś, co przypominam sobie codziennie, gdy staram się wdrożyć nowy nawyk do swojego życia: “Każde Twoje działanie jest oddaniem głosu na osobę, którą chcesz się stać w przyszłości”. 
 
-![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619501995/Grafika_do_tekst%C3%B3w_na_bloga_21_dz9jep.png)
+![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1649705332/Grafika_do_tekst%C3%B3w_na_bloga_19_r9qq1q.png)
 
 Zamiast skupiać się na konkretnym celu, pomyśl “chcę być typem człowieka, który…”. A potem zrób to, co zbliży Cię do bycia takim właśnie człowiekiem. Jesteśmy sumą naszych nawyków, przyzwyczajeń, myśli. Jeśli zrobisz choć drobną pozytywną zmianę w swojej rzeczywistości, możesz być pewny, że przyniesie ona korzyści również w innych obszarach. Na początku może jej nawet nie zauważysz. Przypominam Ci jednak o prawie procentu składanego. Takie zmiany są jak tocząca się kula śniegowa - początkowo wydaje się, że nic się nie zmienia, że każdy wystający spod śniegu listek jest znaczącą przeszkodą, wszystko idzie jakoś wolno i mozolnie, ale jak wiesz, z czasem kula się rozpędza, a wtedy staje się większa z każdą sekundą i ciężko ją zatrzymać, nawet człowiekowi.
 
 Zatem jeśli chcesz być typem człowieka, który codziennie rano z uśmiechem na twarzy przebiega 5, 10 czy 15 kilometrów, oddaj na niego głos już dzisiaj. Wyjdź na poranny 15 min spacer i doceń się za to. Wykonałeś w końcu krok w stronę osoby, którą chcesz się stać :) 
 
-Pamiętaj, że za każdym razem kiedy wykonasz krok (choćby najmniejszy) zgodnie ze swoją intencją “stania  się typem człowieka, który…” Twoje odsetki się kapitalizują. Tworzą się odsetki od odsetek. Każde kolejne poranne wyjście będzie łatwiejsze, przyjemniejsze, bezwysiłkowe. I z czasem naturalnie Twoje spacery zaczną się wydłużać, a może nawet w jakiś słoneczny poranek postanowisz zrobić krótką przebieżkę… albo spotkasz w czasie spacerów biegającego kolegę z pracy i postanowisz dołączyć do niego… albo dołączysz do grupy biegowej, która przygotowuje się do maratonu w Twojej okolicy. Możliwości jest wiele, mnóstwo pewnie nawet nie przejdzie Ci przez myśl, ale pewne jest jedno: po roku codziennego “oddawania głosów na typ osoby, którą chcesz się stać” z pewnością będziesz bliżej niej, a z dużym prawdopodobieństwem nawet 2 kroki przed nią. 
+Pamiętaj, że za każdym razem kiedy wykonasz krok (choćby najmniejszy) zgodnie ze swoją intencją “stania  się typem człowieka, który…” Twoje odsetki się kapitalizują. Tworzą się odsetki od odsetek. Każde kolejne poranne wyjście będzie łatwiejsze, przyjemniejsze, bezwysiłkowe. I z czasem naturalnie Twoje spacery zaczną się wydłużać, a może nawet w jakiś słoneczny poranek postanowisz zrobić krótką przebieżkę… albo spotkasz w czasie spacerów biegającego kolegę z pracy i postanowisz dołączyć do niego… albo dołączysz do grupy biegowej, która przygotowuje się do maratonu w Twojej okolicy. 
+
+Możliwości jest wiele, mnóstwo pewnie nawet nie przejdzie Ci przez myśl, ale pewne jest jedno: po roku codziennego “oddawania głosów na typ osoby, którą chcesz się stać” z pewnością będziesz bliżej niej, a z dużym prawdopodobieństwem nawet 2 kroki przed nią. 
 
 Użyłam tu przykładu z bieganiem, bo jest dość prosty i obrazowy, ale to dotyczy absolutnie każdego nawyku jaki możesz sobie wyobrazić. Chcesz założyć biznes? A może napisać książkę? Niezależnie od tego co chcesz osiągnąć, metoda kuli śniegowej rozpędzi Cię tak daleko, że nawet sobie nie wyobrażasz, gdzie mógłbyś wylądować. 
 
@@ -61,11 +67,11 @@ Możesz myśleć sobie teraz “Okej, okej, wszystko jest łatwe i jasne w teori
 
 ## PRAKTYCZNE WSKAZÓWKI
 
-### 1. Określ jakim typem człowieka chciałbyś się stać
+### KROK 1. Określ jakim typem człowieka chciałbyś się stać
 
 Najlepiej zapisz to sobie w miejscu, na które często spoglądasz (np. w kalendarzu czy aplikacji, w której regularnie robisz notatki). Przemyśl to dobrze, zastanów się dlaczego tego chcesz. Pomocne może być narzędzie, o którym wspominałam w tym poście. Jest bardzo ważne, abyś naprawdę dobrze to przemyślał, ponieważ motywacja do zmian musi płynąć z Twoich wartości życiowych. Tylko w ten sposób zostaną z Tobą na zawsze.
 
-### **2. Formułuj swoje nowe nawyki w formie pozytywnej**
+### **KROK 2. Formułuj swoje nowe nawyki w formie pozytywnej**
 
 Nie próbuj pozbywać się obecnych szkodliwych nawyków poprzez negatywne stwierdzenie typu:
 
@@ -80,13 +86,13 @@ Zamiast tego zapisz je w formie pozytywnej, a najlepiej od razu wymyśl jakieś 
 * “Codziennie przed rozpoczęciem pracy będę pił świeży sok warzywny” (zamiast “nie będę pił kawy”)
 * “Codziennie o 7 rano wyjdę na 15 minutową przebieżkę po okolicy z moim psem” (zamiast “nie będę wstawał późno”)
 
-### **3. Spraw aby nowe zachowania były oczywiste, atrakcyjne, łatwe i satysfakcjonujące**
+### **KROK 3. Spraw aby nowe zachowania były oczywiste, atrakcyjne, łatwe i satysfakcjonujące**
 
 Jeżeli kiedykolwiek zastanawiałeś się nad tym dlaczego masz problem z realizowaniem postanowień, o których twierdzisz, że są NAPRAWDĘ ważne i potrzebne albo zaczynałeś 1 stycznia, a 14 już miałeś dość i rezygnowałeś? Mam dobrą wiadomość :) To niekoniecznie oznacza, że jesteś leniem, brak Ci motywacji czy wytrwałości. To po prostu znak, że nie przygotowałeś się dobrze do startu. Tym razem zrób to dobrze, a będą gwarantowane.
 
 Postaw sobie następujące pytania:
 
-#### 1. Jak mogę sprawić, aby było to oczywiste? 
+#### 1. Jak mogę sprawić, aby było to oczywiste?
 
 Dostosuj otoczenie. Eksponuj rzeczy i sygnały, które wyzwolą dobre nawyki.
 
@@ -94,7 +100,7 @@ Dostosuj otoczenie. Eksponuj rzeczy i sygnały, które wyzwolą dobre nawyki.
 * jeżeli chcesz czytać wieczorem, połóż książkę na poduszce
 * jeżeli chcesz jeść owoce zamiast słodyczy, postaw miskę z owocami w widocznym miejscu, a słodycze zanieś do pracy
 
-#### 2. Jak mogę to uatrakcyjnić w moich oczach? 
+#### 2. Jak mogę to uatrakcyjnić w moich oczach?
 
 Sposobów może być wiele, oto kilka propozycji, które można stosować zarówno osobno, jak i łączyć ze sobą. Im więcej, tym skuteczniej ;)
 
@@ -143,15 +149,23 @@ Nagradzaj się! Zarówno z badań, jak i codziennego życia wiemy, że z chęci�
 * wyznacz sobie kamienie milowe swojego projektu i świętuj je
 * mogą być wyrażone w formie konkretnych wyników (“napisałem 100 stron książki”), miesięcznic/rocznic (“od 10 miesięcy gotuję sobie zdrowe lunche do pracy”) czy zdarzeń (“założyłem firmę”)
 
-### Spiętrzaj swoje nawyki (i ustalaj ich wykonywanie w czasie)
+### KROK 4. Spiętrzaj swoje nawyki (i ustalaj ich wykonywanie w czasie)
 
-Jednym z najbardziej naturalnych i efektywnych sposobów na opanowanie nowego nawyku jest powiązanie go z już istniejącym planem dnia i sposobem zachowania. Taki sposób eliminuje zbyt dużą ilość myślenia i pozwala wykorzystać naturalną siłę pędu, która towarzyszy nam przy wykonywaniu codziennych rutynowych czynności. Przykłady:
+Jednym z najbardziej naturalnych i efektywnych sposobów na opanowanie nowego nawyku jest powiązanie go z już istniejącym planem dnia i sposobem zachowania. Taki sposób eliminuje zbyt dużą ilość myślenia i pozwala wykorzystać naturalną siłę pędu, która towarzyszy nam przy wykonywaniu codziennych rutynowych czynności. 
+
+Przykłady:
+
+
 
 * “Po powrocie z pracy od razu przebieram się w strój sportowy”<br>
   “Po przebraniu się w strój sportowy rozwijam matę w salonie i zaczynam ćwiczyć”<br>
   “Po ćwiczeniach biorę relaksujący prysznic” (jeśli Twoim celem są regularne ćwiczenia)
+
+
 * “Po zaparkowaniu samochodu przed firmą idę kupić sok warzywny w kawiarni na parterze”<br>
   “Po wypiciu soku zaczynam pracę” (jeśli chcesz spożywać więcej warzyw w ciągu dnia)<br>
+
+
 * “Po pobudce o 5tej zaczynam poranną toaletę”<br>
   “Po wyjściu z łazienki robię herbatę”<br>
   “Po zrobieniu herbaty rozpoczynam pracę nad kolejną stroną książki” (jeżeli codzienne pisanie książki jest Twoim celem)
