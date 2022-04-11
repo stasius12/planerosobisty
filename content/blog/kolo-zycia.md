@@ -1,9 +1,9 @@
 ---
-title: Nie próbuj wynaleźć koła na nowo! Zacznij planowanie od KOŁA ŻYCIA
+title: Nie próbuj wynaleźć koła na nowo! Zacznij planowanie od koła życia
 short_name: kolo-zycia
 thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619426564/Grafika_do_tekst%C3%B3w_na_bloga_11_sezg4r.png
 date: 2021-03-05T19:49:47.171Z
-description: KOŁO ŻYCIA to narzędzie, które pozwoli Ci spojrzeć na życie z lotu
+description: Koło życia to narzędzie, które pozwoli Ci spojrzeć na życie z lotu
   ptaka i zidentyfikować potrzeby rozwoju we wszystkich obszarach życia.
 ---
 ## KOŁO ŻYCIA
@@ -19,9 +19,9 @@ Naszą główną intencją w ustalaniu celów jest poprawa jakości naszego życ
 Jak to zrobić? Spojrzeć na swoje życie z lotu ptaka. Właśnie w tym pomoże nam dzisiaj koło życia.
 
 Jest to moje ulubione narzędzie, od którego za każdym razem zaczynam planowanie roku. Pozwala ono odpowiedzieć sobie na dwa podstawowe pytania w kontekście planowania:
+
 * Gdzie jestem dzisiaj i jak się z tym czuję?
-* Gdzie chcę być jutro? (za miesiąc, kwartał czy 5 lat…)
-oraz zrozumieć o wiele więcej. 
+* Gdzie chcę być jutro? Albo za miesiąc, kwartał czy 5 lat… oraz zrozumieć o wiele więcej. 
 
 Koniec gadania, przejdźmy do działania!
 Łap za kartkę i długopis (najlepiej w towarzystwie dobrej herbaty) i zaczynamy!
@@ -48,23 +48,29 @@ Pamiętaj, że są to jedynie propozycje. Jeśli chciałbyś uwzględnić nieco 
 ### Krok 2.
 
 Wyobraź sobie, że każdy obszar to skala od 1 do 10. Oceń swój poziom zadowolenia z każdej ze sfer życia i wpisz do koła. 
-Pamiętaj! Oceniając swoje sfery życia nie myśl o tym jak otoczenie je ocenia. Zastanów się jak TY się z nimi czujesz. Czy jesteś usatysfakcjonowany czy może można by było co nieco poprawić? A może są kategorie, o których całkowicie zapomniałeś w natłoku codziennych zadań? 
-Postaraj się spojrzeć na każdą z kategorii holistycznie, zauważyć ją jako ważną część większej całości. 
+
+
+Pamiętaj! Oceniając swoje sfery życia nie myśl o tym jak otoczenie je ocenia. Zastanów się jak TY się z nimi czujesz. Czy jesteś usatysfakcjonowany czy może można by było co nieco poprawić? A może są kategorie, o których całkowicie zapomniałeś w natłoku codziennych zadań? Postaraj się spojrzeć na każdą z kategorii holistycznie, zauważyć ją jako ważną część większej całości. 
 
 Zadaj sobie pytania dodatkowe, poniżej znajdziesz kilka przykładów. Zapisz odpowiedzi, skojarzenia, cokolwiek co przychodzi ci do głowy w czasie pracy z kołem. Jeśli chcesz, możesz nawet stworzyć mapę myśli z kołem w centrum. Pamiętaj, że w tym ćwiczeniu najważniejsze są Twoje uczucia, nie fakty. Postaraj się myśleć o tym zarówno oceniając poszczególne obszary, jak i tworząc dodatkowe notatki.
 
 Pytania dodatkowe:
-Co jest dla Ciebie ważne w tej sferze? Jak chcesz, aby ona wyglądała? Czego Ci w niej brakuje?
-Jak będzie wyglądać Twoje życie, gdy zwiększy się poziom zadowolenia w danym obszarze?
-Co możesz zrobić aby podnieść poziom satysfakcji w tej dziedzinie?
+
+* Co jest dla Ciebie ważne w tej sferze? Jak chcesz, aby ona wyglądała? Czego Ci w niej brakuje?
+* Jak będzie wyglądać Twoje życie, gdy zwiększy się poziom zadowolenia w danym obszarze?
+* Co możesz zrobić aby podnieść poziom satysfakcji w tej dziedzinie?
 
 ### Krok 3.
 
-Po przeanalizowaniu każdej z części osobno czas na spojrzenie z lotu ptaka i zadanie sobie szeregu pytań. 
-Co widzisz kiedy patrzysz na swoje koło? Jakie uczucia Ci towarzyszą gdy na nie patrzysz? 
-Widzisz organizm, który jest zbilansowany czy może są obszary, które mocno wybijają się na tle pozostałych (zarówno pozytywnie, jak i negatywnie)? Jak oceniłbyś stan zdrowia pacjenta gdyby poszczególne części Twojego koła były częściami ciała? Które obszary nadają się do operacji w pierwszej kolejności? Jak to wpływa na inne sfery Twojego życia? 
-Jak myślisz, które z części mają na siebie największy wpływ? Poprawa której części spowoduje najbardziej pozytywną zmianę w Twoim życiu? Która z części jest kluczem do poprawy całości koła?
-Które ze sposobów działania w obszarach o wysokiej samoocenie możesz przenieść do tych, gdzie jest Twoim zdaniem gorzej?
+Po przeanalizowaniu każdej z części osobno czas na spojrzenie z lotu ptaka i zadanie sobie szeregu pytań:
+
+* Co widzisz kiedy patrzysz na swoje koło?
+* Jakie uczucia Ci towarzyszą gdy na nie patrzysz?
+* Widzisz organizm, który jest zbilansowany czy może są obszary, które mocno wybijają się na tle pozostałych (zarówno pozytywnie, jak i negatywnie)? Jak oceniłbyś stan zdrowia pacjenta gdyby poszczególne części Twojego koła były częściami ciała? 
+* Które obszary nadają się do operacji w pierwszej kolejności? Jak to wpływa na inne sfery Twojego życia?
+* Jak myślisz, które z części mają na siebie największy wpływ? Poprawa której części spowoduje najbardziej pozytywną zmianę w Twoim życiu?
+*  Która z części jest kluczem do poprawy całości koła?
+* Które ze sposobów działania w obszarach o wysokiej samoocenie możesz przenieść do tych, gdzie jest Twoim zdaniem gorzej?
 
 ### Krok 4.
 
@@ -85,9 +91,9 @@ Jeśli praca z kołem będzie dla Ciebie pomocna, możesz spróbować korzystać
 
 Taki sposób pracy z kołem z dostarczy Ci szerszej perspektywy i możliwości pogłębienia analizy. Prawdopodobnie bliscy będą w stanie zwrócić Twoją uwagę na aspekty, o których sam byś nie pomyślał. Pamiętaj jednak, aby najpierw samemu wykonać koło a dopiero w następnym kroku je konsultować, nie na odwrót. Dzięki takiej kolejności upewnisz się, że nie zatracisz własnej perspektywy na analizowane obszary (która jest tutaj najważniejsza)
 
-### W innych obszarach życia<br>
+### W innych obszarach życia
 
-<ins>Przykłady</ins>:
+Przykłady:
 
 * koło poszerzania kompetencji - wypisz umiejętności, których potrzebujesz (np. w pracy) w kole, nanieś na nie skalę i przeanalizuj według schematu wyjaśnionego wcześniej, zadając sobie wspomniane powyżej pytania
 * koło obaw/lęków/frustracji - wypisz obawy, które posiadasz, nanieś na nie skalę i przeanalizuj, które z nich wywierają największy wpływ na Twoje życie, następnie zastanów się jak możesz je pokonać
