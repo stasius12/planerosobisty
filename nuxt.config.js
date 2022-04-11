@@ -1,7 +1,16 @@
+const getEnvironment = () => {
+  // It can be production, deploy-preview, branch-deploy or dev
+  if (process.env.CONTEXT === 'branch-deploy') {
+    return process.env.BRANCH
+  }
+
+  return process.env.CONTEXT
+}
+
 const getUrl = () => {
-  return process.env.CONTEXT === 'production'
+  return getEnvironment() === 'production'
     ? process.env.URL
-    : process.env.CONTEXT === 'dev'
+    : getEnvironment() === 'dev'
     ? process.env.LOCAL_URL || 'http://localhost:8888' // LOCAL_URL - to easily override from .env
     : process.env.DEPLOY_PRIME_URL
 }
@@ -112,7 +121,10 @@ export default {
       baseURL: `${getUrl()}/.netlify/functions/api/`,
     },
     sentryDsn: process.env.SENTRY_DSN,
+    sentryUrl: process.env.SENTRY_URL,
+    stripeUrl: process.env.STRIPE_URL,
     stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+    environment: getEnvironment(),
     url: getUrl(),
   },
 

@@ -49,6 +49,8 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.7.0",
+    "netlify-plugin-contextual-env": "^0.3.0",
+    "netlify-plugin-inline-functions-env": "^1.0.9",
     "node-sass": "^5.0.0",
     "postcss": "^8.3.6",
     "prettier": "^2.2.1",

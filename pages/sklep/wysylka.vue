@@ -95,11 +95,7 @@ export default {
   async asyncData({ $axios }) {
     let shippingMethods = []
 
-    try {
-      shippingMethods = await $axios.$get(`shipping`)
-    } catch (error) {
-      console.error(error)
-    }
+    shippingMethods = await $axios.$get(`shipping`)
 
     return { shippingMethods }
   },
