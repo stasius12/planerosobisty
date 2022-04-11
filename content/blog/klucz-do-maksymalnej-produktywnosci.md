@@ -1,5 +1,5 @@
 ---
-title: PRIORYTETY - klucz do maksymalnej produktywności
+title: Priorytety - klucz do maksymalnej produktywności
 short_name: klucz-do-maksymalnej-produktywności
 thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619785225/Grafika_do_tekst%C3%B3w_na_bloga_35_jtcjqt.png
 date: 2021-04-30T12:18:05.682Z
@@ -7,12 +7,6 @@ description: W tym poście znajdziesz 3 strategie, które pozwolą Ci osiągną�
   maksymalną produktywność już dziś. Dzięki nim realizacja Twoich celów nabierze
   tempa.
 ---
-Zaplanowanie zadań to pierwszy krok do osiągnięcia swoich celów. Zarówno codziennych, jak i tych życiowych. 
-
-Jak ustalać je tak, aby osiągać więcej niż kiedykolwiek? 
-
-W tym poście znajdziesz 3 strategie, które pozwolą Ci osiągnąć maksymalną produktywność już dziś. Połącz je ze sobą, a zobaczysz, że realizacja Twoich celów nabierze tempa.
-
 ## CZEGO NIE ROBIĆ?
 
 Większość z nas planuje swój dzień wypisując niekończącą się listę rzeczy do zrobienia. W rezultacie rozpoczynamy wiele działań, ale przy podsumowaniu miesiąca czy kwartału okazuje się, że niewiele naszych celów zostało osiągniętych. 
@@ -21,19 +15,19 @@ Jak to możliwe? 
 
 Mamy tendencję do traktowania priorytetowo rzeczy najpilniejszych. Zamiast planować swój dzień wokół tego, co dla nas ważne, działamy reaktywnie. Porzucamy decyzję o tym, co chcemy zrobić i odpowiadamy na potrzeby świata zewnętrznego, zapominając o swoich prawdziwych potrzebach i priorytetach.
 
-Co najgorsze, wydaje nam się, że jesteśmy produktywni. Przecież “załatwiamy” tyle spraw każdego dnia. Zrobiliśmy zakupy, odkurzyliśmy dom, zawieźliśmy dziecko na zajęcia, samochód do naprawy, wybraliśmy nowe zasłony… I tak mija nam dzień za dniem, wydaje się, że całkiem produktywnie. Aż nastaje koniec roku czy kwartału, a ty zastanawiasz się “jak to się stało, że nie osiągnąłem swoich celów?”. 
+Co najgorsze, wydaje nam się, że jesteśmy produktywni. Przecież “załatwiamy” tyle spraw każdego dnia. Zrobiliśmy zakupy, odkurzyliśmy dom, zawieźliśmy dziecko na zajęcia, samochód do naprawy, wybraliśmy nowe zasłony… 
+
+I tak mija nam dzień za dniem, wydaje się, że całkiem produktywnie. Aż nastaje koniec roku czy kwartału, a ty zastanawiasz się “jak to się stało, że nie osiągnąłem swoich celów?”. 
 
 ## JAK SOBIE Z TYM PORADZIĆ?
 
 Prawdziwa produktywność nie polega na wykreślaniu kolejnych pozycji ze swojej listy “to do” - to raczej nazwałabym “zajętością”. 
 
-**Osiąganie swoich celów WYMAGA nadania im priorytetu.** Jeśli tego nie zrobimy, nasz czas zawsze wypełnią rzeczy pilne, przysłaniając nam te, które są naprawdę ważne. Niestety bardzo często mylimy te dwa pojęcia, nadając etykietę “ważne” wszystkiemu co pilne. 
+Osiąganie swoich celów WYMAGA nadania im priorytetu. Jeśli tego nie zrobimy, nasz czas zawsze wypełnią rzeczy pilne, przysłaniając nam te, które są naprawdę ważne. Niestety bardzo często mylimy te dwa pojęcia, nadając etykietę “ważne” wszystkiemu co pilne. 
 
 ## STRATEGIA #1 SIATKA PRIORYTETÓW
 
-Z pomocą przychodzi nam Dwight Eisenhower.
-
-Generał armii Stanów Zjednoczonych, Naczelny Dowódca Alianckich Ekspedycyjnych Sił Zbrojnych, 34. prezydent Stanów Zjednoczonych oraz, co dla nas najważniejsze, jeden z najbardziej produktywnych ludzi znanych światu (nie tylko przez kilka dni czy tygodni, ale przez okres całego życia). Sekret jego produktywności tkwił w umiejętności rozróżnienia spraw ważnych od pilnych.
+Z pomocą przychodzi nam Dwight Eisenhower - generał armii Stanów Zjednoczonych, Naczelny Dowódca Alianckich Ekspedycyjnych Sił Zbrojnych, 34. prezydent Stanów Zjednoczonych oraz, co dla nas najważniejsze, jeden z bardziej produktywnych ludzi znanych światu (nie tylko przez kilka dni czy tygodni, ale przez okres całego życia). Sekret jego produktywności tkwił w umiejętności rozróżnienia spraw ważnych od pilnych.
 
 > “To co ważne rzadko bywa pilne, a to co pilne rzadko bywa ważne.” Dwight Eisenhower
 
@@ -131,4 +125,4 @@ Nie zaczynaj swojego dnia od tego co pilne, bo na ważne nie wystarczy Ci czasu 
 
 Połącz te trzy strategie i wprowadź je w życie, a gwarantuję, że zaczniesz osiągać swoje cele szybciej niż ci się wydaje.
 
-Trzymaj się!
+Trzymaj się! Powodzenia!
