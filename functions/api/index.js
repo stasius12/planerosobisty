@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/.netlify/functions/api', router)
 
 // Mailchimp
-router.post('/subscribe', mailchimp.subscribe)
+router.post('/subscribe', catchExpressEndpointErrors(mailchimp.subscribe))
 
 // Stripe products
 router.get('/products', catchExpressEndpointErrors(stripe.listAllProducts))
