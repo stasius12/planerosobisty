@@ -6,9 +6,7 @@ date: 2022-01-16T05:56:45.027Z
 description: "Nie porzucaj swoich marzeń. Pokonaj dolinę rozczarowania i odkryj
   swój ukryty potencjał. "
 ---
-## NIE PORZUCAJ SWOICH MARZEŃ.
-
-## POKONAJ DOLINĘ ROZCZAROWANIA I ODKRYJ SWÓJ UKRYTY POTENCJAŁ.
+## NIE PORZUCAJ SWOICH MARZEŃ
 
 Z pewnością zauważyłeś, że kiedy zaczynasz wdrażać do swojego życia nowe nawyki czy działania, czas jakby spowalnia. 
 
@@ -20,7 +18,7 @@ Nie porzucaj marzenia o maratonie!
 
 Nie przestawaj odkładać oszczędności na inwestycje!
 
-## JESTEŚ W DOLINIE ROZCZAROWANIA. JEDŹ DALEJ.
+## JESTEŚ W DOLINIE ROZCZAROWANIA - JEDŹ DALEJ
 
 Praca, którą wykonałeś dotychczas nie jest bezcelowa. Twoje odczucia są zupełnie normalne. Każdy dzień, w którym biegałeś 30 minut, każda złotówka, którą przelałeś na konto maklerskie, magazynują się. Efekty naszych działań pojawiają się często z opóźnieniem. 
 
