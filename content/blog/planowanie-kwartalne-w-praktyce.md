@@ -7,9 +7,11 @@ description: Dla mnie planowanie kwartalne to nie tylko wypisanie listy zadań n
   następny kwartał. To pretekst do spotkania samej ze sobą i spojrzenia do
   wewnątrz.
 ---
+## PLANOWANIE TO WIĘCEJ NIŻ LISTA TO DO
+
 Dla mnie planowanie kwartalne to nie tylko wypisanie listy zadań na następny kwartał. To pretekst do spotkania samej ze sobą i spojrzenia do wewnątrz. Skupiam się wtedy na swoich potrzebach, marzeniach i zastanawiam się gdzie chciałabym być za 3 miesiące, jakim człowiekiem chciałabym się stać.
 
-O zaletach planowania kwartalnego pisałam już w tym poście. Dzisiaj chciałabym podzielić się z Tobą garścią wskazówek i pomysłów co do samego procesu. Oczywiście nie ma tutaj złych lub dobrych metod. 
+O zaletach planowania kwartalnego pisałam już [w tym poście](https://planerosobisty.pl/blog/planowanie-kwartalne-wprowadzenie). Dzisiaj chciałabym podzielić się z Tobą garścią wskazówek i pomysłów co do samego procesu. Oczywiście nie ma tutaj złych lub dobrych metod. 
 
 Wypróbuj je. Połącz. Odrzuć. Dopasuj do siebie.
 
@@ -21,7 +23,7 @@ Moje planowanie kwartalne zaczynam zawsze od koła życia. Pozwala mi to spojrze
 
 Będzie to moim kompasem w wyborze obszarów, na których chcę się skupić w następnych 3 miesiącach, kiedy zabiorę się za planowanie kwartału. Będzie także punktem kontrolnym, do którego będę się mogła cofnąć, aby podsumować moje działania w ostatnich miesiącach. 
 
-O kole życia pisałam już w innym poście, więc zapraszam Cię do niego jeśli jesteś zainteresowany. kliknij tutaj
+O kole życia pisałam już w innym poście, więc zapraszam Cię do niego jeśli jesteś zainteresowany ([KLIKNIJ TUTAJ!](https://planerosobisty.pl/blog/kolo-zycia)). 
 
 ![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619430030/Grafika_do_tekst%C3%B3w_na_bloga_17_abvbck.png)
 
@@ -40,7 +42,9 @@ W przypadku długoterminowych projektów i planów, rozważam też zawsze: 
 
 ## 3. CZAS NA MARZENIA
 
-Zanim zabiorę się za cele, zadania do wykonania, zobowiązania - jednym słowem KONKRETY, zawsze poświęcam czas na to, aby popuścić wodze fantazji i stworzyć moją własną mapę marzeń (pisałam o niej w tym poście). To na niej, po zrobieniu mini burzy mózgów, zapisuję swoje zarówno krótko- jak i długoterminowe cele, marzenia, zachcianki. Ramię w ramię z kołem życia, będzie ona moim kierunkowskazem przy wyznaczaniu celów na najbliższe miesiące. 
+Zanim zabiorę się za cele, zadania do wykonania, zobowiązania - jednym słowem KONKRETY, zawsze poświęcam czas na to, aby popuścić wodze fantazji i stworzyć moją własną mapę marzeń (pisałam o niej [w tym poście](https://planerosobisty.pl/blog/jak-wyznaczac-cele)). 
+
+To na niej, po zrobieniu mini burzy mózgów, zapisuję swoje zarówno krótko- jak i długoterminowe cele, marzenia, zachcianki. Ramię w ramię z kołem życia, będzie ona moim kierunkowskazem przy wyznaczaniu celów na najbliższe miesiące. 
 
 Kilka pytań, które możesz sobie zadać przy tworzeniu mapy marzeń:
 
@@ -50,7 +54,7 @@ Kilka pytań, które możesz sobie zadać przy tworzeniu mapy marzeń:
 * gdybyś się nie bał to co byś zrobił?
 * czego zawsze chciałeś spróbować?
 
-Przy zadawaniu sobie tych pytań nie skupiaj się na swoich ograniczeniach. Nawet jeśli jeszcze nie wiesz jak osiągnąć swoje cele, zapisz je. Zanim zaczniesz zadawać sobie pytanie “JAK?”, najpierw powiedz “TAK”.
+Przy zadawaniu sobie tych pytań nie skupiaj się na swoich ograniczeniach. Nawet jeśli jeszcze nie wiesz jak osiągnąć swoje cele, zapisz je. Zanim zaczniesz zadawać sobie pytanie “JAK?”, najpierw powiedz im “TAK!” ;)
 
 ## 4. KONKRETY
 
@@ -61,7 +65,7 @@ Mam nadzieję, że przechodząc przez poprzednie kroki, Twoje cele i pomysły ma
 3. Pamiętaj o metodzie małych kroczków. Jeśli Twój cel Cię przytłacza, podziel go na mniejsze części. Jeśli nie wiesz jak go zrealizować, niech Twoim pierwszym krokiem na drodze do celu będzie zrobienie researchu, poszukanie informacji we wszelkich dostępnych źródłach lub skontaktowanie się z osobą, która może to wiedzieć.
 4. Podziel swój cel na konkretne tygodnie lub inne, odpowiednie dla danego projektu, bloki czasowe.
 5. Zastanów się co może pójść nie tak na drodze do celu i już teraz postaraj się temu zapobiec. Zastanów się kto może Ci pomóc, jak ułatwić sobie zadanie itd.
-6. Jeśli Twoim celem jest wykształcenie nowego nawyku, przeczytaj posta ZAKOCHAJ SIĘ W PROCESIE, czyli o wprowadzaniu nowych nawyków do Twojego życia. Znajdziesz w nim mnóstwo wskazówek jak ułatwić sobie to zadanie.
+6. Jeśli Twoim celem jest wykształcenie nowego nawyku, przeczytaj posta [Zakochaj się w procesie, czyli o wprowadzaniu nowych nawyków do Twojego życia](https://planerosobisty.pl/blog/wprowadzanie-nowych-nawykow). Znajdziesz w nim mnóstwo wskazówek jak ułatwić sobie to zadanie.
 
 ## 5. COCO JUMBO I DO PRZODU
 
