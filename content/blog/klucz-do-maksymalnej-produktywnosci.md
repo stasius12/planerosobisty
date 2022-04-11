@@ -2,7 +2,7 @@
 title: Priorytety - klucz do maksymalnej produktywności
 short_name: klucz-do-maksymalnej-produktywności
 thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619785225/Grafika_do_tekst%C3%B3w_na_bloga_35_jtcjqt.png
-date: 2021-04-30T12:18:05.682Z
+date: 2022-03-21T07:22:37.141Z
 description: W tym poście znajdziesz 3 strategie, które pozwolą Ci osiągnąć
   maksymalną produktywność już dziś. Dzięki nim realizacja Twoich celów nabierze
   tempa.

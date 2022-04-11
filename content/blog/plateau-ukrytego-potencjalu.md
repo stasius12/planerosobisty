@@ -2,7 +2,7 @@
 title: Plateau ukrytego potencjału
 short_name: plateau-ukrytego-potencjalu
 thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619505111/Grafika_do_tekst%C3%B3w_na_bloga_24_m7wx8b.png
-date: 2021-04-27T06:03:29.632Z
+date: 2022-01-16T05:56:45.027Z
 description: "Nie porzucaj swoich marzeń. Pokonaj dolinę rozczarowania i odkryj
   swój ukryty potencjał. "
 ---

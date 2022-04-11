@@ -2,7 +2,7 @@
 title: Planowanie roczne zabija Twój rozwój!
 short_name: planowanie-kwartalne-wprowadzenie
 thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619501438/Grafika_do_tekst%C3%B3w_na_bloga_20_lb9lxf.png
-date: 2021-04-27T05:28:59.250Z
+date: 2022-02-02T05:56:45.027Z
 description: Czyli o tym, dlaczego planowanie w cyklach kwartalnych daje lepsze
   rezultaty niż tradycyjne planowanie roczne...
 ---

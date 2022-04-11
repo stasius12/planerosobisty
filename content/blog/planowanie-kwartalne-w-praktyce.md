@@ -2,7 +2,7 @@
 title: Planowanie kwartalne W PRAKTYCE
 short_name: planowanie-kwartalne-w-praktyce
 thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619503058/Grafika_do_tekst%C3%B3w_na_bloga_22_gmz8vz.png
-date: 2021-04-27T05:56:45.027Z
+date: 2022-02-15T05:56:45.027Z
 description: Dla mnie planowanie kwartalne to nie tylko wypisanie listy zadań na
   następny kwartał. To pretekst do spotkania samej ze sobą i spojrzenia do
   wewnątrz.

@@ -2,7 +2,7 @@
 title: Zakochaj się w procesie, czyli o wprowadzaniu nowych nawyków do Twojego życia
 short_name: wprowadzanie-nowych-nawykow
 thumbnail: https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1619455439/Grafika_do_tekst%C3%B3w_na_bloga_18_uufxmy.png
-date: 2021-04-26T16:42:57.954Z
+date: 2022-01-03T05:56:45.027Z
 description: O potędze nawyków napisano tysiące książek. Problem jest tylko
   jeden - jak wdrożyć je w życie NAPRAWDĘ skutecznie?
 ---
