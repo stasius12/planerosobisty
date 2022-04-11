@@ -11,39 +11,35 @@ const {
 const generateOrderNumber = require('../../utils/orderNumberGenerator')
 
 const createCustomer = async (req, res) => {
-  try {
-    const { personal, shipping, metadata } = req.body
+  const { personal, shipping, metadata } = req.body
 
-    const orderNumber = generateOrderNumber()
+  const orderNumber = generateOrderNumber()
 
-    // 1. Creating new customer
-    const customer = await stripe.customers.create({
+  // 1. Creating new customer
+  const customer = await stripe.customers.create({
+    address: {
+      city: personal.city,
+      country: 'PL',
+      line1: personal.line1,
+      postal_code: personal.postal_code,
+    },
+    email: personal.email,
+    name: personal.name,
+    phone: personal.phone,
+    shipping: {
       address: {
-        city: personal.city,
+        city: shipping.city,
         country: 'PL',
-        line1: personal.line1,
-        postal_code: personal.postal_code,
+        line1: shipping.line1,
+        postal_code: shipping.postal_code,
       },
-      email: personal.email,
-      name: personal.name,
-      phone: personal.phone,
-      shipping: {
-        address: {
-          city: shipping.city,
-          country: 'PL',
-          line1: shipping.line1,
-          postal_code: shipping.postal_code,
-        },
-        name: shipping.name,
-        phone: shipping.phone,
-      },
-      metadata: { ...metadata, ORDER_NUMBER: orderNumber },
-    })
+      name: shipping.name,
+      phone: shipping.phone,
+    },
+    metadata: { ...metadata, ORDER_NUMBER: orderNumber },
+  })
 
-    res.status(200).json({ customer, orderNumber })
-  } catch {
-    res.status(500)
-  }
+  res.status(200).json({ customer, orderNumber })
 }
 
 const _getProductsWithPrices = async (isShipping = false) => {
@@ -67,107 +63,91 @@ const _getProductsWithPrices = async (isShipping = false) => {
 }
 
 const listAllProducts = async (req, res) => {
-  try {
-    const mappedProducts = await _getProductsWithPrices()
-    res.status(200).json(mappedProducts)
-  } catch (error) {
-    res.status(500).send(error)
-  }
+  const mappedProducts = await _getProductsWithPrices()
+  res.status(200).json(mappedProducts)
 }
 
 const listAllShippingMethods = async (req, res) => {
-  try {
-    const mappedProducts = await _getProductsWithPrices(true)
-    res.status(200).json(mappedProducts)
-  } catch (error) {
-    res.status(500).send(error)
-  }
+  const mappedProducts = await _getProductsWithPrices(true)
+  res.status(200).json(mappedProducts)
 }
 
 const retrieveProduct = async (req, res) => {
   const { productID } = req.params
 
-  try {
-    const product = await stripe.products.retrieve(productID)
-    const prices = await stripe.prices.list({
-      product: productID,
-      active: true,
-    })
+  const product = await stripe.products.retrieve(productID)
+  const prices = await stripe.prices.list({
+    product: productID,
+    active: true,
+  })
 
-    res.status(200).json({ product, price: prices.data[0] })
-  } catch (error) {
-    res.status(500).send(error)
-  }
+  res.status(200).json({ product, price: prices.data[0] })
 }
 
 const createPaymentIntent = async (req, res) => {
-  try {
-    const {
-      customerID,
-      cartItemsPrices,
-      metadata,
-      shippingPrice,
-      promoCode,
-      orderNumber,
-    } = req.body
+  const {
+    customerID,
+    cartItemsPrices,
+    metadata,
+    shippingPrice,
+    promoCode,
+    orderNumber,
+  } = req.body
 
-    const cartItemsWithAmounts = await Promise.all(
-      cartItemsPrices.map(async ({ priceID, quantity }) => {
-        const price = await stripe.prices.retrieve(priceID)
-        return { priceAmount: price.unit_amount, quantity }
-      })
-    )
+  const cartItemsWithAmounts = await Promise.all(
+    cartItemsPrices.map(async ({ priceID, quantity }) => {
+      const price = await stripe.prices.retrieve(priceID)
+      return { priceAmount: price.unit_amount, quantity }
+    })
+  )
 
-    const amountCartItems = calculateCartAmount(cartItemsWithAmounts)
-    let amountTotal = amountCartItems
+  const amountCartItems = calculateCartAmount(cartItemsWithAmounts)
+  let amountTotal = amountCartItems
 
-    if (promoCode) {
-      const promotionCodeResponse = await stripe.promotionCodes.list({
-        active: true,
-        code: promoCode,
-      })
-
-      const promotionCode = validatePromoCodeResponse(promotionCodeResponse)
-      if (!promotionCode) res.status(400).json('Invalid promotion code')
-
-      if (!validatePromoCodeRestrictions(promotionCode, amountCartItems))
-        res.status(400).json('Promotion code not applicable')
-
-      amountTotal = calculateCartAmountWithDiscount(
-        amountCartItems,
-        promotionCode.coupon.percent_off
-      )
-    }
-
-    const shipping = await stripe.prices.retrieve(shippingPrice)
-    const amountShipping = shipping.unit_amount
-    const amountTotalWithShipping = calculateCartAmountWithShipping(
-      amountTotal,
-      amountShipping
-    )
-
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount: amountTotalWithShipping,
-      currency: 'pln',
-      payment_method_types: ['p24'],
-      customer: customerID,
-      receipt_email: 'receipts@planerosobisty.pl',
-      statement_descriptor: 'Planer Osobisty',
-      description: 'Planer Osobisty',
-      metadata: {
-        ...metadata,
-        ORDER_NUMBER: orderNumber,
-        ORDER_TOTAL: amountTotal / 100,
-        ORDER_SHIPPING_PRICE: amountShipping / 100,
-        ORDER_TOTAL_WITH_SHIPPING: amountTotalWithShipping / 100,
-        promoCode,
-      },
+  if (promoCode) {
+    const promotionCodeResponse = await stripe.promotionCodes.list({
+      active: true,
+      code: promoCode,
     })
 
-    res.status(200).json(paymentIntent.client_secret)
-  } catch {
-    res.status(500)
+    const promotionCode = validatePromoCodeResponse(promotionCodeResponse)
+    if (!promotionCode) res.status(400).json('Invalid promotion code')
+
+    if (!validatePromoCodeRestrictions(promotionCode, amountCartItems))
+      res.status(400).json('Promotion code not applicable')
+
+    amountTotal = calculateCartAmountWithDiscount(
+      amountCartItems,
+      promotionCode.coupon.percent_off
+    )
   }
+
+  const shipping = await stripe.prices.retrieve(shippingPrice)
+  const amountShipping = shipping.unit_amount
+  const amountTotalWithShipping = calculateCartAmountWithShipping(
+    amountTotal,
+    amountShipping
+  )
+
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: amountTotalWithShipping,
+    currency: 'pln',
+    payment_method_types: ['p24'],
+    customer: customerID,
+    receipt_email: 'receipts@planerosobisty.pl',
+    statement_descriptor: 'Planer Osobisty',
+    description: 'Planer Osobisty',
+    metadata: {
+      ...metadata,
+      ORDER_NUMBER: orderNumber,
+      ORDER_TOTAL: amountTotal / 100,
+      ORDER_SHIPPING_PRICE: amountShipping / 100,
+      ORDER_TOTAL_WITH_SHIPPING: amountTotalWithShipping / 100,
+      promoCode,
+    },
+  })
+
+  res.status(200).json(paymentIntent.client_secret)
 }
 
 const retrieveAndValidatePromotionCode = async (req, res) => {

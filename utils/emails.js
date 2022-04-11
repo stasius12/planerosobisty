@@ -8,13 +8,24 @@ const Sentry = initSentry()
 const DEFAULT_SENDER_EMAIL = 'sklep@planerosobisty.pl'
 const DEFAULT_SENDER_NAME = 'Planer Osobisty'
 
-const sendEmail = (to, subject, text, html, sender = null) => {
+const sendEmail = (to, subject, text, html = null, sender = null) => {
+  /*
+  :param to (required) - either string with valid email address or list of email objects
+    e.g. [ { email: 'email1@com.pl' }, { email: 'email2@com.pl' } ]
+  :param subject (required) - string
+  :param text (required) - alternative text
+  :param html (optional) - HTML content, if set text won't be used as content
+  :param sender (optional) - object { email: 'email1@com.pl', name: 'name' }, by default DEFAULT_SENDER_* is used
+   */
+
+  const toParsed = typeof to === 'string' ? [{ email: to }] : to
+  const toAsStr = toParsed.map((obj) => obj.email).join(', ')
+
   try {
     const senderParsed =
       sender !== null
         ? sender
         : { email: DEFAULT_SENDER_EMAIL, name: DEFAULT_SENDER_NAME }
-    const toParsed = typeof to === 'string' ? [{ email: to }] : to
 
     const extra = html ? { htmlContent: html } : { textContent: text }
 
@@ -28,13 +39,13 @@ const sendEmail = (to, subject, text, html, sender = null) => {
     })
 
     Sentry.captureMessage(
-      `Email has been sent to: ${to} with subject: ${subject}`,  // TODO: wrong parsing
+      `Email has been sent to: ${toAsStr} with subject: ${subject}`,
       { extra: data }
     )
   } catch (error) {
     Sentry.captureException(error, {
       extra: {
-        description: `Tried to send an email to: ${to} with subject: ${subject}`,
+        description: `Tried to send an email to: ${toAsStr} with subject: ${subject}`,
       },
     })
   }

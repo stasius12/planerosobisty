@@ -115,6 +115,7 @@ export default {
     sentryUrl: process.env.SENTRY_URL,
     stripeUrl: process.env.STRIPE_URL,
     stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+    ctx: process.env.CONTEXT,
     url: getUrl(),
   },
 
