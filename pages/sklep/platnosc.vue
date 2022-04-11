@@ -327,7 +327,7 @@ Sprawdź przyczynę tutaj:
   * Stripe: ${stripeRequestIdUrl}
 `
       this.$axios.post('send-email-to-admins', {
-        subject: '[PlanerOsobisty] [Error] [CRITICAL] Płatności',
+        subject: `[PlanerOsobisty] [Error] [${this.$config.environment}] Płatności`,
         text: emailMessage,
       })
     },
