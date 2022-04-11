@@ -21,23 +21,29 @@ Pamiętaj! Wyznaczanie celów nie musi być zadaniem realizowanym koniecznie mi�
 Narysuj na kartce poniższy schemat i popuść wodze fantazji. Wyobraź sobie, że wszystko co napiszesz na swojej kartce stanie się rzeczywistością w wybranym okresie czasu. Zapomnij o wszystkim co cię ogranicza i przechodząc przez schemat zgodnie z ruchem zegara, zaczynając od lewego górnego rogu, zapisz jak wyglądałoby Twoje idealne życie. Postaraj się aby wszystkie marzenia były tak konkretne jak to możliwe. Możesz zadać sobie pytanie:
 “Gdybym mógł dokonać wszystkiego albo posiadać cokolwiek o czym pomyślę, co by to było?”. 
 
-![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1649701732/01_IG_1_qqmwws.png)
+![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1649701884/Grafika_do_tekst%C3%B3w_na_bloga_mkqxp1.png)
 
-## Krok 2. Wyznacz priorytety
+## Krok 2. WYZNACZ PRIORYTETY
 
 Spójrz ponownie na swoje notatki. Wybierz i zaznacz 3 cele, których osiągnięcie spowoduje najbardziej pozytywną zmianę w Twoim życiu. Gratulacje, właśnie wyznaczyłeś swoje priorytety :)
 
+![](https://res.cloudinary.com/planer-osobisty/image/upload/c_scale,f_auto,q_auto,w_1400/v1649701960/Grafika_do_tekst%C3%B3w_na_bloga_1_gavjqw.png)
+
 ## Krok 3. Stwórz PLAN DZIAŁANIA
 
-Teraz spróbuj zapisać wszystkie konieczne kroki, które Twoim zdaniem trzeba podjąć aby zrealizować wybrane cele. Pamiętaj, aby wyrażać je w sposób pozytywny (“gdy mam ochotę na przekąskę, wybieram owoce”, a nie “nie jem słodyczy”). I najważniejsze - im więcej konkretów tym lepiej. Zgodnie z koncepcją SMART, niech będą:
-Precyzyjne - zrozumienie nie powinno stanowić kłopotu, sformułowanie powinno być jednoznaczne i niepozostawiające miejsca na luźną interpretację,
-Mierzalne - tak sformułowane, aby można było liczbowo wyrazić stopień realizacji celu, lub przynajmniej umożliwić jednoznaczną „sprawdzalność” jego realizacji,
-Osiągalne – cel zbyt ambitny podkopie Twoją wiarę w jego osiągnięcie i tym samym motywację do jego realizacji; jeżeli Twój cel Cię już teraz przeraża, spróbuj podzielić go na etapy i na razie określ kroki które doprowadzą Cię do zakończenia pierwszego etapu,
-Określone w czasie –  powinny mieć dokładnie określony horyzont czasowy w jakim zamierzamy go osiągnąć 
+Teraz spróbuj zapisać wszystkie konieczne kroki, które Twoim zdaniem trzeba podjąć aby zrealizować wybrane cele. Pamiętaj, aby wyrażać je w sposób pozytywny (“gdy mam ochotę na przekąskę, wybieram owoce”, a nie “nie jem słodyczy”). 
 
-Jeśli w Twoim Planie Działania znalazły się nowe nawyki, które chciałbyś wprowadzić do swojej codzienności zapraszam Cię do posta, który pokaże Ci jak robić to NAPRAWDĘ skutecznie - ZAKOCHAJ SIĘ W PROCESIE, czyli o wprowadzaniu nowych nawyków do Twojego życia. 
+I najważniejsze - im więcej konkretów tym lepiej. Zgodnie z koncepcją SMART, niech będą:
 
-Krok 4. Miej nadzieję na najlepsze, ale przygotuj się na najgorsze
+* Precyzyjne - zrozumienie nie powinno stanowić kłopotu, sformułowanie powinno być jednoznaczne i niepozostawiające miejsca na luźną interpretację,
+* Mierzalne - tak sformułowane, aby można było liczbowo wyrazić stopień realizacji celu, lub przynajmniej umożliwić jednoznaczną „sprawdzalność” jego realizacji,
+* Osiągalne – cel zbyt ambitny podkopie Twoją wiarę w jego osiągnięcie i tym samym motywację do jego realizacji; jeżeli Twój cel Cię już teraz przeraża, spróbuj podzielić go na etapy i na razie określ kroki które doprowadzą Cię do zakończenia pierwszego etapu,
+* Określone w czasie –  powinny mieć dokładnie określony horyzont czasowy w jakim zamierzamy go osiągnąć 
+
+Jeśli w Twoim planie działania znalazły się nowe nawyki, które chciałbyś wprowadzić do swojej codzienności zapraszam Cię do posta, który pokaże Ci jak robić to NAPRAWDĘ skutecznie - [ZAKOCHAJ SIĘ W PROCESIE, czyli o wprowadzaniu nowych nawyków do Twojego życia](https://planerosobisty.pl/blog/wprowadzanie-nowych-nawykow). 
+
+## Krok 4. Miej nadzieję na najlepsze, ale przygotuj się na najgorsze
+
 Bądźmy realistami. Podczas planowania zmian często zakładamy różowe okulary co do naszych działań i okoliczności, które będą nam towarzyszyły w przyszłości. Choć spora dawka pozytywnego myślenia jest zawsze w cenie, warto już teraz pomyśleć jakie problemy możesz napotkać na drodze do swojego celu. 
 
 > „Człowiek bez strategii, który lekceważy przeciwnika, nieuchronnie skończy jako jeniec” 
@@ -46,4 +52,4 @@ To myśl Sun Tzu - chińskiego myśliciela i autora najstarszego na świecie pod
 
 Zaplanowanie rozwiązań i kół ratunkowych zanim natrafisz na przeszkody doda Ci pewności siebie i zbliży do celu bardziej niż cokolwiek innego. Łatwiej spać spokojnie (i realizować swoje najśmielsze plany), kiedy wiesz, że szalupy ratunkowe czekają w pogotowiu :) 
 
-## Krok 4. Do DZIEŁA!
+## Krok 5. Do DZIEŁA!
