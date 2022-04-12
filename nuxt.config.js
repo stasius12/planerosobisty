@@ -74,7 +74,12 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
     '@nuxtjs/moment',
+    '@nuxtjs/google-analytics',
   ],
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+  },
 
   styleResources: {
     scss: [

@@ -7,6 +7,7 @@
   SENTRY_ORG = 'planer-osobisty'
   SENTRY_PROJECT = 'planer-osobisty'
   SENTRY_RELEASE = '1.0.0'
+  GOOGLE_ANALYTICS_ID = 'G-BQB2D0LXWV'
 
 [context.production.environment]
   SENTRY_ENVIRONMENT = 'production'
