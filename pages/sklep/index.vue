@@ -141,7 +141,10 @@
           <li>zaplanowanie miesiąca</li>
           <li>tygodniowy widok na Twoje zadania</li>
         </ul>
-        <button class="button w-full bg-gray-600" @click="addProductToCart(theProduct.id)">
+        <button
+          class="button w-full bg-gray-600"
+          @click="addProductToCart(theProduct.id)"
+        >
           Kup teraz
         </button>
         <div class="grid sm:grid-cols-2 gap-x-2 font-primary text-md mt-2">
@@ -189,19 +192,88 @@
         </div>
       </div>
     </section>
-    <section class="bg-gray-100 m-2 mt-20">
+    <section class="bg-gray-100 m-2 mt-20 hidden md:block">
       <section-title
         header="2"
-        class="shop-what-inside bg-white pb-10"
+        class="bg-white pb-10"
         margin-bottom-class="mb-0"
       >
         Co znajdziesz w środku?
       </section-title>
-      <h2 class="shop-what-inside-mobile text-gray-300 mb-0 pb-10 bg-white">
+      <nav class="flex flex-col flex-wrap sm:flex-row justify-center p-4">
+        <button
+          v-for="section in swiperSections"
+          :key="section.id"
+          class="text-gray-600 py-4 px-4 block hover:text-gray-600 focus:outline-none"
+          :class="{
+            'text-gray-600 border-b-2 font-medium border-gray-600':
+              swiperPage === section.id,
+          }"
+          @click="swiperInstance.slide(section.id)"
+        >
+          {{ section.name }}
+        </button>
+      </nav>
+      <div id="slider" class="swipe">
+        <div class="swipe-wrap">
+          <div v-for="{ id, imgSrc, imgAlt } in swiperSections" :key="id">
+            <img :src="imgSrc" :alt="imgAlt" class="max-w-full" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="m-2 mt-20 md:hidden">
+      <section-title
+        header="2"
+        class="shop-what-inside bg-white mb-10"
+        margin-bottom-class="mb-0"
+      >
+        Co znajdziesz w środku?
+      </section-title>
+      <h2 class="shop-what-inside-mobile text-gray-300 mb-8">
         Co znajdziesz w środku?
       </h2>
+      <div class="shop-list-what-inside mb-8 p-4 bg-gray-100">
+        <ul class="list-disc mb-0">
+          <li>
+            niedatowany widok tygodniowy z przestrzenią na listę zadań i
+            godzinowy podział dnia
+          </li>
+          <li>
+            każdy tydzień na 4 stronach - połączenie struktury tradycyjnego
+            kalendarza i elastycznego notatnika
+          </li>
+          <li>
+            mnóstwo przestrzeni na notatki, trackery, listy to do, mapy myśli
+            czy wizualizacje Twoich pomysłów
+          </li>
+          <li>
+            przestrzeń na autorefleksję i efektywne ćwiczenia samorozwojowe
+          </li>
+          <li>gotowe szablony do rozpisywania celów</li>
+          <li>możliwość spojrzenia na swoje życie z lotu ptaka</li>
+          <li>dwa gotowe szablony pozwalające zaplanować cały rok</li>
+          <li>
+            przewodnik do lepszego poznania siebie i rozwoju własnego potencjału
+          </li>
+          <li>
+            sekcje, dzięki którym łatwiej będzie Ci zaplanować miesiąc i zadbać
+            o odpowiedni work-life balance
+          </li>
+          <li>
+            przestrzeń na świadome zaprojektowanie Twojej wymarzonej
+            rzeczywistości
+          </li>
+          <li>
+            dedykowane sekcje przypominające o priorytetach na wybrany tydzień
+          </li>
+          <li>
+            minimalistyczna stylistyka, pozwalająca na maksymalną funkcjonalność
+            i elastyczność planera
+          </li>
+        </ul>
+      </div>
       <div
-        class="md:hidden"
         style="
           left: 0px;
           width: 100%;
@@ -226,29 +298,6 @@
           src="//e.issuu.com/embed.js"
           async="true"
         ></script>
-      </div>
-      <nav
-        class="hidden md:flex flex-col flex-wrap sm:flex-row justify-center p-4"
-      >
-        <button
-          v-for="section in swiperSections"
-          :key="section.id"
-          class="text-gray-600 py-4 px-4 block hover:text-gray-600 focus:outline-none"
-          :class="{
-            'text-gray-600 border-b-2 font-medium border-gray-600':
-              swiperPage === section.id,
-          }"
-          @click="swiperInstance.slide(section.id)"
-        >
-          {{ section.name }}
-        </button>
-      </nav>
-      <div id="slider" class="swipe hidden md:block">
-        <div class="swipe-wrap">
-          <div v-for="{ id, imgSrc, imgAlt } in swiperSections" :key="id">
-            <img :src="imgSrc" :alt="imgAlt" class="max-w-full" />
-          </div>
-        </div>
       </div>
     </section>
     <section class="sklep__faq m-2 mt-10">
@@ -569,6 +618,12 @@ export default {
 .shop-what-inside-mobile {
   @media (min-width: 420px) {
     display: none;
+  }
+}
+
+.shop-list-what-inside {
+  li {
+    margin-bottom: 10px;
   }
 }
 </style>

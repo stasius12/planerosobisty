@@ -9,7 +9,7 @@
   SENTRY_RELEASE = '1.0.0'
 
 [context.production.environment]
-  SENTRY_ENVIRONMENT = 'production
+  SENTRY_ENVIRONMENT = 'production'
 
 [context.staging.environment]
   STRIPE_URL = 'https://dashboard.stripe.com/test'
