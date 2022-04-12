@@ -4,12 +4,20 @@
 [build.environment]
   STRIPE_URL = 'https://dashboard.stripe.com'
   SENTRY_URL = 'https://sentry.io/organizations/planer-osobisty'
+  SENTRY_ORG = 'planer-osobisty'
+  SENTRY_PROJECT = 'planer-osobisty'
+  SENTRY_RELEASE = '1.0.0'
+
+[context.production.environment]
+  SENTRY_ENVIRONMENT = 'production
 
 [context.staging.environment]
   STRIPE_URL = 'https://dashboard.stripe.com/test'
+  SENTRY_ENVIRONMENT = 'staging'
 
 [context.dev.environment]
   STRIPE_URL = 'https://dashboard.stripe.com/test'
+  SENTRY_ENVIRONMENT = 'dev'
 
 [[plugins]]
 package = 'netlify-plugin-contextual-env'
