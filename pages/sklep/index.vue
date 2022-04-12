@@ -109,7 +109,6 @@
               @click="index = 2 * (id - 1)"
             />
             <img
-              v-if="id < 6"
               :src="productImages[2 * (id - 1) + 1].src"
               :alt="productImages[2 * (id - 1) + 1].alt"
               class="w-1/2 max-w-full"
@@ -456,6 +455,14 @@ const PRODUCT_IMAGES = [
     w: 3000,
     h: 3000,
     alt: 'Planer Osobisty - okładka przybliżona',
+  },
+  {
+    id: 11,
+    src: require('@/assets/images/planer/12-min.png'),
+    thumbnail: require('@/assets/images/planer/12-min.png'),
+    w: 3000,
+    h: 3000,
+    alt: 'Planer Osobisty - wymiary okładki',
   },
 ]
 
