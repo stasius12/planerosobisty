@@ -3,7 +3,7 @@
 
 [build.environment]
   STRIPE_URL = 'https://dashboard.stripe.com'
-  SENTRY_URL = 'https://sentry.io/organizations/planer-osobisty'
+  SENTRY_CLIENT_URL = 'https://sentry.io/organizations/planer-osobisty'
   SENTRY_ORG = 'planer-osobisty'
   SENTRY_PROJECT = 'planer-osobisty'
   SENTRY_RELEASE = '1.0.0'
