@@ -62,6 +62,7 @@ export default {
     { src: '~/plugins/vee-validate', ssr: false },
     '~/plugins/vue-swiper.js',
     '~/plugins/sentry.js',
+    '~/plugins/google-analytics',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -74,12 +75,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
     '@nuxtjs/moment',
-    '@nuxtjs/google-analytics',
   ],
-
-  googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID,
-  },
 
   styleResources: {
     scss: [
