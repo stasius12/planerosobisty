@@ -15,6 +15,7 @@ function initSentry() {
     Sentry.init({
       dsn: process.env.SENTRY_DSN,
       environment: getEnvironment(),
+      release: process.env.SENTRY_RELEASE,
       normalizeDepth: 11,
       integrations: [new ExtraErrorData({ depth: 10 })],
     })

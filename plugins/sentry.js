@@ -9,6 +9,7 @@ export default ({ app: { router, context } }, inject) => {
     Vue,
     normalizeDepth: 11,
     environment: context.$config.environment,
+    release: context.$config.sentryRelease,
     tracesSampleRate: 1.0,
     dsn: context.$config.sentryDsn,
     integrations: [

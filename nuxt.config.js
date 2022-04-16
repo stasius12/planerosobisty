@@ -123,6 +123,7 @@ export default {
     },
     sentryDsn: process.env.SENTRY_DSN,
     sentryUrl: process.env.SENTRY_CLIENT_URL,
+    sentryRelease: process.env.SENTRY_RELEASE,
     stripeUrl: process.env.STRIPE_URL,
     stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
     environment: getEnvironment(),
