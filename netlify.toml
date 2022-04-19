@@ -6,7 +6,7 @@
   SENTRY_CLIENT_URL = 'https://sentry.io/organizations/planer-osobisty'
   SENTRY_ORG = 'planer-osobisty'
   SENTRY_PROJECT = 'planer-osobisty'
-  SENTRY_RELEASE = '1.0.3'
+  SENTRY_RELEASE = '1.0.4'
   GOOGLE_ANALYTICS_ID = 'G-BQB2D0LXWV'
 
 [context.production.environment]
