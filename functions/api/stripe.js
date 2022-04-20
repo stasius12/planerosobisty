@@ -1,6 +1,4 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
-  maxNetworkRetries: 3,
-})
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const {
   validatePromoCodeResponse,
   validatePromoCodeRestrictions,
