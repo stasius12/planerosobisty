@@ -119,9 +119,11 @@
       </div>
       <div class="p-2">
         <h1>{{ theProduct.name }}</h1>
-        <h2 class="text-gray-600 text-3xl -ml-0.5">
+        <h2 class="text-gray-600 text-4xl -ml-0.5 mb-0">
           {{ theProduct.price.unit_amount / 100 }} zł
+          <span class="line-through text-2xl text-red-400 ml-1">129.99 zł</span>
         </h2>
+        <h3 class="text-2xl mb-2 text-gray-400">Oszczędzasz 80%</h3>
         <p class="text-justify mb-4" style="font-size: 0.95rem">
           Planer Osobisty to nie tylko przestrzeń do planowania swoich zadań,
           ale również przewodnik w drodze do poznania siebie i świadomego
